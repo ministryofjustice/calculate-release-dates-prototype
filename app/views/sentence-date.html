@@ -1,6 +1,18 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-Question page
+Enter the sentence date
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+  organisationLabel: {
+    text: 'HMPPS',
+    href: 'offender-details.html'
+  },
+  serviceLabel: {
+    text: 'Calculate release dates',
+    href: '#'
+  }
+}) }}
 {% endblock %}
 {% block beforeContent %}
 <a class="govuk-back-link" href="conviction-date.html">Back</a>

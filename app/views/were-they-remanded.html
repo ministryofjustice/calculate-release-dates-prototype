@@ -1,6 +1,18 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-Question page
+Were they remanded?
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+  organisationLabel: {
+    text: 'HMPPS',
+    href: 'offender-details.html'
+  },
+  serviceLabel: {
+    text: 'Calculate release dates',
+    href: '#'
+  }
+}) }}
 {% endblock %}
 {% block beforeContent %}
 <a class="govuk-back-link" href="sentence-date.html">Back</a>

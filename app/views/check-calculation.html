@@ -1,6 +1,18 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-Question page
+Check and confirm release date
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+  organisationLabel: {
+    text: 'HMPPS',
+    href: 'offender-details.html'
+  },
+  serviceLabel: {
+    text: 'Calculate release dates',
+    href: '#'
+  }
+}) }}
 {% endblock %}
 {% block beforeContent %}
 <a class="govuk-back-link" href="check-answers.html">Back</a>
@@ -16,7 +28,6 @@ Question page
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full>
         <div class=" govuk-width-container">
-        <a href="#" class="govuk-back-link">Back</a>
         <main class="govuk-main-wrapper " id="main-content" role="main">
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds-from-desktop">
