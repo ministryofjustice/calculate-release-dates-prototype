@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Question page
+{% endblock %}
+{% block beforeContent %}
+<a class="govuk-back-link" href="documents-suitable.html">Back</a>
+<dl class="govuk-summary-list" style="border-top: 1px solid #b1b4b6;">
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__value">
+            <span class="govuk-!-margin-right-5"><strong>Offender name: </strong>{{ data['offender-name'] }}</span> <span><strong>Offender number: </strong>{{ data['offender-number'] }}</span>
+        </dt>
+    </div>
+</dl>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="offence-date" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                         What type of sentence did they get?   
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios">
+                                                <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="type-of-sentence" name="type-of-sentence" type="radio" value="Extended Determinate Sentence (EDS)">
+                            <label class="govuk-label govuk-radios__label" for="type-of-sentence">
+                                Extended Determinate Sentence (EDS)
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="type-of-sentence-2" name="type-of-sentence" type="radio" value="Extended Sentence for Public Protection (EPP)">
+                            <label class="govuk-label govuk-radios__label" for="type-of-sentence">
+                                Extended Sentence for Public Protection (EPP)
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="type-of-sentence-3" name="type-of-sentence" type="radio" value="Sentence for Offender of Particular Concern (SOPC)">
+                            <label class="govuk-label govuk-radios__label" for="type-of-sentence">
+                                Sentence for Offender of Particular Concern (SOPC)
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="type-of-sentence-4" name="type-of-sentence" type="radio" value="Standard Determinate Sentence (SDS)">
+                            <label class="govuk-label govuk-radios__label" for="type-of-sentence">
+                                Standard Determinate Sentence (SDS)
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

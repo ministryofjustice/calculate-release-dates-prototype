@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Question page
+{% endblock %}
+{% block beforeContent %}
+<a class="govuk-back-link" href="start.html">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="how-many-sentences" method="post">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                    Enter offender details
+                </h1>
+            </legend>
+            <div class="govuk-inset-text">
+  This is for demo purposes only.
+</div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="offender-name">
+                    Offender name
+                </label>
+                <input class="govuk-input" id="offender-name" name="offender-name" type="text" spellcheck="false">
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="offender-number">
+                    Offender number
+                </label>
+                <input class="govuk-input" id="offender-number" name="offender-number" type="text" spellcheck="false">
+            </div>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
