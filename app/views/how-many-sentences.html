@@ -1,6 +1,18 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-Question page
+How many sentences did they get?
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+  organisationLabel: {
+    text: 'HMPPS',
+    href: 'offender-details.html'
+  },
+  serviceLabel: {
+    text: 'Calculate release dates',
+    href: '#'
+  }
+}) }}
 {% endblock %}
 {% block beforeContent %}
 <a class="govuk-back-link" href="start.html">Back</a>

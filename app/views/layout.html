@@ -49,6 +49,9 @@
   }) }}
 {% endblock %}
 
+
+{%- from "moj/components/header/macro.njk" import mojHeader -%}
+
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
 {% if useAutoStoreData %}
