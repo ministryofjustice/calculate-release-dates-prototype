@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Question page
+{% endblock %}
+{% block beforeContent %}
+
+<a class="govuk-back-link" href="were-they-remanded.html">Back</a>
+<dl class="govuk-summary-list" style="border-top: 1px solid #b1b4b6;">
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__value">
+            <span class="govuk-!-margin-right-5"><strong>Offender name: </strong>John Doe</span> <span><strong>Offender number: </strong>91948392</span>
+        </dt>
+    </div>
+</dl>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full>
+        <div class=" govuk-width-container">
+        <a href="#" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+                    <h1 class="govuk-heading-l">Check your answers</h1>
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Court that sentenced them
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ data['what-type-of-court'] }}
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> type of court</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Documents you have for them
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ data['document'] }}
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> documents</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Type of sentence
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ data['type-of-sentence'] }}
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> type of sentence</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Offence start date
+                            </dt>
+                            <dd id="offense-date" class="govuk-summary-list__value">
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> offence date</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Conviction date
+                            </dt>
+                            <dd id="conviction-date" class="govuk-summary-list__value">
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> offence date</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Sentence date
+                            </dt>
+                            <dd id="sentence-date" class="govuk-summary-list__value">
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> offence date</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Remand
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ data['were-they-remanded'] }}
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> type of sentence</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+                    <h2 class="govuk-heading-m">Submit information to calculate a sentence</h2>
+                    <p class="govuk-body">Some text explaing what will happen.</p>
+                                        <a href="check-calculation.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                        Confirm release dates
+                    </a>
+<!--                     <form action="check-answers" method="post" novalidate>
+                        <input type="hidden" name="answers-checked" value="true">
+                        <button  class="govuk-button" data-module="govuk-button">
+                            Submit for calculation
+                        </button>
+                    </form> -->
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+       
+var offenseMonth = {{ data['offence-start-date-month'] }}
+
+var offenseMonthName = monthNames[offenseMonth];
+
+var offenseStartDate = '{{ data['offence-start-date-day'] }}' + ' ' + offenseMonthName +  ' ' + '{{ data['offence-start-date-year'] }}';
+
+var convictionMonth = {{ data['conviction-date-month'] }};
+
+var convictionMonthName = monthNames[convictionMonth];
+
+var convictionDate = '{{ data['conviction-date-day'] }}' + ' ' + convictionMonthName +  ' ' + '{{ data['conviction-date-year'] }}';
+
+var sentenceMonth = {{ data['sentence-date-month'] }};
+
+var sentenceMonthName = monthNames[sentenceMonth];
+
+var sentenceDate = '{{ data['sentence-date-day'] }}' + ' ' + sentenceMonthName +  ' ' + '{{ data['sentence-date-year'] }}';
+
+console.log("Offense date is: " + offenseStartDate);
+console.log("Conviction date is: " + convictionDate);
+console.log("Sentence date is: " + sentenceDate);
+
+document.getElementById("offense-date").innerHTML = offenseStartDate;
+
+document.getElementById("conviction-date").innerHTML = convictionDate
+
+document.getElementById("sentence-date").innerHTML = sentenceDate;
+
+</script>
+{% endblock %}
+
