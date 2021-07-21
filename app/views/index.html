@@ -4,14 +4,14 @@ Start page example
 {% endblock %}
 {% block header %}
 {{ mojHeader({
-  organisationLabel: {
-    text: 'HMPPS',
-    href: '#'
-  },
-  serviceLabel: {
-    text: 'Calculate release dates',
-    href: '#'
-  }
+organisationLabel: {
+text: 'HMPPS',
+href: '#'
+},
+serviceLabel: {
+text: 'Calculate release dates',
+href: '#'
+}
 }) }}
 {% endblock %}
 {% block beforeContent %}
@@ -23,14 +23,38 @@ Start page example
             {% if serviceName %} {{ serviceName }} {% endif %}
         </h1>
         <p class="govuk-body">This site contains prototypes for the Calculate Release Dates service</p>
+        <h2 class="govuk-heading-l">Alpha</h2>
         <p class="govuk-body">Here is the latest version:</p>
-        <a href="offender-details.html" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 govuk-button--start" data-module="govuk-button">
-          Calculate release dates
-          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-          </svg></a>
-    </div>
-    <div class="govuk-grid-column-one-third">
+        <a href="offender-details" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 govuk-button--start" data-module="govuk-button">
+            Version 1
+            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+            </svg></a>
+<!--         <p><a href="offender-details.html">Version 1</a></p> -->
+        <h2 class="govuk-heading-l">Sandbox</h2>
+        <p>These are pages from the journey showing alternative designs</p>
+        <h3 class="govuk-heading-m ">
+            Start page
+        </h3>
+        <p><a href="/sandbox/start-a.html">Start page - Version B</a></p>
+        <p>
+            Shows a list of information needed to calculate a confirmed sentence, and gives an option to calculate a provisional sentence if not all information is available. Assumption: there is a set of required information, not documents.
+        </p>
+        <p><a href="/sandbox/start-b.html">Start page - Version B</a></p>
+        <p>
+            As above, but in the typical GDS style with "Before you start" information.
+        </p>
+        <h3 class="govuk-heading-m ">
+            Enter offence start date
+        </h3>
+        <p><a href="/sandbox/offence-date-a">Did the offence occur over multiple days? - Version A</a></p>
+        <p>
+            Follows with a seperate question asking if there are multiple offences. Branches to allow entry of end date if applicable.
+        </p>
+        <p><a href="/sandbox/offence-date-b">Did the offence occur over multiple days? - Version B</a></p>
+        <p>
+            Reveals fields to enter offence end date conditionally based on a "Yes" answer to the offence taking place over multiple days.
+        </p>
     </div>
 </div>
 {% endblock %}
