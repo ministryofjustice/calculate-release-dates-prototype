@@ -7,7 +7,7 @@ const router = express.Router()
 router.post('/sandbox/offence-days-answer', function (req, res) {
 
   // Make a variable and give it the value from 'juggling-balls'
-  var offenceDays = req.session.data['offence-multiple-days-yes']
+  var offenceDays = req.session.data['offence-multiple-days']
 console.log(offenceDays)
   // Check whether the variable matches a condition
   if (offenceDays == "yes"){
