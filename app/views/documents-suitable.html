@@ -15,14 +15,14 @@ You can calculate a confirmed release date with these documents
 }) }}
 {% endblock %}
 {% block beforeContent %}
-<a class="govuk-back-link" href="which-documents.html">Back</a>
-<dl class="govuk-summary-list" style="border-top: 1px solid #b1b4b6;">
+<dl class="govuk-summary-list">
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__value">
             <span class="govuk-!-margin-right-5"><strong>Offender name: </strong>{{ data['offender-name'] }}</span> <span><strong>Offender number: </strong>{{ data['offender-number'] }}</span>
         </dt>
     </div>
 </dl>
+<a class="govuk-back-link" href="which-documents.html">Back</a>
 {% endblock %}
 {% block content %}
 <div class="govuk-grid-row">
