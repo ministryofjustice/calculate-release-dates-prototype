@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Check and confirm release date
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+  organisationLabel: {
+    text: 'HMPPS',
+    href: 'offender-details.html'
+  },
+  serviceLabel: {
+    text: 'Calculate release dates',
+    href: 'index.html'
+  }
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__value">
+            <span class="govuk-!-margin-right-5"><strong>Offender name: </strong>{{ data['offender-name'] }}</span> <span><strong>Offender number: </strong>{{ data['offender-number'] }}</span>
+        </dt>
+    </div>
+</dl>
+<a class="govuk-back-link" href="check-answers.html">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full>
+        <div class=" govuk-width-container">
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+                    <h1 class="govuk-heading-l">Check and confirm release date</h1>
+                    <h2 class="govuk-heading-m">Check calculation</h2>
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Sentence date
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                15 June 2021
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Sentence length
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                2 years 6 months
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Sentence and licence expiry date (SLED)
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                14 January 2024
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Number of days in sentence
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                944 days (includes 0 leap days)
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Days in SLED ÷ 2
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                472
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Conditional release date (CRD)
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                30 September 2022
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Days in remand
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                0
+                            </dd>
+                        </div>
+                    </dl>
+                    <h2 class="govuk-heading-m">Effective release dates</h2>
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Effective sentence and licence expiry date (SLED)
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Friday January 2024
+                                <div id="sunday-hint" class="govuk-hint">
+                                    -2 days as 14 January 2024 is a Sunday
+                                </div>
+                            </dd>
+                            <!--                             <dd class="govuk-summary-list__value">
+                                <div id="sunday-hint" class="govuk-hint">
+                                    -2 days as 14 January 2024 is a Sunday
+                                </div>
+                            </dd> -->
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Effective conditonal release date (CRD)
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Friday 30 September 2022
+                            </dd>
+                        </div>
+                    </dl>
+                    <a href="calculation-summary.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                        Confirm release dates
+                    </a>
+                    <!-- <form action="/form-handler" method="post" novalidate>
+                        <input type="hidden" name="answers-checked" value="true">
+                        <button class="govuk-button" data-module="govuk-button">
+                            Submit for calculation
+                        </button>
+                    </form> -->
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</div>
+{% endblock %}
