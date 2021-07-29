@@ -56,7 +56,7 @@ href: 'index.html'
                         </a>
                     </dd>
                 </div>
-                <div class="govuk-summary-list__row">
+<!--                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
                         Type of sentence
                     </dt>
@@ -68,7 +68,7 @@ href: 'index.html'
                             Change<span class="govuk-visually-hidden"> type of sentence</span>
                         </a>
                     </dd>
-                </div>
+                </div> -->
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
                         Offence start date
@@ -136,61 +136,84 @@ href: 'index.html'
 <script type="text/javascript">
 const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
-];
+]
 
-var offenseMonth = { { data['offence-start-date-month'] } };
+var offenceMonth = {{ data['offence-start-date-month'] }}
 
-var offenseMonthName = monthNames[offenseMonth];
+var offenceMonthName = monthNames[offenceMonth]
 
-var offenseStartDate = '{{ data['
-offence - start - date - day '] }}' + ' ' + offenseMonthName + ' ' + '{{ data['
-offence - start - date - year '] }}';
+var offenceStartDate = '{{ data['offence-start-date-day'] }}' + ' ' + offenceMonthName + ' ' + '{{ data['offence-start-date-year'] }}'
 
-var convictionMonth = { { data['conviction-date-month'] } };
+var convictionMonth = {{ data['conviction-date-month'] }}
 
-var convictionMonthName = monthNames[convictionMonth];
+var convictionMonthName = monthNames[convictionMonth]
 
-var convictionDate = '{{ data['
-conviction - date - day '] }}' + ' ' + convictionMonthName + ' ' + '{{ data['
-conviction - date - year '] }}';
+var convictionDate = '{{ data['conviction-date-day'] }}' + ' ' + convictionMonthName + ' ' + '{{ data['conviction-date-year'] }}'
 
-var sentenceMonth = { { data['sentence-date-month'] } };
+var sentenceMonth = {{ data['sentence-date-month'] }}
 
-var sentenceMonthName = monthNames[sentenceMonth];
+var sentenceMonthName = monthNames[sentenceMonth]
 
-var sentenceDate = '{{ data['
-sentence - date - day '] }}' + ' ' + sentenceMonthName + ' ' + '{{ data['
-sentence - date - year '] }}';
+var sentenceDate = '{{ data['sentence-date-day'] }}' + ' ' + sentenceMonthName + ' ' + '{{ data['sentence-date-year'] }}'
 
-var remandMonth = { { data['remand-start-month'] } };
+var remandMonth = {{ data['remand-start-month'] }}
 
-var remandMonthName = monthNames[remandMonth];
+var remandMonthName = monthNames[remandMonth]
 
-var remandStartDate = '{{ data['
-remand - start - day '] }}' + ' ' + remandMonthName + ' ' + '{{ data['
-remand - start - year '] }}';
+var remandStartDate = '{{ data['remand-start-day'] }}' + ' ' + remandMonthName + ' ' + '{{ data['remand-start-year'] }}'
 
-remandMonth = { { data['remand-end-month'] } };
+remandMonth = {{ data['remand-end-month'] }}
 
-remandMonthName = monthNames[remandMonth];
+remandMonthName = monthNames[remandMonth]
 
-var remandEndDate = '{{ data['
-remand - end - day '] }}' + ' ' + remandMonthName + ' ' + '{{ data['
-remand - end - year '] }}';
+var remandEndDate = '{{ data['remand-end-day'] }}' + ' ' + remandMonthName + ' ' + '{{ data['remand-end-year'] }}'
 
-console.log("Offense date is: " + offenseStartDate);
-console.log("Conviction date is: " + convictionDate);
-console.log("Sentence date is: " + sentenceDate);
+console.log("Offence date is: " + offenceStartDate)
+console.log("Conviction date is: " + convictionDate)
+console.log("Sentence date is: " + sentenceDate)
 console.log("Remand dates are: " + remandStartDate + " to " + remandEndDate)
 
-document.getElementById("offense-date").innerHTML = offenseStartDate;
+document.getElementById("offense-date").innerHTML = offenceStartDate
 
-document.getElementById("conviction-date").innerHTML = convictionDate;
+document.getElementById("conviction-date").innerHTML = convictionDate
 
-document.getElementById("sentence-date").innerHTML = sentenceDate;
+document.getElementById("sentence-date").innerHTML = sentenceDate
 
-document.getElementById("remand-start-date").innerHTML = remandStartDate + '<br>';
+document.getElementById("remand-start-date").innerHTML = remandStartDate + '<br>'
 
-document.getElementById("remand-end-date").innerHTML = 'to' + ' ' + remandEndDate;
+document.getElementById("remand-end-date").innerHTML = 'to' + ' ' + remandEndDate
+
+
+// const monthNames = ["January", "February", "March", "April", "May", "June",
+//   "July", "August", "September", "October", "November", "December"
+// ]
+       
+// var offenseMonth = {{ data['offence-start-date-month'] }}
+
+// var offenseMonthName = monthNames[offenseMonth]
+
+// var offenseStartDate = '{{ data['offence-start-date-day'] }}' + ' ' + offenseMonthName +  ' ' + '{{ data['offence-start-date-year'] }}'
+
+// var convictionMonth = {{ data['conviction-date-month'] }}
+
+// var convictionMonthName = monthNames[convictionMonth]
+
+// var convictionDate = '{{ data['conviction-date-day'] }}' + ' ' + convictionMonthName +  ' ' + '{{ data['conviction-date-year'] }}';
+
+// var sentenceMonth = {{ data['sentence-date-month'] }}
+
+// var sentenceMonthName = monthNames[sentenceMonth];
+
+// var sentenceDate = '{{ data['sentence-date-day'] }}' + ' ' + sentenceMonthName +  ' ' + '{{ data['sentence-date-year'] }}'
+
+// console.log("Offense date is: " + offenseStartDate)
+// console.log("Conviction date is: " + convictionDate)
+// console.log("Sentence date is: " + sentenceDate)
+
+// document.getElementById("offense-date").innerHTML = offenseStartDate
+
+// document.getElementById("conviction-date").innerHTML = convictionDate
+
+// document.getElementById("sentence-date").innerHTML = sentenceDate
 </script>
 {% endblock %}
