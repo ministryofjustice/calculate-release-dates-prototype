@@ -1,0 +1,155 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Check and confirm release date
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: 'offender-details.html'
+},
+serviceLabel: {
+text: 'Calculate release dates',
+href: 'index.html'
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__value">
+            <span class="govuk-!-margin-right-5"><strong>Offender name: </strong>{{ data['offender-name'] }}</span> <span><strong>Offender number: </strong>{{ data['offender-number'] }}</span>
+        </dt>
+    </div>
+</dl>
+<a class="govuk-back-link" href="check-answers.html">Back</a>
+{% endblock %}
+{% block content %}
+<main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+            <h1 class="govuk-heading-l">Review calculation before submitting</h1>
+            <h2 class="govuk-heading-m">Calculation summary</h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        From 15 June 2021
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence length
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2 years 6 months
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence and licence expiry date (SLED)
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        14 January 2024
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Number of days in sentence
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        944 days
+                        <div class="govuk-hint govuk-body govuk-!-margin-top-2">
+                            Number of days between 15 June 2021 and 14 January 2024, including 0 leap days
+                        </div>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Days in SLED ÷ 2
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        472
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Conditional release date (CRD)
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        30 September 2022
+                        <div class="govuk-hint govuk-body govuk-!-margin-top-2">
+                            15 June 2021 + 472 days
+                        </div>
+                    </dd>
+                </div>
+            </dl>
+            <h2 class="govuk-heading-m">Adjustments</h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Number of days on remand
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        0
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Number of days tagged bail
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        0
+                    </dd>
+                </div>
+            </dl>
+            <h2 class="govuk-heading-m">Effective release dates</h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Effective sentence and licence expiry date (SLED)
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Friday January 2024
+                        <div class="govuk-hint govuk-body govuk-!-margin-top-2">
+                            -2 days as 14 January 2024 is a Sunday
+                        </div>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Effective conditonal release date (CRD)
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Friday 30 September 2022
+                    </dd>
+                </div>
+            </dl>
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary govuk-!-margin-bottom-9">
+                    <span class="govuk-details__summary-text">
+                        Why you can't see some information
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    Some dates and details are not included as according to <a href="http://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf" target="_blank">PSI 03/2015 (opens in new tab)</a> they are not relevant to this person's circumstances.
+                </div>
+            </details>
+            <h2 class="govuk-heading-m">Confirm and submit to NOMIS</h2>
+            <p class="govuk-body">By submitting this calculation you are confirming that, to the best of your knowledge, it is correct. It will be saved to NOMIS.</p>
+            <a href="calculation-summary.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                Confirm and submit
+            </a>
+            <p><a href="#">There is something wrong with this calculation</a></p>
+            <!-- <form action="/form-handler" method="post" novalidate>
+                        <input type="hidden" name="answers-checked" value="true">
+                        <button class="govuk-button" data-module="govuk-button">
+                            Submit for calculation
+                        </button>
+                    </form> -->
+        </div>
+    </div>
+</main>
+{% endblock %}
