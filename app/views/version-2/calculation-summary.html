@@ -10,7 +10,7 @@ Calculation complete
   },
   serviceLabel: {
     text: 'Calculate release dates',
-    href: 'index.html'
+    href: '../index.html'
   }
 }) }}
 {% endblock %}
@@ -22,7 +22,7 @@ Calculation complete
         </dt>
     </div>
 </dl>
-<<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
 {% endblock %}
 {% block content %}
 <div class="govuk-grid-row">
@@ -60,15 +60,7 @@ Calculation complete
                     Conditional release date
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    30 September 2022
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Days in remand
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    0
+                    Monday, 30 September 2022
                 </dd>
             </div>
             <div class="govuk-summary-list__row">
@@ -80,6 +72,25 @@ Calculation complete
                 </dd>
             </div>
         </dl>
+                <h2 class="govuk-heading-m govuk-!-margin-top-9">Adjustments</h2>
+        <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-top-5">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Days in remand
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    3
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Days on tagged bail
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    3
+                </dd>
+            </div>
+          </dl>
         <h2 class="govuk-heading-m govuk-!-margin-top-9">Effective release dates</h2>
         <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-top-5">
             <div class="govuk-summary-list__row">
@@ -87,9 +98,9 @@ Calculation complete
                     Effective sentence and licence expiry date (SLED)
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    Friday January 2024
-                    <div id="sunday-hint" class="govuk-hint">
-                        -2 days as 14 January 2024 is a Sunday
+                    Monday, 8 January 2024
+                    <div id="sunday-hint" class="govuk-hint govuk-!-margin-top-2">
+                        Sunday, 14 January 2024 minus 6 days of adjustments
                     </div>
                 </dd>
                 <!--                             <dd class="govuk-summary-list__value">
@@ -103,7 +114,10 @@ Calculation complete
                     Effective conditonal release date (CRD)
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    Friday 30 September 2022
+                    Friday, 23 September 2022
+                                        <div id="sunday-hint" class="govuk-hint govuk-!-margin-top-2">
+                        Saturday 24 September 2022 minus 1 day
+                    </div>
                 </dd>
             </div>
           </dl>
