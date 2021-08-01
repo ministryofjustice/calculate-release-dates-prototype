@@ -10,7 +10,7 @@ href: 'offender-details.html'
 },
 serviceLabel: {
 text: 'Calculate release dates',
-href: 'index.html'
+href: '../index.html'
 }
 }) }}
 {% endblock %}
@@ -89,7 +89,7 @@ href: 'index.html'
                     </dd>
                     <dd class="govuk-summary-list__actions">
                         <a class="govuk-link" href="#">
-                            Change<span class="govuk-visually-hidden"> offence date</span>
+                            Change<span class="govuk-visually-hidden"> convivtion date</span>
                         </a>
                     </dd>
                 </div>
@@ -101,7 +101,7 @@ href: 'index.html'
                     </dd>
                     <dd class="govuk-summary-list__actions">
                         <a class="govuk-link" href="#">
-                            Change<span class="govuk-visually-hidden"> offence date</span>
+                            Change<span class="govuk-visually-hidden"> sentence date</span>
                         </a>
                     </dd>
                 </div>
@@ -114,13 +114,26 @@ href: 'index.html'
                     </dd>
                     <dd class="govuk-summary-list__actions">
                         <a class="govuk-link" href="#">
-                            Change<span class="govuk-visually-hidden"> type of sentence</span>
+                            Change<span class="govuk-visually-hidden"> remand dates</span>
+                        </a>
+                    </dd>
+                </div>
+                                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Tagged bail dates
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <span id="tagged-bail-start-date"></span><span id="tagged-bail-end-date"></span>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> tagged bail dates</span>
                         </a>
                     </dd>
                 </div>
             </dl>
-            <h2 class="govuk-heading-m">Submit information to calculate a sentence</h2>
-            <p class="govuk-body">Some text explaining what will happen.</p>
+<!--             <h2 class="govuk-heading-m">Submit information to calculate a sentence</h2>
+            <p class="govuk-body">Some text explaining what will happen.</p> -->
             <a href="check-calculation.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
                 Agree and continue
             </a>
@@ -140,38 +153,51 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 
 var offenceMonth = {{ data['offence-start-date-month'] }}
 
-var offenceMonthName = monthNames[offenceMonth]
+var offenceMonthName = monthNames[offenceMonth - 1]
 
 var offenceStartDate = '{{ data['offence-start-date-day'] }}' + ' ' + offenceMonthName + ' ' + '{{ data['offence-start-date-year'] }}'
 
 var convictionMonth = {{ data['conviction-date-month'] }}
 
-var convictionMonthName = monthNames[convictionMonth]
+var convictionMonthName = monthNames[convictionMonth - 1]
 
 var convictionDate = '{{ data['conviction-date-day'] }}' + ' ' + convictionMonthName + ' ' + '{{ data['conviction-date-year'] }}'
 
 var sentenceMonth = {{ data['sentence-date-month'] }}
 
-var sentenceMonthName = monthNames[sentenceMonth]
+var sentenceMonthName = monthNames[sentenceMonth - 1]
 
 var sentenceDate = '{{ data['sentence-date-day'] }}' + ' ' + sentenceMonthName + ' ' + '{{ data['sentence-date-year'] }}'
 
 var remandMonth = {{ data['remand-start-month'] }}
 
-var remandMonthName = monthNames[remandMonth]
+var remandMonthName = monthNames[remandMonth - 1]
 
 var remandStartDate = '{{ data['remand-start-day'] }}' + ' ' + remandMonthName + ' ' + '{{ data['remand-start-year'] }}'
 
 remandMonth = {{ data['remand-end-month'] }}
 
-remandMonthName = monthNames[remandMonth]
+remandMonthName = monthNames[remandMonth - 1]
 
 var remandEndDate = '{{ data['remand-end-day'] }}' + ' ' + remandMonthName + ' ' + '{{ data['remand-end-year'] }}'
+
+var taggedBailMonth = {{ data['tagged-bail-start-month'] }}
+
+var taggedBailMonthName = monthNames[taggedBailMonth - 1]
+
+var taggedBailStartDate = '{{ data['tagged-bail-start-day'] }}' + ' ' + taggedBailMonthName + ' ' + '{{ data['tagged-bail-start-year'] }}'
+
+taggedBailMonth = {{ data['tagged-bail-end-month'] }}
+
+taggedBailMonthName = monthNames[taggedBailMonth - 1]
+
+var taggedBailEndDate = '{{ data['tagged-bail-end-day'] }}' + ' ' + taggedBailMonthName + ' ' + '{{ data['tagged-bail-end-year'] }}'
 
 console.log("Offence date is: " + offenceStartDate)
 console.log("Conviction date is: " + convictionDate)
 console.log("Sentence date is: " + sentenceDate)
 console.log("Remand dates are: " + remandStartDate + " to " + remandEndDate)
+console.log("Tagged bail dates are: " + taggedBailStartDate + " to " + taggedBailEndDate)
 
 document.getElementById("offense-date").innerHTML = offenceStartDate
 
@@ -182,5 +208,9 @@ document.getElementById("sentence-date").innerHTML = sentenceDate
 document.getElementById("remand-start-date").innerHTML = remandStartDate + '<br>'
 
 document.getElementById("remand-end-date").innerHTML = 'to' + ' ' + remandEndDate
+
+document.getElementById("tagged-bail-start-date").innerHTML = taggedBailStartDate + '<br>'
+
+document.getElementById("tagged-bail-end-date").innerHTML = 'to' + ' ' + taggedBailEndDate
 </script>
 {% endblock %}
