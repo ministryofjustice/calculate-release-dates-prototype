@@ -1,0 +1,196 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Review calculation before submitting
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: 'offender-details.html'
+},
+serviceLabel: {
+text: 'Calculate release dates',
+href: '../index.html'
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__value">
+            <span class="govuk-!-margin-right-5"><strong>Offender name: </strong>{{ data['offender-name'] }}</span> <span><strong>Offender number: </strong>{{ data['offender-number'] }}</span>
+        </dt>
+    </div>
+</dl>
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+            <h1 class="govuk-heading-xl">Review sentence information from NOMIS</h1>
+            <h2 class="govuk-heading-l">Sentences</h2>
+            <p class="govuk-body">There are 4 offences included in this calculation.</p>
+            <h3 class="govuk-heading-m">1. Theft <span class="govuk-hint">committed on 2 March 2019</span></h3>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        29 Feburary 2020
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Conviction date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        29 Feburary 2020
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence length
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2 months
+                    </dd>
+                </div>
+            </dl>
+            <h3 class="govuk-heading-m">2. Burglary <span class="govuk-hint">committed on 9 March 2019</span></h3>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2 March 2019
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Conviction date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        29 Feburary 2020
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence length
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2 years
+                    </dd>
+                </div>
+            </dl>
+            <h3 class="govuk-heading-m">3. Theft <span class="govuk-hint">committed on 10 March 2019</span></h3>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2 March 2019
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Conviction date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        29 Feburary 2020
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence length
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        4 months
+                    </dd>
+                </div>
+            </dl>
+            <h3 class="govuk-heading-m">4. Common assault <span class="govuk-hint">committed on 6 January 2019</span></h3>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2 March 2019
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Conviction date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        29 Feburary 2020
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence length
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2 years
+                    </dd>
+                </div>
+            </dl>
+            <h2 class="govuk-heading-l">Adjustments</h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Number of days on remand
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        44 days
+                        <p class="govuk-hint">remanded between 15 January 2020 and 28 February 2020</p>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Number of days tagged bail
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        10
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Additional days awarded (ADA)
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        14
+                        <p class="govuk-hint">imposed on 15 April 2020</p>
+                    </dd>
+                </div>
+            </dl>
+<!--             <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Why you can't see some information
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    Some dates and details are not included as according to <a href="http://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf" target="_blank">PSI 03/2015 (opens in new tab)</a> they are not relevant to this person's circumstances.
+                </div>
+            </details> -->
+            <h2 class="govuk-heading-m govuk-!-margin-top-9">Confirm and calculate release dates</h2>
+            <p class="govuk-body">By submitting this calculation you are confirming that, to the best of your knowledge, it is correct. It will be used to calculate release dates.</p>
+            <a href="calculation-summary.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                Confirm and submit
+            </a>
+            <p><a href="#">There is something wrong with this calculation</a></p>
+            <!-- <form action="/form-handler" method="post" novalidate>
+                        <input type="hidden" name="answers-checked" value="true">
+                        <button class="govuk-button" data-module="govuk-button">
+                            Submit for calculation
+                        </button>
+                    </form> -->
+        </div>
+    </div>
+</main>
+{% endblock %}
