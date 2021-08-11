@@ -16,3 +16,15 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/related-items";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.custom-card {
+  border: 1px solid #bfc1c3;
+  padding: 20px 20px 0px 20px;
+  margin: 30px 0;
+}
+
+.custom-card-main:after {
+  content: "";
+  display: block;
+  clear: both;
+}
