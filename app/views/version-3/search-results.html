@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Calculate release dates - start
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: 'offender-details.html'
+},
+serviceLabel: {
+text: 'Calculate release dates',
+href: '../index.html'
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">Search results</h1>
+<!--       <h2 class="gem-c-heading govuk-heading-s">2 results</h2> -->
+        <table id="reports-table" class="govuk-table" data-qa="reports-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header"></th>
+                    <th scope="col" class="govuk-table__header">Name</th>
+                    <th scope="col" class="govuk-table__header">Prisoner ID</th>
+                    <th scope="col" class="govuk-table__header">Prison</th>
+                    <th scope="col" class="govuk-table__header"></th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body govuk-body-s">
+                <tr class="govuk-table__row odd">
+                    <td class="govuk-table__cell">
+                        <img src="{{ asset_path }}images/prisoner.jpeg" alt="Headshot of B4166LG" height="110" width="90">
+                    </td>
+                    <td class="govuk-table__cell govuk-!-padding-top-8">Alan Capone</td>
+                    <td class="govuk-table__cell govuk-!-padding-top-8">B4166LG</td>
+                    <td class="govuk-table__cell govuk-!-padding-top-8">HMP Moorland</td>
+                    <td class="govuk-table__cell govuk-!-padding-top-7">
+                        <a href="check-nomis-information.html" role="button" draggable="false" class="govuk-button govuk-button--tertiary" data-module="govuk-button">
+                            Calculate release dates
+                        </a>
+                    </td>
+                </tr>
+                                <tr class="govuk-table__row odd">
+                    <td class="govuk-table__cell">
+                        <img src="{{ asset_path }}images/prisoner-2.jpeg" alt="Headshot of A4145LG" height="110" width="90">
+                    </td>
+                    <td class="govuk-table__cell govuk-!-padding-top-8">Alan Capone</td>
+                    <td class="govuk-table__cell govuk-!-padding-top-8">A4145LG</td>
+                    <td class="govuk-table__cell govuk-!-padding-top-8">HMP Leeds</td>
+                    <td class="govuk-table__cell govuk-!-padding-top-7">
+                        <a href="#" role="button" draggable="false" class="govuk-button govuk-button--tertiary" data-module="govuk-button">
+                            Calculate release dates
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

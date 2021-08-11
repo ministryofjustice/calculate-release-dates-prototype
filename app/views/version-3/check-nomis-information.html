@@ -15,13 +15,13 @@ href: '../index.html'
 }) }}
 {% endblock %}
 {% block beforeContent %}
-<dl class="govuk-summary-list">
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__value">
-            <span class="govuk-!-margin-right-5"><strong>Offender name: </strong>{{ data['offender-name'] }}</span> <span><strong>Offender number: </strong>{{ data['offender-number'] }}</span>
-        </dt>
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Offender name: </strong>Alan Capone</span><strong>Offender number: </strong>B4166LG</span>
+            </div>
+        </div>
     </div>
-</dl>
 <a class="govuk-back-link" href="javascript:history.back();">Back</a>
 {% endblock %}
 {% block content %}
@@ -31,7 +31,7 @@ href: '../index.html'
             <h1 class="govuk-heading-xl">Review sentence information from NOMIS</h1>
             <h2 class="govuk-heading-l">Sentences</h2>
             <p class="govuk-body">There are 4 offences included in this calculation.</p>
-            <h3 class="govuk-heading-m">1. Theft <span class="govuk-hint">committed on 2 March 2019</span></h3>
+            <h3 class="govuk-heading-m">1. Theft <span class="govuk-hint govuk-!-margin-top-1">committed on 2 March 2019</span></h3>
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
@@ -58,7 +58,7 @@ href: '../index.html'
                     </dd>
                 </div>
             </dl>
-            <h3 class="govuk-heading-m">2. Burglary <span class="govuk-hint">committed on 9 March 2019</span></h3>
+            <h3 class="govuk-heading-m">2. Burglary <span class="govuk-hint govuk-!-margin-top-1">committed on 9 March 2019</span></h3>
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
@@ -85,7 +85,7 @@ href: '../index.html'
                     </dd>
                 </div>
             </dl>
-            <h3 class="govuk-heading-m">3. Theft <span class="govuk-hint">committed on 10 March 2019</span></h3>
+            <h3 class="govuk-heading-m">3. Theft <span class="govuk-hint govuk-!-margin-top-1">committed on 10 March 2019</span></h3>
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
@@ -112,7 +112,7 @@ href: '../index.html'
                     </dd>
                 </div>
             </dl>
-            <h3 class="govuk-heading-m">4. Common assault <span class="govuk-hint">committed on 6 January 2019</span></h3>
+            <h3 class="govuk-heading-m">4. Common assault <span class="govuk-hint govuk-!-margin-top-1">committed on 6 January 2019</span></h3>
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
@@ -147,7 +147,7 @@ href: '../index.html'
                     </dt>
                     <dd class="govuk-summary-list__value">
                         44 days
-                        <p class="govuk-hint">remanded between 15 January 2020 and 28 February 2020</p>
+                        <p class="govuk-hint govuk-!-margin-top-2">remanded between 15 January 2020 and 28 February 2020</p>
                     </dd>
                 </div>
                 <div class="govuk-summary-list__row">
@@ -164,11 +164,11 @@ href: '../index.html'
                     </dt>
                     <dd class="govuk-summary-list__value">
                         14
-                        <p class="govuk-hint">imposed on 15 April 2020</p>
+                        <p class="govuk-hint govuk-!-margin-top-2">imposed on 15 April 2020</p>
                     </dd>
                 </div>
             </dl>
-<!--             <details class="govuk-details" data-module="govuk-details">
+            <!--             <details class="govuk-details" data-module="govuk-details">
                 <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text">
                         Why you can't see some information
@@ -183,7 +183,7 @@ href: '../index.html'
             <a href="calculation-summary.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
                 Confirm and submit
             </a>
-            <p><a href="#">There is something wrong with this calculation</a></p>
+            <p><a href="#">There is something wrong with this information</a></p>
             <!-- <form action="/form-handler" method="post" novalidate>
                         <input type="hidden" name="answers-checked" value="true">
                         <button class="govuk-button" data-module="govuk-button">

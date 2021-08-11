@@ -1,9 +1,3 @@
-<style>
-    .moj-timeline__item {
-        padding-left: 30px !important;
-    }
-</style>
-
 {% extends "layout.html" %}
 {% block pageTitle %}
 Calculation complete
@@ -21,167 +15,141 @@ href: '../index.html'
 }) }}
 {% endblock %}
 {% block beforeContent %}
-<dl class="govuk-summary-list">
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__value">
-            <span class="govuk-!-margin-right-5"><strong>Offender name: </strong>{{ data['offender-name'] }}</span> <span><strong>Offender number: </strong>{{ data['offender-number'] }}</span>
-        </dt>
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Offender name: </strong>Alan Capone</span><strong>Offender number: </strong>B4166LG</span>
+            </div>
+        </div>
     </div>
-</dl>
 <a class="govuk-back-link" href="javascript:history.back();">Back</a>
 {% endblock %}
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-panel govuk-panel--confirmation">
+        <!--         <div class="govuk-panel govuk-panel--confirmation">
             <h1 class="govuk-panel__title">Calculation complete</h1>
-        </div>
-        <h2 class="govuk-heading-l govuk-!-margin-top-9">Sentences</h2>
-        <!-- Timeline -->
-        <div class="moj-timeline">
-            <div class="moj-timeline__item">
-                <div class="moj-timeline__header">
-                   <h2 class="moj-timeline__title govuk-heading-m">Theft</h2>
-                    <p class="moj-timeline__byline">committed on 2 March 2019</p> 
-                </div>
-                <div class="moj-timeline__description" style="margin-top: 5px !important;">
-                    <table class="govuk-table">
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header govuk-!-font-size-16">Sentence date</th>
-                                <td class="govuk-table__cell govuk-!-font-size-16">29 Feburary 2020</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header govuk-!-font-size-16">Number length</th>
-                                <td class="govuk-table__cell govuk-!-font-size-16">2 months</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header govuk-!-font-size-16">Number of days in sentence</th>
-                                <td class="govuk-table__cell govuk-!-font-size-16">60</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="govuk-hint">Concurrent to</p>
-                <div class="moj-timeline__description">
-                    <div class="govuk-!-margin-bottom-1">
-                        <h2 class="moj-timeline__title govuk-heading-m">Burglary</h2>
-                        <p class="moj-timeline__byline">committed on 9 March 2019</p>
-                    </div>
-                    <table class="govuk-table">
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header govuk-!-font-size-16">Sentence date</th>
-                                <td class="govuk-table__cell govuk-!-font-size-16">29 Feburary 2020</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header govuk-!-font-size-16">Sentence length</th>
-                                <td class="govuk-table__cell govuk-!-font-size-16">2 years</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header govuk-!-font-size-16">Number of days in sentence</th>
-                                <td class="govuk-table__cell govuk-!-font-size-16">730</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="govuk-hint">Concurrent to</p>
-                <div class="moj-timeline__description">
-                    <div class="govuk-!-margin-bottom-1">
-                        <h2 class="moj-timeline__title govuk-heading-m">Theft</h2>
-                        <p class="moj-timeline__byline">committed on 10 March 2019</p>
-                    </div>
-                    <table class="govuk-table">
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header govuk-!-font-size-16">Sentence date</th>
-                                <td class="govuk-table__cell govuk-!-font-size-16">29 Feburary 2020</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header govuk-!-font-size-16">Sentence length</th>
-                                <td class="govuk-table__cell govuk-!-font-size-16">4 months</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header govuk-!-font-size-16">Number of days in sentence</th>
-                                <td class="govuk-table__cell govuk-!-font-size-16">120</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="moj-timeline__item">
-                <div class="moj-timeline__header">
-                    <h2 class="moj-timeline__title">Common assault</h2>
-                    <p class="moj-timeline__byline">commited on 6 Janurary 2019</p>
-                </div>
-                <table class="govuk-table">
-                    <tbody class="govuk-table__body">
-                        <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__header govuk-!-font-size-16">Sentence date</th>
-                            <td class="govuk-table__cell govuk-!-font-size-16">29 Februrary 2020</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__header govuk-!-font-size-16">Sentence length</th>
-                            <td class="govuk-table__cell govuk-!-font-size-16">2 years</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__header govuk-!-font-size-16">Number of days in sentence</th>
-                            <td class="govuk-table__cell govuk-!-font-size-16">120</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <h2 class="govuk-heading-m govuk-!-margin-top-9">Adjustments</h2>
+        </div> -->
+        <h1 class="govuk-heading-xl">Review calculation before submitting</h1>
+        <!-- Breakdown -->
+        <h2 class="govuk-heading-l">Concurrent sentences</h2>
+        <!-- <h3 class="govuk-heading-m">Sentence details</h3> -->
         <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Sentence</th>
+                    <th class="govuk-table__header" scope="col">Sentence length</th>
+                    <!-- <th class="govuk-table__header govuk-table__header--numeric" scope="col"></th> -->
+                </tr>
+            </thead>
             <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-!-font-size-16">Days in remand</th>
-                    <td class="govuk-table__cell govuk-!-font-size-16">44</td>
+                    <td class="govuk-table__cell" style="width: 75%;">Theft<br><span class="govuk-hint govuk-!-margin-top-2" style="margin-bottom: 0">Committed on 2 March 2019</span></td>
+                    <td class="govuk-table__cell">2 months <br><span class="govuk-hint govuk-!-margin-top-2" style="margin-bottom: 0">60 days</span></td>
+                    <!-- <td class="govuk-table__cell govuk-table__header--numeric"></td> -->
                 </tr>
                 <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-!-font-size-16">Number of days tagged bail</th>
-                    <td class="govuk-table__cell govuk-!-font-size-16">10</td>
+                    <td class="govuk-table__cell" style="width: 75%;">Burglary<br><span class="govuk-hint govuk-!-margin-top-2" style="margin-bottom: 0">Committed on 9 March 2019</span></td>
+                    <td class="govuk-table__cell">2 years<br><span class="govuk-hint govuk-!-margin-top-2" style="margin-bottom: 0">730 days</span></td>
+                    <!-- <td class="govuk-table__cell govuk-table__header--numeric"></td> -->
                 </tr>
                 <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-!-font-size-16">Additional days awarded (ADA)</th>
-                    <td class="govuk-table__cell govuk-!-font-size-16">14</td>
+                    <td class="govuk-table__cell" style="width: 75%;">Theft<br><span class="govuk-hint govuk-!-margin-top-2" style="margin-bottom: 0">Committed on 10 March 2019</span></td>
+                    <td class="govuk-table__cell">4 months <br><span class="govuk-hint govuk-!-margin-top-2" style="margin-bottom: 0">120 days</span></td>
+                    <!-- <td class="govuk-table__cell govuk-table__header--numeric"></td> -->
+                </tr>
+                <tr class="govuk-table__row" style="border-bottom: hidden; margin-bottom: 0;">
+                    <td class="govuk-table__cell govuk-table__header" style="padding-top: 60px; width: 75%;">Length of longest sentence (days):</td>
+                    <td class="govuk-table__cell" style="padding-top: 60px;">730</td>
+                </tr>
+                <tr class="govuk-table__row" style="border-bottom: hidden;">
+                    <td class="govuk-table__cell govuk-table__header" style="width: 75%; padding-top: 0px;">Running total so far (days):</td>
+                    <td class=" govuk-table__cell" style="padding-top: 0px">730</td>
                 </tr>
             </tbody>
         </table>
-    </div>
-<!--     <h2 class="govuk-heading-m govuk-!-margin-top-9">Effective release dates</h2>
-    <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-top-5">
+        <!-- <p class="govuk-!-font-weight-bold">Length of longest sentence (days):
+        <p class="govuk-body">730 days</p> -->
+        <h2 class="govuk-heading-l govuk-!-margin-top-9">Consecutive sentences</h2>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Sentence</th>
+                    <th class="govuk-table__header" scope="col">Sentence length</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" style="width: 75%;">Common assault<br><span class="govuk-hint govuk-!-margin-top-2" style="margin-bottom: 0">Committed on 6 January</span></td>
+                    <td class="govuk-table__cell">2 years <br><span class="govuk-hint govuk-!-margin-top-2" style="margin-bottom: 0">730 days</span></td>
+                </tr>
+                <tr class="govuk-table__row" style="border-bottom: hidden;">
+                    <td class="govuk-table__cell govuk-table__header" style="width: 75%; padding-top: 60px;">Total length of consecutive sentences (days):</td>
+                    <td class=" govuk-table__cell" style="padding-top:60px">730</td>
+                </tr>
+                <tr class="govuk-table__row" style="border-bottom: hidden;">
+                    <td class="govuk-table__cell govuk-table__header" style="width: 75%; padding-top: 0px;">Running total so far (days):</td>
+                    <td class=" govuk-table__cell" style="padding-top: 0px">1460</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="govuk-heading-l govuk-!-margin-top-9">Adjustments</h2>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Adjustment</th>
+                    <th class="govuk-table__header" scope="col">Days + / -</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" style="width: 75%">Remand</td>
+                    <td class="govuk-table__cell">- 44</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Tagged bail</td>
+                    <td class="govuk-table__cell">- 10</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Additional days awarded (ADA)</td>
+                    <td class="govuk-table__cell">+ 14</td>
+                </tr>
+                <tr class="govuk-table__row" style="border-bottom: hidden;">
+                    <td class="govuk-table__cell govuk-table__header" style="width: 75%; padding-top: 60px;">Total adjustments (days):</td>
+                    <td class=" govuk-table__cell" style="padding-top:60px">-11</td>
+                </tr>
+                <tr class="govuk-table__row" style="border-bottom: hidden;">
+                    <td class="govuk-table__cell govuk-table__header" style="width: 75%; padding-top: 0px;">Running total so far (days):</td>
+                    <td class=" govuk-table__cell" style="padding-top: 0px">1449</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="govuk-heading-l govuk-!-margin-top-9">Effective release dates</h2>
+            <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-top-5">
         <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-                Effective sentence and licence expiry date (SLED)
+            <dt class="govuk-summary-list__key" style="width: 75%">
+                Effective sentence and licence expiry date (SLED):
             </dt>
             <dd class="govuk-summary-list__value">
-                Monday, 8 January 2024
-                <div id="sunday-hint" class="govuk-hint govuk-!-margin-top-2">
-                    Sunday, 14 January 2024 minus 6 days of adjustments
+                Friday, 15 Feburary 2024
+                <div id="sunday-hint" class="govuk-hint govuk-!-margin-top-2 govuk-!-margin-top-2">
+                    - 2 days as 17 Feburary 2024 is a Sunday
                 </div>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-                Effective conditonal release date (CRD)
+                Effective conditonal release date (CRD):
             </dt>
             <dd class="govuk-summary-list__value">
-                Friday, 23 September 2022
+                Wednesday, 23 Feburary 2022
                 <div id="sunday-hint" class="govuk-hint govuk-!-margin-top-2">
-                    Saturday 24 September 2022 minus 1 day
+                    Rounded up as CRD is 724.5 days
                 </div>
             </dd>
         </div>
+        <button class="govuk-button govuk-!-margin-top-8" data-module="govuk-button">Confirm and submit</button>
     </dl>
-    <div class="govuk-!-margin-top-5"><a href="#" class="govuk-link">Print this page</a></div>
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-    <a href="offender-details.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-        Calculate another sentence
-        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-        </svg></a> -->
-</div>
+    </div>
 </div>
 {% endblock %}
