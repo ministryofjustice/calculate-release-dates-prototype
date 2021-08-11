@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Calculate release dates - start
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+  organisationLabel: {
+    text: 'HMPPS',
+    href: 'offender-details.html'
+  },
+  serviceLabel: {
+    text: 'Calculate release dates',
+    href: '../index.html'
+  }
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-8">
+    <h1 class="govuk-fieldset__heading govuk-heading-xl">
+      Search for a person
+    </h1>
+  </legend>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-label--m" for="prisoner-first-name">
+      First name
+    </label>
+    <input class="govuk-input" id="prisoner-first-name" name="prisoner-first-name" type="text" autocomplete="off"></div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-label--m" for="prisoner-last-name">
+      Last name
+    </label>
+    <input class="govuk-input id="prisoner-last-name" name="prisoner-last-name" type="text" autocomplete="off"></div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-label--m" for="prisoner-id">
+      Prisonser identifier
+    </label>
+    <div id="sort-code-hint" class="govuk-hint">
+    For example, G8483UJ
+  </div>
+    <input class="govuk-input govuk-input--width-10" id="prisoner-id" name="prisoner-id" type="text" autocomplete="off"></div>
+</fieldset>
+            <a href="search-results.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                Search
+            </a>
+    </div>
+</div>
+{% endblock %}
