@@ -15,13 +15,13 @@ href: '../index.html'
 }) }}
 {% endblock %}
 {% block beforeContent %}
-    <div class="moj-identity-bar">
-        <div class="moj-identity-bar__container">
-            <div class="moj-identity-bar__details">
-                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Offender name: </strong>Alan Capone</span><strong>Offender number: </strong>B4166LG</span>
-            </div>
+<div class="moj-identity-bar">
+    <div class="moj-identity-bar__container">
+        <div class="moj-identity-bar__details">
+            <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Offender name: </strong>Alan Capone</span><strong>Offender number: </strong>B4166LG</span>
         </div>
     </div>
+</div>
 <a class="govuk-back-link" href="javascript:history.back();">Back</a>
 {% endblock %}
 {% block content %}
@@ -55,7 +55,7 @@ href: '../index.html'
                         Sentence length
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        2 months
+                        2 months concurrent
                     </dd>
                 </div>
             </dl>
@@ -82,7 +82,7 @@ href: '../index.html'
                         Sentence length
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        2 years
+                        2 years concurrent
                     </dd>
                 </div>
             </dl>
@@ -109,7 +109,7 @@ href: '../index.html'
                         Sentence length
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        4 months
+                        4 months concurrent
                     </dd>
                 </div>
             </dl>
@@ -136,7 +136,7 @@ href: '../index.html'
                         Sentence length
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        2 years
+                        2 years consecutive to sentence 2
                     </dd>
                 </div>
             </dl>
@@ -147,8 +147,8 @@ href: '../index.html'
                         Number of days on remand
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        44 days
-                        <p class="govuk-hint govuk-!-margin-top-2">remanded between 15 January 2020 and 28 February 2020</p>
+                        15 days
+                        <!--                         <p class="govuk-hint govuk-!-margin-top-2">remanded between 15 January 2020 and 28 February 2020</p> -->
                     </dd>
                 </div>
                 <div class="govuk-summary-list__row">
@@ -165,7 +165,7 @@ href: '../index.html'
                     </dt>
                     <dd class="govuk-summary-list__value">
                         14
-                        <p class="govuk-hint govuk-!-margin-top-2">imposed on 15 April 2020</p>
+                        <p class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">imposed on 15 April 2020</p>
                     </dd>
                 </div>
             </dl>
@@ -179,18 +179,22 @@ href: '../index.html'
                     Some dates and details are not included as according to <a href="http://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf" target="_blank">PSI 03/2015 (opens in new tab)</a> they are not relevant to this person's circumstances.
                 </div>
             </details> -->
-            <h2 class="govuk-heading-m govuk-!-margin-top-9">Confirm and calculate release dates</h2>
-            <p class="govuk-body">By submitting this calculation you are confirming that, to the best of your knowledge, it is correct. It will be used to calculate release dates.</p>
+            <h2 class="govuk-heading-m govuk-!-margin-top-9">Now create your calculation</h2>
+            <p class="govuk-body">This will calculate Alan Capones’s release dates. It will not be saved to NOMIS until you have reviewed the calculation.</p>
             <a href="calculation-summary.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-                Confirm and submit
+                Create calculation
             </a>
-            <p><a href="#">There is something wrong with this information</a></p>
-            <!-- <form action="/form-handler" method="post" novalidate>
-                        <input type="hidden" name="answers-checked" value="true">
-                        <button class="govuk-button" data-module="govuk-button">
-                            Submit for calculation
-                        </button>
-                    </form> -->
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Some information is wrong
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    You can edit this information in NOMIS. It will automatically update here.
+                    If you think the service isn’t working properly, you can also <a href="#">contact the Calculate release dates team.</a>
+                </div>
+            </details>
         </div>
     </div>
 </main>
