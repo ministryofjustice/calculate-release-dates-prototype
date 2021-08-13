@@ -39,7 +39,7 @@
     "inquirer": "^7.1.0",
     "keypather": "^3.0.0",
     "marked": "^2.0.0",
-    "next": "^11.0.1",
+    "next": "^11.1.0",
     "notifications-node-client": "^4.7.2",
     "nunjucks": "^3.2.1",
     "portscanner": "^2.1.1",
