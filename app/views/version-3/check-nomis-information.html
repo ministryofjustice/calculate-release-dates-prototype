@@ -29,9 +29,10 @@ href: '../index.html'
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
             <h1 class="govuk-heading-xl">Check NOMIS information about Joe Bloggs</h1>
-            <p class="govuk-body" onload="getDate()">Last updated: 12 August 2020 at 12:35pm<!-- <span class="currentDate"></span> --></p>
+            <p class="govuk-body">Last updated: <span id="currentDate">12 August 2020 at 11:35</span>
+            </p>
             <h2 class="govuk-heading-l">Sentences</h2>
-            <p class="govuk-body">There are 4 offenses included in this calculation.</p>
+            <p class="govuk-body">There are 4 offences included in this calculation.</p>
             <h3 class="govuk-heading-m">1. Stealing from shops and stalls (shoplifting) <span class="govuk-hint govuk-!-margin-top-1">Committed on 2 March 2019</span></h3>
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                 <div class="govuk-summary-list__row">
@@ -59,7 +60,7 @@ href: '../index.html'
                     </dd>
                 </div>
             </dl>
-            <h3 class="govuk-heading-m">2. Burglary dwelling - with intent to steal <span class="govuk-hint govuk-!-margin-top-1">Committed on 9 March 2020</span></h3>
+            <h3 class="govuk-heading-m" id="offence2">2. Burglary other than dwelling with intent to steal <span class="govuk-hint govuk-!-margin-top-1">Committed on 9 March 2020</span></h3>
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
@@ -147,7 +148,7 @@ href: '../index.html'
                         Number of days on remand
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        15 days
+                        45
                         <!--                         <p class="govuk-hint govuk-!-margin-top-2">remanded between 15 January 2020 and 28 February 2020</p> -->
                     </dd>
                 </div>
@@ -198,15 +199,5 @@ href: '../index.html'
         </div>
     </div>
 </main>
+<a onclick="demo()" href="javascript:void(0);" style="float: right;"><span class="govuk-hint govuk-!-font-size-14">Demo</span></a>
 {% endblock %}
-
-<script>
-function getDate() {
-  var today = new Date();
-  var time = today.getTime();
-  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-  document.getElementById("currentDate").value = date + time;
-}
-</script>
-
-
