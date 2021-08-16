@@ -10,3 +10,23 @@
 {% if useAutoStoreData %}
   <script src="/public/javascripts/auto-store-data.js"></script>
 {% endif %}
+
+
+<script>
+  function getDate() {
+    var today = new Date();
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var date = today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear() + " at " + today.getHours() + ":" + (today.getMinutes()<10?'0':'') + today.getMinutes();
+    console.log("Date is: " + date);
+    document.getElementById("currentDate").innerHTML = date;
+}
+
+function correctMistake() {
+  document.getElementById("offence2").innerHTML = "2. Burglary dwelling - with intent to steal" + ['<span class="govuk-hint govuk-!-margin-top-1">Committed on 9 March 2020</span>'] 
+}
+
+function demo() {
+  getDate();
+  correctMistake();
+}
+</script>
