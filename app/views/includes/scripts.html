@@ -1,32 +1,45 @@
 <!-- Javascript -->
 <script src="/public/javascripts/jquery-1.11.3.js"></script>
-
 {% for scriptUrl in extensionConfig.scripts %}
-  <script src="{{scriptUrl}}"></script>
+<script src="{{scriptUrl}}"></script>
 {% endfor %}
-
 <script src="/public/javascripts/application.js"></script>
-
 {% if useAutoStoreData %}
-  <script src="/public/javascripts/auto-store-data.js"></script>
+<script src="/public/javascripts/auto-store-data.js"></script>
 {% endif %}
-
-
 <script>
-  function getDate() {
+function getDate() {
     var today = new Date();
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var date = today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear() + " at " + today.getHours() + ":" + (today.getMinutes()<10?'0':'') + today.getMinutes();
-    console.log("Date is: " + date);
+    var date = today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear() + " at " + today.getHours() + ":" + (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
+    console.log("Sentence 2 updated " + "\n" + "Last updated is: " + date);
     document.getElementById("currentDate").innerHTML = date;
 }
 
 function correctMistake() {
-  document.getElementById("offence2").innerHTML = "2. Burglary dwelling - with intent to steal" + ['<span class="govuk-hint govuk-!-margin-top-1">Committed on 9 March 2020</span>'] 
+    document.getElementById("offence2").innerHTML = "2. Burglary dwelling - with intent to steal" + ['<span class="govuk-hint govuk-!-margin-top-1">Committed on 9 March 2020</span>']
 }
 
 function demo() {
-  getDate();
-  correctMistake();
+    getDate();
+    correctMistake();
+}
+
+function missingNOMISInfo() {
+
+    var visible = new Boolean();
+
+    let errorMessage = document.getElementById("missingNOMISInfoError");
+    let style = window.getComputedStyle(errorMessage);
+
+    if (style.display == "block") {
+        document.getElementById("missingNOMISInfoError").style.display = "none";
+        visible = false;
+        console.log("Missing NOMIS info visible: " + visible);
+    } else if (style.display == "none") {
+        document.getElementById("missingNOMISInfoError").style.display = "block";
+        visible = true;
+        console.log("Missing NOMIS info visible: " + visible);
+    }
 }
 </script>

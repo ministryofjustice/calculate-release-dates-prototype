@@ -4,14 +4,26 @@ Calculate release dates - start
 {% endblock %}
 {% block header %}
 {{ mojHeader({
-organisationLabel: {
-text: 'HMPPS',
-href: 'offender-details.html'
-},
-serviceLabel: {
-text: 'Calculate release dates',
-href: '../index.html'
-}
+  organisationLabel: {
+    text: 'HMPPS',
+    href: '#'
+  },
+  serviceLabel: {
+    text: 'Calculate release dates',
+    href: 'start'
+  },
+  navigation: {
+    label: 'Account navigation',
+    items: [{
+      text: 'Prototype user',
+      href: '#',
+      active: true
+    }, {
+      text: 'Sign out',
+      href: '#'
+    }]
+  }
+
 }) }}
 {% endblock %}
 {% block beforeContent %}
