@@ -6,11 +6,22 @@ Review calculation before submitting
 {{ mojHeader({
 organisationLabel: {
 text: 'HMPPS',
-href: 'offender-details.html'
+href: '#'
 },
 serviceLabel: {
 text: 'Calculate release dates',
-href: '../index.html'
+href: 'start'
+},
+navigation: {
+label: 'Account navigation',
+items: [{
+text: 'Prototype user',
+href: '#',
+active: true
+}, {
+text: 'Sign out',
+href: '#'
+}]
 }
 }) }}
 {% endblock %}
@@ -25,10 +36,23 @@ href: '../index.html'
 <a class="govuk-back-link" href="javascript:history.back();">Back</a>
 {% endblock %}
 {% block content %}
-<main class="govuk-main-wrapper " id="main-content" role="main">
+<main class="govuk-main-wrapper" style="padding-top: 0;" id="main-content" role="main">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
-            <h1 class="govuk-heading-xl">Check NOMIS information about Joe Bloggs</h1>
+            <div class="moj-banner moj-banner--warning" id="missingNOMISInfoError">
+                <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                    <path d="M13.6,15.4h-2.3v-4.5h2.3V15.4z M13.6,19.8h-2.3v-2.2h2.3V19.8z M0,23.2h25L12.5,2L0,23.2z" />
+                </svg>
+                <div class="moj-banner__message">
+                    <span class="moj-banner__assistive">Warning</span>The following information needed for this calculation is missing from NOMIS:
+                    <ul>
+                        <li>A thing</li>
+                        <li>Another thing</li>
+                    </ul>
+                    Enter this information into NOMIS before returning to this service to calculate a sentence.
+                </div>
+            </div>
+            <h1 class="govuk-heading-xl govuk-!-margin-top-8">Check NOMIS information about Joe Bloggs</h1>
             <p class="govuk-body">Last updated: <span id="currentDate" aria-live="polite">12 August 2020 at 11:35</span>
             </p>
             <h2 class="govuk-heading-l">Sentences</h2>
@@ -199,5 +223,5 @@ href: '../index.html'
         </div>
     </div>
 </main>
-<a onclick="demo()" href="javascript:void(0);" style="float: right;"><span class="govuk-hint govuk-!-font-size-14">Demo</span></a>
+<p class="govuk-hint govuk-!-font-size-14"><a onclick="demo()" href="javascript:void(0);">Update sentence 2</a> | <a onclick="missingNOMISInfo()" href="javascript:void(0);">Show/hide missing information error message</a>
 {% endblock %}
