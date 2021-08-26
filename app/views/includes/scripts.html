@@ -28,18 +28,52 @@ function demo() {
 function missingNOMISInfo() {
 
     var visible = new Boolean();
+    var titleSpacing = document.getElementById("checkNOMISHeading");
 
     let errorMessage = document.getElementById("missingNOMISInfoError");
     let style = window.getComputedStyle(errorMessage);
 
     if (style.display == "block") {
         document.getElementById("missingNOMISInfoError").style.display = "none";
+        titleSpacing.classList.remove("govuk-!-margin-top-8");
         visible = false;
         console.log("Missing NOMIS info visible: " + visible);
     } else if (style.display == "none") {
         document.getElementById("missingNOMISInfoError").style.display = "block";
+        titleSpacing.classList.add("govuk-!-margin-top-8");
         visible = true;
         console.log("Missing NOMIS info visible: " + visible);
     }
 }
+
+function toggleOffenceDateError() {
+    var div = document.getElementById("noOffenceDate");
+
+    if (div.style.display === "none") {
+        div.style.display = "block";
+    } else {
+        div.style.display = "none";
+    }
+}
+
+function toggleSDSError() {
+    var div = document.getElementById("SDSOnly");
+
+    if (div.style.display === "none") {
+        div.style.display = "block";
+    } else {
+        div.style.display = "none";
+    }
+}
+
+function toggleNoBookingError() {
+    var div = document.getElementById("noBooking");
+
+    if (div.style.display === "none") {
+        div.style.display = "block";
+    } else {
+        div.style.display = "none";
+    }
+}
+
 </script>
