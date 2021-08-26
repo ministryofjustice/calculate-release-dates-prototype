@@ -29,7 +29,7 @@ href: '#'
 <div class="moj-identity-bar">
     <div class="moj-identity-bar__container">
         <div class="moj-identity-bar__details">
-            <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Offender name: </strong>Joe Bloggs</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">1 February 1990</span><strong>Offender number: </strong>B4166LG
+            <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Offender name: </strong>Joe Bloggs</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">1 February 1990</span><strong>Prison number: </strong>B4166LG
         </div>
     </div>
 </div>
@@ -39,20 +39,15 @@ href: '#'
 <main class="govuk-main-wrapper" style="padding-top: 0;" id="main-content" role="main">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
-            <div class="moj-banner moj-banner--warning" id="missingNOMISInfoError">
-                <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
-                    <path d="M13.6,15.4h-2.3v-4.5h2.3V15.4z M13.6,19.8h-2.3v-2.2h2.3V19.8z M0,23.2h25L12.5,2L0,23.2z" />
-                </svg>
+            <div class="moj-banner" id="missingNOMISInfoError">
+                <h2 class="govuk-heading-m">You have entered multiple offences for a single sentence </h2>
                 <div class="moj-banner__message">
-                    <span class="moj-banner__assistive">Warning</span>The following information needed for this calculation is missing from NOMIS:
-                    <ul>
-                        <li>A thing</li>
-                        <li>Another thing</li>
-                    </ul>
-                    Enter this information into NOMIS before returning to this service to calculate a sentence.
+                    <p class="govuk-body">This does not comply with <a href="https://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf">PSI 03/2015 (opens in new tab)</a>. We have automatically created a new sentence for each offence.</p>
+                    <h3 class="govuk-heading-s">Check these new sentences are correct</h3>
+                    <p class="govuk-body">If they are not, edit them in NOMIS.</p>
                 </div>
             </div>
-            <h1 class="govuk-heading-xl govuk-!-margin-top-8">Check NOMIS information about Joe Bloggs</h1>
+            <h1 class="govuk-heading-xl govuk-!-margin-top-8" id="checkNOMISHeading">Check NOMIS information about Joe Bloggs</h1>
             <p class="govuk-body">Last updated: <span id="currentDate" aria-live="polite">12 August 2020 at 11:35</span>
             </p>
             <h2 class="govuk-heading-l">Sentences</h2>
@@ -223,5 +218,5 @@ href: '#'
         </div>
     </div>
 </main>
-<p class="govuk-hint govuk-!-font-size-14"><a onclick="demo()" href="javascript:void(0);">Update sentence 2</a> | <a onclick="missingNOMISInfo()" href="javascript:void(0);">Show/hide missing information error message</a>
-{% endblock %}
+<p class="govuk-hint govuk-!-font-size-14"><a onclick="demo()" href="javascript:void(0);">Update sentence 2</a> | <a onclick="missingNOMISInfo()" href="javascript:void(0);">Show/hide message</a>
+    {% endblock %}
