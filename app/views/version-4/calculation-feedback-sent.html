@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Calculation complete
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: '#'
+},
+serviceLabel: {
+text: 'Calculate release dates',
+href: 'start'
+},
+navigation: {
+label: 'Account navigation',
+items: [{
+text: 'Prototype user',
+href: '#',
+active: true
+}, {
+text: 'Sign out',
+href: '#'
+}]
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">
+                    Your report has been sent
+                </h1>
+                <p class="govuk-body">Someting that will happen now. Someone will deal with this.</p>
+                <p class="govuk-body"><a href="">Calculate another release date using NOMIS information</a></p>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
