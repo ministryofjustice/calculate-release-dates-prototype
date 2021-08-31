@@ -30,13 +30,18 @@ href: '#'
 {% endblock %}
 {% block content %}
 <div class="govuk-width-container">
-    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 <h1 class="govuk-heading-xl">
                     Report a problem to the Calculate Release Dates team
                 </h1>
-                <div class="govuk-form-group">
+                <p class="govuk-body">When you report a problem, the team will get:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>your NOMIS ID</li>
+                    <li>a reference for the calculation you were doing</li>
+                </ul>
+                <p class="govuk-body">Your information will only be used to help with this problem.</p>
+                <div class="govuk-form-group govuk-!-margin-top-8">
                     <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
                             What went wrong?
                         </label>
@@ -51,6 +56,5 @@ href: '#'
                 </div>
             </div>
         </div>
-    </main>
 </div>
 {% endblock %}
