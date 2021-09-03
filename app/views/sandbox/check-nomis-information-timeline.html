@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Review calculation before submitting
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: '#'
+},
+serviceLabel: {
+text: 'Calculate release dates',
+href: 'start'
+},
+navigation: {
+label: 'Account navigation',
+items: [{
+text: 'Prototype user',
+href: '#',
+active: true
+}, {
+text: 'Sign out',
+href: '#'
+}]
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<div class="moj-identity-bar">
+    <div class="moj-identity-bar__container">
+        <div class="moj-identity-bar__details">
+            <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Offender name: </strong>Joe Bloggs</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">1 February 1990</span><strong>Prison number: </strong>B4166LG
+        </div>
+    </div>
+</div>
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl" id="checkNOMISHeading">Check NOMIS information about Joe Bloggs</h1>
+        <p class="govuk-body">Last updated: <span id="currentDate" aria-live="polite">12 August 2020 at 11:35</span>
+        </p>
+        <h2 class="govuk-heading-l">Sentences</h2>
+        <p class="govuk-body">There are 4 offences included in this calculation.</p>
+        <div class="moj-timeline">
+            <div class="moj-timeline__item">
+                <div class="moj-timeline__header">
+                    <h2 class="moj-timeline__title">2 years</h2>
+                </div>
+                <p class="moj-timeline__date">730 days</p>
+                <div class="moj-timeline__description">
+                    <h3 class="govuk-body-m">1. Stealing from shops and stalls (shoplifting)<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 2 March 2019</span></h3>
+                    <h3 class="govuk-body-m">2. Burglary other than dwelling with intent to steal<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 9 March 2020</span></h3>
+                    <h3 class="govuk-body-m">3. Stealing from shops and stalls (shoplifting)<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 10 March 2019</span></h3>
+                </div>
+            </div>
+            <div class="moj-timeline__item">
+                <div class="moj-timeline__header">
+                    <h2 class="moj-timeline__title">2 years</h2>
+                </div>
+                <p class="moj-timeline__date">730 days</p>
+                <div class="moj-timeline__description">
+                    <h3 class="govuk-body-m">4. Common assault and battery<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 6 January</span></h3>
+                </div>
+            </div>
+            <div class="moj-timeline__item">
+                <div class="moj-timeline__header">
+                    <h2 class="moj-timeline__title">Total sentence length: 4 years</h2>
+                </div>
+                <p class="moj-timeline__date">1460 days (before adjustments)</p>
+            </div>
+            <!-- <table class="govuk-table" style="table-layout:fixed; width: 100%;">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col" style="width: 60%">Sentence</th>
+                    <th class="govuk-table__header" scope="col" style="width: 20%"></th>
+                    <th class="govuk-table__header" scope="col" style="width: 20%"></th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">1. Stealing from shops and stalls (shoplifting)<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 2 March 2019</span></td>
+                    <td class="govuk-table__cell">Sentence date: <br> Conviction date: <br> Sentence length:</td>
+                    <td class="govuk-table__cell">29 February 2020<br>29 February 2020<br>2 months
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">2. Burglary other than dwelling with intent to steal<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 9 March 2020</span></td>
+                    <td class="govuk-table__cell">Sentence date: <br> Conviction date: <br> Sentence length:</td>
+                    <td class="govuk-table__cell">2 March 2019<br>29 February 2020<br>2 years
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">3. Stealing from shops and stalls (shoplifting)<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 10 March 2019</span></td>
+                    <td class="govuk-table__cell">Sentence date: <br> Conviction date: <br> Sentence length:</td>
+                    <td class="govuk-table__cell">2 March 2019<br>29 February 2020<br>4 months
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">4. Common assault and battery<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 6 January</span></td>
+                    <td class="govuk-table__cell">Sentence date: <br> Conviction date: <br> Sentence length:</td>
+                    <td class="govuk-table__cell">2 March 2019<br>29 February 2020<br>2 years
+                    </td>
+                </tr>
+            </tbody>
+        </table> -->
+        </div>
+    </div>
+    {% endblock %}
