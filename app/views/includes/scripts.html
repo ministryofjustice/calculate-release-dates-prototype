@@ -13,7 +13,7 @@ function getDate() {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var date = today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear() + " at " + today.getHours() + ":" + (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
     console.log("Sentence 2 updated " + "\n" + "Last updated is: " + date);
-    document.getElementById("currentDate").innerHTML = date;
+    document.getElementById("currentDate").innerHTML = "Last updated: " + date;
 }
 
 function correctMistake() {
