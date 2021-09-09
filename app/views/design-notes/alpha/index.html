@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Calculate release dates prototype
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: '#'
+},
+serviceLabel: {
+text: 'Calculate release dates design notes',
+href: '#'
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Alpha &nbsp;
+        </h1>
+        <nav>
+            <p class="govuk-body">Contents</p>
+            <ul class="govuk-list">
+                <li><a href="">Overview</a></li>
+                <li><a href="">Initial prototype</a></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+        <h2 class="govuk-heading-l">Overview</h2>
+        <p class="govuk-body">some kind of description about the alpha phase
+            <h2 class="govuk-heading-l govuk-!-margin-top-8 govuk-!-margin-bottom-6 ">Initial prototype</h2>
+            <h3 class="govuk-heading-m">What we did</h3>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Produced a prototype in Balsamiq (as an interaction designer had not yet joined the team)</li>
+                <li>Initial hypotheses were defined and prioritised in various workshops</li>
+            </ul>
+            <h3 class="govuk-heading-m">Our core hypotheses</h3>
+            <ol class="govuk-list govuk-list--number">
+                <li>
+                    <p class="govuk-!-font-weight-bold">WE BELIEVE</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">IF </span>we show a full sentence calculation breakdown at the end of the journey</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">FOR </span>all members of staff</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">THEN </span>this will help them trust the service</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">We would know this is true when </span>staff accept dates calculated by the service</p>
+                </li>
+                <li>
+                    <p class="govuk-!-font-weight-bold">WE BELIEVE</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">IF </span>we create a mandatory list of questions</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">FOR </span>all members of staff</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">THEN </span>we know they are considering all necessary information</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">We would know this is true when </span>when experienced members of staff feel everything necessary has been considered</p>
+                </li>
+            </ol>
+    </div>
+</div>
+{% endblock %}
