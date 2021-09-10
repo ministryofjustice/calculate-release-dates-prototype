@@ -23,26 +23,20 @@ href: '#'
         <h1 class="govuk-heading-xl">
             Alpha &nbsp;
         </h1>
-        <nav>
-            <p class="govuk-body">Contents</p>
-            <ul class="govuk-list">
-                <li><a href="">Overview</a></li>
-                <li><a href="">Initial prototype</a></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </nav>
         <h2 class="govuk-heading-l">Overview</h2>
-        <p class="govuk-body">some kind of description about the alpha phase
-            <h2 class="govuk-heading-l govuk-!-margin-top-8 govuk-!-margin-bottom-6 ">Initial prototype</h2>
+        <p class="govuk-body">In alpha teams try out different solutions to the problems they learnt about during discovery. We spent alpha building prototypes and testing different ideas.
+            <h2 class="govuk-heading-l govuk-!-margin-top-4 govuk-!-margin-bottom-6">Initial prototype</h2>
             <h3 class="govuk-heading-m">What we did</h3>
-            <ul class="govuk-list govuk-list--bullet">
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
                 <li>Produced a prototype in Balsamiq (as an interaction designer had not yet joined the team)</li>
                 <li>Initial hypotheses were defined and prioritised in various workshops</li>
+                <li>A <a href="../version-1/start.html">journey was mapped and defined</a> based on our discovery research</li>
+                <li>The prototype reflected this journey and otherwise followed the GOV.UK design system and content design guidelines</li>
+                <li>The order of the design approximated the order of the paper calculation sheet</li>
             </ul>
-            <h3 class="govuk-heading-m">Our core hypotheses</h3>
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Our core hypotheses</h3>
             <ol class="govuk-list govuk-list--number">
-                <li>
+                <li class="govuk-!-margin-bottom-6">
                     <p class="govuk-!-font-weight-bold">WE BELIEVE</p>
                     <p class="govuk-body"><span class="govuk-!-font-weight-bold">IF </span>we show a full sentence calculation breakdown at the end of the journey</p>
                     <p class="govuk-body"><span class="govuk-!-font-weight-bold">FOR </span>all members of staff</p>
@@ -57,6 +51,47 @@ href: '#'
                     <p class="govuk-body"><span class="govuk-!-font-weight-bold">We would know this is true when </span>when experienced members of staff feel everything necessary has been considered</p>
                 </li>
             </ol>
+            <h2 class="govuk-heading-l govuk-!-margin-top-4 govuk-!-margin-bottom-6">1st prototype (never tested)</h2>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Remake of initial prototype in code using the prototyping kit</li>
+            </ul>
+            <h2 class="govuk-heading-l govuk-!-margin-top-4 govuk-!-margin-bottom-6">Tech pivot</h2>
+            <p class="govuk-body">Our tech team discovered that writing information to NOMIS carried a large risk. As such, it was decided that inputting data would be removed from the scope of our service. Our service would calculate release dates based on information in NOMIS. This changed the overall journey and the hypotheses we would test.</p>
+            <ol class="govuk-list govuk-list--number">
+                <li class="govuk-!-margin-bottom-6">
+                    <p class="govuk-!-font-weight-bold">WE BELIEVE</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">IF </span>we show the user everything currently inputted into NOMIS to review before the calculation is done</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">FOR </span>all users with a calculator mindset</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">THEN </span>the user can feel confident we have taken the specific information from NOMIS into account with the calculation</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">AND </span>gives them the opportunity to spot a mistake to fix in NOMIS before the calculation is done</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">We would know this is true when </span></p>
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>We understand how users feel about adapting any mistakes on NOMIS and returning to our service</li>
+                        <li>We understand if users having to pick closest to in NOMIS impacts their sense of trust for our service</li>
+                        <li>Users feel we have captured all necessary information from NOMIS to complete the calculation</li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="govuk-!-font-weight-bold">WE BELIEVE</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">IF </span>we show a full sentence calculation breakdown at the end of the journey</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">FOR </span>all members of staff</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">THEN </span>this will help them trust the service</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">We would know this is true when </span>staff accept dates calculated by the service</p>
+                </li>
+            </ol>
+            <h2 class="govuk-heading-l govuk-!-margin-top-4 govuk-!-margin-bottom-6">4th prototype iteration (not yet tested)</h2>
+            <p class="govuk-body">Changes made in this prototype:</p>
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li>The types of sentences covered in Alpha are emphasised on start page.</li>
+                <li>We included a message saying that some detail not included in calculation based on offender circumstances - such as HDC eligibility - emphasised at start of calculation</li>
+                <li>Added option to print calculation</li>
+                <li>Reordered calculation summary to prioritise release dates, based on findings from user research</li>
+                <li>Removed some information included in the calculation summary that duplicated that on the previous page, based in user research findings</li>
+                <li>Revised check NOMIS screen to accommodate longer lists of sentences</li>
+                <li>Added additional journeys for cancelling a calculation and reporting a problem</li>
+                <li>Added banner to explain multiple offences for single sentences being automatically split into multiple sentences by our service</li>
+                <li>Added errors for anticipated problems</li>
+            </ul>
     </div>
 </div>
 {% endblock %}
