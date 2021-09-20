@@ -28,10 +28,10 @@ href: '#'
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 {{ govukPhaseBanner({
-  tag: {
-    text: "alpha"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+tag: {
+text: "alpha"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 <a class="govuk-back-link" href="javascript:history.back();">Back</a>
 {% endblock %}
@@ -41,30 +41,88 @@ href: '#'
         <h1 class="govuk-heading-xl">
             Search for an offender
         </h1>
-        <fieldset class="govuk-fieldset">
-            <div class="govuk-form-group">
-                <label class="govuk-label govuk-label--m" for="prisoner-first-name">
-                    First name
-                </label>
-                <input class="govuk-input" id="prisoner-first-name" name="prisoner-first-name" type="text" autocomplete="off"></div>
-            <div class="govuk-form-group">
-                <label class="govuk-label govuk-label--m" for="prisoner-last-name">
-                    Last name
-                </label>
-                <input class="govuk-input id=" prisoner-last-name" name="prisoner-last-name" type="text" autocomplete="off"></div>
-            <div class="govuk-form-group">
-                <label class="govuk-label govuk-label--m" for="prison-number">
-                    Prison number
-                </label>
-                <div id="prison-number-hint" class="govuk-hint">
-                    For example, G8483UJ
+        <form novalidate="novalidate" class="prisoner-search__form" data-test="global-search-form" action="search-results.html">
+            <input type="hidden" name="referrer" value="">
+            <div class="horizontal-form govuk-!-margin-bottom-3">
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="searchText">
+                        Enter prisoner name or ID
+                    </label>
+                    <input class="govuk-input govuk-!-width-full" id="searchText" name="searchText" type="text" data-test="global-search-text">
                 </div>
-                <input class="govuk-input govuk-input--width-10" id="prison-number" name="prison-number" type="text" autocomplete="off">
+                <button type="submit" class="govuk-button" data-module="govuk-button" data-test="global-search-submit">
+                    Search
+                </button>
             </div>
-        </fieldset>
-        <a href="search-results.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-            Search
-        </a>
+            <details class="govuk-details govuk-!-margin-bottom-0" data-module="govuk-details" data-test="global-search-filters-container">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Filters
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="locationFilter">
+                            Location status of prisoner
+                        </label>
+                        <select class="govuk-select" id="locationFilter" name="locationFilter" data-test="location-filter">
+                            <option value="ALL">All</option>
+                            <option value="IN">Inside</option>
+                            <option value="OUT">Outside</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="genderFilter">
+                            Prisoner gender
+                        </label>
+                        <select class="govuk-select" id="genderFilter" name="genderFilter" data-test="gender-filter">
+                            <option value="ALL">All</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                            <option value="NK">Not known</option>
+                            <option value="NS">Not specified</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                Date of birth (optional)
+                            </legend>
+                            <div id="dob-hint" class="govuk-hint">
+                                For example, 31 3 1980
+                            </div>
+                            <div class="govuk-date-input" id="dob">
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="dobDay">
+                                            Day
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dobDay" name="dobDay" type="text" pattern="[0-9]*" inputmode="numeric" data-test="dob-day">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="dobMonth">
+                                            Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dobMonth" name="dobMonth" type="text" pattern="[0-9]*" inputmode="numeric" data-test="dob-month">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="dobYear">
+                                            Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dobYear" name="dobYear" type="text" pattern="[0-9]*" inputmode="numeric" data-test="dob-year">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <a href="./global-search" data-test="clear-link" class="govuk-body govuk-link govuk-link--no-visited-state">Clear</a>
+                </div>
+            </details>
+        </form>
     </div>
 </div>
 {% endblock %}

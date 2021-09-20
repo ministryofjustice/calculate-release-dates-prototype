@@ -45,7 +45,7 @@ href: '#'
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-                    <div class="moj-banner" id="missingNOMISInfoError">
+                    <div class="moj-banner" id="missingNOMISInfoError" style="display: none">
                 <h2 class="govuk-heading-m">You have entered multiple offences for a single sentence </h2>
                 <div class="moj-banner__message">
                     <p class="govuk-body">This does not comply with <a href="https://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf">PSI 03/2015 (opens in new tab)</a>. We have automatically created a new sentence for each offence.</p>
@@ -53,65 +53,72 @@ href: '#'
                     <p class="govuk-body">If they are not, edit them in NOMIS.</p>
                 </div>
             </div>
-        <h1 class="govuk-heading-xl govuk-!-margin-top-8" id="checkNOMISHeading">Check NOMIS information about Joe Bloggs</h1>
+        <h1 class="govuk-heading-xl" id="checkNOMISHeading">Check NOMIS information about Joe Bloggs</h1>
         <p class="govuk-body">Last updated: <span id="currentDate" aria-live="polite">12 August 2020 at 11:35</span>
         </p>
+        <p class="govuk-body"><a a onclick="demo()" href="javascript:void(0);">Check for updates from NOMIS</a></p>
     </div>
 </div>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full govuk-!-margin-top-8">
         <h2 class="govuk-heading-l">Sentences</h2>
-        <p class="govuk-body govuk-!-margin-top-2">There are 15 offences included in this calculation.</p>
+        <p class="govuk-body govuk-!-margin-top-2">There are 4 offences included in this calculation.</p>
 <!-- Concurrent sentences -->
 <h3 class="govuk-heading-m govuk-!-margin-top-6">Concurrent sentences</h3>
         <!-- <h3 class="govuk-heading-m">Sentence details</h3> -->
         <table class="govuk-table" style="table-layout:fixed; width: 100%;">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col" style="width: 5%"></th>
                     <th class="govuk-table__header" scope="col" style="width: 50%">Sentence</th>
                     <th class="govuk-table__header" scope="col" style="width: 25%">Sentence date</th>
                     <th class="govuk-table__header" scope="col" style="width: 25%">Conviction date</th>
-                    <th class="govuk-table__header" scope="col" style="width: 35%">Sentence length</th>
+                    <th class="govuk-table__header" scope="col" style="width: 30%">Sentence length</th>
                     <!-- <th class="govuk-table__header govuk-table__header--numeric" scope="col"></th> -->
                 </tr>
             </thead>
             <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">1. Stealing from shops and stalls (shoplifting)<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 2 March 2019</span></td>
+                    <td class="govuk-table__cell">1.</td>
+                    <td class="govuk-table__cell">Stealing from shops and stalls (shoplifting)<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 2 March 2019</span></td>
                     <td class="govuk-table__cell">29 February 2020</td>
                     <td class="govuk-table__cell">29 February 2020</td>
                     <td class="govuk-table__cell">2 months <br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">60 days</span></td>
                     <!-- <td class="govuk-table__cell govuk-table__header--numeric"></td> -->
                 </tr>
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">2. Burglary dwelling - with intent to steal<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 9 March 2019</span></td>
+                    <td class="govuk-table__cell">2.</td>
+                    <td class="govuk-table__cell" id="offence2">Burglary other than dwelling with intent to steal<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 9 March 2019</span></td>
                     <td class="govuk-table__cell">2 March 2019</td>
                     <td class="govuk-table__cell">29 February 2020</td>
                     <td class="govuk-table__cell">2 years<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">730 days</span></td>
                 </tr>
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">3. Stealing from shops and stalls (shoplifting)<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 10 March 2019</span></td>
+                    <td class="govuk-table__cell">3.</td>
+                    <td class="govuk-table__cell">Stealing from shops and stalls (shoplifting)<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 10 March 2019</span></td>
                     <td class="govuk-table__cell">2 March 2019</td>
                     <td class="govuk-table__cell">29 February 2020</td>
                     <td class="govuk-table__cell">4 months <br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">121 days</span></td>
                 </tr>
             </tbody>
         </table>
-        <p class="govuk-!-font-weight-bold">Length of longest sentence (days): <span class="govuk-body" style="margin-left: 55px;">730 days</span></p>
         <!-- Consecutive sentences -->
         <h3 class="govuk-heading-m govuk-!-margin-top-8">Consecutive sentences</h3>
+                <p class="govuk-!-font-weight-bold">Consecutive to sentence: <span class="govuk-body">2</span></p>
         <table class="govuk-table" style="table-layout:fixed; width: 100%;">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col" style="width: 5%"></th>
                     <th class="govuk-table__header" scope="col" style="width: 50%">Sentence</th>
                     <th class="govuk-table__header" scope="col" style="width: 25%">Sentence date</th>
                     <th class="govuk-table__header" scope="col" style="width: 25%">Conviction date</th>
-                    <th class="govuk-table__header" scope="col" style="width: 35%">Sentence length</th>
+                    <th class="govuk-table__header" scope="col" style="width: 30%">Sentence length</th>
                 </tr>
             </thead>
             <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell" style="width: 75%;">Common assault and battery<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 6 January</span></td>
+                    <td class="govuk-table__cell">4.</td>
+                    <td class="govuk-table__cell">Common assault and battery<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 6 January</span></td>
                     <td class="govuk-table__cell">2 March 2019</td>
                     <td class="govuk-table__cell">29 February 2020</td>
                     <td class="govuk-table__cell">2 years <br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">730 days</span></td>
@@ -274,7 +281,7 @@ href: '#'
                         </span>
                     </summary>
                     <div class="govuk-details__text">
-                        You can edit this information in NOMIS. It will automatically update here.
+                        You can edit this information in NOMIS and <a href="">reload this page</a>.
                         If you think the service isn’t working properly, you can also <a href="#">contact the Calculate release dates team.</a>
                     </div>
                 </details>
