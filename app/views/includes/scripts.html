@@ -13,11 +13,11 @@ function getDate() {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var date = today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear() + " at " + today.getHours() + ":" + (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
     console.log("Sentence 2 updated " + "\n" + "Last updated is: " + date);
-    document.getElementById("currentDate").innerHTML = "Last updated: " + date;
+    document.getElementById("currentDate").innerHTML = date;
 }
 
 function correctMistake() {
-    document.getElementById("offence2").innerHTML = "2. Burglary dwelling - with intent to steal" + ['<span class="govuk-hint govuk-!-margin-top-1">Committed on 9 March 2020</span>']
+    document.getElementById("offence2").innerHTML = "Burglary dwelling - with intent to steal" + ['<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 9 March 2020</span>']
 }
 
 function demo() {
