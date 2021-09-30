@@ -26,6 +26,9 @@ href: '#'
 }) }}
 {% endblock %}
 {% block beforeContent %}
+<script>window.onload = function() {
+  getDate();
+};</script>
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 {{ govukPhaseBanner({
 tag: {
@@ -68,7 +71,7 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
             </div>
         </div>
         <h1 class="govuk-heading-xl" id="checkNOMISHeading">Check NOMIS information about Joe Bloggs</h1>
-        <p class="govuk-body">Last updated: <span id="currentDate" aria-live="polite">12 August 2020 at 11:35</span>
+        <p class="govuk-body">Last updated: <span id="currentDate" aria-live="polite"</span>
         </p>
         <p class="govuk-body"><a a onclick="demo()" href="javascript:void(0);">Check for updates from NOMIS</a></p>
     </div>
