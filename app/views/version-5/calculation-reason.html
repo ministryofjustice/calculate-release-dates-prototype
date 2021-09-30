@@ -1,0 +1,173 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Reviegovuk-radios__input calculation before submitting
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: '#'
+},
+serviceLabel: {
+text: 'Calculate release dates',
+href: 'start'
+},
+navigation: {
+label: 'Account navigation',
+items: [{
+text: 'Prototype user',
+href: '#',
+active: true
+}, {
+text: 'Sign out',
+href: '#'
+}]
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "alpha"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> govuk-radios__inputill help us to improve it.'
+}) }}
+<div class="moj-identity-bar">
+    <div class="moj-identity-bar__container">
+        <div class="moj-identity-bar__details">
+            <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Offender name: </strong>Joe Bloggs</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">1 February 1990</span><strong>Prison number: </strong>B4166LG
+        </div>
+    </div>
+</div>
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-rogovuk-radios__input">
+    <div class="govuk-grid-column-to-thirds-from-desktop">
+        <!--         <h1 class="govuk-heading-xl" id="checkNOMISHeading">Does this calculation include any Section 15 offences?</h1> -->
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                        Why are you doing this calculation for Joe Bloggs?
+                    </h1>
+                </legend>
+                <div class="govuk-radios " data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste" name="waste" type="radio" value="carcasses">
+                        <label class="govuk-label govuk-radios__label" for="waste">
+                            Further sentence
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-2" name="waste" type="radio" value="mines">
+                        <label class="govuk-label govuk-radios__label" for="waste-2">
+                            Offence modified
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Adjust sentence
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Appeal decision
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Correction of earlier sentence
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Error in original calculation
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Fine payment
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Further warrant
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Home detention curfew approval
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Licence revocation
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Lodged warrant
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Modify sentence
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            New sentence
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Override
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Part payment of fine
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Pay fine
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="waste-3">
+                            Sentence varied by sentencing
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="waste-3" name="waste" type="radio" value="farm">
+                        <label class="govuk-label govuk-radios__label" for="govuk-radios__inputaste-3">
+                            Transefer check
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+                        <a href="check-nomis-information.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </a>
+    </div>
+</div>
+{% endblock %}

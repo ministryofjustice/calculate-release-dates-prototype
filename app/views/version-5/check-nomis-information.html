@@ -28,10 +28,10 @@ href: '#'
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 {{ govukPhaseBanner({
-  tag: {
-    text: "alpha"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+tag: {
+text: "alpha"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 <div class="moj-identity-bar">
     <div class="moj-identity-bar__container">
@@ -45,14 +45,28 @@ href: '#'
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-                    <div class="moj-banner" id="missingNOMISInfoError" style="display: none">
-                <h2 class="govuk-heading-m">You have entered multiple offences for a single sentence </h2>
-                <div class="moj-banner__message">
-                    <p class="govuk-body">This does not comply with <a href="https://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf">PSI 03/2015 (opens in new tab)</a>. We have automatically created a new sentence for each offence.</p>
-                    <h3 class="govuk-heading-s">Check these new sentences are correct</h3>
-                    <p class="govuk-body">If they are not, edit them in NOMIS.</p>
-                </div>
+                <div class="moj-banner govuk-!-margin-bottom-8" id="infoChangeedMessage" style="display: none">
+            <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+    C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" />
+            </svg>
+            <div class="moj-banner__message">
+                <h2 class="govuk-heading-m">Some information might have changed</h2>
+                <p class="govuk-body">Check for information that might have been updated in NOMIS before continuing with the sentence calculation.</p>
             </div>
+        </div>
+        <div class="moj-banner" id="missingNOMISInfoError" style="display: none">
+            <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+    C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" />
+            </svg>
+            <div class="moj-banner__message">
+                <h2 class="govuk-heading-m">You have entered multiple offences for a single sentence </h2>
+                <p class="govuk-body">This does not comply with <a href="https://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf">PSI 03/2015 (opens in new tab)</a>. We have automatically created a new sentence for each offence.</p>
+                <h3 class="govuk-heading-s">Check these new sentences are correct</h3>
+                <p class="govuk-body">If they are not, edit them in NOMIS.</p>
+            </div>
+        </div>
         <h1 class="govuk-heading-xl" id="checkNOMISHeading">Check NOMIS information about Joe Bloggs</h1>
         <p class="govuk-body">Last updated: <span id="currentDate" aria-live="polite">12 August 2020 at 11:35</span>
         </p>
@@ -63,8 +77,8 @@ href: '#'
     <div class="govuk-grid-column-full govuk-!-margin-top-8">
         <h2 class="govuk-heading-l">Sentences</h2>
         <p class="govuk-body govuk-!-margin-top-2">There are 4 offences included in this calculation.</p>
-<!-- Concurrent sentences -->
-<h3 class="govuk-heading-m govuk-!-margin-top-6">Concurrent sentences</h3>
+        <!-- Concurrent sentences -->
+        <h3 class="govuk-heading-m govuk-!-margin-top-6">Concurrent sentences</h3>
         <!-- <h3 class="govuk-heading-m">Sentence details</h3> -->
         <table class="govuk-table" style="table-layout:fixed; width: 100%;">
             <thead class="govuk-table__head">
@@ -104,7 +118,7 @@ href: '#'
         </table>
         <!-- Consecutive sentences -->
         <h3 class="govuk-heading-m govuk-!-margin-top-8">Consecutive sentences</h3>
-<!--                 <p class="govuk-!-font-weight-bold">Consecutive to sentence: <span class="govuk-body">2</span></p> -->
+        <p class="govuk-!-font-weight-bold">Consecutive to sentence: <span class="govuk-body">2</span></p>
         <table class="govuk-table" style="table-layout:fixed; width: 100%;">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -133,8 +147,6 @@ href: '#'
                 </tr> -->
             </tbody>
         </table>
-
-
         <!-- <table class="govuk-table govuk-!-margin-top-6" style="table-layout:fixed; width: 100%;">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -236,12 +248,11 @@ href: '#'
                 </tr>
             </tbody>
         </table> -->
-
-
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds-from-desktop">
-                <h2 class="govuk-heading-l govuk-!-margin-top-6 ">Adjustments</h2>
+                <h2 class="govuk-heading-l govuk-!-margin-top-6">Adjustments</h2>
                 <dl class="govuk-summary-list">
+                    <h3 class="govuk-heading-m govuk-!-margin-top-2">Deductions</h3>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key" style="width: 90%;">
                             Number of days on remand
@@ -259,6 +270,7 @@ href: '#'
                             10
                         </dd>
                     </div>
+                    <h3 class="govuk-heading-m govuk-!-margin-top-8">Additions</h3>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                             Additional days awarded (ADA)
@@ -266,6 +278,22 @@ href: '#'
                         <dd class="govuk-summary-list__value">
                             14
                             <p class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">imposed on 15 April 2020</p>
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Unlawfully at large (UAL)
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            0
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Restore additional days awarded (RADA)
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            0
                         </dd>
                     </div>
                 </dl>
@@ -289,5 +317,5 @@ href: '#'
         </div>
     </div>
 </div>
-<p class="govuk-hint govuk-!-font-size-14"><a onclick="demo()" href="javascript:void(0);">Update sentence 2</a> | <a onclick="missingNOMISInfo()" href="javascript:void(0);">Show/hide message</a>
+<a onclick="missingNOMISInfo()" href="javascript:void(0);">Show/hide message</a>
 {% endblock %}
