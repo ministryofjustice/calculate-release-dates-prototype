@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-Review calculation before submitting
+Check NOMIS information 
 {% endblock %}
 {% block header %}
 {{ mojHeader({
@@ -73,7 +73,7 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
             </div>
         </div>
         <h1 class="govuk-heading-xl" id="checkNOMISHeading">Check NOMIS information about Joe Bloggs</h1>
-        <p class="govuk-body">Last updated from NOMIS: <span id="currentDate" aria-live="polite"> </span> </p>
+        <!-- <p class="govuk-body">Last updated from NOMIS: <span id="currentDate" aria-live="polite"> </span> </p> -->
         <!-- <p class="govuk-body"><a onclick="demo()" href="javascript:void(0);">Check for updates from NOMIS</a></p> -->
     </div>
 </div>
@@ -360,5 +360,5 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
         </div>
     </div>
 </div>
-<a onclick="missingNOMISInfo()" href="javascript:void(0);">Show/hide message</a>
+<!-- <a onclick="missingNOMISInfo()" href="javascript:void(0);">Show/hide message</a> -->
 {% endblock %}

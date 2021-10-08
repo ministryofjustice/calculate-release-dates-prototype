@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-Review calculation before submitting
+Check NOMIS information 
 {% endblock %}
 {% block header %}
 {{ mojHeader({
@@ -73,7 +73,7 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
             </div>
         </div>
         <h1 class="govuk-heading-xl" id="checkNOMISHeading">Check NOMIS information about Joe Bloggs</h1>
-        <p class="govuk-body">Last updated from NOMIS: <span id="currentDate" aria-live="polite"> </span> </p>
+        <!-- <p class="govuk-body">Last updated from NOMIS: <span id="currentDate" aria-live="polite"> </span> </p> -->
         <!-- <p class="govuk-body"><a onclick="demo()" href="javascript:void(0);">Check for updates from NOMIS</a></p> -->
     </div>
 </div>
@@ -279,7 +279,7 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
                     <!-- Conviction date -->
                     <td class="govuk-table__cell">21 November 2020</td>
                     <!-- Sentence length -->
-                    <td class="govuk-table__cell">8 months <br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">242 days</span><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">consecutive to count 1</span></td>
+                    <td class="govuk-table__cell">8 months <br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">242 days</span><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">consecutive to<br> Trial record sheet 1, count 1</span></td>
                 </tr>
             </tbody>
         </table>
@@ -453,7 +453,7 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
                     <!-- Conviction date -->
                     <td class="govuk-table__cell">18 December 2020</td>
                     <!-- Sentence length -->
-                    <td class="govuk-table__cell">3 years <br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">1095 days</span><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">consecutive to 8 months</span></td>
+                    <td class="govuk-table__cell">3 years <br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">1095 days</span><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">consecutive to<br>Trial record sheet 3, count 1</span></td>
                 </tr>
             </tbody>
         </table>
@@ -536,5 +536,5 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
         </div>
     </div>
 </div>
-<a onclick="missingNOMISInfo()" href="javascript:void(0);">Show/hide message</a>
+<!-- <a onclick="missingNOMISInfo()" href="javascript:void(0);">Show/hide message</a> -->
 {% endblock %}
