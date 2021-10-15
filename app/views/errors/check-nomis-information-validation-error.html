@@ -1,0 +1,361 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Check NOMIS information
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: '#'
+},
+serviceLabel: {
+text: 'Calculate release dates',
+href: 'start'
+},
+navigation: {
+label: 'Account navigation',
+items: [{
+text: 'Prototype user',
+href: '#',
+active: true
+}, {
+text: 'Sign out',
+href: '#'
+}]
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<script>
+window.onload = function() {
+    getDate();
+};
+</script>
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "alpha"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="moj-identity-bar">
+    <div class="moj-identity-bar__container">
+        <div class="moj-identity-bar__details">
+            <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Offender name: </strong>Joe Bloggs</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">1 February 1990</span><strong>Prison number: </strong>B4166LG
+        </div>
+    </div>
+</div>
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <p class="govuk-body govuk-!-font-weight-bold">The sentence date for count 1 starts in the future.</p>
+      </li>
+      <li>
+        <p class="govuk-body govuk-!-margin-bottom-0">You need to return to NOMIS to correct this, <a class="govuk-link" style="color: #1d70b8;">then reload this page</a>.</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+        <div class="moj-banner govuk-!-margin-bottom-8" id="infoChangedMessage" style="display: none">
+            <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+    C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" />
+            </svg>
+            <div class="moj-banner__message">
+                <h2 class="govuk-heading-m">Information might have changed</h2>
+                <p class="govuk-body">Check for information that might have been updated in NOMIS before continuing with the sentence calculation.</p>
+            </div>
+        </div>
+        <div class="moj-banner" id="missingNOMISInfoError" style="display: none">
+            <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+    C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" />
+            </svg>
+            <div class="moj-banner__message">
+                <h2 class="govuk-heading-m">You have entered multiple offences for a single sentence </h2>
+                <p class="govuk-body">This does not comply with <a href="https://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf">PSI 03/2015 (opens in new tab)</a>. We have automatically created a new sentence for each offence.</p>
+                <h3 class="govuk-heading-s">Check these new sentences are correct</h3>
+                <p class="govuk-body">If they are not, edit them in NOMIS.</p>
+            </div>
+        </div>
+        <h1 class="govuk-heading-xl" id="checkNOMISHeading">Check NOMIS information about Joe Bloggs</h1>
+        <!-- <p class="govuk-body">Last updated from NOMIS: <span id="currentDate" aria-live="polite"> </span> </p> -->
+        <!-- <p class="govuk-body"><a onclick="demo()" href="javascript:void(0);">Check for updates from NOMIS</a></p> -->
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-margin-top-8">
+        <h2 class="govuk-heading-l">Sentences</h2>
+        <p class="govuk-body govuk-!-margin-top-2">There are 12 offences included in this calculation.</p>
+        <h3 class="govuk-heading-m govuk-!-margin-top-6">Trial record sheet</h3>
+        <table class="govuk-table" style="width: 100%;">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col" style="width: 3%">Count</th>
+                    <th class="govuk-table__header" scope="col" style="width: 30%">Offence</th>
+                    <th class="govuk-table__header" scope="col" style="width: 10%">Verdict</th>
+                    <th class="govuk-table__header" scope="col" style="width: 17%">Sentence date</th>
+                    <th class="govuk-table__header" scope="col" style="width: 17%">Conviction date</th>
+                    <th class="govuk-table__header" scope="col" style="width: 17%">Sentence length</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body govuk-body-s">
+                <tr class="govuk-table__row">
+                    <!-- Count -->
+                    <td class="govuk-table__cell">1.</td>
+                    <!-- Offence -->
+                    <td class="govuk-table__cell">Act of violence on fixed platform<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2020</span></td>
+                    <!-- Verdict -->
+                    <td class="govuk-table__cell">Guilty</td>
+                    <!-- Sentence date -->
+                    <td class="govuk-table__cell">21 September 2021</td>
+                    <!-- Conviction date -->
+                    <td class="govuk-table__cell">21 September 2021</td>
+                    <!-- Sentence length -->
+                    <td class="govuk-table__cell">18 months <br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">547 days</span><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">consecutive to count 2</span></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Count -->
+                    <td class="govuk-table__cell">2.</td>
+                    <!-- Offence -->
+                    <td class="govuk-table__cell" id="offence2">Burglary dwelling - with intent to steal<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2020</span></td>
+                    <!-- Verdict -->
+                    <td class="govuk-table__cell">Guilty</td>
+                    <!-- Sentence date -->
+                    <td class="govuk-table__cell">21 September 2021</td>
+                    <!-- Conviction date -->
+                    <td class="govuk-table__cell">21 September 2021</td>
+                    <!-- Sentence length -->
+                    <td class="govuk-table__cell">18 months<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">547 days</span><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">concurrent</span></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Count -->
+                    <td class="govuk-table__cell">3.</td>
+                    <!-- Offence -->
+                    <td class="govuk-table__cell">Rape a girl under 13<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2020</span></td>
+                    <!-- Verdict -->
+                    <td class="govuk-table__cell">Not guilty</td>
+                    <!-- Sentence date -->
+                    <td class="govuk-table__cell"></td>
+                    <!-- Conviction date -->
+                    <td class="govuk-table__cell"></td>
+                    <!-- Sentence length -->
+                    <td class="govuk-table__cell"><br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0"></span></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Count -->
+                    <td class="govuk-table__cell">4.</td>
+                    <!-- Offence -->
+                    <td class="govuk-table__cell">Rape a girl under 13<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2013<br> to 15 November 2015</span></td>
+                    <!-- Verdict -->
+                    <td class="govuk-table__cell">Not guilty</td>
+                    <!-- Sentence date -->
+                    <td class="govuk-table__cell"></td>
+                    <!-- Conviction date -->
+                    <td class="govuk-table__cell"></td>
+                    <!-- Sentence length -->
+                    <td class="govuk-table__cell"><br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0"></span></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Count -->
+                    <td class="govuk-table__cell">5.</td>
+                    <!-- Offence -->
+                    <td class="govuk-table__cell">Rape a girl 13/14/15 years of age<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2015<br> to 20 November 2018</span></td>
+                    <!-- Verdict -->
+                    <td class="govuk-table__cell">Not guilty</td>
+                    <!-- Sentence date -->
+                    <td class="govuk-table__cell"></td>
+                    <!-- Conviction date -->
+                    <td class="govuk-table__cell"></td>
+                    <!-- Sentence length -->
+                    <td class="govuk-table__cell"><br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0"></span></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Count -->
+                    <td class="govuk-table__cell">6.</td>
+                    <!-- Offence -->
+                    <td class="govuk-table__cell">Rape a girl 13/14/15 years of age<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2015<br> to 20 November 2018</span></td>
+                    <!-- Verdict -->
+                    <td class="govuk-table__cell">Not guilty</td>
+                    <!-- Sentence date -->
+                    <td class="govuk-table__cell"></td>
+                    <!-- Conviction date -->
+                    <td class="govuk-table__cell"></td>
+                    <!-- Sentence length -->
+                    <td class="govuk-table__cell"><br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0"></span></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Count -->
+                    <td class="govuk-table__cell">7.</td>
+                    <!-- Offence -->
+                    <td class="govuk-table__cell">Rape a girl 13/14/15 years of age<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2015<br> to 20 November 2018</span></td>
+                    <!-- Verdict -->
+                    <td class="govuk-table__cell">Not guilty</td>
+                    <!-- Sentence date -->
+                    <td class="govuk-table__cell"></td>
+                    <!-- Conviction date -->
+                    <td class="govuk-table__cell"></td>
+                    <!-- Sentence length -->
+                    <td class="govuk-table__cell"><br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0"></span></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Count -->
+                    <td class="govuk-table__cell">8.</td>
+                    <!-- Offence -->
+                    <td class="govuk-table__cell">Rape a girl 13/14/15 years of age<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2015<br> to 20 November 2018</span></td>
+                    <!-- Verdict -->
+                    <td class="govuk-table__cell">Not guilty</td>
+                    <!-- Sentence date -->
+                    <td class="govuk-table__cell"></td>
+                    <!-- Conviction date -->
+                    <td class="govuk-table__cell"></td>
+                    <!-- Sentence length -->
+                    <td class="govuk-table__cell"><br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0"></span></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Count -->
+                    <td class="govuk-table__cell">9.</td>
+                    <!-- Offence -->
+                    <td class="govuk-table__cell">Theft from a shop<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2020</span></td>
+                    <!-- Verdict -->
+                    <td class="govuk-table__cell">Guilty</td>
+                    <!-- Sentence date -->
+                    <td class="govuk-table__cell">21 September 2021</td>
+                    <!-- Conviction date -->
+                    <td class="govuk-table__cell">21 September 2021</td>
+                    <!-- Sentence length -->
+                    <td class="govuk-table__cell">3 months <br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">60 days</span><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">concurrent</span></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Count -->
+                    <td class="govuk-table__cell">10.</td>
+                    <!-- Offence -->
+                    <td class="govuk-table__cell">Racially / religiously aggravated common assault / beating<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2015<br> to 20 November 2018</span></td>
+                    <!-- Verdict -->
+                    <td class="govuk-table__cell">Guilty</td>
+                    <!-- Sentence date -->
+                    <td class="govuk-table__cell">21 September 2021</td>
+                    <!-- Conviction date -->
+                    <td class="govuk-table__cell">21 September 2021</td>
+                    <!-- Sentence length -->
+                    <td class="govuk-table__cell">1 year <br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">365 days</span><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">concurrent</span></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Count -->
+                    <td class="govuk-table__cell">11.</td>
+                    <!-- Offence -->
+                    <td class="govuk-table__cell">Burglary dwelling and theft - no violence<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2015</span></td>
+                    <!-- Verdict -->
+                    <td class="govuk-table__cell">Guilty</td>
+                    <!-- Sentence date -->
+                    <td class="govuk-table__cell">21 September 2021</td>
+                    <!-- Conviction date -->
+                    <td class="govuk-table__cell">21 September 2021</td>
+                    <!-- Sentence length -->
+                    <td class="govuk-table__cell">18 months <br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">547 days</span><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">concurrent</span></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Count -->
+                    <td class="govuk-table__cell">12.</td>
+                    <!-- Offence -->
+                    <td class="govuk-table__cell">Assault a traffic officer in the execution of his/her duty<br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2015</span></td>
+                    <!-- Verdict -->
+                    <td class="govuk-table__cell">Guilty</td>
+                    <!-- Sentence date -->
+                    <td class="govuk-table__cell">21 September 2021</td>
+                    <!-- Conviction date -->
+                    <td class="govuk-table__cell">21 September 2021</td>
+                    <!-- Sentence length -->
+                    <td class="govuk-table__cell">6 months <br><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">182 days</span><span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">concurrent</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+                <h4 class="govuk-heading-m govuk-!-margin-top-2">Adjustments</h4>
+                <h5 class="govuk-heading-s govuk-!-margin-bottom-0 ">Deductions</h5>
+                <table class="govuk-table" style="table-layout:fixed; width: 68%;">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="col" style="width: 60%"></th>
+                            <th class="govuk-table__header" scope="col" style="width: 5%"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body govuk-body-s">
+                        <tr class="govuk-table__row">
+                            <!-- Adjustment -->
+                            <td class="govuk-table__cell">Number of days on remand</td>
+                            <!-- Days -->
+                            <td class="govuk-table__cell">15</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <!-- Adjustment -->
+                            <td class="govuk-table__cell">Number of days tagged bail</td>
+                            <!-- Days -->
+                            <td class="govuk-table__cell">10</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <!-- Adjustment -->
+                            <td class="govuk-table__cell">Restore additional days awarded (RADA)</td>
+                            <!-- Days -->
+                            <td class="govuk-table__cell">2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5 class="govuk-heading-s govuk-!-margin-bottom-0">Additions</h5>
+                <table class="govuk-table" style="table-layout:fixed; width: 68%;">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="col" style="width: 60%"></th>
+                            <th class="govuk-table__header" scope="col" style="width: 5%"></th>
+                    </thead>
+                    <tbody class="govuk-table__body govuk-body-s">
+                        <tr class="govuk-table__row">
+                            <!-- Adjustment -->
+                            <td class="govuk-table__cell">Additional days awarded (ADA)</td>
+                            <!-- Days -->
+                            <td class="govuk-table__cell">7</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <!-- Adjustment -->
+                            <td class="govuk-table__cell" style="border-bottom:none">Number of days unlawfully at large (UAL)</td>
+                            <!-- Days -->
+                            <td class="govuk-table__cell" style="border-bottom:none">2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+                <h2 class="govuk-heading-m govuk-!-margin-top-9">Now calculate release dates for Joe Bloggs</h2>
+                <p class="govuk-body">The release dates will not be saved in NOMIS until you have reviewed the calculation.</p>
+                <a href="calculation-summary.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                    Calculate release dates
+                </a>
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            Some information is wrong
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        You can edit this information in NOMIS and <a onclick="correctMistake()" href="javascript:void(0);">reload this page</a>.
+                        If you think the service isn’t working properly, <a href="#">contact the Calculate release dates team.</a>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <a onclick="missingNOMISInfo()" href="javascript:void(0);">Show/hide message</a> -->
+{% endblock %}
