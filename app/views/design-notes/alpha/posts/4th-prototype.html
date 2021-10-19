@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Calculate release dates prototype
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: '#'
+},
+serviceLabel: {
+text: 'Calculate release dates design notes',
+href: '#'
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-!-margin-top-4 govuk-!-margin-bottom-8">
+            <h1 class="govuk-heading-xl">4th prototype iteration</h1>
+            <p class="govuk-body">This prototype was not tested with users.</p>
+            <p class="govuk-body">Changes made in this prototype:</p>
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li>The types of sentences covered in Alpha are emphasised on start page.</li>
+                <li>We included a message saying that some detail not included in calculation based on offender circumstances - such as HDC eligibility - emphasised at start of calculation</li>
+                <li>Added option to print calculation</li>
+                <li>Reordered calculation summary to prioritise release dates, based on findings from user research</li>
+                <li>Removed some information included in the calculation summary that duplicated that on the previous page, based in user research findings</li>
+                <li>Revised check NOMIS screen to accommodate longer lists of sentences</li>
+                <li>Added additional journeys for cancelling a calculation and reporting a problem</li>
+                <li>Added banner to explain multiple offences for single sentences being automatically split into multiple sentences by our service</li>
+                <li>Added errors for anticipated problems</li>
+            </ul>
+        </div>
+        <nav class="moj-pagination" id="pagination-label">
+            <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+            <ul class="moj-pagination__list">
+                <li class="moj-pagination__item  moj-pagination__item--prev">
+                    <a class="moj-pagination__link" href="tech-pivot">Previous<span class="govuk-visually-hidden"> post</span></a>
+                </li>
+                                    <li class="moj-pagination__item  moj-pagination__item--next">
+                        <a class="moj-pagination__link" href="5th-prototype">Next<span class="govuk-visually-hidden"> post</span></a>
+                    </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+{% endblock %}
