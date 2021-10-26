@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+There is a problem
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: '#'
+},
+serviceLabel: {
+text: 'Calculate release dates',
+href: 'start'
+},
+navigation: {
+label: 'Account navigation',
+items: [{
+text: 'Prototype user',
+href: '#',
+active: true
+}, {
+text: 'Sign out',
+href: '#'
+}]
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">
+                    There is a problem
+                </h1>
+                <p class="govuk-body">The service has been unable to save the calculation results to NOMIS. You need to check NOMIS information and do the calculation again.</p>
+                <a href="check-nomis-information.html" role="button" draggable="false" class="govuk-button govuk-button--tertiary govuk-!-margin-top-6" data-module="govuk-button">
+                    Check NOMIS again
+                </a>
+            </div>
+        </div>
+</div>
+</div>
+{% endblock %}
