@@ -1,0 +1,39 @@
+{% extends "./dps/includes/template.html" %}
+{% block content %}
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-8">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">Enter prototype details</h1>
+            <p class="govuk-body">Enter a user name and a prison name to appear on on the DPS pages within the prototype. For user research sessions enter the name of the user and the prison they work at.</p>
+        </div>
+    </div>
+</div>
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <form class="form" action="../version-6/dps/dps-home" method="post">
+                <div class="govuk-form-group govuk-!-margin-top-6">
+                    <label class="govuk-label govuk-!-font-weight-bold" for="user-name">
+                        User name
+                    </label>
+                    <div id="more-detail-hint" class="govuk-hint">
+                        For example, "Jane Doe"
+                    </div>
+                    <input class="govuk-input" id="user-name" name="user-name" type="text" spellcheck="false">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-font-weight-bold" for="prison-name">
+                        Prison name
+                    </label>
+                    <div id="more-detail-hint" class="govuk-hint">
+                        For example, "Leeds"
+                    </div>
+                    <input class="govuk-input" id="prison-name" name="prison-name" type="text" spellcheck="false">
+                </div>
+                <button class="govuk-button" data-module="govuk-button">Continue</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
