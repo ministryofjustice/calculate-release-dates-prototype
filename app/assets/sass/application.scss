@@ -132,3 +132,17 @@ border-left-color: inherit;
 .location-bar {
   margin-bottom: 0;
 }
+
+.calculation-breakdown-table .govuk-table__cell, .govuk-table__header {
+  border: none;
+  padding: 7.5px 20px 7.5px 0
+}
+
+.calculation-breakdown-table-cell {
+  border: none;
+  padding: 7.5px 20px 7.5px 0
+}
+
+.moj-banner {
+  padding: 20px;
+}
