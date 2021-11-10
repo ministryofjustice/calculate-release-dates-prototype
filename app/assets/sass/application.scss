@@ -72,14 +72,31 @@ $moj-page-width: 1170px;
 
 .custom-card {
   border: 1px solid #bfc1c3;
+}
+
+.custom-card-main {
   padding: 20px 20px 0px 20px;
-  margin: 30px 0;
 }
 
 .custom-card-main:after {
   content: "";
   display: block;
   clear: both;
+}
+
+.custom-card-header-heading {
+color: #0b0c0c;
+font-family: "GDS Transport", arial, sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+font-weight: 700;
+font-size: 24px !important;
+font-size: 1.125rem;
+line-height: 1.11111;
+display: block;
+margin-left: 15px;
+margin-block-start: 0em;
+margin-block-end: 0em;
 }
 
 .link-back {
@@ -133,16 +150,15 @@ border-left-color: inherit;
   margin-bottom: 0;
 }
 
-.calculation-breakdown-table .govuk-table__cell, .govuk-table__header {
-  border: none;
-  padding: 7.5px 20px 7.5px 0
-}
-
-.calculation-breakdown-table-cell {
-  border: none;
-  padding: 7.5px 20px 7.5px 0
-}
-
 .moj-banner {
   padding: 20px;
 }
+
+.calculation-breakdown-consecutive-table-cell {
+  border-top: 1px solid #b1b4b6;
+}
+
+.calculation-breakdown:first-child {
+  border-top: 1px solid #b1b4b6;
+}
+

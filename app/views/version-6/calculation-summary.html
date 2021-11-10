@@ -42,9 +42,6 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <h2 class="govuk-heading-l govuk-!-margin-top-6">Final release dates</h2>
-            <div class="govuk-inset-text">
-                Some calculations are made up of different sentences and terms, such as overlapping or concurrent sentences. The effective release date comes from the sentence or term with the latest release date.
-            </div>
         </div>
     </div>
     <div class="govuk-grid-row">
@@ -69,128 +66,112 @@
             </div>
         </div>
     </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-inset-text">
+                Some calculations are made up of different sentences and terms, such as overlapping or concurrent sentences. The effective release date comes from the sentence or term with the latest release date.
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Calculation breakdown -->
 <!-- Breakdown -->
 <div class="moj-width-container">
-    <h2 class="govuk-heading-l govuk-!-margin-top-9 govuk-!-margin-bottom-6">Calculation breakdown</h2>
+    <h2 class="govuk-heading-l govuk-!-margin-top-9 govuk-!-margin-bottom-8">Calculation breakdown</h2>
+    <!-- Concurrent sentence breakdown -->
+    <h3 class="govuk-heading-m govuk-!-margin-bottom-4">Concurrent sentences</h3>
+    <table class="govuk-table govuk-!-margin-bottom-4" style="table-layout:fixed; width: 100%; border: none;">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Sentence</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--date">Sentence start date</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--date">Sentence length</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--date">SLED</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--date">CRD</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body calculation-breakdown">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Court case 2, count 1</td>
+                <td class="govuk-table__cell">17 July 2020</td>
+                <td class="govuk-table__cell">12 months<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">365 days<br></span></td>
+                <td class="govuk-table__cell">16 July 2020</td>
+                <td class="govuk-table__cell">15 January 2021</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Court case 4, count 1</td>
+                <td class="govuk-table__cell">13 Decemeber 2020</td>
+                <td class="govuk-table__cell">2 months<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">62 days<br></span></td>
+                <td class="govuk-table__cell">12 July 2020</td>
+                <td class="govuk-table__cell">12 January 2021</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="govuk-heading-m govuk-!-margin-bottom-4 govuk-!-margin-top-8">Consecutive sentences</h3>
+    <table class="govuk-table govuk-!-margin-bottom-4" style="table-layout:fixed; width: 100%; border: none;">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Sentence</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--date">Sentence start date</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--date">Sentence length</th>
+                <th scope="col" class="govuk-table__header">SLED</th>
+                <th scope="col" class="govuk-table__header">CRD</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body calculation-breakdown">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Court case 1, count 1</td>
+                <td class="govuk-table__cell">20 March 2020</td>
+                <td class="govuk-table__cell">2 years</td>
+                <td class="govuk-table__cell">19 March 2022</td>
+                <td class="govuk-table__cell">19 March 2021</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Court case 3, count 1</td>
+                <td class="govuk-table__cell">20 March 2022</td>
+                <td class="govuk-table__cell">8 months<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">consecutive to
+                        court case 1, count 1</span></td>
+                <td class="govuk-table__cell">18 November 2022</td>
+                <td class="govuk-table__cell">19 July 2022</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Court case 5, count 1</td>
+                <td class="govuk-table__cell">20 November 2022</td>
+                <td class="govuk-table__cell">8 months<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">consecutive to
+                        court case 3, count 1</span></td>
+                <td class="govuk-table__cell">18 November 2025</td>
+                <td class="govuk-table__cell">19 May 2024</td>
+        </tbody>
+    </table>
+    <h3 class="govuk-heading-m govuk-!-margin-bottom-4 govuk-!-margin-top-8">Effective release dates</h3>
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-half">
-            <!-- Concurrent sentences -->
-            <h3 class="govuk-heading-m govuk-!-margin-bottom-4">Concurrent sentences</h3>
-                    <table class="govuk-table calculation-breakdown-table govuk-!-margin-bottom-4" style="table-layout:fixed; width: 100%;">
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__header">Court case 2, count 1</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;"></td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell" style="">Sentence start date</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">17, July 2020</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell" style="">Sentence length</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">12 months<span class="govuk-hint govuk-!-margin-top-2" style="margin-bottom:0;">365 days<br></span></td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell" style="">SLED</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">16, July 2020</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell" style="">CRD</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">15, January 2021</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="govuk-table govuk-!-margin-bottom-6 govuk-!-margin-top-6" style="table-layout:fixed; width: 100%;">
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__header">Court case 4, count 1</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;"></td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell" style="">Sentence start date</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">13, December 2020</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell" style="">Sentence length</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">2 months<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">62 days<br></span></td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell" style="">SLED</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">12, February 2021</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell" style="">CRD</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">12, January 2021</td>
-                            </tr>
-                        </tbody>
-                    </table>
-            <!-- Consecutive sentences -->
-            <h3 class="govuk-heading-m govuk-!-margin-bottom-4 govuk-!-margin-top-7">Consecutive sentences</h3>
-                    <table class="govuk-table govuk-!-margin-bottom-4" style="table-layout:fixed; width: 100%;">
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__header">Court case 1, count 1</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;"></td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell" style="">Sentence length</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">2 years</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="govuk-table govuk-!-margin-bottom-4" style="table-layout:fixed; width: 100%;">
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__header">Court case 3, count 1</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;"></td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell" style="">Sentence length</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">8 months<span class="govuk-hint govuk-!-margin-top-2" style="margin-bottom:0;">consecutive to <br>court case 1, count 1</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="govuk-table govuk-!-margin-bottom-4" style="table-layout:fixed; width: 100%;">
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__header">Court case 5, count 1</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;"></td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell" style="">Sentence length</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">8 months<span class="govuk-hint govuk-!-margin-top-2" style="margin-bottom:0;">consecutive to <br>court case 3, count 1</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="govuk-table govuk-!-margin-bottom-4 govuk-!-margin-top-6" style="table-layout:fixed; width: 100%;">
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__header">Aggregate sentence length</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">2071 days</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__header" style="">Sentence start date</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">20, March 2020</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__header" style="">SLED*</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%;">19, November 2025</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__header" style="border-bottom: none;">CRD*</td>
-                                <td class="govuk-table__cell" style="padding-left: 20%; border-bottom: none;">19, January 2023</td>
-                            </tr>
-                        </tbody>
-                    </table>
-        </div>
+        <div class="govuk-grid-column-two-thirds">
+    <table class="govuk-table govuk-!-margin-bottom-4">
+        <tbody class="govuk-table__body calculation-breakdown">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header">Latest SLED before adjustments</td>
+                <td class="govuk-table__cell">18 November 2025</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header">Latest CRD before adjustments</td>
+                <td class="govuk-table__cell">19 May 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header">SLED after adjustments</td>
+                <td class="govuk-table__cell">4 November 2025<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">19 November 2025 - 15 days</span></td>
+            </tr>
+                        <tr class="govuk-table__row">
+                <td class="govuk-table__header">CRD after adjustments</td>
+                <td class="govuk-table__cell">10 January 2023<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">19 January 2023 - 9 days</span></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
     </div>
 </div>
 <div class="moj-width-container">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <p class="govuk-body"><a href="#">Report a problem with this calculation</a></p>
             <h3 class="govuk-heading-m govuk-!-margin-top-8">Confirm and submit to NOMIS</h3>
             <p class="govuk-body">By submitting this calculation you are confirming that, to the best of your knowledge, it is correct. The calculation will be saved in NOMIS.</p>
             <a href="calculation-complete.html">
@@ -200,4 +181,4 @@
         </div>
     </div>
 </div>
-{% endblock %}
+</ {% endblock %}
