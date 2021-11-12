@@ -31,9 +31,6 @@
             <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
                 Review calculation before submitting
             </h1>
-            <div class="govuk-inset-text">
-                Some dates and details are not included as according to <a href="http://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf" target="_blank">PSI 03/2015 (opens in new tab)</a> they are not relevant to this person's circumstances.
-            </div>
         </div>
     </div>
 </div>
@@ -55,22 +52,39 @@
                     <h3 class="govuk-heading-s">Conditional release date (CRD)</h3>
                     <p class="govuk-body ">Tuesday, 10 January 2023</p>
                     <!-- TUSED -->
-<!--                     <h3 class="govuk-heading-s">Top up supervision end date (TUSED)</h3>
+                    <!--                     <h3 class="govuk-heading-s">Top up supervision end date (TUSED)</h3>
                     <p class="govuk-body ">Friday, 13 January 2023</p>
                     <p class="govuk-hint govuk-!-font-size-16">Saturday, 14 January 2023 adjusted for weekend</p> -->
                     <!-- HDC -->
-<!--                     <h3 class="govuk-heading-s">Home detention curfew eligibility date (HDCED)</h3>
+                    <!--                     <h3 class="govuk-heading-s">Home detention curfew eligibility date (HDCED)</h3>
                     <p class="govuk-body ">Monday, 26 July 2021</p>
                     <p class="govuk-hint govuk-!-font-size-16">Sunday, 25 July 2021 adjusted for weekend</p> -->
                 </div>
             </div>
         </div>
     </div>
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row govuk-!-margin-top-6">
         <div class="govuk-grid-column-two-thirds">
-            <div class="govuk-inset-text">
-                Some calculations are made up of different sentences and terms, such as overlapping or concurrent sentences. The effective release date comes from the sentence or term with the latest release date.
-            </div>
+            <details class="govuk-details govuk-!-margin-bottom-2" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Why are some details missing?
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    Some dates and details are not included as according to <a href="http://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf" target="_blank">PSI 03/2015 (opens in new tab)</a> they are not relevant to this person's circumstances.
+                </div>
+            </details>
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        How are final release dates calculated?
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    Some calculations are made up of different sentences and terms, such as overlapping or concurrent sentences. The final release date comes from the sentence or term with the latest release date.
+                </div>
+            </details>
         </div>
     </div>
 </div>
@@ -108,65 +122,64 @@
         </tbody>
     </table>
     <h3 class="govuk-heading-m govuk-!-margin-bottom-4 govuk-!-margin-top-8">Consecutive sentences</h3>
-    <table class="govuk-table govuk-!-margin-bottom-4" style="table-layout:fixed; width: 100%; border: none;">
-        <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Sentence</th>
-                <th scope="col" class="govuk-table__header govuk-table__header--date">Sentence start date</th>
-                <th scope="col" class="govuk-table__header govuk-table__header--date">Sentence length</th>
-                <th scope="col" class="govuk-table__header">SLED</th>
-                <th scope="col" class="govuk-table__header">CRD</th>
-            </tr>
-        </thead>
-        <tbody class="govuk-table__body calculation-breakdown">
-            <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Court case 1, count 1</td>
-                <td class="govuk-table__cell">20 March 2020</td>
-                <td class="govuk-table__cell">2 years</td>
-                <td class="govuk-table__cell">19 March 2022</td>
-                <td class="govuk-table__cell">19 March 2021</td>
-            </tr>
-            <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Court case 3, count 1</td>
-                <td class="govuk-table__cell">20 March 2022</td>
-                <td class="govuk-table__cell">8 months<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">consecutive to
-                        court case 1, count 1</span></td>
-                <td class="govuk-table__cell">18 November 2022</td>
-                <td class="govuk-table__cell">19 July 2022</td>
-            </tr>
-            <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Court case 5, count 1</td>
-                <td class="govuk-table__cell">20 November 2022</td>
-                <td class="govuk-table__cell">8 months<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">consecutive to
-                        court case 3, count 1</span></td>
-                <td class="govuk-table__cell">18 November 2025</td>
-                <td class="govuk-table__cell">19 May 2024</td>
-        </tbody>
-    </table>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <table class="govuk-table govuk-!-margin-bottom-4">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header" style="width: 46%">Sentence</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--date" style="width: 30%">Sentence length</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body calculation-breakdown">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Court case 1, count 1</td>
+                        <td class="govuk-table__cell">2 years</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Court case 3, count 1</td>
+                        <td class="govuk-table__cell">8 months<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">consecutive to court case 1, count 1</span></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Court case 5, count 1</td>
+                        <td class="govuk-table__cell">8 months<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">consecutive to court case 3, count 1</span></td>
+                    </tr>
+                    <tr class="govuk-table__row" style="border-top: 2px solid #b1b4b6">
+                        <td class="govuk-table__header">SLED</td>
+                        <td class="govuk-table__cell">19 November 2025</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__header">CRD</td>
+                        <td class="govuk-table__cell">19 January 2023</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <h3 class="govuk-heading-m govuk-!-margin-bottom-4 govuk-!-margin-top-8">Effective release dates</h3>
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-    <table class="govuk-table govuk-!-margin-bottom-4">
-        <tbody class="govuk-table__body calculation-breakdown">
-            <tr class="govuk-table__row">
-                <td class="govuk-table__header">Latest SLED before adjustments</td>
-                <td class="govuk-table__cell">18 November 2025</td>
-            </tr>
-            <tr class="govuk-table__row">
-                <td class="govuk-table__header">Latest CRD before adjustments</td>
-                <td class="govuk-table__cell">19 May 2024</td>
-            </tr>
-            <tr class="govuk-table__row">
-                <td class="govuk-table__header">SLED after adjustments</td>
-                <td class="govuk-table__cell">4 November 2025<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">19 November 2025 - 15 days</span></td>
-            </tr>
-                        <tr class="govuk-table__row">
-                <td class="govuk-table__header">CRD after adjustments</td>
-                <td class="govuk-table__cell">10 January 2023<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">19 January 2023 - 9 days</span></td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
+            <table class="govuk-table govuk-!-margin-bottom-4">
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__header">Latest SLED before adjustments</td>
+                        <td class="govuk-table__cell">19 November 2025</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__header">Latest CRD before adjustments</td>
+                        <td class="govuk-table__cell">19 January 2023</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__header">SLED after adjustments</td>
+                        <td class="govuk-table__cell">4 November 2025<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">19 November 2025 &#8211; 15 days</span></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__header">CRD after adjustments</td>
+                        <td class="govuk-table__cell">10 January 2023<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom:0;">19 January 2023 &#8211; 9 days</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 <div class="moj-width-container">
@@ -181,4 +194,4 @@
         </div>
     </div>
 </div>
-</ {% endblock %}
+{% endblock %}
