@@ -52,4 +52,35 @@ console.log(adjustment)
 
 })
 
+
+// V6 settings
+// Route for start page
+router.post('/version-6/start-point-answer', function (req, res) {
+
+  // Make a variable and give it the value 
+  var startPoint = req.session.data['start-point']
+console.log(startPoint)
+  // Check whether the variable matches a condition
+  if (startPoint == "dps"){
+    // Send user to next page
+    res.redirect('/version-6/dps/dps-home') 
+  } else res.redirect('/version-6/start')
+
+})
+
+// Route for adjustments
+router.post('/version-6/start-point-answer', function (req, res) {
+
+  var sp = req.session.data['start-point']
+
+console.log(sp)
+  if (sp == "dps"){
+    res.redirect('/version-2/remand-dates') 
+  }
+  else if (sp == "standalone"){
+    res.redirect('/version-2/tagged-bail-dates')
+  }
+})
+
+
 module.exports = router
