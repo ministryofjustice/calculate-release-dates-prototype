@@ -2,7 +2,7 @@
 {% block content %}
 <div class="moj-width-container">
     <h1 class="govuk-heading-xl govuk-!-margin-top-8">
-        Calculate release dates
+        {% if serviceName %} {{ serviceName }} {% endif %}
     </h1>
     <p>Automatically calculate an offender’s release date using information from NOMIS.</p>
     <div class="govuk-inset-text">
