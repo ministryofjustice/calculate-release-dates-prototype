@@ -1,0 +1,47 @@
+{% extends "./dps/includes/template.html" %}
+{% block content %}
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-8">
+            Search for a person to calculate release dates for
+        </h1>
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="moj-width-container">
+            <form>
+                <div class="govuk-grid-row prisoner-search__form__row">
+                    <div class="horizontal-form govuk-!-margin-bottom-3">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="keywords">
+                                First name
+                            </label>
+                            <input class="govuk-input govuk-!-width-full" id="keywords" name="keywords" type="text" data-test="prisoner-search-keywords">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="keywords">
+                                Last name
+                            </label>
+                            <input class="govuk-input govuk-!-width-full" id="keywords" name="keywords" type="text" data-test="prisoner-search-keywords">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="keywords">
+                                Prison number
+                            </label>
+                            <input class="govuk-input govuk-!-width-full" id="keywords" name="keywords" type="text" data-test="prisoner-search-keywords">
+                        </div>
+                    </div>
+                </div>
+                <a href="search-for-prisoner-results.html" class="govuk-button prisoner-search__button">Search</a>
+        </div>
+        </form>
+    </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="moj-width-container govuk-!-margin-top-6">
+        <p class="govuk-body govuk-!-bold-text">Search for a person using the form above.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
