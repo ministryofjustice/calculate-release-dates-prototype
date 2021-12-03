@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Calculation complete
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: '#'
+},
+serviceLabel: {
+text: 'Calculate release dates',
+href: 'start'
+},
+navigation: {
+label: 'Account navigation',
+items: [{
+text: 'Prototype user',
+href: '#',
+active: true
+}, {
+text: 'Sign out',
+href: '#'
+}]
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">
+                    Report a problem to the Calculate Release Dates team
+                </h1>
+                <p class="govuk-body">When you report a problem, the team will get:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>your NOMIS ID</li>
+                    <li>a reference for the calculation you were doing</li>
+                </ul>
+                <p class="govuk-body">Your information will only be used to help with this problem.</p>
+                <div class="govuk-form-group govuk-!-margin-top-8">
+                    <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+                            What went wrong?
+                        </label>
+                    </h2>
+                    <div id="more-detail-hint" class="govuk-hint">
+                        Do not include personal information, like your name or workplace.
+                    </div>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+                    <a href="calculation-feedback-sent.html">
+                        <button class="govuk-button" data-module="govuk-button">Send</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}
