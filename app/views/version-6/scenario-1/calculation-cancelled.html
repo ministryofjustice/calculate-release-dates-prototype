@@ -1,54 +1,20 @@
-{% extends "layout.html" %}
-{% block pageTitle %}
-Calculation complete
-{% endblock %}
-{% block header %}
-{{ mojHeader({
-  organisationLabel: {
-    text: 'HMPPS',
-    href: '#'
-  },
-  serviceLabel: {
-    text: 'Calculate release dates',
-    href: 'start'
-  },
-  navigation: {
-    label: 'Account navigation',
-    items: [{
-      text: 'Prototype user',
-      href: '#',
-      active: true
-    }, {
-      text: 'Sign out',
-      href: '#'
-    }]
-  }
-
-}) }}
-{% endblock %}
-{% block beforeContent %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "alpha"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
-<a class="govuk-back-link" href="javascript:history.back();">Back</a>
-{% endblock %}
+{% extends "./dps/includes/template.html" %}
 {% block content %}
-<div class="govuk-width-container">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-                    <h1 class="govuk-heading-xl">
-                        Calculation cancelled for Joe Bloggs
-                    </h1>
-                <div class="govuk-!-margin-top-8">
-                    <p class="govuk-body">This calculation has not been saved in NOMIS.</p>
-                    <p class="govuk-body govuk-!-margin-top-6"><a href="calculation-feedback.html">Report a problem with this calculation</a></p>
-                    <p class="govuk-body"><a href="start.html">Return to Digital Prison Services</a></p>
-                </div>
-            </div>
+<div class="moj-width-container">
+    <a href="javascript:history.back();" class="govuk-back-link">Back</a>
+</div>
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-top-6">
+                Calculation cancelled for Joe Bloggs
+            </h1>
+            <p>The release dates have not been saved to NOMIS.</p>
+            <p class="govuk-body"><a href="start-standalone.html">Calculate another release date</a></p>
+            <h2 class="govuk-heading-m govuk-!-margin-top-8">Report a problem with this calculation</h2>
+            <p class="govuk-body">If you think the calculation was wrong,  <a href="mailto:calculatereleasedates@digital.justice.gov.uk">email the Calculate release dates team</a>. Your feedback will help to improve this service.
+</p>
         </div>
+    </div>
 </div>
 {% endblock %}
