@@ -173,3 +173,24 @@ border-left-color: inherit;
 .homepage-content {
   margin-bottom: -50px;
 }
+
+.pagination-next {
+  text-decoration: none;
+  display: block;
+  float: left;
+}
+
+.pagination-next:visited {
+  color: #1d70b8;
+}
+
+.pagination-next-second-line {
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.arrow-next {
+  margin-right: 10px;
+  display: block;
+  float: left;
+}
