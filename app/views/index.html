@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-Calculate release dates prototype
+Manage a person's release dates prototype
 {% endblock %}
 {% block header %}
 {{ mojHeader({
@@ -9,7 +9,7 @@ text: 'HMPPS',
 href: '#'
 },
 serviceLabel: {
-text: 'Calculate release dates',
+text: "Manage a person's release dates",
 href: '#'
 }
 }) }}
@@ -25,26 +25,37 @@ href: '#'
                 beta
             </strong>
         </h1>
-        <p class="govuk-body">This site contains prototypes for the Calculate Release Dates service.
-            <p class="govuk-body">The latest version of the prototype is Version 6. There are a number of scenarios for this version.</p>
+        <p class="govuk-body">This site contains prototypes for the Manage a person's release dates service.
+            <p class="govuk-body">The latest stable version of the prototype is Version 6. There are a number of scenarios for this version.</p>
+            <p class="govuk-body">Manage a person's release dates is a woirking name for the service that includes Calculate release dates and Lookup a person's release dates.</p>
             <!--             <a href="version-5/nomis-modal.html" role="button" draggable="false" class="govuk-button govuk-!-margin-top-6 govuk-!-margin-bottom-8 govuk-button--start" data-module="govuk-button">
                 Launch version 5
-                <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
                 </svg></a> -->
-            <h2 class="govuk-heading-l govuk-!-margin-top-4">Prototypes</h2>
-            <div class="govuk-inset-text">
-                A breakdown of the calculation scenarios is <a href="https://docs.google.com/spreadsheets/d/1iCInVwKjW0SRdRTH5w7wwEpLghUnoQEQOtSBBHqysY4/edit?usp=sharing">on Google Drive here</a>.
-            </div>
-            <h3 class="govuk-heading-m">Version 7 (WIP)</h3>
+            <h2 class="govuk-heading-l">Manage a person's release dates protoypes</h2>
+            <h3 class="govuk-heading-m">Latest version &nbsp; <strong class="govuk-tag govuk-tag--yellow" style="vertical-align: middle;">
+                    work in progress
+                </strong></h3>
             <ul class="govuk-list">
-                <li><a href="version-7">Version 7 (scenario 1)</a></li>
+                <li><a href="version-7">Version 7</a></li>
             </ul>
-            <h3 class="govuk-heading-m">Version 6</h3>
+            <h2 class="govuk-heading-l">Calculate release dates prototypes</h2>
+            <p class="govuk-body">
+                Prototypes for the Calculate release dates service only. 
+            </p>
+            <p class="govuk-body">A breakdown of the calculation scenarios is <a href="https://docs.google.com/spreadsheets/d/1iCInVwKjW0SRdRTH5w7wwEpLghUnoQEQOtSBBHqysY4/edit?usp=sharing">on Google Drive here</a>.</p>
+            <h3 class="govuk-heading-m">Latest version &nbsp; <strong class="govuk-tag govuk-tag--green">
+                    stable</strong></h3>
+            <p class="govuk-body"><a href="version-6">Version 6</a></p>
+                <h3 class="govuk-heading-s">Older versions</h3>
             <ul class="govuk-list">
-                <li><a href="version-6">Version 6</a></li>
+                <li><a href="version-5">Version 5</a></li>
+                <li><a href="version-4/nomis-modal">Version 4</a></li>
+                <li><a href="version-3/nomis-modal">Version 3</a></li>
+                <li><a href="version-2/offender-details">Version 2</a></li>
+                <li><a href="version-1/offender-details.html">Version 1</a></li>
             </ul>
-            <h3 class="govuk-heading-m">Error pages</h3>
+            <h3 class="govuk-heading-s">Error pages</h3>
             <ul class="govuk-list">
                 <li><a href="errors/error-there-is-a-problem-page-button">There is a problem page with button</a></li>
                 <li><a href="errors/error-there-is-a-problem-page-link">There is a problem page with link</a></li>
@@ -57,15 +68,7 @@ href: '#'
             <h2 class="govuk-heading-l govuk-!-margin-top-4">Design notes</h2>
             <p class="govuk-body">A design history and decisions made on the Calculate release dates service.</p>
             <p class="govuk-body"><a href="/design-notes">Go to design notes</a></p>
-            <hr class="govuk-!-margin-bottom-6 govuk-!-margin-top-8">
-            <h2 class=" govuk-heading-m">Previous versions</h2>
-            <ul class="govuk-list">
-                <li><a href="version-5">Version 5</a></li>
-                <li><a href="version-4/nomis-modal">Version 4</a></li>
-                <li><a href="version-3/nomis-modal">Version 3</a></li>
-                <li><a href="version-2/offender-details">Version 2</a></li>
-                <li><a href="version-1/offender-details.html">Version 1</a></li>
-            </ul>
+            <!-- <hr class="govuk-!-margin-bottom-6 govuk-!-margin-top-8"> -->
     </div>
 </div>
 {% endblock %}
