@@ -54,7 +54,7 @@ Digital Prison Services
                 HMPPS
             </a>
 
-            <a class="dps-header__link dps-header__title__service-name" href="/">{% if serviceName %} {{ serviceName }} {% endif %}</a>
+            <a class="dps-header__link dps-header__title__service-name" href="/">Calculate release dates</a>
         </div>
 
         <nav aria-label="Account navigation">
@@ -73,11 +73,15 @@ Digital Prison Services
         </nav>
     </div>
 </header>
-<div class="location-bar">
-      <span class="location-bar__location" data-test="active-location">
-          <strong class="govuk-tag govuk-!-margin-right-1 ">PROTOTYPE</strong>
-          <span class="gtm-active-case-load">Cold Mountain Penitentiary (HMP)</span>
-      </span>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service.
+    </span>
+  </p>
 </div>
 {% endblock %}
 
