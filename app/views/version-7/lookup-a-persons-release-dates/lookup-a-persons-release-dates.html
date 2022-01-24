@@ -7,7 +7,7 @@
             <li class="govuk-breadcrumbs__list-item">
                 <a class="govuk-breadcrumbs__link" href="/">Manage a person's release dates</a>
             </li>
-            <li class="govuk-breadcrumbs__list-item" aria-current="page">View release dates</li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="page">Look up a person's release dates</li>
         </ol>
     </div>
 </div>
@@ -15,10 +15,10 @@
 <div class="homepage-search">
     <div class="moj-width-container">
         <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Find release dates for a prisoner</h2>
-        <p class="govuk-body govuk-hint">Enter a Prison Number to look up the person's details</p>
-        <form class="horizontal-form" data-test="homepage-search-form" class="form" action="search-results" method="post">
+        <p class="govuk-body govuk-hint">You can search by a person's name or prison number</p>
+        <form class="horizontal-form" data-test="lookup-search-form" class="form" action="search-results" method="post">
             <div class="govuk-form-group">
-                <label class="govuk-label" for="prisoner-name">Prison number</label> <input class="govuk-input" data-test="homepage-search-keywords" id="prisoner-name" name="prisoner-name" type="text">
+                <input class="govuk-input lookup-search-input" data-test="lookup-search-keywords" id="prisoner-name" name="prisoner-name" type="text">
             </div>
             <button class="govuk-button" data-module="govuk-button" type="submit" onclick="showAlert()">Search</button>
         </form>
