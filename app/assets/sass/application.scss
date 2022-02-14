@@ -291,3 +291,17 @@ border-left-color: inherit;
     margin-left: govuk-spacing(6);
   }
 }
+
+.adjustment-details {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.adjustment-cell {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.adjustment-hint {
+  line-height: 1.6 !important;
+}
