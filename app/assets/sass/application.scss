@@ -305,3 +305,7 @@ border-left-color: inherit;
 .adjustment-hint {
   line-height: 1.6 !important;
 }
+
+.govuk-checkboxes--small .govuk-checkboxes__label:before {
+  top: 2px;
+}
