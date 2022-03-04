@@ -309,3 +309,8 @@ border-left-color: inherit;
 .govuk-checkboxes--small .govuk-checkboxes__label:before {
   top: 2px;
 }
+
+.govuk-checkboxes__input:checked + .govuk-checkboxes__label:after {
+opacity: 1;
+top: 10px;
+}
