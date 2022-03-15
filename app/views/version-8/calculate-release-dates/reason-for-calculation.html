@@ -1,0 +1,77 @@
+{% extends "./dps/includes/template.html" %}
+{% block content %}
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-top-8">
+                Why are you calculating release dates for Joe Bloggs?
+            </h1>
+            <p class="govuk-body">Select a reason for the calculation.</p>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="calculation-reason" name="calculation-reason" type="radio" value="england">
+                            <label class="govuk-label govuk-radios__label" for="calculation-reason">
+                                New calculation
+                            </label>
+                        </div>
+                        <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="contact" name="calculation-reason" type="radio" value="email" data-aria-controls="conditional-contact">
+                                <label class="govuk-label govuk-radios__label" for="contact">
+                                    Transfer check
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="calculation-reason-3" name="calculation-reason" type="radio" value="wales">
+                                <label class="govuk-label govuk-radios__label" for="calculation-reason-3">
+                                    Lodged warrant
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="calculation-reason-4" name="calculation-reason" type="radio" value="northern-ireland">
+                                <label class="govuk-label govuk-radios__label" for="calculation-reason-4">
+                                    Additional days awarded (ADA)
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="calculation-reason-4" name="calculation-reason" type="radio" value="northern-ireland">
+                                <label class="govuk-label govuk-radios__label" for="calculation-reason-4">
+                                    Restoration of additional days awarded (RADA)
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="calculation-reason-4" name="calculation-reason" type="radio" value="northern-ireland">
+                                <label class="govuk-label govuk-radios__label" for="calculation-reason-4">
+                                    Further sentence
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="calculation-reason-4" name="calculation-reason" type="radio" value="northern-ireland">
+                                <label class="govuk-label govuk-radios__label" for="calculation-reason-4">
+                                    14 day check
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="calculation-reason-4" name="calculation-reason" type="radio" value="northern-ireland">
+                                <label class="govuk-label govuk-radios__label" for="calculation-reason-4">
+                                    2 day check
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="calculation-reason-4" name="calculation-reason" type="radio" value="northern-ireland">
+                                <label class="govuk-label govuk-radios__label" for="calculation-reason-4">
+                                    Appeal
+                                </label>
+                            </div>
+                        </div>
+                </fieldset>
+            </div>
+            <a href="check-sentence-and-offence-information-2.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                Continue
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
