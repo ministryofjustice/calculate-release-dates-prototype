@@ -1,4 +1,4 @@
-{% extends "./dps/includes/template.html" %}
+{% extends "../dps/includes/template.html" %}
 {% block content %}
 <div class="moj-width-container">
     <div class="govuk-grid-row">
@@ -10,8 +10,8 @@
     </div>
     <div class="govuk-grid-row">
         <div class="moj-width-container">
-            <p class="govuk-body govuk-!-margin-bottom-6">You can search using a person’s name or prison number.</p>
             <form>
+                <p class="govuk-body govuk-!-margin-bottom-6">You can search using a person’s name or prison number.</p>
                 <div class="govuk-grid-row prisoner-search__form__row">
                     <div class="horizontal-form govuk-!-margin-bottom-3">
                         <div class="govuk-form-group">
@@ -37,6 +37,33 @@
                 <a href="search-for-prisoner-results.html" class="govuk-button prisoner-search__button">Search</a>
         </div>
         </form>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <!-- nav class="moj-pagination govuk-!-font-size-19" id="pagination-label">
+                <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+                <ul class="moj-pagination__list"></ul>
+                <p class="moj-pagination__results">Showing <b>1</b> to <b>1</b> of <b>1</b> results</p>
+            </nav> -->
+            <div class="prisoner-search__results-list">
+                <table class="govuk-table" data-test="global-search-results-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Name</th>
+                            <th scope="col" class="govuk-table__header">Prison number</th>
+                            <th scope="col" class="govuk-table__header">Date of birth</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell"><a href="schedule-15-offence.html">Bloggs, Joe</a></td>
+                            <td class="govuk-table__cell">B4166LG</td>
+                            <td class="govuk-table__cell">1 February 1990</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
