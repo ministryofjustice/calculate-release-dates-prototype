@@ -1,4 +1,4 @@
-{% extends "./dps/includes/template.html" %}
+{% extends "../dps/includes/template.html" %}
 {% block content %}
 <!-- Prisoner identity bar -->
 <div class="moj-width-container">
@@ -11,9 +11,8 @@
     </div>
 </div>
 <!-- Breadcrumbs -->
-<div class="moj-width-container">
-    <a href="check-sentence-and-offence-information-6.html" class="govuk-back-link">Back</a>
-    <!-- <div class="govuk-breadcrumbs govuk-!-display-none-print">
+<!-- <div class="moj-width-container">
+    <div class="govuk-breadcrumbs govuk-!-display-none-print">
         <ol class="govuk-breadcrumbs__list">
             <li class="govuk-breadcrumbs__list-item">
                 <a class="govuk-breadcrumbs__link" href="/">Home</a>
@@ -22,15 +21,15 @@
                 <a class="govuk-breadcrumbs__link" href="/prisoner/G9126UE">Bloggs, Joe</a>
             </li>
             <li class="govuk-breadcrumbs__list-item" aria-current="page">Calculate release dates</li>
-        </ol> -->
+        </ol>
     </div>
-</div>
+</div> -->
 <!-- Page intro -->
 <div class="moj-width-container govuk-!-margin-top-8">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-xl">
-                Adjustments for Joe Bloggs
+                Check adjustments for Joe Bloggs
             </h1>
             <p class="govuk-body">Some fancy introductory text by Jo to introduce this page.</p>
         </div>
@@ -234,7 +233,19 @@
                     </tr>
                 </tbody>
             </table>
-                        <details class="govuk-details" data-module="govuk-details">
+        </div>
+    </div>
+</div>
+<!-- Call to action -->
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m govuk-!-margin-top-8">Now calculate release dates for Joe Bloggs</h2>
+            <p class="govuk-body">The release dates will not be saved in NOMIS until you have reviewed the calculation.</p>
+            <a href="calculation-summary.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                Calculate release dates
+            </a>
+            <details class="govuk-details" data-module="govuk-details">
                 <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text">
                         Some information is wrong
@@ -245,16 +256,6 @@
                     If you think the service isn’t working properly, email <a href="mailto:calculatereleasedates@digital.justice.gov.uk">calculatereleasedates@digital.justice.gov.uk</a> for support.
                 </div>
             </details>
-        </div>
-    </div>
-</div>
-<!-- Call to action -->
-<div class="moj-width-container">
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-<button onclick="location.href='check-sentence-and-offence-information-6.html'" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-Back
-</button>
         </div>
     </div>
 </div>
