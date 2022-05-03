@@ -10,20 +10,10 @@
         </div>
     </div>
 </div>
-<!-- Breadcrumbs -->
-<!-- <div class="moj-width-container">
-    <div class="govuk-breadcrumbs govuk-!-display-none-print">
-        <ol class="govuk-breadcrumbs__list">
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/">Home</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/prisoner/G9126UE">Bloggs, Joe</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item" aria-current="page">Calculate release dates</li>
-        </ol>
-    </div>
-</div> -->
+<!-- Back link -->
+<div class="moj-width-container">
+<a href="search-for-prisoner-results" class="govuk-back-link">Back</a>
+</div>
 <!-- Page intro -->
 <div class="moj-width-container govuk-!-margin-top-8">
     <div class="govuk-grid-row">
@@ -33,32 +23,46 @@
             </h1>
             <p class="govuk-body">Select which sentences fall under an SDS+ calculation.</p>
             <details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      What is an SDS+?
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    <p class="govuk-body">An SDS+ is a sentence where prisoners have to serve two thirds of their sentence in custody. For an SDS+ to apply, the prisoner must:</p>
-    <ul class="govuk-list govuk-list--bullet">
-        <li>be 18 years or over</li>
-        <li>be sentenced for a Schedule 15 offence that may attract a maximum of life imprisonment</li>
-        <li>be sentenced on or after 1 April 2020</li>
-        <li>receive 7 years or more from a single Standard Determinate Sentence or Detention in a Young Offender Institution</li>
-    </ul>
-    <p class="govuk-body"><a href="https://docs.google.com/document/d/1UOgexo_R2w2HujVrHplefT8h2uo79uvk" target="_blank">Read more information on SDS+ sentences (opens in a new tab)</a>.</p>
-  </div>
-</details>
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        What is an SDS+?
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <p class="govuk-body">An SDS+ is a sentence where prisoners have to serve two thirds of their sentence in custody. For an SDS+ to apply, the prisoner must:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>be 18 years or over</li>
+                        <li>be sentenced for a Schedule 15 offence that may attract a maximum of life imprisonment</li>
+                        <li>be sentenced on or after 1 April 2020</li>
+                        <li>receive 7 years or more from a single Standard Determinate Sentence or Detention in a Young Offender Institution</li>
+                    </ul>
+                    <p class="govuk-body"><a href="https://docs.google.com/document/d/1UOgexo_R2w2HujVrHplefT8h2uo79uvk" target="_blank">Read more information on SDS+ sentences (opens in a new tab)</a>.</p>
+                </div>
+            </details>
         </div>
     </div>
 </div>
 <!-- Court case 1 -->
 <div class="moj-width-container govuk-!-margin-top-4">
+    <div class="govuk-grid-row govuk-!-margin-bottom-6">
+        <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="select-all" name="select-all" type="checkbox" value="select-all">
+        <label class="govuk-label govuk-checkboxes__label" for="select-all" style="padding-top: 5px; padding-left:10px">
+          Select all
+        </label>
+      </div>
+      </div>
+      </div>
+  </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
     <h3 class="govuk-heading-m">Court case 1</h3>
     <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all" style="width: 100%">
         <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-                <th class="govuk-table__header" scope="col" id="select-all" style="width: 4%"></th>
+                <th class="govuk-table__header" scope="col" style="width: 4%"></th>
                 <th class="govuk-table__header" scope="col" style="width: 4%">Count</th>
                 <th class="govuk-table__header" scope="col" style="width: 35%">Offence</th>
                 <th class="govuk-table__header" scope="col" style="width: 18%">Sentence type</th>
@@ -76,16 +80,35 @@
                         </label>
                     </div>
                 </td>
-                <td class="govuk-table__cell">2.</td>
-                <td class="govuk-table__cell">Rape of a boy under 13 - SOA 2003<br>
+                <td class="govuk-table__cell">1.</td>
+                <td class="govuk-table__cell">Hijacking of ships<br>
                     <div class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0;">Committed on 20 June 2021</div>
                 </td>
                 <td class="govuk-table__cell">ORA CJA03 Standard Determinate Sentence</td>
                 <td class="govuk-table__cell">1 July 2021</td>
-                <td class="govuk-table__cell">8 years 0 months<br> 
-0 weeks 0 days </td>
+                <td class="govuk-table__cell">8 years 0 months<br>
+                    0 weeks 0 days </td>
             </tr>
-            <!-- <tr class="govuk-table__row">
+        </tbody>
+    </table>
+</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+    <h3 class="govuk-heading-m">Court case 2</h3>
+    <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all" style="width: 100%">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col" style="width: 4%"></th>
+                <th class="govuk-table__header" scope="col" style="width: 4%">Count</th>
+                <th class="govuk-table__header" scope="col" style="width: 35%">Offence</th>
+                <th class="govuk-table__header" scope="col" style="width: 18%">Sentence type</th>
+                <th class="govuk-table__header" scope="col" style="width: 18%">Sentence date</th>
+                <th class="govuk-table__header" scope="col" style="width: 21%">Sentence length</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
                     <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
                         <input type="checkbox" class="govuk-checkboxes__input" id="count-2" value="count-2">
@@ -94,20 +117,36 @@
                         </label>
                     </div>
                 </td>
-                </td>
-                <td class="govuk-table__cell">2.</td>
-                <td class="govuk-table__cell">Burglary dwelling - with intent to steal<br>
+                <td class="govuk-table__cell">1.</td>
+                <td class="govuk-table__cell">Soliciting murder <br>
                     <div class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2020</div>
                 </td>
                 <td class="govuk-table__cell">ORA CJA03 Standard Determinate Sentence</td>
                 <td class="govuk-table__cell">21 September 2021</td>
                 <td class="govuk-table__cell">7 years 0 months<br>0 weeks 0 days</td>
-            </tr> -->
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                        <input type="checkbox" class="govuk-checkboxes__input" id="count-2" value="count-2">
+                        <label class="govuk-label govuk-checkboxes__label" for="count-2">
+                            <span class="govuk-visually-hidden">Select count 2</span>
+                        </label>
+                    </div>
+                </td>
+                <td class="govuk-table__cell">2.</td>
+                <td class="govuk-table__cell">Hostage taking <br>
+                    <div class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2020</div>
+                </td>
+                <td class="govuk-table__cell">ORA CJA03 Standard Determinate Sentence</td>
+                <td class="govuk-table__cell">21 September 2021</td>
+                <td class="govuk-table__cell">7 years 0 months<br>0 weeks 0 days</td>
+            </tr>
         </tbody>
     </table>
 </div>
+</div>
 <!-- Call to action -->
-<div class="moj-width-container govuk-!-margin-top-9">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <a href="check-sentence-and-offence-information.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
