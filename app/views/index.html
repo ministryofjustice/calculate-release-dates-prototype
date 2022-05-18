@@ -25,50 +25,77 @@ href: '#'
                 beta
             </strong>
         </h1>
-        <p class="govuk-body">This site contains prototypes for the {% if serviceName %} {{ serviceName }} {% endif %} service.
-            <p class="govuk-body">The latest stable version of the prototype is Version 8.</p>
-            <p class="govuk-body">A breakdown of the calculation scenarios used in the prototypes is <a href="https://docs.google.com/spreadsheets/d/1iCInVwKjW0SRdRTH5w7wwEpLghUnoQEQOtSBBHqysY4/edit?usp=sharing">on Google Drive here</a>.</p>
-            <h2 class="govuk-heading-l">Protoypes</h2>
-            <h3 class="govuk-heading-m">Latest versions</h3>
-            <ul class="govuk-list">
-                <h4 class="govuk-heading-s">Version 8&nbsp; <strong class="govuk-tag govuk-tag--yellow" style="vertical-align: middle;">
-                        work in progress
-                    </strong></h4>
-                <li><a href="version-8/calculate-release-dates/louise-show-and-tell/start-standalone">Louise show and tell - 8 April</a></li>
-                <li><a href="version-8/calculate-release-dates/reason-for-calculation/start-standalone">Reason for calculation</a></li>
-                <li><a href="version-8/calculate-release-dates/schedule-15/start-standalone">Schedule 15 offences (SDS+)</a></li>
-                <li><a href="version-8/calculate-release-dates/fixed-term-recall/start-standalone">Fixed term recall</a></li>
-                <li><a href="version-8/calculate-release-dates/paralell-sentences/start-standalone">Recall - paralell sentences</a></li>
-                                <li><a href="version-8/calculate-release-dates/unserved-adas/search-for-prisoner">Unserved ADAs</a></li>
-                <li>
-                    <p class="govuk-body"><a href="version-6">Version 6</a>&nbsp; <strong class="govuk-tag govuk-tag--green" style="vertical-align: middle;">
-                            stable
-                        </strong></p>
-                </li>
-            </ul>
-            <h2 class="govuk-heading-m">Older versions</h2>
-            <ul class="govuk-list">
-                <li><a href="version-7">Version 7</a></li>
-                <li><a href="version-5">Version 5</a></li>
-                <li><a href="version-4/nomis-modal">Version 4</a></li>
-                <li><a href="version-3/nomis-modal">Version 3</a></li>
-                <li><a href="version-2/offender-details">Version 2</a></li>
-                <li><a href="version-1/offender-details.html">Version 1</a></li>
-            </ul>
-            <h3 class="govuk-heading-m">Error pages</h3>
-            <ul class="govuk-list">
-                <li><a href="errors/error-there-is-a-problem-page-button">There is a problem page with button</a></li>
-                <li><a href="errors/error-there-is-a-problem-page-link">There is a problem page with link</a></li>
-                <li><a href="errors/error-banner.html">Error banner</a></li>
-            </ul>
-            <h3 class="govuk-heading-m">Notifications</h3>
-            <ul class="govuk-list">
-                <li><a href="errors/notification-banner.html">Notification banner (no action required from user)</a></li>
-            </ul>
-            <h2 class="govuk-heading-l govuk-!-margin-top-4">Design notes</h2>
+        <p class="govuk-body">This site contains prototypes for the {% if serviceName %} {{ serviceName }} {% endif %} service.<br>The latest stable version of the prototype is <a href="version-8/calculate-release-dates/louise-show-and-tell/start-standalone">Version 8.</a></p>
+        </p>
+        <h2 class="govuk-heading-l govuk-!-margin-top-7">What's new</h2>
+        <p class="govuk-body">
+            The latest changes made to the calculate release dates prototype.
+        </p>
+        <h3 class="govuk-heading-m">May 2022</h3>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header" style="width: 30%;">Topic</th>
+                    <th scope="col" class="govuk-table__header">Update</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell">Fixed term recalls</td>
+                    <td class="govuk-table__cell">
+                        <p>Adjustments made to the Check Sentence and offence information page to show Fixed term recall as a sentence type, with additional text to show when the person was returned to custody</p>
+                        <p>Recall sentence remand added to the summary and detailed adjustments</p>
+                        <p>Final release dates and Calculation breakdown sections show PRRD for recalls</p>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell">Unserved ADAs</td>
+                    <td class="govuk-table__cell">
+                        <p>Added the ability to show number of days and date unserved ADAs were awarded in the detailed adjustments section on the Check Sentence and Offence Information page.</p>
+                        <p>Number of unserved ADAs that have been excluded from a calculation shown in the Release dates with adjustments section of the calculation breakdown as release date types</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="govuk-heading-l govuk-!-margin-top-8">Protoypes</h2>
+        <h3 class="govuk-heading-m">Latest version</h3>
+        <ul class="govuk-list">
+            <h4 class="govuk-heading-s">Version 8</h4>
+            <li><a href="version-8/calculate-release-dates/louise-show-and-tell/start-standalone">Version 8</a><strong class="govuk-tag govuk-tag--green" style="vertical-align: middle; margin-left: 10px;">
+                    Stable
+                </strong></li>
+            <li><a href="version-8/calculate-release-dates/reason-for-calculation/start-standalone">Reason for calculation</a></li>
+            <li><a href="version-8/calculate-release-dates/schedule-15/start-standalone">Schedule 15 offences (SDS+)</a></li>
+            <li><a href="version-8/calculate-release-dates/fixed-term-recall/start-standalone">Fixed term recall</a></li>
+            <li><a href="version-8/calculate-release-dates/paralell-sentences/start-standalone">Recall - paralell sentences</a></li>
+            <li><a href="version-8/calculate-release-dates/unserved-adas/search-for-prisoner">Unserved ADAs</a></li>
+            <li>
+            </li>
+        </ul>
+        <h2 class="govuk-heading-m">Older versions</h2>
+        <ul class="govuk-list">
+            <li><a href="version-6">Version 6</li>
+            <li><a href="version-7">Version 7</a></li>
+            <li><a href="version-5">Version 5</a></li>
+            <li><a href="version-4/nomis-modal">Version 4</a></li>
+            <li><a href="version-3/nomis-modal">Version 3</a></li>
+            <li><a href="version-2/offender-details">Version 2</a></li>
+            <li><a href="version-1/offender-details.html">Version 1</a></li>
+        </ul>
+        <h3 class="govuk-heading-m">Error pages</h3>
+        <ul class="govuk-list">
+            <li><a href="errors/error-there-is-a-problem-page-button">There is a problem page with button</a></li>
+            <li><a href="errors/error-there-is-a-problem-page-link">There is a problem page with link</a></li>
+            <li><a href="errors/error-banner.html">Error banner</a></li>
+        </ul>
+        <h3 class="govuk-heading-m">Notifications</h3>
+        <ul class="govuk-list">
+            <li><a href="errors/notification-banner.html">Notification banner (no action required from user)</a></li>
+        </ul>
+        <!--             <h2 class="govuk-heading-l govuk-!-margin-top-4">Design notes</h2>
             <p class="govuk-body">A design history and decisions made on the Calculate release dates service.</p>
-            <p class="govuk-body"><a href="/design-notes">Go to design notes</a></p>
-            <!-- <hr class="govuk-!-margin-bottom-6 govuk-!-margin-top-8"> -->
+            <p class="govuk-body"><a href="/design-notes">Go to design notes</a></p> -->
+        <!-- <hr class="govuk-!-margin-bottom-6 govuk-!-margin-top-8"> -->
     </div>
 </div>
 {% endblock %}
