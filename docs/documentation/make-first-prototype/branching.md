@@ -1,8 +1,12 @@
+---
+title: Show different pages depending on user input (branching)
+caption: Build a basic prototype
+---
 # Show different pages depending on user input (branching)
 
 Our first question asks the user how many balls they can juggle. We’re going to send them to an ‘ineligible’ page if they can only juggle 2 balls or less. Sending users to different pages based on their input is called branching.
 
-To do this, we’re going to need an ‘ineligible.html’ page, and some logic to decide when to send users there.
+To do this, we’re going to need an `ineligible.html` page, and some logic to decide when to send users there.
 
 This kind of logic goes in a file called `app/routes.js`, which is written in JavaScript. Routes tell the kit what to do when the user goes to specific pages.
 
@@ -10,11 +14,11 @@ The route takes the answer the user gave to the first question and either sends 
 
 ## Create an ineligible page
 
-1. Make an `ineligible.html` page by copying `template-content-page.html`.
+1. Make an `ineligible.html` page by copying `content.html` from `docs/views/templates` to `app/views`.
 
 2. Update the content to tell the user why they’re ineligible and what they can do next.
 
-Check it works by visiting http://localhost:3000/ineligible.
+To check it works, [go to http://localhost:3000/ineligible](http://localhost:3000/ineligible).
 
 ## Create a route
 
@@ -22,7 +26,7 @@ We’re going to write some logic to process the user’s answer to question 1. 
 
 Currently, the `juggling-balls` page sends the user directly to question 2. Instead, we’re going to send them to a special URL where we can run some code to check their answer.
 
-1. In juggling-balls.html change the form action to `/juggling-balls-answer`.
+1. In `juggling-balls.html` change the form action to `/juggling-balls-answer`.
 
 2. Open `/app/routes.js`.
 
@@ -32,11 +36,11 @@ Currently, the `juggling-balls` page sends the user directly to question 2. Inst
 // Run this code when a form is submitted to 'juggling-balls-answer'
 router.post('/juggling-balls-answer', function (req, res) {
 
-  // Make a variable and give it the value from 'juggling-balls'
-  var jugglingBalls = req.session.data['juggling-balls']
+  // Make a variable and give it the value from 'how-many-balls'
+  var howManyBalls = req.session.data['how-many-balls']
 
   // Check whether the variable matches a condition
-  if (jugglingBalls == "3 or more"){
+  if (howManyBalls == "3 or more"){
     // Send user to next page
     res.redirect('/juggling-trick')
   } else {
