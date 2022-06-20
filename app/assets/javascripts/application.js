@@ -11,15 +11,13 @@ $(document).ready(function () {
 })
 
 // Check all checkboxes
-$('#select-all').click(function(event) {   
+$('#unselect-all').click(function(event) {   
     if(this.checked) {
         // Iterate each checkbox
-        $(':checkbox').each(function() {
-            this.checked = true;                        
+        $('.count').each(function() {
+            this.checked = false;                        
         });
-    } else {
-        $(':checkbox').each(function() {
-            this.checked = false;                       
-        });
-    }
+    } 
 }); 
+
+
