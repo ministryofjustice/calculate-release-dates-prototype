@@ -14,76 +14,37 @@
 <div class="moj-width-container">
     <a href="search-for-prisoner-results" class="govuk-back-link">Back</a>
 </div>
-<div class="moj-width-container">
-    <div class="moj-banner govuk-!-margin-top-6">
-        <h2 class="govuk-heading-m">One or more of these sentences could include a Schedule 15 offence</h2>
-        <div class="moj-banner__message">
-            <p class="govuk-body">This could change the way release dates for some sentences are calculated.</p>
-        </div>
-    </div>
-</div>
 <!-- Page intro -->
 <div class="moj-width-container govuk-!-margin-top-8">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-
             <h1 class="govuk-heading-xl">
-                Select the sentences that include Schedule 15 offences
+                Select offences that appear in List B
             </h1>
-            <p class="govuk-body">Schedule 15 offences cannot yet be identified by this service. To make sure release dates are calculated correctly, you must select sentences that include a Schedule 15 offence.</p>
-            <details class="govuk-details" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                        How are release date calculations affected?
-                    </span>
-                </summary>
-                <div class="govuk-details__text">
-                    <p class="govuk-body">In some cases, a person's release dates are calculated at two thirds of their sentence in custody. This happens when the person:</p>
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li>is sentenced for a Schedule 15 offence that may attract a maximum of life imprisonment</li>
-                        <li>is 18 years or over</li>
-                        <li>is sentenced on or after 1 April 2020</li>
-                        <li>has received 7 years or more from a single Standard Determinate Sentence or Detention in a Young Offender Institution</li>
-                    </ul>
+            <p class="govuk-body">For each sentence, select the offences that have alternative release date arrangements.</p>
+            <p class="govuk-body">The offences that appear in List B are applicable to:
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>SDS and DYOPI sentence types</li>
+                    <li>sentences from 28 June 2022</li>
+                    <li>sentence lengths of 4 years or over, but less than 7 years</li>
+                </ul>
+            </p>
+            <div class="card-group card-group__item govuk-!-margin-top-6">
+                <div class="card card--clickable" data-test="manage-prisoner-whereabouts">
+                    <h2 class="govuk-heading-s card__heading">
+                        <a class="govuk-link card__link" href="court-cases">List B</a>
+                    </h2>
+                    <p class="govuk-body card__description govuk-!-margin-bottom-2">SDS, DYOPI sentence types, sentenced from 28 June 2022, 4 years or over and less than 7 years</p>
                 </div>
-            </details>
-        </div>
-    </div>
-    <div class="govuk-grid-row govuk-!-margin-top-4 govuk-!-margin-bottom-6"> 
-    <div class="govuk-grid-column-two-thirds">
-            <h3 class="govuk-heading-m">Lists of Schedule 15 offences</h3>
-            <p class="govuk-body">There are 3 lists of Schedule 15 offences. The lists are grouped by sentence date and sentence length.</p>
-            <h4 class="govuk-heading-s">Sentence dates from 1 April 2020 and 27 June 2022</h4>
-            <ul class="govuk-list">
-                <li><a href="schedule-15-offence-list-pre-july-22" target="_blank">Sentences over 7 years</a></li>
-            </ul>
-            
-            <h4 class="govuk-heading-s">Sentence dates after 28 June 2022</h4>
-            <ul class="govuk-list">
-                <li><a href="schedule-15-offence-list-4-7-years-june-22-onwards" target="_blank">Sentences between 4 and 7 years</a></li>
-                <li><a href="schedule-15-offence-list-7-years-june-22-onwards" target="_blank">Sentences over 7 years</a></li>
-            </ul>
+            </div>
         </div>
     </div>
 </div>
 <!-- Court case 1 -->
 <div class="moj-width-container govuk-!-margin-top-4">
-<!--     <div class="govuk-grid-row govuk-!-margin-bottom-6">
-        <div class="govuk-grid-column-two-thirds">
-            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="select-all" name="select-all" type="checkbox" value="select-all">
-                    <label class="govuk-label govuk-checkboxes__label" for="select-all" style="padding-top: 5px; padding-left:10px">
-                        Select all
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
             <h2 class="govuk-heading-l">Sentences</h2>
-            <p class="govuk-body">Select the sentences that include a Schedule 15 offence. You must use the correct list for each sentence, according to the sentence date and sentence length.</p>
             <h3 class="govuk-heading-m">Court case 1</h3>
             <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all" style="width: 100%">
                 <thead class="govuk-table__head">
@@ -91,7 +52,6 @@
                         <th class="govuk-table__header" scope="col" style="width: 4%"></th>
                         <th class="govuk-table__header" scope="col" style="width: 4%">Count</th>
                         <th class="govuk-table__header" scope="col" style="width: 35%">Offence</th>
-                        <th class="govuk-table__header" scope="col" style="width: 18%">Sentence type</th>
                         <th class="govuk-table__header" scope="col" style="width: 18%">Sentence date</th>
                         <th class="govuk-table__header" scope="col" style="width: 21%">Sentence length</th>
                     </tr>
@@ -110,7 +70,6 @@
                         <td class="govuk-table__cell">Hijacking of ships<br>
                             <div class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0;">Committed on 20 June 2021</div>
                         </td>
-                        <td class="govuk-table__cell">ORA CJA03 Standard Determinate Sentence</td>
                         <td class="govuk-table__cell">1 July 2021</td>
                         <td class="govuk-table__cell">8 years 0 months<br>
                             0 weeks 0 days </td>
@@ -128,7 +87,6 @@
                         <th class="govuk-table__header" scope="col" style="width: 4%"></th>
                         <th class="govuk-table__header" scope="col" style="width: 4%">Count</th>
                         <th class="govuk-table__header" scope="col" style="width: 35%">Offence</th>
-                        <th class="govuk-table__header" scope="col" style="width: 18%">Sentence type</th>
                         <th class="govuk-table__header" scope="col" style="width: 18%">Sentence date</th>
                         <th class="govuk-table__header" scope="col" style="width: 21%">Sentence length</th>
                     </tr>
@@ -147,7 +105,6 @@
                         <td class="govuk-table__cell">Soliciting murder <br>
                             <div class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2020</div>
                         </td>
-                        <td class="govuk-table__cell">ORA CJA03 Standard Determinate Sentence</td>
                         <td class="govuk-table__cell">21 September 2021</td>
                         <td class="govuk-table__cell">7 years 0 months<br>0 weeks 0 days</td>
                     </tr>
@@ -164,18 +121,27 @@
                         <td class="govuk-table__cell">Hostage taking <br>
                             <div class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 15 November 2020</div>
                         </td>
-                        <td class="govuk-table__cell">ORA CJA03 Standard Determinate Sentence</td>
                         <td class="govuk-table__cell">21 September 2021</td>
                         <td class="govuk-table__cell">7 years 0 months<br>0 weeks 0 days</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="govuk-grid-column-two-thirds govuk-!-margin-top-2" style="padding-left: 0px;">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="select-all" name="select-all" type="checkbox" value="select-all">
+                        <label class="govuk-label govuk-checkboxes__label" for="select-all" style="padding-top: 5px; padding-left:10px">
+                            None of the sentences include xxx
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Call to action -->
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row govuk-!-margin-top-8">
         <div class="govuk-grid-column-two-thirds">
-            <a href="check-sentence-and-offence-information.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+            <a href="alternative-release-arrangements-c" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
                 Continue
             </a>
         </div>
