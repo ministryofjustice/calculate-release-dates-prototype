@@ -19,29 +19,9 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-xl">
-                Select offences that appear in List A
+                Select sentences that have offences that appear in List A
             </h1>
-            <p class="govuk-body">Some sentences in this calculation meet the criteria for SDS+ release arrangements specified by List A.</p>
-            <!--             <div class="govuk-grid-row">
-                <div class="govuk-grid-column-one-half">
-                    <div class="card-group card-group__item govuk-!-margin-top-6">
-                        <div class="card card--clickable">
-                            <h2 class="govuk-heading-s card__heading govuk-!-margin-bottom-0">
-                                <a class="govuk-link card__link" href="list-a" target="_blank">List A (opens in new tab)</a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <p class="govuk-body">The offences that appear in List A are applicable to:
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>SDS, DYOI, SEC91 and SEC250 sentence types</li>
-                    <li>sentences imposed on or after 01 April 2020</li>
-                    <li>sentences imposed before 28 June 2022</li>
-                    <li>individual sentences of 7 years or over</li>
-                    <li>people aged 18 years or over when sentenced</li>
-                    <li>a maximum sentence of life</li>
-                </ul>
+            <p class="govuk-body">
             </p>
         </div>
     </div>
@@ -50,29 +30,33 @@
 <div class="moj-width-container govuk-!-margin-top-4">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <h2 class="govuk-heading-l">What you need to do</h2>
-            <p class="govuk-body">For each sentence, select the offences that have alternative release date arrangements.</p>
+            <p class="govuk-body">For each sentence, you must select the offences that have alternative release arrangements.</p>
             <ol class="govuk-list govuk-list--number">
-                <li>Look up the name of the offence for each sentence on <a href="">List A (opens in new tab)</a></li>
-                <li>Select those sentences that have offences that appear on List A</li>
+                <li>Note the name of the offence for the first sentence below</li>
+                <li>Open <a href="">List A (opens in new tab)</a></li>
+                <li>Check if the name of the offence appears in List A
+                </a></li>
+                <li>Return to this page</li>
+                <li>Select the box if the offence name appears on the list</li>
+                <li>Repeat for each sentence</li>
             </ol>
             <details class="govuk-details" data-module="govuk-details">
                 <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text">
-                        Wording of incohate offences
+                        Are incohate offences included?
                     </span>
                 </summary>
                 <div class="govuk-details__text">
-                    <p class="govuk-body">Some incohate offences might include wording that do not appear as named sentences on the list, such as:
+                    <p class="govuk-body">Not all incohate offences are appear on the list as named offences. Sentences that include incohate offences could still be specified by Schedule 15. Incohate offences can be: 
                     </p>
                     <ul class="govuk-list govuk-list--bullet">
                         <li>aiding, abbetting councelling or procuring</li>
                         <li>attempted or attempt to</li>
-                        <li>conspiriciy to</li>
+                        <li>conspiricy or conspire to</li>
                         <li>incite or incitement</li>
                         <li>where the person intended or believed would commit an offence</li>
                     </ul>
-                    <p class="govuk-body"> Such offences could still be specified Schedule 15 offences. See paragraphs 64 (specified violent offences) and paragraph 153 (specified sexual offences) for more information.</p>
+                    <p class="govuk-body">See paragraphs 64 (specified violent offences) and paragraph 153 (specified sexual offences) for more information.</p>
                 </div>
             </details>
         </div>
@@ -114,8 +98,8 @@
                     </div>
                 </div>
             </div>
-                     <h3 class="govuk-heading-m">Court case 2</h3>
-                        <div class="govuk-!-margin-bottom-6 app-possible-prison-record" style="display: flex;">
+            <h3 class="govuk-heading-m">Court case 2</h3>
+            <div class="govuk-!-margin-bottom-6 app-possible-prison-record" style="display: flex;">
                 <div class="govuk-grid-column-full govuk-!-margin-top-4">
                     <h3 class="govuk-body-s govuk-!-margin-bottom-0">Count 1</h3>
                     <h4 class="govuk-heading-s govuk-!-margin-bottom-1">
@@ -145,7 +129,7 @@
                     </div>
                 </div>
             </div>
-                                    <div class="govuk-!-margin-bottom-6 app-possible-prison-record" style="display: flex;">
+            <div class="govuk-!-margin-bottom-6 app-possible-prison-record" style="display: flex;">
                 <div class="govuk-grid-column-full govuk-!-margin-top-4">
                     <h3 class="govuk-body-s govuk-!-margin-bottom-0">Count 2</h3>
                     <h4 class="govuk-heading-s govuk-!-margin-bottom-1">
@@ -175,11 +159,19 @@
                     </div>
                 </div>
             </div>
+                                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                None of the sentences have offences that appear on List A
+                            </label>
+                        </div>
+                    </div>
         </div>
     </div>
     <!-- Call to action -->
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-two-thirds govuk-!-margin-top-4">
             <a href="alternative-release-arrangements-b" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
                 Continue
             </a>
