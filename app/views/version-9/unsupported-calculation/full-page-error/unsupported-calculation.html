@@ -1,0 +1,17 @@
+{% extends "../../dps/includes/template.html" %}
+{% block content %}
+<div class="moj-width-container">
+    <h1 class="govuk-heading-xl govuk-!-margin-top-8">
+        Unsupported calculation
+    </h1>
+    <p>The service is unable to calculate release dates for this calculation.</p>
+    <p>For [sentence type] sentences, this service cannot support some calculations in some circumstances. This could be because:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>A reason</li>
+        <li>Another reason</li>
+    </ul>
+    <p>You can view the sentence and offence information for Colin Ball. If you think some information is wrong, you can change it in NOMIS and try the calculation again.</p>
+    <p>
+        <a href="/check-sentence-and-offence-information">View sentence and offence information for Joe Bloggs</a></p>
+</div>
+{% endblock %}
