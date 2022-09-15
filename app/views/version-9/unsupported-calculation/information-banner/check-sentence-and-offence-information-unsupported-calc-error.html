@@ -14,15 +14,23 @@
 <div class="moj-width-container">
     <a href="search-for-prisoner-results" class="govuk-back-link">Back</a>
 </div>
-<!-- Information banner - unsupported calculation -->
+<!-- Unsupported calculation error -->
 <div class="moj-width-container govuk-!-margin-top-4">
-    <div class="moj-banner" id="missingNOMISInfoError">
-        <h2 class="govuk-heading-m">This calculation is not supported</h2>
-        <div class="moj-banner__message">
-            <p class="govuk-body">Some content about why the calculation isn't supported.</p>
-            <p class="govuk-body">If the the sentence and offence information is incorrect, you can edit it in NOMIS and <a href="">reload this page</a>.</p>
-        </div>
-    </div>
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    This calculation isn't supported.
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <p class="govuk-body">More information about why the calculation isn't supported by the service.</p>
+      </li>
+            <li>
+        <p class="govuk-body govuk-!-margin-bottom-0">If you think some sentence and offence information is wrong, you can change it in NOMIS and <a class="govuk-link" style="color: #1d70b8;">reload this page</a>.</p>
+      </li>
+    </ul>
+  </div>
+</div>
 </div>
 <!-- Page intro -->
 <div class="moj-width-container govuk-!-margin-top-7">
@@ -31,11 +39,12 @@
             <h1 class="govuk-heading-xl">
                 Check sentence and offence information for Colin Ball
             </h1>
+            <p class="govuk-body">This calculation will include 2 sentences from NOMIS.</p>
         </div>
     </div>
 </div>
 <!-- Court case 1 -->
-<div class="moj-width-container">
+<div class="moj-width-container govuk-!-margin-top-6">
     <h3 class="govuk-heading-l govuk-!-margin-bottom-2">Court case 1</h3>
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
@@ -521,7 +530,7 @@
         <div class="govuk-grid-column-two-thirds">
             <h2 class="govuk-heading-m govuk-!-margin-top-7">Now calculate release dates for Colin Ball</h2>
             <p class="govuk-body">The release dates will not be saved in NOMIS until you have reviewed the calculation.</p>
-            <a href="check-sentence-and-offence-information-unsupported-calc-error" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+            <a href="#" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
                 Calculate release dates
             </a>
         </div>
