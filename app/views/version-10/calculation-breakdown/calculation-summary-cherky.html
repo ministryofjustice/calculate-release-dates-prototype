@@ -1,0 +1,574 @@
+{% extends "../../dps/includes/template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><strong>Prison number: </strong>G2883VE</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="check-sentence-and-offence-information" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-7">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+                Review calculation before submitting
+            </h1>
+        </div>
+    </div>
+</div>
+<!-- Final release dates -->
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l govuk-!-margin-top-6">Final release dates</h2>
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+            <div class="custom-card" style="background-color: #f3f2f1;">
+                <div class="custom-card-main">
+                    <!-- SLED -->
+                    <h3 class="govuk-heading-s">Sentence and licence expiry date (SLED)</h3>
+                    <p class="govuk-body">Saturday, 1 November 2025</p>
+                    <!-- CRD -->
+                    <h3 class="govuk-heading-s">Conditional release date (CRD)</h3>
+                    <p class="govuk-body ">Saturday, 07 January 2023</p>
+                    <p class="govuk-body govuk-hint govuk-!-font-size-16" data-qa="CRD-weekend-adjustment">Friday, 06 January 2023 when adjusted to a working day</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-two-thirds">
+            <details class="govuk-details govuk-!-margin-bottom-2" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Why are some details missing?
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    Some dates and details are not included as according to <a href="http://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf" target="_blank">PSI 03/2015 (opens in new tab)</a> they are not relevant to this person's circumstances.
+                </div>
+            </details>
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        How are final release dates calculated?
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    Some calculations are made up of different sentences and terms, such as overlapping or concurrent sentences. The final release date comes from the sentence or term with the latest release date.
+                </div>
+            </details>
+        </div>
+    </div>
+</div>
+<!-- Calculation breakdown -->
+<div class="moj-width-container govuk-!-margin-top-8">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <div class="moj-timeline">
+                <div class="moj-timeline__item">
+                    <div class="moj-timeline__header">
+                        <h2 class="moj-timeline__title">From Thursday 12 December 2013</h2>
+                    </div>
+                    <div class="moj-timeline__description govuk-!-margin-top-2">
+                        <details class="govuk-details govuk-!-margin-bottom-2" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text govuk-!-margin-top-4">
+                                    Monday 18 July 2022 (PED)
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                <h3 class="govuk-heading-s">Court case 2, count 3</h3>
+                                <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-font-size-16">
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Offence
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            Indecent assault on a child
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence type
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            Standard determinate sentence (SDS)
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence date
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            17 July 2020
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence length
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            12 months
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Calculated PED (two thirds)
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            27 July 2021
+                                            <p class="govuk-hint govuk-!-font-size-16 govuk-!-margin-top-1">1948 days</p>
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Effective PED
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            24 June 2020
+                                            <p class="govuk-hint govuk-!-font-size-16 govuk-!-margin-top-1">Note: PED adjusted to the CRD of Court case 3, count 4: Indecent assault on a child</p>
+                                        </dd>
+                                    </div>
+                                    <h3 class="govuk-heading-s govuk-!-margin-top-3">Adjustments</h3>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Remand
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            33 days
+                                        </dd>
+                                    </div>
+                                    <h3 class="govuk-heading-s govuk-!-margin-top-3">Release dates</h3>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Calculated PED (two thirds)
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            27 July 2020
+                                            <p class="govuk-hint govuk-!-font-size-16 govuk-!-margin-top-1">1948 days</p>
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Effective PED
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            24 June 2020
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </details>
+                        <details class="govuk-details govuk-!-margin-bottom-2" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    Monday 24 June 2024 (CRD)
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-font-size-16">
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Court case 2, count 4
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Offence
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            Robbery
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence type
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            Standard determinate sentence (SDS)
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence date
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            17 July 2020
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence length
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            12 months
+                                        </dd>
+                                    </div>
+                                    <h3 class="govuk-heading-s govuk-!-margin-top-2">Adjustments</h3>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Remand
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            33 days
+                                        </dd>
+                                    </div>
+                                    <h3 class="govuk-heading-s govuk-!-margin-top-2">Release dates</h3>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Calculated PED (end of custodial term)
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            27 July 2024
+                                            <p class="govuk-hint govuk-!-font-size-16 govuk-!-margin-top-1">2922 days</p>
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Effective CRD
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            24 June 2024
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </details>
+                        <details class="govuk-details govuk-!-margin-bottom-0" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    To Thursday 8 November 2029 (SLED)
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-font-size-16">
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Court case 2, count 4
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Offence
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            Robbery
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence type
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            Standard determinate sentence (SDS)
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence date
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            17 July 2020
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence length
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            12 months
+                                        </dd>
+                                    </div>
+                                    <h3 class="govuk-heading-s govuk-!-margin-top-2">Adjustments</h3>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Remand
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            33 days
+                                        </dd>
+                                    </div>
+                                    <h3 class="govuk-heading-s govuk-!-margin-top-2">Release dates</h3>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Calculated PED (end of custodial term)
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            27 July 2024
+                                            <p class="govuk-hint govuk-!-font-size-16 govuk-!-margin-top-1">2922 days</p>
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Effective CRD
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            24 June 2024
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="moj-timeline__item govuk-!-margin-bottom-0">
+                    <div class="moj-timeline__header">
+                        <h2 class="moj-timeline__title">Calculated dates for each sentence</h2>
+                    </div>
+                    <div class="moj-timeline__description">
+                        <details class="govuk-details govuk-!-margin-bottom-2" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    Court case 1, count 1
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-font-size-16">
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Offence
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            Assault a boy under 13 by touching - SOA 2003
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence type
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            EDS LASPO Discretionary Release
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence date
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            17 July 2020
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Custodial term
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            8 years
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Licence term
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            8 years
+                                        </dd>
+                                    </div>                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Calculated SLED
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            1 January 2020
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Calculated CRD
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            1 January 2020
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Calculated PED
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            1 January 2020
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </details>
+                        <details class="govuk-details govuk-!-margin-bottom-2" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    Court case 1, count 1
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-font-size-16">
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Offence
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            Cause / incite a male child under 13 to engage in sexual activity - offender 18 or over - penetration
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence type
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            EDS LASPO Discretionary Release
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence date
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            17 July 2020
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Custodial term
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            8 years
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Licence term
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            8 years
+                                        </dd>
+                                    </div>                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Calculated SLED
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            1 January 2020
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Calculated CRD
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            1 January 2020
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Calculated PED
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            1 January 2020
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </details>
+                        <details class="govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    Court case 1, count 1
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-font-size-16">
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Offence
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            Sex offenders register - fail to comply with notification requirements - SOA 2003
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence type
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            CJ03 Standard Determinate Sentence 
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Sentence date
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            17 July 2020
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Custodial term
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            8 years
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Licence term
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            8 years
+                                        </dd>
+                                    </div>                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Calculated SLED
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            1 January 2020
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Calculated CRD
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            1 January 2020
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key calc-timeline-summary-list-padding-fix">
+                                            Calculated PED
+                                        </dt>
+                                        <dd class="govuk-summary-list__value calc-timeline-summary-list-padding-fix">
+                                            1 January 2020
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h3 class="govuk-heading-m govuk-!-margin-top-8">Confirm and submit to NOMIS</h3>
+            <p class="govuk-body">By submitting this calculation you are confirming that, to the best of your knowledge, it is correct. The calculation will be saved in NOMIS.</p>
+            <a href="calculation-complete.html">
+                <button class="govuk-button" data-module="govuk-button">Confirm and submit</button>
+            </a>
+            <p class="govuk-body govuk-!-font-size-16"><a href="calculation-cancelled.html" class="govuk-link">Cancel calculation</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
