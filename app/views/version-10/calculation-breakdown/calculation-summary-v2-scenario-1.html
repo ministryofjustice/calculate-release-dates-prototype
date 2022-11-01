@@ -127,12 +127,12 @@
                             <td class="govuk-table__cell" style="border-left: 5px solid #1d70b8; padding-left: 10px;">04 August 2023<br>
                                 <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">730 days</span><br>
                                 <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">SLED</span><br>
-                                <span class="moj-badge govuk-!-margin-top-1">Latest date</span>
+                                <span class="moj-badge govuk-!-margin-top-1">Latest SLED</span>
                             </td>
-                            <td class="govuk-table__cell" style="background-color:#f3f2f1; padding-left: 10px">04 August 2022<br>
+                            <td class="govuk-table__cell" style="border-left: 5px solid #1d70b8; padding-left: 10px;">04 August 2022<br>
                                 <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">365 days</span><br>
                                 <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">CRD</span><br>
-                                <span class="moj-badge govuk-!-margin-top-1">Latest date</span>
+                                <span class="moj-badge govuk-!-margin-top-1">Latest CRD</span>
                             </td>
                         </tr>
                     </tbody>
@@ -142,43 +142,49 @@
     </div>
     <h3 class="govuk-heading-m govuk-!-margin-bottom-4">Release dates with adjustments</h3>
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-two-thirds">
             <table class="govuk-table govuk-!-margin-bottom-8" data-qa="release-dates-adjustments-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Date type</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--date">Calculation</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--date">Calculated date</th>
+                    </tr>
+                </thead>
                 <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
-                        <th class="govuk-table__header">SLED with adjustments</th>
+                        <th class="govuk-table__header">SLED</th>
+                        <td class="govuk-table__cell">
+                            4 August 2023 &minus; 20 days remand
+                            <!--                             <div class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+                                From court case 3, count 3, which is the latest calculated date
+                            </div> -->
+                        </td>
                         <td class="govuk-table__cell">
                             15 July 2023
                         </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__header">CRD</td>
                         <td class="govuk-table__cell">
-                                4 August 2023 &minus; 20 days remand
-                            <div class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16 govuk-!-margin-bottom-0">
-                                From court case 3, count 3, which is the latest calculated date
-                            </div>
-                        </td> </tr> 
-                        <tr class="govuk-table__row">
-                        <td class="govuk-table__header">CRD with adjustments</td>
+                            4 August 2022 &minus; 20 days remand
+                        </td>
                         <td class="govuk-table__cell">
                             15 July 2022
                         </td>
-                        <td class="govuk-table__cell">
-                                4 August 2022 &minus; 20 days remand
-                        </td>
                     </tr>
                     <tr class="govuk-table__row">
-                        <td class="govuk-table__header" style="border-bottom: none;">HDCED with adjustments</td>
+                        <td class="govuk-table__header" style="border-bottom: none;">HDCED</td>
+                                                <td class="govuk-table__cell" style="border-bottom: none;">
+                            16 July 2022 &minus; 135 day</td>
                         <td class="govuk-table__cell" style="border-bottom: none;">
                             03 March 2022
                         </td>
-                        <td class="govuk-table__cell" style="border-bottom: none;">
-                                16 July 2022 &minus; 135 days
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        </tr>
+        </tbody>
+        </table>
     </div>
+</div>
 </div>
 <div class="moj-width-container govuk-!-margin-top-8">
     <div class="govuk-grid-row">
