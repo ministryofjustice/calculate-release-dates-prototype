@@ -1,4 +1,4 @@
-{% extends "../../dps/includes/template.html" %}
+{% extends "../../../dps/includes/template.html" %}
 {% block content %}
 <!-- Prisoner identity bar -->
 <div class="moj-width-container">
@@ -37,13 +37,14 @@
                 <div class="custom-card-main">
                     <!-- SLED -->
                     <h3 class="govuk-heading-s">Sentence and licence expiry date (SLED)</h3>
-                    <p class="govuk-body">Friday, 16 June 2017</p>
+                    <p class="govuk-body">Saturday, 15 July 2023</p>
+                    <p class="govuk-body govuk-hint govuk-!-font-size-16" data-qa="CRD-weekend-adjustment">Friday, 14 July 2023 when adjusted to a working day</p>
                     <!-- CRD -->
                     <h3 class="govuk-heading-s">Conditional release date (CRD)</h3>
-                    <p class="govuk-body ">Thursday, 17 March 2016</p>
+                    <p class="govuk-body ">Friday, 15 July 2022</p>
                     <!-- HDCED -->
                     <h3 class="govuk-heading-s">Home detention curfew eligibility date (HDCED)</h3>
-                    <p class="govuk-body" data-qa="HDCED-date">Wednesday, 4 November 2015</p>
+                    <p class="govuk-body" data-qa="HDCED-date">Thursday, 03 March 2022</p>
                 </div>
             </div>
         </div>
@@ -96,48 +97,44 @@
                     </thead>
                     <tbody class="govuk-table__body calculation-breakdown">
                         <tr class="govuk-table__row">
-                            <td class="govuk-table__cell">
-                                <details class="govuk-details" data-module="govuk-details">
-                                    <summary class="govuk-details__summary">
-                                        <span class="govuk-details__summary-text">
-                                            Aggregate consecutive sentences
-                                        </span>
-                                    </summary>
-                                    <div class="govuk-details__text">
-                                        <table class="govuk-table govuk-!-margin-bottom-4">
-                                            <thead class="govuk-table__head">
-                                                <tr class="govuk-table__row">
-                                                    <th scope="col" class="govuk-table__header">Sentence</th>
-                                                    <th scope="col" class="govuk-table__header govuk-table__header--date">Sentence length</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="govuk-table__body calculation-breakdown">
-                                                <tr class="govuk-table__row">
-                                                    <td class="govuk-table__cell">Court case 1, count 1
-                                                    </td>
-                                                    <td class="govuk-table__cell">6 months<br>
-                                                    </td>
-                                                </tr>
-                                                <tr class="govuk-table__row">
-                                                    <td class="govuk-table__cell">Court case 1, count 2
-                                                    </td>
-                                                    <td class="govuk-table__cell">24 months<br>
-                                                        <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">consecutive to court case 1, count 1</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </details>
+                            <td class="govuk-table__cell">Court case 1, count 1
                             </td>
-                            <td class="govuk-table__cell">16 February 2015</td>
-                            <td class="govuk-table__cell">912 days</td>
-                            <td class="govuk-table__cell">15 August 2017<br>
-                                <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">912 days</span><br>
+                            <td class="govuk-table__cell">17 May 2020</td>
+                            <td class="govuk-table__cell">2 years</td>
+                            <td class="govuk-table__cell">16 May 2022<br>
+                                <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">730 days</span><br>
                                 <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">SLED</span></td>
-                            <td class="govuk-table__cell">16 May 2016<br>
-                                <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">456 days</span><br>
+                            <td class="govuk-table__cell">16 May 2021<br>
+                                <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">365 days</span><br>
                                 <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">CRD</span></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Court case 2, count 2
+                            </td>
+                            <td class="govuk-table__cell">27 Mar 2021</td>
+                            <td class="govuk-table__cell">18 months</td>
+                            <td class="govuk-table__cell">26 Sep 2022<br>
+                                <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">549 days</span><br>
+                                <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">SLED</span></td>
+                            <td class="govuk-table__cell">26 Dec 2021<br>
+                                <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">275 days</span><br>
+                                <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">CRD</span></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Court case 3, count 3
+                            </td>
+                            <td class="govuk-table__cell">05 Aug 2021</td>
+                            <td class="govuk-table__cell">2 years</td>
+                            <td class="govuk-table__cell" style="border-left: 5px solid #1d70b8; padding-left: 10px;">04 August 2023<br>
+                                <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">730 days</span><br>
+                                <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">SLED</span><br>
+                                <span class="moj-badge govuk-!-margin-top-1">Latest SLED</span>
+                            </td>
+                            <td class="govuk-table__cell" style="border-left: 5px solid #1d70b8; padding-left: 10px;">04 Aug 2022<br>
+                                <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">365 days</span><br>
+                                <span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">CRD</span><br>
+                                <span class="moj-badge govuk-!-margin-top-1">Latest CRD</span>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -160,36 +157,39 @@
                     <tr class="govuk-table__row">
                         <th class="govuk-table__header">SLED</th>
                         <td class="govuk-table__cell">
-                            15 August 2017 &minus; 60 days
+                            4 Aug 2023 &minus; 20 days
+                            <!--                             <div class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+                                From court case 3, count 3, which is the latest calculated date
+                            </div> -->
                         </td>
                         <td class="govuk-table__cell">
-                            16 June 2017
+                            15 Jul 2023
                         </td>
                         <td class="govuk-table__cell">
-                            60 days remand
+                            20 days remand
                         </td>
                     </tr>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__header">CRD</td>
                         <td class="govuk-table__cell">
-                            16 May 2016 &minus; 60 days
+                            4 Aug 2022 &minus; 20 days
                         </td>
                         <td class="govuk-table__cell">
-                            17 March 2016
+                            15 Jul 2022
                         </td>
                         <td class="govuk-table__cell">
-                            60 days remand
+                            20 days remand
                         </td>
                     </tr>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__header">HDCED</td>
                         <td class="govuk-table__cell">
-                            18 March 2016 &minus; 135 days
+                            16 Jul 2022 &minus; 135 days
                         <td class="govuk-table__cell">
-                            4 November 2015
+                            3 Mar 2022
                         </td>
                         <td class="govuk-table__cell">
-                            CRD &minus; 135 days, as the sentence is over 18 months and under 4 years
+                            135 days subtracted from CRD, as the sentence is over 18 months and under 4 years
                         </td>
                     </tr>
                 </tbody>
