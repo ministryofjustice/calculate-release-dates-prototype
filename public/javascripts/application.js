@@ -20,4 +20,3 @@ $('#unselect-all').click(function(event) {
     } 
 }); 
 
-
