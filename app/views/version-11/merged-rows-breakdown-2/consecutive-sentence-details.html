@@ -1,0 +1,77 @@
+{% extends "../../dps/includes/template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><strong>Prison number: </strong>G2883VE</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="calculation-summary" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-7">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+                Consecutive sentence details
+            </h1>
+        </div>
+    </div>
+</div>
+<!-- Breakdown -->
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <!-- Concurrent sentence breakdown -->
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Sentence</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--date">Sentence date</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--date">Sentence length</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body calculation-breakdown">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                            Court case 2, count 1
+                            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-2 govuk-!-margin-top-2">
+                                Burglary dwelling - with intent to steal
+                            </p>
+                            <p class="govuk-hint govuk-!-margin-top-0 govuk-!-font-size-16">CJA03 Standard Determinate Sentence</p>
+                        </td>
+                        <td class="govuk-table__cell">
+                            20 March 2020</td>
+                        <td class="govuk-table__cell">2 years<br><span class="govuk-hint govuk-!-font-size-16">Consecutive to court case 1 count 1</span></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                            Court case 5, count 1
+                            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-2 govuk-!-margin-top-2">
+                                Burglary dwelling - with intent to steal
+                            </p>
+                            <p class="govuk-hint govuk-!-margin-top-0 govuk-!-font-size-16">Sentencing Code Standard Determinate Sentence</p>
+                        </td>
+                        <td class="govuk-table__cell">
+                            20 March 2020</td>
+                        <td class="govuk-table__cell">2 years<br><span class="govuk-hint govuk-!-font-size-16">Consecutive to court case 3 count 1</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="moj-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <p class="govuk-body"><a href="calculation-summary">Return to calculation summary</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
