@@ -1,0 +1,89 @@
+{% extends "dps/includes/template.html" %}
+{% block content %}
+<div class="app-masthead govuk-!-margin-top-0">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="app-masthead__title govuk-heading-xl govuk-!-margin-bottom-3">
+                    Calculate release dates
+                </h1>
+                <h3 class="app-masthead__subtitle govuk-heading-l">Design manual</h3>
+                <div class="app-masthead__description">
+                    <p class="govuk-body"></p>
+                </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+                        <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../">Home</a>
+    </li>
+  </ol>
+</div>
+        </div>
+    </div>
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <!-- Navigation -->
+        <div class="govuk-grid-column-one-quarter">
+            <h3 class="govuk-heading-s">Pages</h3>
+            <nav class="design-manual-nav">
+                <ul class="govuk-list">
+                    <li><a class="govuk-link--no-underline" href="start-page">Start page</a></li>
+                    <li><a class="govuk-link--no-underline" href="search-for-a-person">Search for a person</a></li>
+                    <li><a class="govuk-link--no-underline govuk-!-font-weight-bold" href="check-sentence-and-offence-information">Check sentence and offence information</a></li>
+                    <li><a class="govuk-link--no-underline" href="calculation-summary">Calculation summary</a></li>
+                    <li><a class="govuk-link--no-underline" href="calculation-complete">Calculation complete</a></li>
+                </ul>
+            </nav>
+            <h3 class="govuk-heading-s govuk-!-margin-top-6">Patterns</h3>
+            <nav class="design-manual-nav">
+                <ul class="govuk-list">
+                    <li><a class="govuk-link--no-underline" href="">Sentence card</a></li>
+                    <li><a class="govuk-link--no-underline" href="">Adjustments</a></li>
+                    <li><a class="govuk-link--no-underline" href="">Release dates summary</a></li>
+                    <li><a class="govuk-link--no-underline" href="">Calculation breakdown</a></li>
+                    <li><a class="govuk-link--no-underline" href="">Badges</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Check sentence and offence information</h1>
+                        <strong class="govuk-tag govuk-tag--green govuk-!-margin-bottom-6">
+  Stable
+</strong>
+            <p class="govuk-body-l">Help users make sure the information used in the calculation from NOMIS is correct.</p>
+                        <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/check-sentence-and-offence-information.jpeg" alt="" style="width:600px;">
+<h2 class="govuk-heading-l govuk-!-margin-top-6">What this page does</h2>
+            <p class="govuk-body">
+                On this page users review the court case, sentence and offence information that has been entered into NOMIS and used in the calculation. 
+            </p>
+            <p class="govuk-body">
+                Before using Calculate release dates users must enter sentence and offence information into NOMIS. Because of usability problems with NOMIS, this information can be difficult to enter and view. 
+            </p>
+            <p class="govuk-body">By laying out information clearly, calculate release dates allows users to ensure that all information that is to be used in a calculation is present and correct.</p>
+            <p class="govuk-body">If any information is incorrect, users must correct this in NOMIS and reload this page to review changes.</p>
+            <h3 class="govuk-heading-m">Adjustments</h3>
+            <p class="govuk-body">Adjustments that are to be applied to a calculation entered into NOMIS are also displayed on this page. It shows a summary of all adjustments as well as more detailed information about some adjustments, such as remand, that might affect the outcome of a calculation.</p>
+            <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/adjustments-1.jpeg" alt="" style="width:300px;">
+            <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/adjustments-2.jpeg" alt="" style="width:300px; float: right;">
+            <h3 class="govuk-heading-m govuk-!-margin-top-4">Include an ERSED date</h3>
+            <p class="govuk-body">Currently there is no functionality in other services to identify a person who requires an ERSED date (Early release scheme eligibility date) as part of their calculation. Until functionality in other services allows this, users must select to inclide an ERSED date in a calculation on this page using a checkbox.</p>
+            <h2 class="govuk-heading-l">User research</h2>
+            <p class="govuk-body">Multiple versions of this page have been tested with users in user research and during the service's private beta phase.</p>
+            <p class="govuk-body">User research has shown us that users understand the page and are able to use it.</p>
+            <p class="govuk-body">We have heard from userrs that the the layout of information makes it easy to read and undestand, giving them confidence that the correct information is being used in the calculation.</p>
+            <p class="govuk-body">When using previous versions of the page, some users told us that they wanted to see information about dates relevent to remand in the adjustments section. This led to our addion of detailed adjustments.</p>
+            <h2 class="govuk-heading-l">Future considerations</h2>
+            <p class="govuk-body">As the Digital Warrant Folder service replaces NOMIS for the input of court case, sentence and offence information the purpose of this page will change. We believe there will still be a user need to review the information used in a calculation, but will need to consider how this page integrates with that service</p>
+            <p class="govuk-body">Although initial user research suggests users are able to include an ERSED date in the calculation, and understand the meaning of this, we must monitor this component over time. As ERSED dates are only applicable in a minority of calculations, users might develop a behaviour where they skip this as it's not relevent in most cases.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
