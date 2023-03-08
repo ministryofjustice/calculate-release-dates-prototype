@@ -27,13 +27,13 @@
             <nav class="moj-sub-navigation" aria-label="Sub navigation">
                 <ul class="moj-sub-navigation__list">
                     <li class="moj-sub-navigation__item">
-                        <a class="moj-sub-navigation__link" aria-current="page" href="hub-page-release-dates">Release dates</a>
+                        <a class="moj-sub-navigation__link" href="hub-page-release-dates">Release dates</a>
                     </li>
                     <li class="moj-sub-navigation__item">
                         <a class="moj-sub-navigation__link" href="hub-page-sentences">Court cases and sentences</a>
                     </li>
                     <li class="moj-sub-navigation__item">
-                        <a class="moj-sub-navigation__link" href="hub-page-adjustments">Adjustments</a>
+                        <a class="moj-sub-navigation__link" aria-current="page" href="hub-page-adjustments">Adjustments</a>
                     </li>
                     <li class="moj-sub-navigation__item">
                         <a class="moj-sub-navigation__link" href="hub-page-calculation-history">Calculation history</a>
@@ -42,31 +42,91 @@
             </nav>
         </div>
     </div>
-    <!-- Release dates -->
+    <!-- Adjustments -->
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-half">
             <h2 class="govuk-heading-l">
-                Release dates
+                Adjustments
             </h2>
-            <div class="custom-card" style="background-color: #f3f2f1;">
-                <div class="custom-card-main">
-                    <!-- SLED -->
-                    <h3 class="govuk-heading-s">Sentence and licence expiry date (SLED)</h3>
-                    <p class="govuk-body">Tuesday, 19 February 2036</p>
-                    <!-- CRD -->
-                    <h3 class="govuk-heading-s">Conditional release date (CRD)</h3>
-                    <p class="govuk-body ">Sunday, 19 February 2034</p>
-                    <p class="govuk-body govuk-hint govuk-!-font-size-16" data-qa="CRD-weekend-adjustment">Friday, 17 February 2034 when adjusted to a working day</p>
-                    <!-- PED -->
-                    <h3 class="govuk-heading-s">Parole eligibility date (PED)</h3>
-                    <p class="govuk-body ">Friday, 21 April 2028</p>
-                    <!-- ERSED -->
-                    <h3 class="govuk-heading-s">Early removal scheme eligibility date (ERSED)</h3>
-                    <p class="govuk-body ">Wednesday, 21 April 2027</p>
-                </div>
-            </div>
         </div>
     </div>
+        <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <!-- Deductions -->
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Deductions</h3>
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="col" width="90%"></th>
+                                    <th class="govuk-table__header" scope="col">Days</th>
+                                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Adjustment -->
+                    <td class="govuk-table__cell">Recall remand</td>
+                    <!-- Days -->
+                    <td class="govuk-table__cell">0</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Adjustment -->
+                    <td class="govuk-table__cell">Remand</td>
+                    <!-- Days -->
+                    <td class="govuk-table__cell">
+                        1
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Adjustment -->
+                    <td class="govuk-table__cell">Recall tagged bail</td>
+                    <!-- Days -->
+                    <td class="govuk-table__cell">0</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Adjustment -->
+                    <td class="govuk-table__cell">Tagged bail</td>
+                    <!-- Days -->
+                    <td class="govuk-table__cell">
+                        0
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Adjustment -->
+                    <td class="govuk-table__cell">Restore additional days awarded (RADA)</td>
+                    <!-- Days -->
+                    <td class="govuk-table__cell">0</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Adjustment -->
+                    <td class="govuk-table__cell">Unused remand</td>
+                    <!-- Days -->
+                    <td class="govuk-table__cell">0</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Additions -->
+        <h3 class="govuk-heading-m govuk-!-margin-top-8 govuk-!-margin-bottom-0">Additions</h3>
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="col" width="90%"></th>
+                                    <th class="govuk-table__header" scope="col">Days</th>
+                                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Adjustment -->
+                    <td class="govuk-table__cell">Additional days awarded (ADA)</td>
+                    <!-- Days -->
+                    <td class="govuk-table__cell">0</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- Adjustment -->
+                    <td class="govuk-table__cell">Unlawfully at large (UAL)</td>
+                    <!-- Days -->
+                    <td class="govuk-table__cell">0
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
     <!-- Section break -->
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
     <!-- Actions -->
@@ -107,7 +167,7 @@
             <li class="govuk-grid-column-one-third card-group__item">
                 <div class="card card--clickable" data-test="manage-prisoner-whereabouts">
                     <h2 class="govuk-heading-m card__heading">
-                        <a class="govuk-link card__link govuk-link--no-visited-state" href="enter-confirmed-release-date/what-is-the-confirmed-release-date">Enter approved date</a>
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="enter-confirmed-release-date/what-is-the-confirmed-release-date">Enter a confirmed release date</a>
                     </h2>
                     <p class="govuk-body card__description">Enter and save a prisoner's confirmed release date</p>
                 </div>
