@@ -12,38 +12,63 @@
 </div> -->
 <!-- Page heading -->
 <div class="moj-width-container">
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl govuk-!-margin-top-8 govuk-!-margin-bottom-6">
-                Colin Ball
-            </h1>
-            <!-- Prison number -->
-            <p class="govuk-body"><span class="govuk-!-font-weight-bold govuk-!-margin-right-5">Prison number</span>G2883VE</p>
-        </div>
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="#">Back to search results</a>
+            </li>
+        </ol>
     </div>
-    <!-- Navigation -->
+    <!-- Banner -->
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-            <nav class="moj-sub-navigation" aria-label="Sub navigation">
-                <ul class="moj-sub-navigation__list">
-                    <li class="moj-sub-navigation__item">
-                        <a class="moj-sub-navigation__link" href="hub-page-release-dates">Release dates</a>
-                    </li>
-                    <li class="moj-sub-navigation__item">
-                        <a class="moj-sub-navigation__link" href="hub-page-sentences">Court cases and sentences</a>
-                    </li>
-                    <li class="moj-sub-navigation__item">
-                        <a class="moj-sub-navigation__link" aria-current="page" href="hub-page-adjustments">Adjustments</a>
-                    </li>
-                    <li class="moj-sub-navigation__item">
-                        <a class="moj-sub-navigation__link" href="hub-page-calculation-history">Calculation history</a>
-                    </li>
-                </ul>
-            </nav>
+        <div data-test="hmpps-profile-banner-partial" class="hmpps-profile-banner">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full hmpps-profile-banner-top">
+                    <a href="/prisoner/G6123VU/image" class="hmpps-clickable-image" data-qa="prisoner-photo-link">
+                        <img class="hmpps-profile-photo" src="/public/images/prisoner.jpeg" alt="Saunders, John">
+                    </a>
+                    <h2 class="govuk-heading-l hmpps-profile-prisoner-name">Colin Ball</h2>
+                    <div class="info">
+                        <p class="govuk-body govuk-!-font-size-24 hmpps-profile-prisoner-number" aria-label="Prisoner Number">
+                            G6123VU
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full hmpps-profile-banner-bottom govuk-!-padding-top-9">
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+                            <hr>
+                        </div>
+                    </div>
+                    <nav class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+                            <ul class="hmpps-profile-tab-links">
+                                <li class="govuk-heading-s">
+                                    <a href="/prisoner/G6123VU" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline">Overview</a>
+                                </li>
+                                <li class="govuk-heading-s">
+                                    <a href="hub-page-release-dates" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline">Release dates</a>
+                                </li>
+                                <li class="govuk-heading-s">
+                                    <a href="hub-page-sentences" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline">Court cases</a>
+                                </li>
+                                <li class="govuk-heading-s hmpps-profile-tab-link-selected">
+                                    <a href="hub-page-adjustments" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline">Adjustments</a>
+                                </li>
+                                <li class="govuk-heading-s">
+                                    <a href="hub-page-calculation-history" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline">Calculations</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Adjustments -->
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row govuk-!-margin-top-6">
         <div class="govuk-grid-column-one-half">
             <h2 class="govuk-heading-l">
                 Adjustments
