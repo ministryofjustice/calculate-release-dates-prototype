@@ -18,10 +18,10 @@
 <div class="moj-width-container govuk-!-margin-top-4">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <form class="form" action="confirmed-release-date-reason">
+            <form class="form" action="confirmation">
                 <div class="govuk-form-group">
                     <span class="govuk-caption-l">Enter manually calculated release dates</span>
-                    <h1 class="govuk-heading-xl">Check your answers before saving to NOMIS</h1>
+                    <h1 class="govuk-heading-xl">Check your answers</h1>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key" style="width: 55%;">
@@ -31,7 +31,7 @@
               4 March 2024
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="enter-release-dates">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
@@ -53,10 +53,10 @@
         </dl>
         <h2 class="govuk-heading-m">Confirm and submit to NOMIS</h2>
         <p class="govuk-body">By submitting this calculation you are confirming that, to the best of your knowledge, it is correct. The calculation will be saved in NOMIS</p>
-        <form action="/form-handler" method="post" novalidate>
+        <form action="confirmation" method="post" novalidate>
           <input type="hidden" name="answers-checked" value="true">
           <button class="govuk-button" data-module="govuk-button">
-            Accept and save to NOMIS
+            Confirm and save to NOMIS
           </button>
         </form>
     </div>
