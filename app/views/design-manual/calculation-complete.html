@@ -1,7 +1,7 @@
-{% extends "dps/includes/template.html" %}
+{% extends "./template.html" %}
 {% block content %}
 <div class="app-masthead govuk-!-margin-top-0">
-    <div class="govuk-width-container">
+    <div class="moj-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 <h1 class="app-masthead__title govuk-heading-xl govuk-!-margin-bottom-3">
@@ -47,31 +47,30 @@
                 <ul class="govuk-list">
                     <li><a class="govuk-link--no-underline" href="">Sentence card</a></li>
                     <li><a class="govuk-link--no-underline" href="">Adjustments</a></li>
-                    <li><a class="govuk-link--no-underline" href="">Release dates summary</a></li>
-                    <li><a class="govuk-link--no-underline" href="">Calculation breakdown</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/release-dates-summary">Release dates summary</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/calculation-breakdown">Calculation breakdown</a></li>
                     <li><a class="govuk-link--no-underline" href="">Badges</a></li>
                 </ul>
             </nav>
         </div>
         <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Start page</h1>
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Calculation complete</h1>
                         <strong class="govuk-tag govuk-tag--green govuk-!-margin-bottom-6">
   Stable
 </strong>
-            <p class="govuk-body-l">Help users to understand what the service does.</p>
-                        <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/start.jpeg" alt="" style="width:600px;">
+            <p class="govuk-body-l">Tell users that  a calculation has been successfully saved to NOMIS.</p>
+                        <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/calculation-complete.jpeg" alt="" style="width:600px;">
 <h2 class="govuk-heading-l govuk-!-margin-top-6">What this page does</h2>
-            <p class="govuk-body">This page helps users understading what the service does, and what they must do before using it. 
+            <p class="govuk-body">This page will be shown once a user has submitted a calculation and it has been saved to NOMIS. If a calculation cannot be shown to NOMIS they will be <a href="https://dsdmoj.atlassian.net/wiki/spaces/CS/pages/3736961143/Calculation+errors">shown an error page (restricted access)</a>.
             </p>
-            <p class="govuk-body">
-                In addition to this, this page also informs users of the calculation lookup service where they can view previous calculations completed by Calculate release dates.
-            </p>
-            <p class="govuk-body">Users can also check which sentence types are supported by the service from here.</p>
-            <h2 class="govuk-heading-l">User research</h2>
-            <p class="govuk-body">Page analytics show that a low proportion of users are using the calculation lookup service, or viewing the supported sentence types from this page.</p>
-<h2 class="govuk-heading-l">Future considerations</h2>
-            <p class="govuk-body">Further research may need to be carried out to understand how often users need to use the calculation lookup service or check supported sentences.</p>
-            <p class="govuk-body">In future, we might want to give the calculation lookup service more prominance as we migrate away from NOMIS. We might also need to consider replacing this page as Calculate release dates integrates with the Digital Warrant Folder service.</p>
+            <h3 class="govuk-heading-s">Print calculation summary</h3>
+            <strong class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-6">
+  MVP
+</strong>
+<p class="govuk-body">Users can print a paper version of the final release dates and the calculation summary. The service produces a PDF, print-friendly version of the <a href="../design-manual/calculation-summary">Calculation summary page</a>. 
+</p>
+<p class="govuk-body">Research shows that users currently print these from the service to be added to a prisoner’s case file, and in some cases have been handed to prisoners as an alternative to the Key dates slip produced by NOMIS.</p>
+<p class="gouk-body">We are planning to carry out research and redesign a printed version of release dates and the calculation for both OMU staff and prisoners. We have designed <a href="https://miro.com/app/board/o9J_l5lVf1g=/?moveToWidget=3458764543401279288&cot=14">some initial versions (restricted access)</a>.</p>
         </div>
     </div>
 </div>

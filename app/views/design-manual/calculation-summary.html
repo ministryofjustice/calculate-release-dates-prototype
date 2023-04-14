@@ -1,7 +1,7 @@
-{% extends "dps/includes/template.html" %}
+{% extends "./template.html" %}
 {% block content %}
 <div class="app-masthead govuk-!-margin-top-0">
-    <div class="govuk-width-container">
+    <div class="moj-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 <h1 class="app-masthead__title govuk-heading-xl govuk-!-margin-bottom-3">
@@ -38,12 +38,7 @@
                     <li><a class="govuk-link--no-underline" href="start-page">Start page</a></li>
                     <li><a class="govuk-link--no-underline" href="../design-manual/search-for-a-person">Search for a person</a></li>
                     <li><a class="govuk-link--no-underline" href="../design-manual/check-sentence-and-offence-information">Check sentence and offence information</a></li>
-                    <div style="border-left: 4px solid #1d70b8;" class="govuk-!-padding-left-2">
                     <li><a class="govuk-link--no-underline govuk-!-font-weight-bold" href="../design-manual/calculation-summary">Calculation summary</a></li>
-                    <li class="govuk-!-font-size-16">&mdash;<a class="govuk-link--no-underline" href="#final-release-dates"> Final release dates</a></li>
-                    <li class="govuk-!-font-size-16">&mdash;<a class="govuk-link--no-underline" href="calculation-summary"> Calculation breakdown</a></li>
-                    <li class="govuk-!-font-size-16">&mdash;<a class="govuk-link--no-underline" href="calculation-summary"> Adjustments</a></li>
-                </div>
                     <li><a class="govuk-link--no-underline" href="../design-manual/calculation-complete">Calculation complete</a></li>
                 </ul>
             </nav>
@@ -52,8 +47,8 @@
                 <ul class="govuk-list">
                     <li><a class="govuk-link--no-underline" href="">Sentence card</a></li>
                     <li><a class="govuk-link--no-underline" href="">Adjustments</a></li>
-                    <li><a class="govuk-link--no-underline" href="">Release dates summary</a></li>
-                    <li><a class="govuk-link--no-underline" href="">Calculation breakdown</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/release-dates-summary">Release dates summary</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/calculation-breakdown">Calculation breakdown</a></li>
                     <li><a class="govuk-link--no-underline" href="">Badges</a></li>
                 </ul>
             </nav>
@@ -63,18 +58,20 @@
             <strong class="govuk-tag govuk-tag--yellow govuk-!-margin-bottom-6">
                 In design
             </strong>
-            <p class="govuk-body-l">Help users understand the dates calculated by the service before saving thenm to NOMIS.</p>
+            <p class="govuk-body-l">Help users understand the dates calculated by the service before saving them to NOMIS.</p>
             <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/calculation-summary-page.jpeg" alt="" style="width:600px;">
             <h2 class="govuk-heading-l govuk-!-margin-top-6">What this page does</h2>
             <p class="govuk-body">This page shows users the final release dates that have been calculated by the service.
             </p>
             <p class="govuk-body">
-                Users are shown the release dates themselves, and a breakdown of how the service reached these dates. Because trust was a key user need of the service, requiring confidence in the calculation result by the user, the service has been designed to be transparent.
+                Users are shown the release dates and a breakdown of how the service reached these dates. Trust is a key user need of this service, and it is important to gain user’s confidence in the calculation. As a result, the service has been designed to be transparent. The Calculation breakdown clearly shows each stage of the calculation. This has been designed to reflect a manual calculation and to have familiarity, similar to an itemised phone bill or tax document.
             </p>
-            <p class="govuk-body">The Calculation breakdown clearly shows each stage of the calculation. This has been designed to reflect a manual calculation and to have familiarity, similar to an itemised phone bill or tax document.</p>
             <h2 class="govuk-heading-l" id="final-release-dates">Final release dates</h2>
-            <p class="govuk-body">In this section, users see the final release dates calclated by the service. These dates include adjustments.</p>
-            <p class="govuk-body">Dates are shown usng the <a href="../design-manual/release-dates-summary">release dates summary</a> pattern.</p>
+            <p class="govuk-body">In this section, users see the final release dates calculated by the service. These dates include adjustments.</p>
+            <p class="govuk-body">Dates are shown using the <a href="../design-manual/release-dates-summary">release dates summary pattern</a>.</p>
+            <h2 class="govuk-heading-l" id="calculation-breakdown">Calculation breakdown</h2>
+            <p class="govuk-body">The calculation breakdown shows users how the service reached the final release dates for the calculation. Each stage of the calculation is broken down, showing how release dates or eligibility dates were calculated for each sentence. This mirrors how calculations would be done using a manual calculation sheet.</p>
+            <p class="govuk-body">Read more about the <a href="../design-manual/calculation-breakdown">calculation breakdown pattern</a> .</p>
         </div>
     </div>
 </div>
