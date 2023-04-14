@@ -1,0 +1,102 @@
+{% extends "./template.html" %}
+{% block content %}
+<div class="app-masthead govuk-!-margin-top-0">
+    <div class="moj-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="app-masthead__title govuk-heading-xl govuk-!-margin-bottom-3">
+                    Calculate release dates
+                </h1>
+                <h3 class="app-masthead__subtitle govuk-heading-l">Design manual</h3>
+                <div class="app-masthead__description">
+                    <p class="govuk-body"></p>
+                </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <div class="govuk-breadcrumbs">
+                <ol class="govuk-breadcrumbs__list">
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="../design-manual/">Home</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <!-- Navigation -->
+        <div class="govuk-grid-column-one-quarter">
+            <h3 class="govuk-heading-s">Pages</h3>
+            <nav class="design-manual-nav">
+                <ul class="govuk-list">
+                    <li><a class="govuk-link--no-underline" href="start-page">Start page</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/search-for-a-person">Search for a person</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/check-sentence-and-offence-information">Check sentence and offence information</a></li>
+                                        <li><a class="govuk-link--no-underline" href="../design-manual/calculation-summary">Calculation summary</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/calculation-complete">Calculation complete</a></li>
+                </ul>
+            </nav>
+            <h3 class="govuk-heading-s govuk-!-margin-top-6">Patterns</h3>
+            <nav class="design-manual-nav">
+                <ul class="govuk-list">
+                    <li><a class="govuk-link--no-underline" href="">Sentence card</a></li>
+                    <li><a class="govuk-link--no-underline" href="">Adjustments</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/release-dates-summary">Release dates summary</a></li>
+                    <li><a class="govuk-link--no-underline govuk-!-font-weight-bold" href="../design-manual/calculation-breakdown">Calculation breakdown</a></li>
+                    <li><a class="govuk-link--no-underline" href="">Badges</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Calculation breakdown</h1>
+            <strong class="govuk-tag govuk-tag--purple govuk-!-margin-bottom-6">
+                Pattern
+            </strong>
+            <strong class="govuk-tag govuk-tag--blue govuk-!-margin-bottom-6">
+                Needs more research
+            </strong>
+            <p class="govuk-body-l">Help users understand how release dates were calculated.</p>
+            <h2 class="govuk-heading-l govuk-!-margin-top-6">What this pattern does</h2>
+            <p class="govuk-body">The Calculation breakdown pattern illustrates each stage of a calculation, showing how release dates were worked out by the service.</p>
+            <p class="govuk-body">The pattern can be reused in services that need to show sentence calculations, such as the Manage a digital warrant folder service. </p>
+            <h3 class="govuk-heading-m">Concurrent sentences</h3>
+            <p class="govuk-body govuk-!-margin-top-4">Concurrent sentences are listed in rows with associated information, such as sentence type and date. This  helps users understand the calculation rules applied.</p>
+            <p class="govuk-body">For sentence types such as SOPC, the custodial term and licence period are shown for each sentence.</p>
+            <p class="govuk-body">The relevant calculated dates are shown adjacent to each sentence, with the number of days included in the term. This reflects how OMU staff use paper calculation sheets, by counting the number of days in a sentence from the sentence date.</p>
+            <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/concurrent-sentences.jpeg" alt="" style="width:600px;">
+            <p class="govuk-hint govuk-!-font-size-16 govuk-!-margin-top-4">Concurrent sentences shown in the calculation breakdown</p>
+            <h3 class="govuk-heading-m govuk-!-margin-top-6">Consecutive sentences</h3>
+            <p class="govuk-body">Consecutive sentences are shown as an aggregate on the calculation breakdown. They are treated as such in a calculation and when users use paper calculation sheets.</p>
+                      <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/consecutive-sentences.jpeg" alt="" style="width:600px;">
+                        <p class="govuk-hint govuk-!-font-size-16 govuk-!-margin-top-4">Consecutive sentences are shown as an aggregate in the calculation breakdown</p>
+            <p class="govuk-body govuk-!-margin-top-6">Users can see more information about the sentences included in the aggregate by selecting the “Consecutive sentence details” link. This opens a new page, which shows the details for individual sentences, including notional dates where appropriate.</p>
+            <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/consecutive-sentence-details.jpeg" alt="" style="width:600px;">
+            <p class="govuk-hint govuk-!-font-size-16 govuk-!-margin-top-4">Individual consecutive sentences are shown on a separate page</p>
+            <h3 class="govuk-heading-m govuk-!-margin-top-6">Latest release or eligibility dates</h3>
+
+            <p class="govuk-body">In a calculation, the latest relevant release or eligibility dates are used to determine the final release dates, once adjustments are applied. The latest dates relevant to the calculation are highlighted in the calculation breakdown.</p>
+
+            <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/latest-dates.jpeg" alt="" style="width:300px;">
+            <p class="govuk-hint govuk-!-font-size-16 govuk-!-margin-top-4">Latest release dates highlighted using blue border and label</p>
+
+            <h3 class="govuk-heading-m govuk-!-margin-top-6">Release dates that include adjustments</h3>
+
+            <p class="govuk-body">Adjustments that are applied to release or eligibility dates are formatted as a mathematical sum. They show the latest date from the calculation, how an adjustment has been applied, and the new calculated date.</p>
+
+            <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/release-dates-that-include-adjustments.jpeg" alt="" style="width:600px;">
+            <h2 class="govuk-heading-l govuk-!-margin-top-6">User research</h2>
+            <p class="govuk-body">Users found the calculation breakdown page very useful. By seeing a calculation broken down sentence-by-sentence, users reflected how the calculation breakdown mirrors the process of a paper calculation.</p>
+            <p class="govuk-body">Feedback from users included:</p>
+            <p class="govuk-inset-text">"It's good how it doesn’t just produce the dominant date, it splits everything up and breaks it down."</p>
+            <p class="govuk-inset-text">"[It] follows the same order that we do things on the calc sheet. For me this was quite clear. I don't think any case admins, even new ones, could misunderstand this"</p>
+            <p class="govuk-body">Showing how adjustments are applied formatted as a mathematical sum has tested well with users. By using symbols to show addition and subtraction, users have been able to easily understand how the adjustments have been applied, in a way that mirrors their own language.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

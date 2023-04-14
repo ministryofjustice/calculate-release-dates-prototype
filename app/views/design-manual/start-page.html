@@ -1,7 +1,7 @@
-{% extends "dps/includes/template.html" %}
+{% extends "./template.html" %}
 {% block content %}
 <div class="app-masthead govuk-!-margin-top-0">
-    <div class="govuk-width-container">
+    <div class="moj-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 <h1 class="app-masthead__title govuk-heading-xl govuk-!-margin-bottom-3">
@@ -47,8 +47,8 @@
                 <ul class="govuk-list">
                     <li><a class="govuk-link--no-underline" href="">Sentence card</a></li>
                     <li><a class="govuk-link--no-underline" href="">Adjustments</a></li>
-                    <li><a class="govuk-link--no-underline" href="">Release dates summary</a></li>
-                    <li><a class="govuk-link--no-underline" href="">Calculation breakdown</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/release-dates-summary">Release dates summary</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/calculation-breakdown">Calculation breakdown</a></li>
                     <li><a class="govuk-link--no-underline" href="">Badges</a></li>
                 </ul>
             </nav>
@@ -58,20 +58,28 @@
                         <strong class="govuk-tag govuk-tag--green govuk-!-margin-bottom-6">
   Stable
 </strong>
-            <p class="govuk-body-l">Help users to understand what the service does.</p>
+            <p class="govuk-body-l">Help users start using the service and understand what it does.</p>
                         <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/start.jpeg" alt="" style="width:600px;">
 <h2 class="govuk-heading-l govuk-!-margin-top-6">What this page does</h2>
-            <p class="govuk-body">This page helps users understading what the service does, and what they must do before using it. 
+            <p class="govuk-body">This page helps users understand what the service does, and what they must do before using it.
             </p>
             <p class="govuk-body">
                 In addition to this, this page also informs users of the calculation lookup service where they can view previous calculations completed by Calculate release dates.
+Users can also check which sentence types are supported by the service from here.
+
             </p>
-            <p class="govuk-body">Users can also check which sentence types are supported by the service from here.</p>
             <h2 class="govuk-heading-l">User research</h2>
             <p class="govuk-body">Page analytics show that a low proportion of users are using the calculation lookup service, or viewing the supported sentence types from this page.</p>
+            <p class="govuk-body">User research shows that users do not notice the Calculation lookup service link.</p>
+            <h2 class="govuk-heading-l">Accessibility</h2>
+            <p class="govuk-body">Findings of an accessibility audit showed that the colour contrast of the Start button used on this page doesn’t meet the criteria for WCAG 2.2. It was also noted that it might not be clear to some visually impaired users what the purpose of the “Start now” label is.</p>
+            <p class="govuk-body">Findings of an accessibility audit showed that the colour contrast of the Start button used on this page doesn’t meet the criteria for WCAG 2.2. It was also noted that it might not be clear to some visually impaired users what the purpose of the “Start now” label is.</p>
+            <p class="govuk-body">This page uses the <a href="https://design-system.service.gov.uk/patterns/start-using-a-service/">Start using a service design pattern</a> from the GOV.UK design system. We have <a href="https://github.com/alphagov/govuk-design-system-backlog/issues/111#issuecomment-1505283893">reported findings about the colour contrast to the Design system team</a> and are <a href="../design-manual/landing-page">exploring alternative designs</a> that will be more accessible.
+</p>
 <h2 class="govuk-heading-l">Future considerations</h2>
             <p class="govuk-body">Further research may need to be carried out to understand how often users need to use the calculation lookup service or check supported sentences.</p>
-            <p class="govuk-body">In future, we might want to give the calculation lookup service more prominance as we migrate away from NOMIS. We might also need to consider replacing this page as Calculate release dates integrates with the Digital Warrant Folder service.</p>
+            <p class="govuk-body">In future, we might want to give the calculation lookup service more prominence as we migrate away from NOMIS. We might also need to consider replacing this page as Calculate release dates integrates with the Digital Warrant Folder service.</p>
+            <p class="govuk-body">We have designed an <a href="../design-manual/landing-page">initial version of a landing page</a> that could replace the start page in future versions of the service. This is currently awaiting usability testing.</p>
         </div>
     </div>
 </div>
