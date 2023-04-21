@@ -403,3 +403,18 @@ padding-left: 20px;
         }
     }
 }
+
+.design-manual-sub-menu {
+  border-left: 4px solid #1d70b8;
+  padding-left: 15px;
+}
+
+.design-manual-sub-menu-item a {
+  text-decoration: none;
+}
+
+.design-manual-sub-menu-item::before {
+  content: "—";
+  margin-right: 10px;
+  color: #505a5f;
+}
