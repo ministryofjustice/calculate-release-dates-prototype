@@ -1,0 +1,66 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><strong>Prison number: </strong>G2883VE</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="../hub-page" class="govuk-back-link">Back</a>
+</div>
+<!-- What is the confirmed date -->
+<div class="moj-width-container govuk-!-margin-top-4">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form class="form" action="confirmation">
+                <div class="govuk-form-group">
+                    <span class="govuk-caption-l">Enter manually calculated release dates</span>
+                    <h1 class="govuk-heading-xl">Check your answers</h1>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style="width: 55%;">
+              Sentence Expiry Date (SED)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              4 March 2024
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="enter-release-dates">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Conditional Release Date (CRD)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              4 March 2023
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="enter-release-dates">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+        </dl>
+        <h2 class="govuk-heading-m">Confirm and submit to NOMIS</h2>
+        <p class="govuk-body">By submitting this calculation you are confirming that, to the best of your knowledge, it is correct. The calculation will be saved in NOMIS</p>
+        <form action="confirmation" method="post" novalidate>
+          <input type="hidden" name="answers-checked" value="true">
+          <button class="govuk-button" data-module="govuk-button">
+            Confirm and save to NOMIS
+          </button>
+        </form>
+    </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
