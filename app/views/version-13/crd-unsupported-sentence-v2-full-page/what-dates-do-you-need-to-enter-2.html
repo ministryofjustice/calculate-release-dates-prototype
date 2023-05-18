@@ -19,98 +19,104 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <span class="govuk-caption-xl">Enter manually calculated release dates</span>
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-      <h1 class="govuk-fieldset__heading">
-        Select the dates you need to enter
-      </h1>
-    </legend>
-    <div id="waste-hint" class="govuk-hint">
-      Select all that apply to  the manual calculation.
-    </div>
-    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          Home Detention Curfew Eligibility Date (HDCED)
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-          Early Transfer Date for Detention and Training Orders (ETD)
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Mid Transfer Date (MTD)
-        </label>
-      </div>
-            <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Late Transfer Date for a Detention Training Order (LTD)
-        </label>
-      </div>
-            <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Detention Post Recall Release Date (DPRRD)
-        </label>
-      </div>
-            <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Automatic Release Date (ARD)
-        </label>
-      </div>
-            <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" disabled checked>
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Conditional Release Date (CRD)
-        </label>
-      </div>
-            <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Parole Eligibility Date (PED)
-        </label>
-      </div>
-            <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Non Parole Date (NPD)
-        </label>
-      </div>
-            <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Licence Expiry Date (LED)
-        </label>
-      </div>
-            <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Post Recall Release Date (PRRD)
-        </label>
-      </div>
-            <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" disabled checked>
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Sentence Expiry Date (SED)
-        </label>
-      </div>
-                  <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Top Up Supervision Expiry Date (TUSED)
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            Select the dates you need to enter
+                        </h1>
+                    </legend>
+                    <div id="waste-hint" class="govuk-hint">
+                        Select all that apply to the manual calculation.
+                    </div>
+                    <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" checked disabled>
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                            SED (Sentence Expiry Date)
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                            LED (Licence Expiry Date)
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" checked disabled>
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                            CRD (Conditional Release Date)
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                HDCED (Home Detention Curfew Eligibility Date)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                TUSED (Top Up Supervision Expiry Date)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                PRRD (Post Recall Release Date)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                PED (Parole Eligibility Date)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                ERSED (Early Removal Scheme Eligibility Date)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                ARD (Automatic Release Date)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                MTD (Mid Transfer Date)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                ETD (Early Transfer Date for Detention and Training Orders)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                LTD (Late Transfer Date for a Detention Training Order)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                NPS (Non Parole Date)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                DPRRD (Detention Post Recall Release Date)
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
                 <a href="enter-release-dates-3" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
                     Continue
                 </a>
