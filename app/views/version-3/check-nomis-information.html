@@ -1,0 +1,203 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Review calculation before submitting
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: 'offender-details.html'
+},
+serviceLabel: {
+text: 'Calculate release dates',
+href: '../index.html'
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<div class="moj-identity-bar">
+    <div class="moj-identity-bar__container">
+        <div class="moj-identity-bar__details">
+            <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Offender name: </strong>Joe Bloggs</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">1 February 1990</span><strong>Offender number: </strong>B4166LG
+        </div>
+    </div>
+</div>
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+            <h1 class="govuk-heading-xl">Check NOMIS information about Joe Bloggs</h1>
+            <p class="govuk-body">Last updated: <span id="currentDate" aria-live="polite">12 August 2020 at 11:35</span>
+            </p>
+            <h2 class="govuk-heading-l">Sentences</h2>
+            <p class="govuk-body">There are 4 offences included in this calculation.</p>
+            <h3 class="govuk-heading-m">1. Stealing from shops and stalls (shoplifting) <span class="govuk-hint govuk-!-margin-top-1">Committed on 2 March 2019</span></h3>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        29 February 2020
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Conviction date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        29 February 2020
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence length
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2 months concurrent
+                    </dd>
+                </div>
+            </dl>
+            <h3 class="govuk-heading-m" id="offence2">2. Burglary other than dwelling with intent to steal <span class="govuk-hint govuk-!-margin-top-1">Committed on 9 March 2020</span></h3>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2 March 2019
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Conviction date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        29 February 2020
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence length
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2 years concurrent
+                    </dd>
+                </div>
+            </dl>
+            <h3 class="govuk-heading-m">3. Stealing from shops and stalls (shoplifting) <span class="govuk-hint govuk-!-margin-top-1">Committed on 10 March 2019</span></h3>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2 March 2019
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Conviction date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        29 February 2020
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence length
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        4 months concurrent
+                    </dd>
+                </div>
+            </dl>
+            <h3 class="govuk-heading-m">4. Common assault and battery <span class="govuk-hint govuk-!-margin-top-1">Committed on 6 January</span></h3>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2 March 2019
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Conviction date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        29 February 2020
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence length
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2 years consecutive to sentence 2
+                    </dd>
+                </div>
+            </dl>
+            <h2 class="govuk-heading-l">Adjustments</h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Number of days on remand
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        45
+                        <!--                         <p class="govuk-hint govuk-!-margin-top-2">remanded between 15 January 2020 and 28 February 2020</p> -->
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Number of days tagged bail
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        10
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Additional days awarded (ADA)
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        14
+                        <p class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16">imposed on 15 April 2020</p>
+                    </dd>
+                </div>
+            </dl>
+            <!--             <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Why you can't see some information
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    Some dates and details are not included as according to <a href="http://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf" target="_blank">PSI 03/2015 (opens in new tab)</a> they are not relevant to this person's circumstances.
+                </div>
+            </details> -->
+            <h2 class="govuk-heading-m govuk-!-margin-top-9">Now create your calculation</h2>
+            <p class="govuk-body">This will calculate Joe Blogg's release dates. It will not be saved to NOMIS until you have reviewed the calculation.</p>
+            <a href="calculation-summary.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                Create calculation
+            </a>
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Some information is wrong
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    You can edit this information in NOMIS. It will automatically update here.
+                    If you think the service isn’t working properly, you can also <a href="#">contact the Calculate release dates team.</a>
+                </div>
+            </details>
+        </div>
+    </div>
+</main>
+<a onclick="demo()" href="javascript:void(0);" style="float: right;"><span class="govuk-hint govuk-!-font-size-14">Demo</span></a>
+{% endblock %}

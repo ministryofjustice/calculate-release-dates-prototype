@@ -1,0 +1,178 @@
+{% extends "./template.html" %}
+{% block content %}
+<div class="app-masthead govuk-!-margin-top-0">
+    <div class="moj-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="app-masthead__title govuk-heading-xl govuk-!-margin-bottom-3">
+                    Calculate release dates
+                </h1>
+                <h3 class="app-masthead__subtitle govuk-heading-l">Design manual</h3>
+                <div class="app-masthead__description">
+                    <p class="govuk-body"></p>
+                </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <div class="govuk-breadcrumbs">
+                <ol class="govuk-breadcrumbs__list">
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="../design-manual/">Home</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <!-- Navigation -->
+        <div class="govuk-grid-column-one-quarter">
+            <h3 class="govuk-heading-s">Pages</h3>
+            <nav class="design-manual-nav">
+                <ul class="govuk-list">
+                    <li><a class="govuk-link--no-underline" href="start-page">Start page</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/search-for-a-person">Search for a person</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/check-sentence-and-offence-information">Check sentence and offence information</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/calculation-summary">Calculation summary</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/calculation-complete">Calculation complete</a></li>
+                </ul>
+            </nav>
+            <h3 class="govuk-heading-s govuk-!-margin-top-6">Components and patterns</h3>
+            <nav class="design-manual-nav">
+                <ul class="govuk-list">
+                    <li><a class="govuk-link--no-underline" href="../design-manual/sentence-card">Sentence card</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/release-dates-summary">Release dates summary</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/calculation-breakdown">Calculation breakdown</a></li>
+                </ul>
+            </nav>
+            <h3 class="govuk-heading-s govuk-!-margin-top-6">Content</h3>
+            <nav class="design-manual-nav">
+                <ul class="govuk-list design-manual-sub-menu">
+                    <li><a class="govuk-link--no-underline govuk-!-font-weight-bold" href="../design-manual/content-design-playbook">Content design playbook</a></li>
+                    <li class="design-manual-sub-menu-item"><a href="#introduction">Introduction</a></li>
+                    <li class="design-manual-sub-menu-item"><a href="#page-titles">Page titles</a></li>
+                    <li class="design-manual-sub-menu-item"><a href="#acronyms">Acronyms</a></li>
+                    <li class="design-manual-sub-menu-item"><a href="#identifying-the-person">Identifying the person</a></li>
+                    <li class="design-manual-sub-menu-item"><a href="#service-names">Service names</a></li>
+                    <li class="design-manual-sub-menu-item"><a href="#error-messaging">Error messaging</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Content design playbook</h1>
+            <h2 class="govuk-heading-l govuk-!-margin-top-6">Introduction</h2>
+            <p class="govuk-body">This document logs the content decisions made for Calculate release dates and Digital warrant folder services. It is constantly evolving, based on our learnings from user research and other information provided by other teams in the MOJ.</p>
+            <p class="govuk-body">The content used throughout the two services adheres as closely as possible to the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">Government Digital Services (GDS) styleguide</a>. However, there are times when this has not been possible for one reason or another, such as the:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>type of content</li>
+                <li>users’ vernacular language</li>
+                <li>language used across other services</li>
+            </ul>
+            <h2 class="govuk-heading-m">The type of content</h2>
+            <p class="govuk-body">Much of the content used throughout the services is data such as dates or numbers, or terminology used in law. It is written in a particular way in policy to reflect the legal language. This cannot be changed for legal reasons. </p>
+            <h2 class="govuk-heading-m">The users’ vernacular language</h2>
+            <p class="govuk-body">The language used in OMUs has to be learned, but the same language is spoken across the prison estate. OMU staff use prison terminology and acronyms in day-to-day life; it is how they communicate with colleagues and other people they work with (such as solicitors or probation officers). This is because the same language is used in prison policy, printed in the paper processes and taught in the training OMU staff receive. Many acronyms are also embedded in NOMIS, the computer software OMU staff use to record prisoner’s information.</p>
+            <p class="govuk-body">In user research, we honed in on certain terminology and acronyms, to get an idea of how users understood this language.</p>
+            <p class="govuk-body">We found that, across the board, the majority of the terminology used in our prototypes was understood by users across the participating prisons. Phrases such as ‘Relevant remand’, ‘adjustments’ and ‘Consecutive or concurrent’ raised no concerns and every participant knew what they meant. Acronyms such as HDCED, ADA and RADA are used in everyday sentence calculation.</p>
+            <p class="govuk-body">In one instance, a user didn’t know what an acronym stood for, but understood what it meant, the context in which it was used and used the acronym regularly themself. In short, the language of our users has to be learnt, but moving away from this terminology would be difficult, as it is so ingrained in every part of their role.</p>
+            <h2 class="govuk-heading-m">The language used across other services</h2>
+            <p class="govuk-body">Calculate release dates and Digital warrant folder work alongside many other initiatives from HMPPS. The decisions made on the language used throughout the service has taken into account other projects, and a shared vocabulary is being nurtured. As a result, some of the language used in our two services has been intentionally chosen to facilitate that alignment.</p>
+            <h2 class="govuk-heading-m">Readability</h2>
+            <p class="govuk-body">Readability measures how easy it is for a user to understand written content. Much of the language used across the two services cannot be changed for reasons mentioned in the ‘type of content’ section above. Unfortunately, this language is not easy to read and does not score well on readability metrics, such as the Flesch Kincaid Grade.</p>
+            <p class="govuk-body">Below is a sample of some of the most common words used throughout our services, and their readability grade.</p>
+            <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/flesch-kincaid.jpeg" alt="" style="width:400px;">
+            <!-- insert table here -->
+            <h2 class="govuk-heading-l govuk-!-margin-top-6">The playbook</h2>
+            <p class="govuk-body">GDS advises that we aim for a reading age of around 9. This is difficult for both of our services, as much of the unchangeable terminology is not very readable.</p>
+            <p class="govuk-body">The playbook explains how we have attempted to mitigate confusion with the language we are forced to use in the two services. It also acts as a reference for future services and helps us to maintain consistency across both services.</p>
+            <p class="govuk-inset-text">The "rules" documented below are still being developed and will evolve as and when they need to, in line with user feedback.</p>
+            <h2 class="govuk-heading-l" id="page-titles">Page titles</h2>
+            <h3 class="govuk-heading-m">Questions or statements</h3>
+            <p class="govuk-body">Use a statement to tell the user what they will be asked to do on each page, such as ‘Add a court case’ for example. Statements are used when we ask the user to do several things on one page.</p>
+            <p class="govuk-body">Use a question when we are only asking the user to enter one piece of information. Do not use a question for a search box or type ahead.</p>
+            <h3 class="govuk-heading-l">Field titles</h3>
+            <p class="govuk-body">Here is a list of the <a href="https://docs.google.com/spreadsheets/d/1kvuP4gGM4I7dPtNIncdsRULRfNaWInSKct1bg-Hci7g/edit#gid=0">field titles (Google Docs)</a> we currently use across the two services.
+                Use sentence casing for field titles. Never use full stops.
+            </p>
+            <h3 class="govuk-heading-m">When to use ‘enter’</h3>
+            <p class="govuk-body">Use ‘enter’ when the user is inputting new information into your service.
+                The dictionary definition of the word ‘enter’ is: ‘To put information into a computer, book or document’.</p>
+            <h3 class="govuk-heading-m">When to use ‘add’</h3>
+            <p class="govuk-body">Use ‘add’ when information is being added to existing information.</p>
+            <p class="govuk-body">The dictionary definition of the word ‘add’ is: ‘to put something with something else to increase the number or amount or to make it more important’.</p>
+            <h2 class="govuk-heading-l" id="acronyms">Acronyms</h2>
+            <p class="govuk-body">
+                There are hundreds of <a href="https://ministry-of-justice-acronyms.service.justice.gov.uk/">acronyms</a> across the MOJ. GDS standards recommend avoiding acronyms as much as possible. This is because they:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>are hard to read</li>
+                <li>can be ambiguous - they can stand for more than one thing</li>
+                <li>do not say what the thing is</li>
+            </ul>
+            <p class="govuk-body">GDS also ask for acronyms to be spelled out where possible. For example, you would write it like this:</p>
+            <p class="govuk-inset-text">Calculate release dates (CRD)</p>
+            <p class="govuk-body">However, within our service, we are trialling a new approach, where we spell out the acronym in the brackets and use the acronym first. This means the same sentence would look like this:</p>
+            <p class="govuk-inset-text">CRD (Calculate release dates)</p>
+            <p class="govuk-body">We hypothesis this would be a better way to present information because:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>It is how users speak - they use the acronym</li>
+                <li>It is what users understand - sometimes they don’t even know exactly what the acronyms stand for. This new way of presenting information is being tested using user research within the calculate release dates service</li>
+            </ul>
+            <h2 class="govuk-heading-l" id="identifying-the-person">Identifying the person in prison (person or prisoner)</h2>
+            <p class="govuk-body">Where possible, use the person’s name as dynamic text. Otherwise, use the term ‘person’ unless you are specifically talking about a piece of data, such as the prison number. Try to avoid using the term ‘prisoner’ where possible. This is based on a wider MoJ content design agreement. Research has suggested that using the term prisoner devalues the person and can have a negative impact on how the person is treated during their stay in prison.</p>
+            <h2 class="govuk-heading-l" id="service-names">Service names</h2>
+            <p class="govuk-body">Calculate release dates and Digital warrant folder are both services. Avoid using terms like ‘tools’ or ‘projects’.</p>
+            <h3 class="govuk-heading-m">Capitalisation</h3>
+            <p class="govuk-body">We use sentence casing for our services. This means only the first word is capitalised.</p>
+            <h3 class="govuk-heading-m">Naming the service</h3>
+            <p class="govuk-body">Services should clearly explain what the service does. However, we are currently testing the name ‘Digital warrant folder’ with users. The logic for this decision was:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>we are still figuring out exactly what our service includes, therefore this may alter the name of our service once we have defined all the things our ‘warrant folder’ does</li>
+                <li>the warrant folder being a shared space, just like DPS or Content Hub</li>
+                <li>conversations with other teams in this space align with the approach to move away from verb-based naming conventions. This is because many of the services do more than one thing, which limits the number of appropriate verbs that can be used for such a service. ‘Manage’ is a prime example. If every service starts with ‘manage’ it becomes repetitive, makes it difficult to alphabetise services (because all of them start with ‘manage’) and therefore makes the word superfluous</li>
+            </ul>
+            <h3 class="govuk-heading-m">Adjust release dates</h3>
+            <p class="govuk-body">The aim of this service is to give the user the functionality to review, add or edit adjustments to prisoner’s record. As of 30 March 2023 the name has performed well in user research, with all users understanding what the service sets out to do. However, there are concerns amongst the team that this is a technically inaccurate name. This is because:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>The primary task is entering or editing adjustment information</li>
+                <li>The change - or adjustment- to the release dates is the outcome of the primary task; it happens because of the adjustment information entered.</li>
+            </ul>
+            <h3 class="govuk-heading-l" id="error-messaging">Error messaging</h3>
+            <p class="govuk-body">All of the error messages for the Calculate release dates service can be found <a href="">on Confluence (access required)</a>.</p>
+            <p class="govuk-body">In most instances, the error banner follows the same structure:</p>
+            <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
+                <dl class="govuk-summary-list govuk-summary-list--no-border">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Title
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            There is a problem
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Body
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Describe the problem - tell the user what is wrong
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Body
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Tell the user what to do next. In many instances, we say: ‘Update these details in NOMIS and then reload this page’
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

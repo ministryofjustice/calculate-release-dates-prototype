@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Calculate release dates prototype
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: '#'
+},
+serviceLabel: {
+text: 'Calculate release dates design notes',
+href: '#'
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Alpha &nbsp;
+        </h1>
+        <h2 class="govuk-heading-l">Overview</h2>
+        <p class="govuk-body">In alpha teams try out different solutions to the problems they learnt about during discovery. We spent alpha building prototypes and testing different ideas.
+            <h2 class="govuk-heading-l govuk-!-margin-top-4 govuk-!-margin-bottom-6">Posts</h2>
+            <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-6"><a href="alpha/posts/initial-prototype.html">Initial prototype</a></h3>
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+            <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-6"><a href="alpha/posts/tech-pivot.html">Tech pivot</a></h3>
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+            <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-6"><a href="alpha/posts/4th-prototype.html">4th prototype iteration</a></h3>
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+            <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-6"><a href="alpha/posts/5th-prototype.html">5th prototype iteration</a></h3>
+    </div>
+</div>
+{% endblock %}

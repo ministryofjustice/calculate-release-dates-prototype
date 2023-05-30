@@ -1,0 +1,88 @@
+{% extends "./template.html" %}
+{% block content %}
+<div class="app-masthead govuk-!-margin-top-0">
+    <div class="moj-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="app-masthead__title govuk-heading-xl govuk-!-margin-bottom-3">
+                    Calculate release dates
+                </h1>
+                <h3 class="app-masthead__subtitle govuk-heading-l">Design manual</h3>
+                <div class="app-masthead__description">
+                    <p class="govuk-body"></p>
+                </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <div class="govuk-breadcrumbs">
+                <ol class="govuk-breadcrumbs__list">
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="../design-manual/">Home</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <!-- Navigation -->
+        <div class="govuk-grid-column-one-quarter">
+            <h3 class="govuk-heading-s">Pages</h3>
+            <nav class="design-manual-nav">
+                <ul class="govuk-list">
+                    <li><a class="govuk-link--no-underline" href="start-page">Start page</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/search-for-a-person">Search for a person</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/check-sentence-and-offence-information">Check sentence and offence information</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/calculation-summary">Calculation summary</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/calculation-complete">Calculation complete</a></li>
+                </ul>
+            </nav>
+            <h3 class="govuk-heading-s govuk-!-margin-top-6">Components and patterns</h3>
+            <nav class="design-manual-nav">
+                <ul class="govuk-list">
+                    <li><a class="govuk-link--no-underline" href="../design-manual/sentence-card">Sentence card</a></li>
+                    <li><a class="govuk-link--no-underline govuk-!-font-weight-bold" href="../design-manual/release-dates-summary">Release dates summary</a></li>
+                    <li><a class="govuk-link--no-underline" href="../design-manual/calculation-breakdown">Calculation breakdown</a></li>
+                </ul>
+            </nav>
+            <h3 class="govuk-heading-s govuk-!-margin-top-6">Content</h3>
+            <nav class="design-manual-nav">
+                <ul class="govuk-list">
+                    <li><a class="govuk-link--no-underline" href="../design-manual/content-design-playbook">Content design playbook</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Release dates summary</h1>
+            <strong class="govuk-tag govuk-tag--purple govuk-!-margin-bottom-6">
+                Pattern
+            </strong>
+            <strong class="govuk-tag govuk-tag--blue govuk-!-margin-bottom-6">
+                Needs more research
+            </strong>
+            <p class="govuk-body-l">Show a persons release dates.</p>
+            <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/release-dates-summary.jpeg" alt="" style="width:400px;">
+            <h2 class="govuk-heading-l govuk-!-margin-top-6">What this pattern does</h2>
+            <p class="govuk-body">The release dates summary pattern can be used when showing a prisoner's final calculated release dates.</p>
+            <p class="govuk-body">Dates are displayed in a panel that emphasises them on the page, creating a hierarchy of information.</p>
+            <p class="govuk-body">Any type of final calculated date can be shown. The ordering of dates are determined by the Policy Framework. Labels should be shown with the full name of the date and its acronym in brackets. For example, "Conditional release date (CRD)".</p>
+            <h3 class="govuk-heading-m">Hint text</h3>
+            <img class="govuk-!-margin-top-2 design-manual-img" src="{{ asset_path }}images/hint-text.jpeg" alt="" style="width:400px;">
+            <p class="govuk-body govuk-!-margin-top-4">Hint text can be used alongside release dates to show additional relevant information.</p>
+            <p class="govuk-body">For example, when a release date falls on a weekend, the release date is shown as hint text when adjusted to relevant working days in the Calculate release dates service. This has received positive feedback from users.</p>
+            <p class="govuk-body">Hint text should be used sparingly. Overuse could be overwhelming and distract from other content.</p>
+            <h2 class="govuk-heading-l">User research</h2>
+            <p class="govuk-body">User research findings will go here.</p>
+            <h2 class="govuk-heading-l">Future considerations</h2>
+            <p class="govuk-body">The Release dates summary pattern was designed with the intention that it could be used by other services within Digital Prison Services (DPS) and the MoJ where a prisoner's release dates calculated by Calculate release dates would be shown.</p>
+            <p class="govuk-body">Currently there are no APIs that do this, and no work has been done with other services to test how well the design integrates and works. </p>
+            <p class="govuk-body">User testing of this pattern with other services should be carried out and might lead to us changing the design in future.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

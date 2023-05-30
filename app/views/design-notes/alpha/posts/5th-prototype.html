@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Calculate release dates prototype
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: '#'
+},
+serviceLabel: {
+text: 'Calculate release dates design notes',
+href: '#'
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-!-margin-top-4 govuk-!-margin-bottom-6">
+        <h1 class="govuk-heading-xl">5th prototype iteration</h1>
+        <p class="govuk-body">We made changes to the prototype in this version that allow more complicated calculations to work with our service. We created 3 versions or the prototype, 1 for <a href="https://docs.google.com/spreadsheets/d/1iCInVwKjW0SRdRTH5w7wwEpLghUnoQEQOtSBBHqysY4/edit?usp=sharing">each scenario listed here (access required)</a>.</p>
+        <p class="govuk-body">This prototype was tested with users on the week beginning 11 October 2021.</p>
+        <h2 class="govuk-heading-l">Check NOMIS info page</h2>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>Changes made to sentence information to accommodate more complex calculations:</li>
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li>sentences reformatted into a table to handle longer lists of offences more efficiently and allow users to scan more easily</li>
+                <li>text size decreased to accommodate more information on page</li>
+                <li>added verdict column as these are needed for some calculations</li>
+                <li>count number listed for each offence. Consecutive sentences refer to the count they are consecutive to</li>
+                <li>adjustments divided into deductions and additions to make it easier for users to understand days added and subtracted</li>
+                <li>sentences broken down into trial record sheets for calcs where more than one is involved</li>
+            </ul>
+            <li>Content changed under the “Some information is wrong” details link, informing users to reload the page when they have changed information in NOMIS. Previous versions suggested the page automatically updated, which is no longer the case.</li>
+            <li>“Last updated from NOMIS” time and date stamp removed as the team felt this could be misleading to users </li>
+            <li>Added a banner when the page has been reloaded to inform users that information may have changed, and to check this before continuing with the calculation</li>
+        </ul>
+        </div>
+        <div class="govuk-!-margin-bottom-8">
+        <h2 class="govuk-heading-l govuk-!-margin-top-4 govuk-!-margin-bottom-6">Review calculation page</h2>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>Headings on page changed to Final release dates to be more consistent with PSI</li>
+            <li>Additional dates shown in the Final release dates section for calculations where these are given</li>
+            <li>Hint text added to show users when release dates have been adjusted for weekends</li>
+            <li>Calculation breakdown shown for each sentence where there are calculations with multiple trial record sheets</li>
+            <li>Effective release dates shown for each calculation breakdown where they are calculated separately</li>
+            <li>Content added in inset text to inform users where calculations may have overlapping concurrent sentences that affect the final release dates</li>
+            <li>We have added a journey that allows users to report a problem with the calculation to the Calculate release dates team, which will help improve the calculation engine and allow users to escalate when calculations give unexpected results</li>
+            <li>An option to cancel the calculation, without saving information to NOMIS has been added. This journey also allows users to report a problem as above. This is not mandatory.</li>
+            </div>
+            <nav class="moj-pagination" id="pagination-label">
+                <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+                <ul class="moj-pagination__list">
+                    <li class="moj-pagination__item  moj-pagination__item--prev">
+                        <a class="moj-pagination__link" href="4th-prototype.html">Previous<span class="govuk-visually-hidden"> post</span></a>
+                    </li>
+<!--                     <li class="moj-pagination__item  moj-pagination__item--next">
+                        <a class="moj-pagination__link" href="#">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+                    </li> -->
+                </ul>
+            </nav>
+    </div>
+</div>
+{% endblock %}

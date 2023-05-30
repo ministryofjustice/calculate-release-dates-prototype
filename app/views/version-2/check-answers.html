@@ -1,0 +1,216 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Check your answers
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: 'offender-details.html'
+},
+serviceLabel: {
+text: 'Calculate release dates',
+href: 'index.html'
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__value">
+            <span class="govuk-!-margin-right-5"><strong>Offender name: </strong></strong>{{ data['offender-name'] }}</span> <span><strong>Offender number: </strong>{{ data['offender-number'] }}</span>
+        </dt>
+    </div>
+</dl>
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+            <h1 class="govuk-heading-l">Check your answers</h1>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Court that sentenced them
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['what-type-of-court'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> type of court</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Documents you have for them
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['document'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> documents</span>
+                        </a>
+                    </dd>
+                </div>
+<!--                 <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Type of sentence
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['type-of-sentence'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> type of sentence</span>
+                        </a>
+                    </dd>
+                </div> -->
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Offence start date
+                    </dt>
+                    <dd id="offense-date" class="govuk-summary-list__value">
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> offence date</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Conviction date
+                    </dt>
+                    <dd id="conviction-date" class="govuk-summary-list__value">
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> convivtion date</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Sentence date
+                    </dt>
+                    <dd id="sentence-date" class="govuk-summary-list__value">
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> sentence date</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Remand dates
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <span id="remand-start-date"></span><span id="remand-end-date"></span>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> remand dates</span>
+                        </a>
+                    </dd>
+                </div>
+                                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Tagged bail dates
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <span id="tagged-bail-start-date"></span><span id="tagged-bail-end-date"></span>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change<span class="govuk-visually-hidden"> tagged bail dates</span>
+                        </a>
+                    </dd>
+                </div>
+            </dl>
+<!--             <h2 class="govuk-heading-m">Submit information to calculate a sentence</h2>
+            <p class="govuk-body">Some text explaining what will happen.</p> -->
+            <a href="check-calculation.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                Agree and continue
+            </a>
+            <!--                     <form action="check-answers" method="post" novalidate>
+                        <input type="hidden" name="answers-checked" value="true">
+                        <button  class="govuk-button" data-module="govuk-button">
+                            Submit for calculation
+                        </button>
+                    </form> -->
+        </div>
+    </div>
+</main>
+<script type="text/javascript">
+const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+]
+
+var offenceMonth = {{ data['offence-start-date-month'] }}
+
+var offenceMonthName = monthNames[offenceMonth - 1]
+
+var offenceStartDate = '{{ data['offence-start-date-day'] }}' + ' ' + offenceMonthName + ' ' + '{{ data['offence-start-date-year'] }}'
+
+var convictionMonth = {{ data['conviction-date-month'] }}
+
+var convictionMonthName = monthNames[convictionMonth - 1]
+
+var convictionDate = '{{ data['conviction-date-day'] }}' + ' ' + convictionMonthName + ' ' + '{{ data['conviction-date-year'] }}'
+
+var sentenceMonth = {{ data['sentence-date-month'] }}
+
+var sentenceMonthName = monthNames[sentenceMonth - 1]
+
+var sentenceDate = '{{ data['sentence-date-day'] }}' + ' ' + sentenceMonthName + ' ' + '{{ data['sentence-date-year'] }}'
+
+var remandMonth = {{ data['remand-start-month'] }}
+
+var remandMonthName = monthNames[remandMonth -1]
+
+var remandStartDate = '{{ data['remand-start-day'] }}' + ' ' + remandMonthName + ' ' + '{{ data['remand-start-year'] }}'
+
+remandMonth = {{ data['remand-end-month'] }}
+
+remandMonthName = monthNames[remandMonth - 1]
+
+var remandEndDate = '{{ data['remand-end-day'] }}' + ' ' + remandMonthName + ' ' + '{{ data['remand-end-year'] }}'
+
+var taggedBailMonth = {{ data['tagged-bail-start-month'] }}
+
+var taggedBailMonthName = monthNames[taggedBailMonth]
+
+var taggedBailStartDate = '{{ data['tagged-bail-start-day'] }}' + ' ' + taggedBailMonthName + ' ' + '{{ data['tagged-bail-start-year'] }}'
+
+taggedBailMonth = {{ data['tagged-bail-end-month'] }}
+
+taggedBailMonthName = monthNames[taggedBailMonth - 1]
+
+var taggedBailEndDate = '{{ data['tagged-bail-end-day'] }}' + ' ' + taggedBailMonthName + ' ' + '{{ data['tagged-bail-end-year'] }}'
+
+console.log("Offence date is: " + offenceStartDate)
+console.log("Conviction date is: " + convictionDate)
+console.log("Sentence date is: " + sentenceDate)
+console.log("Remand dates are: " + remandStartDate + " to " + remandEndDate)
+console.log("Tagged bail dates are: " + taggedBailStartDate + " to " + taggedBailEndDate)
+
+document.getElementById("offense-date").innerHTML = offenceStartDate
+
+document.getElementById("conviction-date").innerHTML = convictionDate
+
+document.getElementById("sentence-date").innerHTML = sentenceDate
+
+document.getElementById("remand-start-date").innerHTML = remandStartDate + '<br>'
+
+document.getElementById("remand-end-date").innerHTML = 'to' + ' ' + remandEndDate
+
+document.getElementById("tagged-bail-start-date").innerHTML = taggedBailStartDate + '<br>'
+
+document.getElementById("tagged-bail-end-date").innerHTML = 'to' + ' ' + taggedBailEndDate
+</script>
+{% endblock %}
