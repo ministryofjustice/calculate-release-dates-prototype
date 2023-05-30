@@ -1,0 +1,201 @@
+{% extends "prototype-home-layout.html" %}
+{% block content %}
+<div class="app-masthead govuk-!-margin-top-0">
+    <div class="moj-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="app-masthead__title govuk-heading-xl govuk-!-margin-bottom-3">
+                    Calculate release dates
+                </h1>
+                <h3 class="app-masthead__subtitle govuk-heading-l">Prototypes</h3>
+                <div class="app-masthead__description">
+                    <p class="govuk-body"></p>
+                </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="moj-width-container govuk-!-margin-top-8">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <!-- Version 13 -->
+            <h2 class="govuk-heading-l">Version 13</h2>
+            <h3 class="govuk-heading-m">In this version</h3>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Redesigned start point, replacing the start page. This allows users to more easily access journeys as the service grows:</li>
+                <ul class="govuk-list govuk-list--number govuk-!-margin-left-2">
+                    <li>Calculate release dates</li>
+                    <li>Calculation lookup</li>
+                    <li>Enter approved dates (tbc)</li>
+                </ul>
+                <li>Experimental: redesigned search in response to user reseach that shows users come to our service with a person's prison number. Streamlined the journey to meet this mental model and avoid single search result scenarios</li>
+                <li>Experimental: added navigation to leave a calculation and return to the home page in response to user research showing users are not using the service name in the header to do this</li>
+            </ul>
+            <h3 class="govuk-heading-m">Prototype links</h3>
+            <ul class="govuk-list">
+                <li><a href="version-13/hub-page">Version 13</a><strong class="govuk-tag govuk-tag--green" style="vertical-align: middle; margin-left: 10px;">
+                        Currently working on
+                    </strong></li>
+                <li><a href="version-13/crd-unsupported-sentence/hub-page">Unsupported sentence</a><strong class="govuk-tag govuk-tag--grey" style="vertical-align: middle; margin-left: 10px;">
+                        Parked
+                    </strong></li>
+                <li><a href="version-13/crd-unsupported-sentence-v2-banner/hub-page">Unsupported sentence v2 - banner</a><strong class="govuk-tag govuk-tag--grey" style="vertical-align: middle; margin-left: 10px;">
+                        Parked
+                    </strong></li>
+                <li><a href="version-13/crd-unsupported-sentence-v2-full-page-determinate/hub-page">Unsupported sentence v2 - determinate</a><strong class="govuk-tag govuk-tag--green" style="vertical-align: middle; margin-left: 10px;">
+                        Currently working on
+                    </strong></li>
+                    <li><a href="version-13/crd-unsupported-sentence-v2-full-page-indeterminate/hub-page">Unsupported sentence v2 - indeterminate</a><strong class="govuk-tag govuk-tag--green" style="vertical-align: middle; margin-left: 10px;">
+                        Currently working on
+                    </strong></li>
+            </ul>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+            <!-- Version 12 -->
+            <h2 class="govuk-heading-l">Version 12</h2>
+            <h3 class="govuk-heading-m">In this version</h3>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Design for calculation breakdown for calculations with a DTO</li>
+                <li>Initial design for a hub page where users can more easily find the calculate and view journeys, and to accomodate manual entry of confirmed release dates</li>
+            </ul>
+            <h3 class="govuk-heading-m">Prototype links</h3>
+            <ul class="govuk-list">
+                <li><a href="version-12/sentences-and-release-dates/hub-page">Hub page</a><strong class="govuk-tag govuk-tag--grey" style="vertical-align: middle; margin-left: 10px;">
+                        Parked
+                    </strong></li>
+                <li><a href="version-12/DTO/start-standalone">DTO</a><strong class="govuk-tag govuk-tag--blue" style="vertical-align: middle; margin-left: 10px;">
+                        Ready for UR
+                    </strong></li>
+                <li><a href="version-12/sentences-and-release-dates/crd-unsupported-sentence/unsupported-sentence-error-page">Unsupported sentence</a></li>
+                <li><a href="version-12/multiple-sentences-notification/start-standalone">Multiple offences against a sentence notification banner</a></li>
+            </ul>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+            <!-- Version 11 -->
+            <h2 class="govuk-heading-l">Version 11</h2>
+            <h3 class="govuk-heading-m">In this version</h3>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Ideas for a new, more scalable calculation breakdown to handle more sentence types and calculation scenarios</li>
+                <li>Added option to include ERSED date in calculations</li>
+                <li>Notification banner included when some calculation scenarios can't produce an ERSED date</li>
+            </ul>
+            <h3 class="govuk-heading-m">Prototype links</h3>
+            <ul class="govuk-list">
+                <li><a href="version-11/ERSED-notification-text/start-standalone">ERSED with notification banner</a></li>
+                <li><a href="version-11/merged-rows-breakdown-2/start-standalone">Table breakdown for UR</a></li>
+                <li><a href="version-11/merged-rows-breakdown-2-recall/start-standalone">Table breakdown for UR - recall</a></li>
+                <!--                                     <li><a href="version-11/merged-rows-breakdown/calculation-summary">Table breakdown</a><strong class="govuk-tag govuk-tag--orange" style="vertical-align: middle; margin-left: 10px;">
+                        Work in progress
+                    </strong></li> -->
+                <li><a href="version-11/cards-breakdown/calculation-summary">"Cards" breakdown</a><strong class="govuk-tag govuk-tag--grey" style="vertical-align: middle; margin-left: 10px;">
+                        Parked
+                    </strong></li>
+            </ul>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+            <!-- Version 10 -->
+            <h2 class="govuk-heading-l">Version 10</h2>
+            <h3 class="govuk-heading-m">In this version</h3>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Iterating calculation breakdown</li>
+            </ul>
+            <h3 class="govuk-heading-m">Prototype links</h3>
+            <ul class="govuk-list">
+                <h4 class="govuk-heading-s">Calculation breakdown table v2</h4>
+                <li><a href="version-10/calculation-breakdown/calc-breakdown-s1/search-for-prisoner">Scenario 1</a></li>
+                <li><a href="version-10/calculation-breakdown/calc-breakdown-s2/search-for-prisoner">Scenario 2</a></li>
+                <li><a href="version-10/calculation-breakdown/calc-breakdown-s3/search-for-prisoner">Scenario 3</a></li>
+                <li><a href="version-10/calculation-breakdown/calc-breakdown-s4/search-for-prisoner">Scenario 4</a></li>
+                <h4 class="gocuk-heading-s">Calculation breakdown timeline ideas</h4>
+                <li><a href="version-10/calculation-breakdown/ideas/calculation-summary-1">Calculation breakdown timeline 1</a></li>
+                <li><a href="version-10/calculation-breakdown/ideas/calculation-summary-cherky">Calculation breakdown - Cherky's timeline</a></li>
+                <li><a href="version-10/calculation-breakdown/ideas/calculation-summary-cherky-v2">Calculation breakdown - Cherky's timeline<br> with Ashley's changes</a></li>
+            </ul>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+            <!-- Version 9 -->
+            <h2 class="govuk-heading-l">Version 9</h2>
+            <h3 class="govuk-heading-m">In this version</h3>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>EDS sentence type added</li>
+                <li>New look to Check sentence and offence page to improve scalability and functionality</li>
+                <li>Iterated the SDS+ journey following <a href="">user research</a></li>
+            </ul>
+            <h3 class="govuk-heading-m">Prototype links</h3>
+            <ul class="govuk-list">
+                <li><a href="version-9/version-9/start-standalone">Version 9</a></li>
+                <li><a href="version-9/eds/check-sentence-and-offence-information">EDS</a></li>
+                <li><a href="version-9/schedule-15-v3/start-standalone">Schedule 15 offences (SDS+) v3</a></li>
+            </ul>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+            <!-- Version 8 -->
+            <h2 class="govuk-heading-l">Version 8</h2>
+            <h3 class="govuk-heading-m">In this version</h3>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Fixed term recall sentences added</li>
+                <li>Initial design for recalls with paralell sentences</li>
+                <li>New journey that asks users to select sentences that are SDS+ following PCSC changes</li>
+                <li>Design to ask users for reason for calculation</li>
+                <li>Design to show unserved ADAS</li>
+            </ul>
+            <h3 class="govuk-heading-m">Prototype links</h3>
+            <ul class="govuk-list">
+                <li><a href="version-8/calculate-release-dates/version-8/start-standalone">Version 8</a><strong class="govuk-tag govuk-tag--blue" style="vertical-align: middle; margin-left: 10px;">
+                        Stable
+                    </strong></li>
+                <li><a href="version-8/calculate-release-dates/fixed-term-recall/check-sentence-and-offence-information">Fixed term recall</a></li>
+                <li><a href="version-8/calculate-release-dates/paralell-sentences/check-sentence-and-offence-information">Recall - paralell sentences</a></li>
+                <li><a href="version-8/calculate-release-dates/schedule-15-v2/start-standalone">SDS+ (Schedule 15 offences)</a></li>
+                <li><a href="version-8/calculate-release-dates/reason-for-calculation/reason-for-calculation">Reason for calculation</a></li>
+                <li><a href="version-8/calculate-release-dates/unserved-adas/calculation-summary">Unserved ADAs</a></li>
+                <li>
+                </li>
+            </ul>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+            <h2 class="govuk-heading-m">Older versions</h2>
+            <div class="govuk-inset-text">
+                There may be some bugs in these designs as they are no longer maintained
+            </div>
+            <ul class="govuk-list">
+                <li><a href="version-7">Version 7</a></li>
+                <li><a href="version-6">Version 6</a></li>
+                <li><a href="version-5">Version 5</a></li>
+                <li><a href="version-4/search-for-prisoner">Version 4</a></li>
+                <li><a href="version-3/nomis-modal">Version 3</a></li>
+                <li><a href="version-2/offender-details">Version 2</a></li>
+                <li><a href="version-1/offender-details.html">Version 1</a></li>
+            </ul>
+            <h3 class="govuk-heading-m">Error pages</h3>
+            <ul class="govuk-list">
+                <li><a href="errors/error-there-is-a-problem-page-button">There is a problem page with button</a></li>
+                <li><a href="errors/error-there-is-a-problem-page-link">There is a problem page with link</a></li>
+                <li><a href="errors/error-banner.html">Error banner</a></li>
+            </ul>
+            <h3 class="govuk-heading-m">Notifications</h3>
+            <ul class="govuk-list">
+                <li><a href="errors/notification-banner.html">Notification banner (no action required from user)</a></li>
+            </ul>
+            <!--             <h2 class="govuk-heading-l govuk-!-margin-top-4">Design notes</h2>
+            <p class="govuk-body">A design history and decisions made on the Calculate release dates service.</p>
+            <p class="govuk-body"><a href="/design-notes">Go to design notes</a></p> -->
+            <!-- <hr class="govuk-!-margin-bottom-6 govuk-!-margin-top-8"> -->
+        </div>
+        <div class="govuk-grid-column-one-third">
+            <aside class="app-related" role="complementary" style="border-top: 2px solid #1d70b8; padding-top:15px">
+                <h2 class="govuk-heading-s govuk-!-margin-bottom-2" id="-title">Useful links</h2>
+                <nav role="navigation" aria-labelledby="-title">
+                    <ul class="app-related__list" style="padding-left: 0;">
+                        <li class="app-related__list-item" style="list-style-type:none;">
+                            <a class="govuk-link" href="/design-manual" target="_blank">Design manual</a>
+                        </li>
+                        <li class="app-related__list-item" style="list-style-type:none;">
+                            <a class="govuk-link" href="https://miro.com/app/board/o9J_l5lVf1g=/?share_link_id=505027649934" target="_blank">Design Miro board</a>
+                        </li>
+                        <li class="app-related__list-item" style="list-style-type:none;">
+                            <a class="govuk-link" href="https://drive.google.com/drive/u/2/folders/1zsTJi9qE7iG-96pn3kgFOS1d6ym8hfvZ" target="_blank">Content docs (Google Drive)</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </div>
+</div>
+{% endblock %}

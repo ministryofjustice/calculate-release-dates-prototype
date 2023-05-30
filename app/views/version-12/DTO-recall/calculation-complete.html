@@ -1,0 +1,54 @@
+{% extends "../../dps/includes/template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><strong>Prison number: </strong>G2883VE</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs -->
+<div class="moj-width-container">
+<!--     <div class="govuk-breadcrumbs govuk-!-display-none-print">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/prisoner/G9126UE">Bloggs, Joe</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="page">Calculate release dates</li>
+        </ol>
+    </div> -->
+</div>
+<div class="moj-width-container govuk-!-margin-top-8">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">
+                        Calculation complete for<br>Colin Ball
+                    </h1>
+                    <div class="govuk-panel__body govuk-!-font-size-19">
+                        The calculation has been saved in NOMIS.
+                    </div>
+                </div>
+            </div>
+            <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
+                <h2 class="govuk-heading-l">Next steps</h2>
+                <ul class="govuk-list">
+                    <li><a href="{{ asset_path }}images/calculation-summary.pdf">Print calculation summary</a></li>
+                    <li><a href="search-for-prisoner">Calculate another release date</a></li>
+                </ul>
+                <h2 class="govuk-heading-l">Help improve this service</h2>
+                <p class="govuk-body">This is a new service. Your feedback will help us make it useful. You can share your feedback by <a href="">completing a short survey (opens in a new tab).</a></p>
+                <!-- <ul class="govuk-list govuk-list--bullet">
+                    <li></li>
+                    <li><a href="">Signing up to take part in user research</a></li>
+                </ul> -->
+            </div>
+        </div>
+</div>
+{% endblock %}

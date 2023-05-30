@@ -1,0 +1,105 @@
+{% extends "./template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<!-- <div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><strong>Prison number: </strong>G2883VE</span>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Page heading -->
+<div class="moj-width-container">
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="#">Back to search results</a>
+            </li>
+        </ol>
+    </div>
+    <!-- Banner -->
+    <div class="govuk-grid-row">
+        <div data-test="hmpps-profile-banner-partial" class="hmpps-profile-banner">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full hmpps-profile-banner-top">
+                    <a href="/prisoner/G6123VU/image" class="hmpps-clickable-image" data-qa="prisoner-photo-link">
+                        <img class="hmpps-profile-photo" src="/public/images/prisoner.jpeg" alt="Saunders, John">
+                    </a>
+                    <h2 class="govuk-heading-l hmpps-profile-prisoner-name">Colin Ball</h2>
+                    <div class="info">
+                        <p class="govuk-body govuk-!-font-size-24 hmpps-profile-prisoner-number" aria-label="Prisoner Number">
+                            G6123VU
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full hmpps-profile-banner-bottom govuk-!-padding-top-9">
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+                            <hr>
+                        </div>
+                    </div>
+                    <nav class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+                            <ul class="hmpps-profile-tab-links">
+                                <li class="govuk-heading-s">
+                                    <a href="/prisoner/G6123VU" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline">Overview</a>
+                                </li>
+                                <li class="govuk-heading-s">
+                                    <a href="hub-page-release-dates" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline">Release dates</a>
+                                </li>
+                                <li class="govuk-heading-s">
+                                    <a href="hub-page-sentences" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline">Court cases</a>
+                                </li>
+                                <li class="govuk-heading-s">
+                                    <a href="hub-page-adjustments" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline">Adjustments</a>
+                                </li>
+                                <li class="govuk-heading-s hmpps-profile-tab-link-selected">
+                                    <a href="hub-page-calculation-history" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline">Calculations</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Calculation history -->
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l">
+                Calculation history
+            </h2>
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Date</th>
+      <th scope="col" class="govuk-table__header">Establishment</th>
+      <th scope="col" class="govuk-table__header">Reason</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell"><a href="">10 September 2021</a></td>
+      <td class="govuk-table__cell">HMP Wakefield</td>
+      <td class="govuk-table__cell">Adjustment added</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell"><a href="">14 July 2020</a></td>
+      <td class="govuk-table__cell">HMP Wakefield</td>
+      <td class="govuk-table__cell">Transfer check</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell"><a href="">14 July 2020</a></td>
+      <td class="govuk-table__cell">HMP Leeds</td>
+      <td class="govuk-table__cell">Initial calculation</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+    </div>
+</div>
+{% endblock %}

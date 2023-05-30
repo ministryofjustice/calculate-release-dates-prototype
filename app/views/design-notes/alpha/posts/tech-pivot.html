@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Calculate release dates prototype
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: '#'
+},
+serviceLabel: {
+text: 'Calculate release dates design notes',
+href: '#'
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">Tech pivot</h1>
+            <p class="govuk-body">Our tech team discovered that writing information to NOMIS carried a large risk. As such, it was decided that inputting data would be removed from the scope of our service. Our service would calculate release dates based on information in NOMIS. This changed the overall journey and the hypotheses we would test.</p>
+            <div class="govuk-!-margin-bottom-8">
+            <ol class="govuk-list govuk-list--number">
+                <li class="govuk-!-margin-bottom-6">
+                    <p class="govuk-!-font-weight-bold govuk-!-margin-top-7">WE BELIEVE</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">IF </span>we show the user everything currently inputted into NOMIS to review before the calculation is done</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">FOR </span>all users with a calculator mindset</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">THEN </span>the user can feel confident we have taken the specific information from NOMIS into account with the calculation</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">AND </span>gives them the opportunity to spot a mistake to fix in NOMIS before the calculation is done</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">We would know this is true when </span></p>
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>We understand how users feel about adapting any mistakes on NOMIS and returning to our service</li>
+                        <li>We understand if users having to pick closest to in NOMIS impacts their sense of trust for our service</li>
+                        <li>Users feel we have captured all necessary information from NOMIS to complete the calculation</li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="govuk-!-font-weight-bold govuk-!-margin-top-7">WE BELIEVE</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">IF </span>we show a full sentence calculation breakdown at the end of the journey</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">FOR </span>all members of staff</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">THEN </span>this will help them trust the service</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">We would know this is true when </span>staff accept dates calculated by the service</p>
+                </li>
+            </ol>
+            </div>
+            <nav class="moj-pagination" id="pagination-label">
+            <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+            <ul class="moj-pagination__list">
+                <li class="moj-pagination__item  moj-pagination__item--prev">
+                    <a class="moj-pagination__link" href="initial-prototype">Previous<span class="govuk-visually-hidden"> post</span></a>
+                </li>
+                                    <li class="moj-pagination__item  moj-pagination__item--next">
+                        <a class="moj-pagination__link" href="4th-prototype">Next<span class="govuk-visually-hidden"> post</span></a>
+                    </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+{% endblock %}

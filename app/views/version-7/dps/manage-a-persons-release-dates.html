@@ -1,0 +1,29 @@
+{% extends "./includes/template.html" %}
+{% block content %}
+<div class="moj-width-container">
+    <a href="/version-7/dps/dps-home" class="govuk-back-link">Digital Prison Services</a>
+    <h1 class="govuk-heading-xl govuk-!-margin-top-7">Manage a person's release dates</h1>
+</div>
+<div class="homepage-content">
+    <div class="moj-width-container">
+        <ul class="govuk-grid-row card-group">
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable" data-test="receive">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link" href="../calculate-release-dates/search-for-prisoner.html">Calculate release dates</a>
+                    </h2>
+                    <p class="govuk-body card__description">Automatically calculate a prisoner’s release dates using information from NOMIS.</p>
+                </div>
+            </li>
+                        <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable" data-test="receive">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link" href="../lookup-a-persons-release-dates-2/search-for-prisoner">Lookup a person's release dates</a>
+                    </h2>
+                    <p class="govuk-body card__description">View release dates and calculations for a prisoner.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

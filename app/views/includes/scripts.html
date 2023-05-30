@@ -1,0 +1,81 @@
+<!-- Javascript -->
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+{% for scriptUrl in extensionConfig.scripts %}
+<script src="{{scriptUrl}}"></script>
+{% endfor %}
+<script src="/public/javascripts/application.js"></script>
+{% if useAutoStoreData %}
+<script src="/public/javascripts/auto-store-data.js"></script>
+{% endif %}
+<script>
+function getDate() {
+    var today = new Date();
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var date = today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear() + " at " + today.getHours() + ":" + (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
+    console.log("Sentence 2 updated " + "\n" + "Last updated is: " + date);
+    document.getElementById("currentDate").innerHTML = date;
+}
+
+function correctMistake() {
+    document.getElementById("offence2").innerHTML = "Burglary dwelling - with intent to steal" + ['<span class="govuk-hint govuk-!-margin-top-2 govuk-!-font-size-16" style="margin-bottom: 0">Committed on 9 March 2020</span>'];
+
+    document.getElementById("infoChangedMessage").style.display = "block";
+}
+
+function demo() {
+    getDate();
+    correctMistake();
+}
+
+function missingNOMISInfo() {
+
+    var visible = new Boolean();
+    var titleSpacing = document.getElementById("checkNOMISHeading");
+
+    let errorMessage = document.getElementById("missingNOMISInfoError");
+    let style = window.getComputedStyle(errorMessage);
+
+    if (style.display == "block") {
+        document.getElementById("missingNOMISInfoError").style.display = "none";
+        titleSpacing.classList.remove("govuk-!-margin-top-8");
+        visible = false;
+        console.log("Missing NOMIS info visible: " + visible);
+    } else if (style.display == "none") {
+        document.getElementById("missingNOMISInfoError").style.display = "block";
+        titleSpacing.classList.add("govuk-!-margin-top-8");
+        visible = true;
+        console.log("Missing NOMIS info visible: " + visible);
+    }
+}
+
+function toggleOffenceDateError() {
+    var div = document.getElementById("noOffenceDate");
+
+    if (div.style.display === "none") {
+        div.style.display = "block";
+    } else {
+        div.style.display = "none";
+    }
+}
+
+function toggleSDSError() {
+    var div = document.getElementById("SDSOnly");
+
+    if (div.style.display === "none") {
+        div.style.display = "block";
+    } else {
+        div.style.display = "none";
+    }
+}
+
+function toggleNoBookingError() {
+    var div = document.getElementById("noBooking");
+
+    if (div.style.display === "none") {
+        div.style.display = "block";
+    } else {
+        div.style.display = "none";
+    }
+}
+
+</script>

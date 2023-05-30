@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Which of these documents do you have for them?
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+organisationLabel: {
+text: 'HMPPS',
+href: 'offender-details.html'
+},
+serviceLabel: {
+text: 'Calculate release dates',
+href: '../index.html'
+}
+}) }}
+{% endblock %}
+{% block beforeContent %}
+<dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__value">
+            <span class="govuk-!-margin-right-5"><strong>Offender name: </strong>{{ data['offender-name'] }}</span> <span><strong>Offender number: </strong>{{ data['offender-number'] }}</span>
+        </dt>
+    </div>
+</dl>
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="offence-date" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="documents-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Which of these documents do you have for them?
+                        </h1>
+                    </legend>
+                    <div id="documents-hint" class="govuk-hint">
+                        Select all that apply.
+                    </div>
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="doc-1" name="document" type="checkbox" value="Indictment">
+                            <label class="govuk-label govuk-checkboxes__label" for="doc-1">
+                                Indictment (F5088)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="doc-2" name="document" type="checkbox" value="Order of imprisonment">
+                            <label class="govuk-label govuk-checkboxes__label" for="doc-2">
+                                Order of imprisonment
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="doc-3" name="document" type="checkbox" value="Prior calculation">
+                            <label class="govuk-label govuk-checkboxes__label" for="doc-3">
+                                Prior release date calculation
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="doc-4" name="document" type="checkbox" value="Revovation paper">
+                            <label class="govuk-label govuk-checkboxes__label" for="doc-4">
+                                Prior release date calculation
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="doc-5" name="document" type="checkbox" value="Trial record sheet">
+                            <label class="govuk-label govuk-checkboxes__label" for="doc-5">
+                                Trial record sheet (F5089)
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+        <a href="#" class="govuk-link">Some of these documents have errors</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Calculation complete
+{% endblock %}
+{% block header %}
+{{ mojHeader({
+  organisationLabel: {
+    text: 'HMPPS',
+    href: '#'
+  },
+  serviceLabel: {
+    text: 'Calculate release dates',
+    href: 'start'
+  },
+  navigation: {
+    label: 'Account navigation',
+    items: [{
+      text: 'Prototype user',
+      href: '#',
+      active: true
+    }, {
+      text: 'Sign out',
+      href: '#'
+    }]
+  }
+
+}) }}
+{% endblock %}
+{% block beforeContent %}
+
+<a class="govuk-back-link" href="javascript:history.back();">Back</a>
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">Version 5 prototypes</h1>
+            <p class="govuk-body">Select a start point and scenario for the prototype.</p>
+            <h2 class="govuk-heading-m">Standalone journey</h2>
+            <ul class="govuk-list">
+                <li><a href="version-5/version-5-1/start.html">Scenario 1</a></li>
+                <li><a href="version-5/version-5-2/start.html">Scenario 2</a></li>
+                <li><a href="version-5/version-5-3/start.html">Scenario 3</a></li>
+            </ul>
+            <h2 class="govuk-heading-m">Start journey in DPS</h2>
+            <ul class="govuk-list">
+                <li><a href="version-5/version-5-1/dps/prototype-details.html">Scenario 1</a></li>
+                <li><a href="version-5/version-5-2/dps/prototype-details.html">Scenario 2</a></li>
+                <li><a href="version-5/version-5-3/dps/prototype-details.html">Scenario 3</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

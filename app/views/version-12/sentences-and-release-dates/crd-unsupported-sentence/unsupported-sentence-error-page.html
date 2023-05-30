@@ -1,0 +1,32 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><strong>Prison number: </strong>G2883VE</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="../hub-page" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <span class="govuk-caption-xl">Calculate release dates</span>
+            <h1 class="govuk-heading-xl">
+                There is a problem
+            </h1>
+            <p class="govuk-body">One or more of the sentence types in this calculation is not currently supported in this service:</p>
+  <ul class="govuk-list govuk-list--bullet"><li>2020 ORA Detention and Training Order</li></ul>
+  <p class="govuk-body">If these sentences are correct, you will need to complete this calculation manually using a calculation sheet.</p>
+  <p class="govuk-body">You must then <a href="enter-release-dates">enter the release dates here</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
