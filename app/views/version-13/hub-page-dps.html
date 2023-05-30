@@ -1,7 +1,7 @@
 {% extends "./template.html" %}
 {% block content %}
 <!-- Prisoner identity bar -->
-<!-- <div class="moj-width-container">
+<div class="moj-width-container">
     <div class="moj-identity-bar">
         <div class="moj-identity-bar__container govuk-!-margin-left-0">
             <div class="moj-identity-bar__details">
@@ -9,56 +9,24 @@
             </div>
         </div>
     </div>
-</div> -->
-<!-- Back link -->
-<div class="moj-width-container">
-    <a href="#" class="govuk-back-link">Back to Digital Prison Services</a>
 </div>
-<!-- Page heading -->
 <div class="moj-width-container">
+<!-- Back link -->
+    <a href="#" class="govuk-back-link">Back to Digital Prison Services</a>
+<!-- Page heading -->
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-xl govuk-!-margin-top-8">
-                Calculate release dates for Colin Ball
+                Release dates for Colin Ball
             </h1>
-        </div>
-    </div>
-    <!-- Prisoner details -->
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-            <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-6">
-                <!--         <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-                Name
-            </dt>
-            <dd class="govuk-summary-list__value">
-                Colin Ball
-            </dd>
-        </div> -->
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Prison number
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        G2883VE
-                    </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Date of birth
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        5 January 1978
-                    </dd>
-                </div>
-            </dl>
         </div>
     </div>
     <!-- Tiles -->
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-            <ul class="card-group">
-                <li class="govuk-grid-column-one-half govuk-!-padding-left-0 card-group__item">
+        <div class="govuk-grid-column-full govuk-!-margin-top-2">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-4">Calculate release dates</h2>
+            <ul class="card-group govuk-grid-row">
+                <li class="govuk-grid-column-one-third card-group__item">
                     <div class="card card--clickable" data-test="global-search">
                         <h2 class="govuk-heading-m card__heading">
                             <a class="govuk-link card__link govuk-link--no-visited-state" href="calculate-release-dates/check-sentence-and-offence-information">Calculate release dates</a>
@@ -66,24 +34,48 @@
                         <p class="govuk-body card__description">Automatically calculate an prisoner’s release dates using information from NOMIS</p>
                     </div>
                 </li>
-                <li class="govuk-grid-column-one-half govuk-!-padding-left-0 card-group__item">
+                <li class="govuk-grid-column-one-third card-group__item">
                     <div class="card card--clickable" data-test="manage-prisoner-whereabouts">
                         <h2 class="govuk-heading-m card__heading">
-                            <a class="govuk-link card__link govuk-link--no-visited-state" href="view-release-dates/check-sentence-and-offence-information">Look up a calculation</a>
+                            <a class="govuk-link card__link govuk-link--no-visited-state" href="view-release-dates/check-sentence-and-offence-information">View latest calculation</a>
                         </h2>
-                        <p class="govuk-body card__description">View previous calculations from the Calculate release dates service</p>
+                        <p class="govuk-body card__description">View the latest calculation from the Calculate release dates service</p>
                 </li>
-                <!-- <li class="govuk-grid-column-one-third card-group__item">
-                <div class="card card--clickable" data-test="manage-prisoner-whereabouts">
-                    <h2 class="govuk-heading-m card__heading">
-                        <a class="govuk-link card__link govuk-link--no-visited-state" href="enter-confirmed-release-date/what-is-the-confirmed-release-date">Enter a confirmed release date</a>
-                    </h2>
-                    <p class="govuk-body card__description">Enter and save a prisoner's confirmed release date</p>
-                </div>
-            </li> -->
             </ul>
         </div>
     </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-4">Enter dates</h2>
+            <ul class="card-group govuk-grid-row">
+                <li class="govuk-grid-column-one-third card-group__item">
+                    <div class="card card--clickable" data-test="manage-prisoner-whereabouts">
+                        <h2 class="govuk-heading-m card__heading">
+                            <a class="govuk-link card__link govuk-link--no-visited-state" href="crd-unsupported-sentence-v2-full-page-indeterminate/what-dates-do-you-need-to-enter">Enter indeterminate release dates</a>
+                        </h2>
+                        <p class="govuk-body card__description">Enter and save a prisoner's indeterminate release dates</p>
+                    </div>
+                </li>
+                <li class="govuk-grid-column-one-third card-group__item">
+                    <div class="card card--clickable" data-test="manage-prisoner-whereabouts">
+                        <h2 class="govuk-heading-m card__heading">
+                            <a class="govuk-link card__link govuk-link--no-visited-state" href="#">Enter an approved release date</a>
+                        </h2>
+                        <p class="govuk-body card__description">Enter and save a prisoner's confirmed release date</p>
+                    </div>
+                </li>
+                <li class="govuk-grid-column-one-third card-group__item">
+                    <div class="card card--clickable" data-test="manage-prisoner-whereabouts">
+                        <h2 class="govuk-heading-m card__heading">
+                            <a class="govuk-link card__link govuk-link--no-visited-state" href="crd-enter-rotl-date/enter-rotl-date">Enter a ROTL date</a>
+                        </h2>
+                        <p class="govuk-body card__description">Enter and save a prisoner's ROTL date</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
     <!-- Related information and Help and support -->
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
