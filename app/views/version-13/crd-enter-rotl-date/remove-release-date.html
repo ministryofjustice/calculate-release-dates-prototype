@@ -1,0 +1,52 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><strong>Prison number: </strong>G2883VE</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="what-dates-do-you-need-to-enter" class="govuk-back-link">Back</a>
+</div>
+<!-- What is the confirmed date -->
+<div class="moj-width-container govuk-!-margin-top-4">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form class="form">
+                <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Are you sure you want to remove the APD (Approved Parole Date) for Colin Ball?
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+                <a href="check-your-answers-2" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
