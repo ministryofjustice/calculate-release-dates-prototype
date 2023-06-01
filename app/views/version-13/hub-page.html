@@ -1,0 +1,69 @@
+{% extends "./template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<!-- <div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><strong>Prison number: </strong>G2883VE</span>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Page heading -->
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-top-8">
+                Calculate release dates
+            </h1>
+        </div>
+    </div>
+    <!-- Tiles -->
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <ul class="card-group">
+            <li class="govuk-grid-column-one-half govuk-!-padding-left-0 card-group__item">
+                <div class="card card--clickable" data-test="global-search">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="calculate-release-dates/search-for-prisoner">Calculate release dates</a>
+                    </h2>
+                    <p class="govuk-body card__description">Automatically calculate an prisoner’s release dates using information from NOMIS</p>
+                </div>
+            </li>
+            <li class="govuk-grid-column-one-half govuk-!-padding-right-0 card-group__item">
+                <div class="card card--clickable" data-test="manage-prisoner-whereabouts">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="view-release-dates/search-for-prisoner">Look up a calculation</a>
+                    </h2>
+                    <p class="govuk-body card__description">View previous calculations from the Calculate release dates service</p>
+                </div>
+            </li>
+            <!-- <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable" data-test="manage-prisoner-whereabouts">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="enter-confirmed-release-date/what-is-the-confirmed-release-date">Enter a confirmed release date</a>
+                    </h2>
+                    <p class="govuk-body card__description">Enter and save a prisoner's confirmed release date</p>
+                </div>
+            </li> -->
+        </ul>
+    </div>
+</div>
+    <!-- Related information and Help and support -->
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m govuk-!-margin-top-4">Releated information</h2>
+            <ul class="govuk-list">
+                <li class="govuk-!-margin-bottom-2"><a href="supported-sentences">Sentence types supported by the Calculate release dates service</a></li>
+                <li class="govuk-!-margin-bottom-2"><a href="">Print the Calculate release dates quick start guide</a></li>
+                <li class="govuk-!-margin-bottom-2"><a href="">Read the latest Policy Framework</a></li>
+            </ul>
+            <h2 class="govuk-heading-m govuk-!-margin-top-6">Help and support</h2>
+            <ul class="govuk-list">
+                <li class="govuk-!-margin-bottom-2"><a href="">Email the Calculate release dates support mailbox</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
