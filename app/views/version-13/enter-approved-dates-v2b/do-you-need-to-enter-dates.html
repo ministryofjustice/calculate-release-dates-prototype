@@ -1,0 +1,61 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><strong>Prison number: </strong>G2883VE</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="calculation-summary" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Do you need to enter APD, HDCAD or ROTL dates for Colin Ball?
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+          No, save the calculation to NOMIS
+        </label>
+      </div>
+    </div>
+      </fieldset>
+</div>
+    <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      More information
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p class="govuk-body">By selecting 'yes' to enter APD, HDCAD or ROTL dates, you'll need to select the dates you need to enter. The dates you enter will be saved to NOMIS with the calculated dates.</p> 
+    <p class="govuk-body">Otherwise, the calculation will be saved to NOMIS with no manually entered dates.</p>
+  </div>
+</details>
+            <a href="what-dates-do-you-need-to-enter" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                Continue
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
