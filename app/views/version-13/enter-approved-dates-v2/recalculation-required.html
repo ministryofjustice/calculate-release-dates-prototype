@@ -1,0 +1,45 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><strong>Prison number: </strong>G2883VE</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="start-standalone" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+           <span class="govuk-caption-xl">Enter APD, HDCAD or ROTL dates</span>
+            <h1 class="govuk-heading-xl">
+                Recalculation required
+            </h1>
+            <p class="govuk-body">Before you can enter APD, HDCAD or ROTL dates for Colin Ball, release dates must be recalculated. This service will automatically recalculate release dates.</p>
+            <!-- <ul class="govuk-list govuk-list--bullet">
+                <li>ORA Breach Top Up Supervision</li>
+            </ul> -->
+            <h2 class="govuk-heading-m">What you need to do</h2>
+            <ul class="govuk-list govuk-list--number">
+                <li>Check the person's sentence and offence information is correct</li>
+                <li>Review the release dates calculated by the service</li>
+                <li>Enter approved dates</li>
+            </ul>
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form>
+                <a href="check-sentence-and-offence-information" class="govuk-button prisoner-search__button govuk-!-margin-top-4">Continue</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

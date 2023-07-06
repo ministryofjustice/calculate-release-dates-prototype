@@ -1,0 +1,62 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><strong>Prison number: </strong>G2883VE</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="check-sentence-and-offence-information" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">
+                Review dates before saving
+            </h1>
+        </div>
+    </div>
+</div>
+<!-- Final release dates -->
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+            <div class="custom-card" style="background-color: #f3f2f1;">
+                <div class="custom-card-main">
+                    <!-- SLED -->
+                    <h3 class="govuk-heading-s">Sentence and licence expiry date (SLED)</h3>
+                    <p class="govuk-body">Tuesday, 19 February 2036</p>
+                    <!-- CRD -->
+                    <h3 class="govuk-heading-s">Conditional release date (CRD)</h3>
+                    <p class="govuk-body ">Sunday, 19 February 2034</p>
+                    <p class="govuk-body govuk-hint govuk-!-font-size-16" data-qa="CRD-weekend-adjustment">Friday, 17 February 2034 when adjusted to a working day</p>
+                    <!-- PED -->
+                    <h3 class="govuk-heading-s">Parole eligibility date (PED)</h3>
+                    <p class="govuk-body ">Friday, 21 April 2028</p>
+                    <!-- ERSED -->
+                    <h3 class="govuk-heading-s">Early removal scheme eligibility date (ERSED)</h3>
+                    <p class="govuk-body ">Wednesday, 21 April 2027</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="moj-width-container govuk-!-margin-top-8">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h3 class="govuk-heading-m">Confirm and submit to NOMIS</h3>
+            <p class="govuk-body">XXX</p>
+            <a href="confirmation">
+                <button class="govuk-button" data-module="govuk-button">Confirm and save to NOMIS</button>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
