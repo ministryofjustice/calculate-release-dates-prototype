@@ -1,0 +1,36 @@
+{% extends "../../dps/includes/template.html" %}
+{% block content %}
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-top-8">
+        Calculate release dates
+    </h1>
+    <p class="govuk-body">You can use this service to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>automatically calculate a prisoner's release dates</li>
+        <li>enter a prisoner's APD, HDCAD or ROTL dates</li>
+    </ul>
+    <p class="govuk-body">Before you start, make sure all of the prisoner's sentence details are up to date in NOMIS.</p>
+    <h2 class="govuk-heading-m">Entering APD, HDCAD or ROTL dates</h2>
+    <p class="govuk-body">Before you can enter APD, HDCAD or ROTL dates for Colin Ball, you must calculate release dates.</p>
+    <h2 class="govuk-heading-m">If you need to look up a calculation</h2>
+    <p class="govuk-body">You can view previous calculations using the <a href="">calculation look up service</a>.</p>
+    <a href="check-sentence-and-offence-information.html" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-6 govuk-!-margin-bottom-8" data-module="govuk-button">
+        Calculate release dates
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+    </a>
+    <!-- h2 class="govuk-heading-m">Before you start</h2>
+    <p class="govuk-body">Check in NOMIS that the prisoner’s information includes:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>court case information</li>
+        <li>offence information</li>
+        <li>sentences</li>
+        <li>adjustments </li>
+    </ul> -->
+</div>
+</div>
+</div>
+{% endblock %}
