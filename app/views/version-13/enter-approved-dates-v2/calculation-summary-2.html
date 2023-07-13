@@ -28,7 +28,7 @@
 <!-- Final release dates -->
 <div class="moj-width-container">
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-three-quarters">
             <h2 class="govuk-heading-l govuk-!-margin-top-4">Calculated dates</h2>
             <div class="govuk-summary-card">
                 <div class="govuk-summary-card__content" id="release-dates">
@@ -36,32 +36,52 @@
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
                                 SLED
-                                <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
+                                <p class="govuk-!-font-size-16 govuk-hint">Home detention curfew approved date</p>
                             </dt>
-                            <dd class="govuk-summary-list__value">
+                            <dd class="govuk-summary-list__value release-dates-date">
                                 Sunday, 23 October 2039
                             </dd>
                         </div>
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                CRD
-                                <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
+                                PED
+                                <p class="govuk-!-font-size-16 govuk-hint">Approved parole date</p>
                             </dt>
-                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                            <dd class="govuk-summary-list__value govuk-!-padding-top-4 release-dates-date">
                                 Wednesday, 23 October 2030
                             </dd>
                         </div>
                     </dl>
                 </div>
             </div>
+                        <details class="govuk-details govuk-!-margin-bottom-2" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Why are some details missing?
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    Some dates and details are not included as according to <a href="http://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf" target="_blank">PSI 03/2015 (opens in new tab)</a> they are not relevant to this person's circumstances.
+                </div>
+            </details>
+                        <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        How are final release dates calculated?
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    Some calculations are made up of different sentences and terms, such as overlapping or concurrent sentences. The final release date comes from the sentence or term with the latest release date.
+                </div>
+            </details>
         </div>
     </div>
     <!-- Approved dates -->
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-three-quarters">
             <h2 class="govuk-heading-l govuk-!-margin-top-4">Manual dates</h2>
             <div class="govuk-summary-card">
-                <div class="govuk-summary-card__content" id="release-dates">
+                <div class="govuk-summary-card__content">
                     <dl class="govuk-summary-list release-dates-list">
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
@@ -75,6 +95,7 @@
                                 <a class="govuk-link" href="#">
                                     Change<span class="govuk-visually-hidden"> age</span>
                                 </a>
+                                <a href="remove-release-date" class="govuk-!-margin-left-3 remove-date-link">Remove <span class="govuk-visually-hidden">HDCAD</span></a>
                             </dd>
                         </div>
                         <div class="govuk-summary-list__row">
@@ -89,10 +110,12 @@
                                 <a class="govuk-link" href="#">
                                     Change<span class="govuk-visually-hidden"> age</span>
                                 </a>
+                                <a href="remove-release-date" class="govuk-!-margin-left-3 remove-date-link">Remove <span class="govuk-visually-hidden">APD</span></a>
                             </dd>
                         </div>
                         <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                            <dt class="
+                            govuk-summary-list__key release-dates-key govuk-!-font-size-24">
                                 ROTL
                                 <p class="govuk-!-font-size-16 govuk-hint">Release on temporary licence</p>
                             </dt>
@@ -103,35 +126,14 @@
                                 <a class="govuk-link" href="#">
                                     Change<span class="govuk-visually-hidden"> age</span>
                                 </a>
+                                <a href="remove-release-date" class="govuk-!-margin-left-3 remove-date-link">Remove <span class="govuk-visually-hidden">ROTL</span></a>
                             </dd>
                         </div>
+
                     </dl>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="govuk-grid-row govuk-!-margin-top-6">
-        <div class="govuk-grid-column-two-thirds">
-            <details class="govuk-details govuk-!-margin-bottom-2" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                        Why are some details missing?
-                    </span>
-                </summary>
-                <div class="govuk-details__text">
-                    Some dates and details are not included as according to <a href="http://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf" target="_blank">PSI 03/2015 (opens in new tab)</a> they are not relevant to this person's circumstances.
-                </div>
-            </details>
-            <details class="govuk-details" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                        How are final release dates calculated?
-                    </span>
-                </summary>
-                <div class="govuk-details__text">
-                    Some calculations are made up of different sentences and terms, such as overlapping or concurrent sentences. The final release date comes from the sentence or term with the latest release date.
-                </div>
-            </details>
+                                        <p class="govuk-body govuk-!-margin-top-4"><a href="">Add another HDCAD, APD or ROTL date</a></p>
         </div>
     </div>
 </div>
