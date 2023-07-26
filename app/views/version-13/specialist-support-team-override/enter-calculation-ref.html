@@ -1,0 +1,22 @@
+{% extends "../../dps/includes/template.html" %}
+{% block content %}
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-form-group">
+                <h1 class="govuk-label-wrapper govuk-!-margin-top-8">
+                    <label class="govuk-label govuk-label--l" for="event-name">
+                        Enter the calculation reference number
+                    </label>
+                </h1>
+                <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
+                <input class="govuk-input" id="event-name" name="event-name" type="text">
+                </div>
+            </div>
+            <a href="key-dates.html"><button class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
