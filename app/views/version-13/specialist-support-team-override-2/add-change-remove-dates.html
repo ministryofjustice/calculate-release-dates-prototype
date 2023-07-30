@@ -1,0 +1,69 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><span class="govuk-!-margin-right-5"><strong>Prison number: </strong>G2883VE</span><strong>Location: </strong>E-8-014
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="dates-summary" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">
+                <span class="govuk-caption-xl">Specialist support team override tool</span>
+                Add, change or remove dates
+            </h1>
+        </div>
+    </div>
+</div>
+<!-- Calculate dates -->
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-6">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24" style="width: 30%;">
+                        SLED
+                        <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value" style="width: 45%;">
+                        Sunday, 23 October 2039
+                    </dd>
+                    <dd class="govuk-summary-list__actions" style="width: 25%;">
+                        <a class="govuk-link govuk-link--no-visited-state" href="enter-release-dates-2">
+                            Change<span class="govuk-visually-hidden">SLED</span></a>
+                        <a href="remove-sled" class="govuk-!-margin-left-4 remove-date-link">Remove <span class="govuk-visually-hidden">SLED</span></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24" style="width: 30%;">
+                        CRD
+                        <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value" style="width: 45%;">
+                        Wednesday, 23 October 2030
+                    </dd>
+                    <dd class="govuk-summary-list__actions" style="width: 25%;">
+                        <a class="govuk-link govuk-link--no-visited-state" href="enter-release-dates-2">
+                            Change<span class="govuk-visually-hidden">CRD</span></a>
+                        <a href="remove-release-date" class="govuk-!-margin-left-4 remove-date-link">Remove <span class="govuk-visually-hidden">CRD</span></a>
+                    </dd>
+                </div>
+            </dl>
+            <p class="govuk-body govuk-!-margin-bottom-8"><a href="what-dates-do-you-need-to-add" class="govuk-link govuk-link--no-visited-state">Add another date</a></p>
+            <button onclick="location.href='dates-summary-2';" class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Confirm changes</button>
+            <a href="dates-summary" class="govuk-body govuk-!-margin-left-4 cancel-link">Cancel</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

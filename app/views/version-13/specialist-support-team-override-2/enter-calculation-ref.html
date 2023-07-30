@@ -1,20 +1,27 @@
 {% extends "../../dps/includes/template.html" %}
 {% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="start-standalone" class="govuk-back-link">Back</a>
+</div>
 <div class="moj-width-container">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <div class="govuk-form-group">
-                <h1 class="govuk-label-wrapper govuk-!-margin-top-8">
-                    <span class="govuk-caption-xl">Specialist support team override tool</span>
-                    <label class="govuk-label govuk-label--l" for="event-name">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading govuk-!-margin-top-6">
+                        <span class="govuk-caption-xl">Specialist support team override tool</span>
+                        Lookup a calculation
+                    </h1>
+                </legend>
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-margin-top-4" for="address-line-1">
                         Enter the calculation reference number
                     </label>
-                </h1>
-                <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
-                    <input class="govuk-input" id="event-name" name="event-name" type="text">
+                    <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
                 </div>
-            </div>
-            <a href="dates-summary.html"><button class="govuk-button" data-module="govuk-button">
+            </fieldset>
+            <a href="confirm-calculation.html"><button class="govuk-button" data-module="govuk-button">
                     Continue
                 </button></a>
         </div>
