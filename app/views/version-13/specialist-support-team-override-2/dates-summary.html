@@ -1,7 +1,7 @@
 {% extends "../template.html" %}
 {% block content %}
 <!-- Prisoner identity bar -->
-<!-- <div class="moj-width-container">
+<div class="moj-width-container">
     <div class="moj-identity-bar">
         <div class="moj-identity-bar__container govuk-!-margin-left-0">
             <div class="moj-identity-bar__details">
@@ -10,100 +10,78 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 <!-- Back link -->
 <div class="moj-width-container">
-    <a href="check-sentence-and-offence-information" class="govuk-back-link">Back</a>
+    <a href="confirm-calculation" class="govuk-back-link">Back</a>
 </div>
 <!-- Page intro -->
 <div class="moj-width-container govuk-!-margin-top-6">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-xl">
-                                    <span class="govuk-caption-xl">Specialist support team override tool</span>
-                Dates summary
+                <span class="govuk-caption-xl">Specialist support team override tool</span>
+                Calculated dates
             </h1>
-            <dl class="govuk-summary-list govuk-summary-list--no-border">
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Prisoner name
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        Colin Ball
-                    </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Establishment
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        HMP Leeds
-                    </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Prison number
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        G2883VE
-                    </dd>
-                </div>
-            </dl>
         </div>
     </div>
 </div>
 <!-- Calculate dates -->
 <div class="moj-width-container">
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-three-quarters">
-            <h2 class="govuk-heading-l govuk-!-margin-top-4">Calculated dates</h2>
-        <div class="govuk-summary-card govuk-!-margin-bottom-8">
-            <div class="govuk-summary-card__content" id="release-dates">
-                <dl class="govuk-summary-list release-dates-list">
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                            SLED
-                            <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
-                        </dt>
-                        <dd class="govuk-summary-list__value">
-                            Sunday, 23 October 2039
-                        </dd>
-                        <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="#">
-                                    Change<span class="govuk-visually-hidden"> age</span>
-                                </a>
-                                <a href="remove-release-date" class="govuk-!-margin-left-3 remove-date-link">Remove <span class="govuk-visually-hidden">HDCAD</span></a>
-                            </dd>
-                    </div>
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                            CRD
-                            <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
-                        </dt>
-                        <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                            Wednesday, 23 October 2030
-                        </dd>
-                        <dd class="govuk-summary-list__actions">
-                                <a class="govuk-link" href="#">
-                                    Change<span class="govuk-visually-hidden"> age</span>
-                                </a>
-                                <a href="remove-release-date" class="govuk-!-margin-left-3 remove-date-link">Remove <span class="govuk-visually-hidden">HDCAD</span></a>
-                            </dd>
-                    </div>
-                </dl>
-            </div>
-    </div>
-       <p class="govuk-body"><a href="what-dates-do-you-need-to-enter">Add another date</a></p>
-        </div>
-    </div>
-</div>
-<div class="moj-width-container govuk-!-margin-top-6">
-    <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <h3 class="govuk-heading-m">Save dates</h3>
-            <p class="govuk-body">By saving, you are confirming that, to the best of your knowledge, the dates are correct. The dates will be saved in NOMIS.</p>
-            <a href="confirmation">
-                <button class="govuk-button" data-module="govuk-button">Confirm and save</button>
+            <div class="govuk-summary-card govuk-!-margin-bottom-9">
+                <div class="govuk-summary-card__content" id="release-dates">
+                    <dl class="govuk-summary-list release-dates-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                SLED
+                                <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Sunday, 23 October 2039
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                CRD
+                                <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                                Wednesday, 23 October 2030
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Do you agree with the calculated dates?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="changed-name">
+                                Yes, save the dates
+                            </label>
+                            <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                                By saving the dates you are confirming that, to the best of your knowledge, they are correct. The dates will be saved in NOMIS.
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no" checked>
+                            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                No, I want to make a change
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <a href="add-change-remove-dates">
+                <button class="govuk-button" data-module="govuk-button">Continue</button>
             </a>
         </div>
     </div>

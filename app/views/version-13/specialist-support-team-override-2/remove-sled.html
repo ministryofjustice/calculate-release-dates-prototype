@@ -1,0 +1,41 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><span class="govuk-!-margin-right-5"><strong>Prison number: </strong>G2883VE</span><strong>Location: </strong>E-8-014
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="add-change-remove-dates" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">
+                <span class="govuk-caption-xl">Specialist support team override tool</span>
+                Are you sure you want to remove the SLED?
+            </h1>
+        </div>
+    </div>
+</div>
+<!-- Calculate dates -->
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+                <p class="govuk-body-l govuk-!-margin-bottom-8">Sunday, 23 October 2039</p>
+                <p class="govuk-body">
+                <button onclick="location.href='add-change-remove-dates-2';" class="govuk-button destructive-button govuk-!-margin-bottom-0" data-module="govuk-button">Yes, remove SLED</button>
+            <a href="add-change-remove-dates" class="govuk-body govuk-!-margin-left-4 cancel-link">Cancel</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

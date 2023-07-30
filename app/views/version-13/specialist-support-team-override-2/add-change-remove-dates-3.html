@@ -1,0 +1,89 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- Prisoner identity bar -->
+<div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Colin Ball</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">15 May 2000</span><span class="govuk-!-margin-right-5"><strong>Prison number: </strong>G2883VE</span><strong>Location: </strong>E-8-014
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="dates-summary" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div class="moj-banner moj-banner--success" role="region" aria-label="Success">
+                <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                    <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" />
+                </svg>
+                <div class="moj-banner__message">SED and HDCED successfully added.</div>
+            </div>
+            <h1 class="govuk-heading-xl">
+                <span class="govuk-caption-xl">Specialist support team override tool</span>
+                Add, change or remove dates
+            </h1>
+        </div>
+    </div>
+</div>
+<!-- Calculate dates -->
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-6">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24" style="width: 30%;">
+                        CRD
+                        <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value" style="width: 45%;">
+                        Wednesday, 23 October 2030
+                    </dd>
+                    <dd class="govuk-summary-list__actions" style="width: 25%;">
+                        <a class="govuk-link govuk-link--no-visited-state" href="enter-release-dates-2">
+                            Change<span class="govuk-visually-hidden">CRD</span></a>
+                        <a href="remove-release-date" class="govuk-!-margin-left-4 remove-date-link">Remove <span class="govuk-visually-hidden">CRD</span></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24" style="width: 30%;">
+                        SED
+                        <p class="govuk-!-font-size-16 govuk-hint">Sentence expiry date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value" style="width: 45%;">
+                        Monday, 4 March 2024
+                    </dd>
+                    <dd class="govuk-summary-list__actions" style="width: 25%;">
+                        <a class="govuk-link govuk-link--no-visited-state" href="enter-release-dates-2">
+                            Change<span class="govuk-visually-hidden">SED</span></a>
+                        <a href="remove-release-date" class="govuk-!-margin-left-4 remove-date-link">Remove <span class="govuk-visually-hidden">SED</span></a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24" style="width: 30%;">
+                        HDCED
+                        <p class="govuk-!-font-size-16 govuk-hint">Home detention curfew elibility date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value" style="width: 45%;">
+                        Saturday, 4 March 2023
+                    </dd>
+                    <dd class="govuk-summary-list__actions" style="width: 25%;">
+                        <a class="govuk-link govuk-link--no-visited-state" href="enter-release-dates-2">
+                            Change<span class="govuk-visually-hidden">CRD</span></a>
+                        <a href="remove-release-date" class="govuk-!-margin-left-4 remove-date-link">Remove <span class="govuk-visually-hidden">CRD</span></a>
+                    </dd>
+                </div>
+            </dl>
+            <p class="govuk-body govuk-!-margin-bottom-8"><a href="what-dates-do-you-need-to-enter-2" class="govuk-link govuk-link--no-visited-state">Add another date</a></p>
+                            <button onclick="location.href='dates-summary-2';" class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Confirm changes</button>
+            <a href="dates-summary" class="govuk-body govuk-!-margin-left-4 cancel-link">Cancel</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
