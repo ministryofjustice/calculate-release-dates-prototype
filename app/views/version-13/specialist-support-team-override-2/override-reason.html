@@ -19,44 +19,42 @@
 <div class="moj-width-container govuk-!-margin-top-6">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl">
-                <span class="govuk-caption-xl">Override release dates</span>
-                Select the reason for the override
-            </h1>
-            <form class="form" action="hearing-type">
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-xl">Override release dates</span>
+                            Select a reason for the override
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="override-reason-1" name="override-reason" type="radio" value="Order of imprisonment/warrant doesn’t match trial record sheet">
-                            <label class="govuk-label govuk-radios__label" for="override-reason-1">
+                            <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                            <label class="govuk-label govuk-radios__label" for="contact">
                                 Order of imprisonment/warrant doesn’t match trial record sheet
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="override-reason-2" name="override-reason" type="radio" value="Terrorism or terror-related offences">
-                            <label class="govuk-label govuk-radios__label" for="override-reason-2">
+                            <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                            <label class="govuk-label govuk-radios__label" for="contact-2">
                                 Terrorism or terror-related offences
                             </label>
                         </div>
-                        <div class="govuk-radios" data-module="govuk-radios">
-                            <div class="govuk-radios" data-module="govuk-radios">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="override-reason-3" name="override-reason" type="radio" value="yes" aria-controls="conditional-court-case-reference" aria-expanded="false">
-                                    <label class="govuk-label govuk-radios__label" for="override-reason-3">
-                                        Other
-                                    </label>
-                                </div>
-                                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-override-reason">
-                                    <div class="govuk-form-group">
-                                        <input class="govuk-input govuk-!-width-one-third" id="other-reason" name="other-reason" spellcheck="true">
-                                    </div>
-                                </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+                            <label class="govuk-label govuk-radios__label" for="contact-3">
+                                Other
+                            </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+                            <div class="govuk-form-group">
+                                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel">
                             </div>
                         </div>
-                    </fieldset>
-                </div>
-            </form>
-            <a href="enter-release-dates-1" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                    </div>
+                </fieldset>
+            </div>
+            <a href="what-dates-do-you-need-to-enter" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
                 Continue
             </a>
         </div>
