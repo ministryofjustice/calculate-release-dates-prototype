@@ -79,7 +79,7 @@
         }
       }
 
-      @include govuk-responsive-padding(7, 'top');
+      // @include govuk-responsive-padding(7, 'top');
 
       @media (max-width: 1152px) {
         padding-top: 0;
@@ -136,13 +136,13 @@
   }
 
   .hmpps-profile-banner-bottom {
-    @include govuk-responsive-padding(6, 'left');
+    // @include govuk-responsive-padding(6, 'left');
 
     @media (max-width: 640px) {
       padding-left: 19px;
     }
 
-    @include govuk-responsive-padding(5, 'right');
+    // @include govuk-responsive-padding(5, 'right');
     background-color: #f3f2f1;
 
     overflow: auto;
