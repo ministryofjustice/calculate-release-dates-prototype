@@ -10,6 +10,7 @@
     "@ministryofjustice/frontend": "^1.6.6",
     "govuk-frontend": "^4.5.0",
     "govuk-prototype-kit": "^13.12.1",
+    "hmpps-court-cases-release-dates-design": "^2.12.0",
     "jquery": "^3.7.0",
     "notifications-node-client": "^5.2.3"
   }
