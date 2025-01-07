@@ -99,3 +99,9 @@ Started [Remove empty directory app/views/includes]
 Skipped deleting app/views/includes
 Skipped deleting app/assets/images
 Succeeded [Remove empty directory app/assets/sass/patterns]
+2025-01-07T21:23:41.545Z
+cwd: ~/Projects/calculate-release-dates-prototype
+package: govuk-prototype-kit@13.16.2
+argv: /usr/local/bin/node ~/.npm/_npx/751a68202a4807b7/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Failed [Check migration is being applied to a pre v13 prototype]
