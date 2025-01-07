@@ -1,6 +1,7 @@
 {
   "assets": [
-    "/govuk/assets"
+    "/govuk/assets",
+    "/govuk/all.js.map"
   ],
   "sass": [
     "/govuk-prototype-kit/init.scss"
@@ -53,6 +54,10 @@
     {
       "importFrom": "govuk/components/error-summary/macro.njk",
       "macroName": "govukErrorSummary"
+    },
+    {
+      "importFrom": "govuk/components/exit-this-page/macro.njk",
+      "macroName": "govukExitThisPage"
     },
     {
       "importFrom": "govuk/components/fieldset/macro.njk",

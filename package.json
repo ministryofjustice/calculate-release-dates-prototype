@@ -7,8 +7,8 @@
   "name": "govuk-prototype-kit",
   "dependencies": {
     "@govuk-prototype-kit/step-by-step": "^2.1.0",
-    "@ministryofjustice/frontend": "^1.6.6",
-    "govuk-frontend": "^4.5.0",
+    "@ministryofjustice/frontend": "^1.8.1",
+    "govuk-frontend": "^4.9.0",
     "govuk-prototype-kit": "^13.12.1",
     "hmpps-court-cases-release-dates-design": "^2.12.0",
     "jquery": "^3.7.0",
