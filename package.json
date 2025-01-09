@@ -7,10 +7,10 @@
   "name": "govuk-prototype-kit",
   "dependencies": {
     "@govuk-prototype-kit/step-by-step": "^2.1.0",
-    "@ministryofjustice/frontend": "^1.8.1",
-    "govuk-frontend": "^4.9.0",
+    "@ministryofjustice/frontend": "^3.3.1",
+    "govuk-frontend": "^5.8.0",
     "govuk-prototype-kit": "^13.12.1",
-    "hmpps-court-cases-release-dates-design": "^2.12.0",
+    "hmpps-court-cases-release-dates-design": "^3.0.0",
     "jquery": "^3.7.0",
     "notifications-node-client": "^5.2.3"
   }
