@@ -1,0 +1,30 @@
+{% extends "../../includes/layouts/template-linear.html" %}
+{% block content %} 
+
+<form method="post" action="calculation-summary">
+<div class="moj-interruption-card">
+    <div class="moj-interruption-card__content">
+      <h1 class="govuk-heading-l moj-interruption-card__heading">Are you sure you want to calculate release dates?</h1>
+      <div class="govuk-body-l moj-interruption-card__body">
+        <p>Multiple sentences for this prisoner have been aggregated in an irregular way.</p> 
+        <span>You can:</span> 
+        <ul>
+            <li>review and modify sentence and offence information on NOMIS and <a href="#" class="govuk-link--inverse">try again</a></li>
+            <li>continue to calculare release dates anyway</li>
+        </ul>
+      </div>
+      <div class="govuk-button-group moj-interruption-card__actions">
+  
+        <button role="button" draggable="false" class="govuk-button govuk-button--inverse" data-module="govuk-button">
+          Calculate release dates
+        </button>
+  
+        <a class="govuk-link govuk-link--inverse" href="check-sentence-and-offence-information">Go back to sentence and offence information</a>
+  
+      </div>
+    </div>
+  </div>
+
+</form>
+  
+{% endblock %}
