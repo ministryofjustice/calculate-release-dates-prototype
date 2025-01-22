@@ -2,8 +2,7 @@
   "scripts": {
     "dev": "govuk-prototype-kit dev",
     "serve": "govuk-prototype-kit serve",
-    "start": "govuk-prototype-kit start"
-    "compile-sass": "sass --quiet-deps --no-source-map --load-path=node_modules/govuk-frontend/dist --load-path=node_modules/@ministryofjustice/frontend --load-path=. app/assets/sass/application.scss:./assets/stylesheets/application.css --style compressed"
+    "start": "govuk-prototype-kit start" 
   },
   "name": "govuk-prototype-kit",
   "dependencies": {
