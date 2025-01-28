@@ -1,0 +1,72 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="">
+    <div class="">
+        <a href="index.html" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                    <h1 class="govuk-heading-l"><span class="govuk-caption-xl">Adjustments</span>Review Tagged bail</h1>
+                    <div id="dataContainer">
+
+                    </div>
+                    <table class="govuk-table">
+                        <caption class="govuk-table__caption govuk-table__caption--m">Tagged bail details</caption>
+                        <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Court name</th>
+                            <th scope="col" class="govuk-table__header">Case reference</th>
+                            <th scope="col" class="govuk-table__header">Days</th>
+                            <th scope="col" class="govuk-table__header">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody id="TaggedBailDetails" class="govuk-table__body">
+
+
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Bristol Magistrates Court</td>
+                            <td class="govuk-table__cell">T20223256</td>
+                            <td class="govuk-table__cell">12</td>
+                            <td class="govuk-table__cell">
+                                <a href="edit-case.html" class="edit-link" data-caseno="6">Edit</a>
+                                <a href="edit-days.html" class="delete-link govuk-!-margin-left-4" data-caseno="6">Delete</a>
+                            </td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Bristol Magistrates Court</td>
+                            <td class="govuk-table__cell">T90000000</td>
+                            <td class="govuk-table__cell">67</td>
+                            <td class="govuk-table__cell">
+                                <a href="edit-case.html" class="edit-link" data-caseno="5">Edit</a>
+                                <a href="edit-days.html" class="delete-link govuk-!-margin-left-4" data-caseno="5">Delete</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header" colspan="2">Total days</th>
+                            <td id="totalTB" class="govuk-table__cell" colspan="2">79</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                    <div id="alerthere"></div>
+                    <div class="govuk-button-group">
+                        <a href="result" id="saveRemandButton" class="govuk-button" data-journey="1">
+                            Continue
+                        </a>
+                        <a href="../../index-1.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </a>
+                    </div>
+
+<!--                    <a href="review-2.html" class="govuk-link">Return to remand details</a>-->
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/add-remand.js"></script>
+{% endblock %}

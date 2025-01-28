@@ -1,0 +1,57 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="">
+    <div class="">
+        <a href="review-2.html" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                    <h1 class="govuk-heading-l"><span class="govuk-caption-xl">Adjustments</span>Confirm and save</h1>
+                    <div id="dataContainer">
+
+                    </div>
+                    <table class="govuk-table">
+                        <caption class="govuk-table__caption govuk-table__caption--m">Remand details</caption>
+                        <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Remand period</th>
+                            <th scope="col" class="govuk-table__header">Days spent on remand</th>
+<!--                            <th scope="col" class="govuk-table__header"></th>-->
+                        </tr>
+                        </thead>
+                        <tbody id="tableBody-2" class="govuk-table__body">
+
+
+                        </tbody>
+                        <tfoot>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Total days</th>
+                            <td class="govuk-table__cell" id="saveTableTotal">000</td>
+                            <td class="govuk-table__cell"></td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                    <div id="alerthere"></div>
+                    <div class="govuk-button-group"> 
+                        <form action="../../adjustments?toDo=adjustmentsApplied" method="post">
+                            <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" id="saveRemandButton" data-qa="submitReason" data-journey="1">
+                            Confirm and save
+                            </button> 
+                        </form>  
+                        <form method="post" action="../../adjustments">
+                            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                                Cancel
+                            </button>
+                        </form> 
+                    </div>
+
+                    <a href="review-2.html" class="govuk-link">Return to remand details</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/add-remand.js"></script>
+{% endblock %}

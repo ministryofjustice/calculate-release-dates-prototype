@@ -1,0 +1,37 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+                <form class="form" action="/{{data.prototypeVersion}}/new-court-name" method="post">
+            <div class="govuk-form-group"> 
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add appearance information</span>
+                            Was the appearance at {{ data.courtCase.appearances.at(-1)['next-court-name'] }}?
+                        </h1>
+                    </legend>
+                    <div class="govuk-hint">This was the court name for the previous appearance.</div>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="court-name-select" name="appearance[court-name-select]" type="radio" value="Yes">
+                            <label class="govuk-label govuk-radios__label" for="court-name-select">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="court-name-select-2" name="appearance[court-name-select]" type="radio" value="No">
+                            <label class="govuk-label govuk-radios__label" for="court-name-select-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

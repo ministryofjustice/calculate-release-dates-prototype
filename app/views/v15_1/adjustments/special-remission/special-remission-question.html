@@ -1,0 +1,52 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="govuk-body">
+    <div class="">
+        <a href="../index-1" class="govuk-back-link">Back</a>
+
+       
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                  <form class="form" action="special-remission-days" method="post">
+                       <h1 class="govuk-heading-l">
+                                <span class="govuk-caption-xl">Adjustments</span>
+                                Has the sentence calculation team provided the amount of special remission days?
+                            </h1>
+                           <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                                  <div id="changedName-hint" class="govuk-hint">
+                                    Hint text
+                                  </div>
+                                  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="changedName" name="srselect" type="radio" value="Yes">
+                                      <label class="govuk-label govuk-radios__label" for="changedName">
+                                        Yes
+                                      </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="changedName-2" name="srselect" type="radio" value="No">
+                                      <label class="govuk-label govuk-radios__label" for="changedName-2">
+                                        No
+                                      </label>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                        </div>
+                      <div class="govuk-button-group">
+                        <button class="govuk-button" data-module="govuk-button">Continue</button>
+                            <a href="../index.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                                Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+         
+
+            
+    </div>
+</div>
+<script src="/public/javascripts/add-remand-mvp.js"></script>
+{% endblock %}

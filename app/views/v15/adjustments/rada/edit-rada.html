@@ -1,0 +1,86 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="govuk-body">
+    <div class="">
+        <a href="view-rada" class="govuk-back-link">Back</a>
+
+        <main id="editRADAPage" class="govuk-main-wrapper offence-outcome " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <form action="/form-handler" method="post" novalidate>
+                        <div class="">
+                            <h1 class="govuk-heading-l"><span class="govuk-caption-xl">Adjustments</span>
+                                Edit RADA details
+                            </h1>
+                            <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset" role="group" aria-describedby="rada-hint">
+                                    <legend class="govuk-fieldset__legend--s">
+                                        Date of days restored
+                                    </legend>
+                                    <div id="rada-hint" class="govuk-hint">
+                                        For example, 27 3 2022
+                                    </div>
+                                    <div class="govuk-date-input" id="passport-issued">
+                                        <div class="govuk-date-input__item">
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label" for="rada-day">
+                                                    Day
+                                                </label>
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="rada-day" name="rada-day" type="text" inputmode="numeric">
+                                            </div>
+                                        </div>
+                                        <div class="govuk-date-input__item">
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label" for="rada-month">
+                                                    Month
+                                                </label>
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="rada-month" name="rada-month" type="text" inputmode="numeric">
+                                            </div>
+                                        </div>
+                                        <div class="govuk-date-input__item">
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label" for="rada-year">
+                                                    Year
+                                                </label>
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="rada-year" name="rada-year" type="text" inputmode="numeric">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                            </div>
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-label--s" for="RADADays">
+                                    Number of additional days restored
+                                </label>
+                                <div class="govuk-input__wrapper">
+                                    <input id="RADADays" class="govuk-input govuk-input--width-4"  name="days" type="text" spellcheck="false">
+                                    <div class="govuk-input__suffix" aria-hidden="true">days</div>
+                                </div>
+                            </div>
+<!--                            <div class="govuk-form-group">-->
+<!--                                <label class="govuk-label" for="rada-document-ID">-->
+<!--                                    Adjudication ID-->
+<!--                                </label>-->
+<!--                                <input class="govuk-input govuk-input&#45;&#45;width-20" id="rada-document-ID" name="width-20" type="text">-->
+<!--                            </div>-->
+
+                        </div>
+
+                        <div class="govuk-button-group">
+                            <a id="editRADAButton" href="confirm-rada"  class="govuk-button" data-module="govuk-button">
+                                Continue
+                            </a>
+                            <a href="view-rada" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                                Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/adjustments-3-mvp.js"></script>
+{% endblock %}

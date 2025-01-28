@@ -1,0 +1,73 @@
+{% extends "../template.html" %}
+{% block content %}
+{% set consecAppearance = data.courtCases[data.sentence['consecutive-to-case-ref-index']].appearances | last %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="/{{data.prototypeVersion}}/persist-sentence?edit=true" method="post">
+            {% else %}
+            <form class="form" action="/{{data.prototypeVersion}}/persist-sentence" method="post">
+                {% endif %}
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            {% if data.postSaveEdit == 'true' %}
+                            <h1 class="govuk-fieldset__heading">
+                                <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{
+                                    data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{
+                                    data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year']
+                                    }}</span>
+                                Select the consecutive offence
+                            </h1>
+                            {% else %}
+                            <h1 class="govuk-fieldset__heading">
+                                <span class="govuk-caption-l">Add offences</span>
+                                Select the consecutive offence
+                            </h1>
+                            {% endif %}
+                        </legend>
+                        <details class="govuk-details govuk-!-margin-top-2">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    What to do if the case isn't listed
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                Lorum ipsum
+                            </div>
+                        </details>
+                        <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+                            {% for sentence in consecAppearance.sentences %}
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="consecutive-to-case-ref"
+                                    name="sentence[consecutive-to]" type="radio"
+                                    value=" {{ sentence['count-number'] }} on case {{ consecAppearance['court-case-ref'] }}">
+                                <label class="govuk-label govuk-radios__label" for="consecutive-concurrent">
+                                    Count {{ sentence['count-number'] }}<br>
+                                    {{ sentence['offence-name'] }}<br>
+                                    <span class="govuk-hint">Committed on {{ sentence['offence-start-date-day'] }}/{{
+                                        sentence['offence-start-date-month'] }}/{{ sentence['offence-start-date-year']
+                                        }}</span>
+                                </label>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="govuk-button-group">
+                    <button type="submit" class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+                    <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+                        formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+                        Save as a draft
+                    </button>
+                </div>
+            </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+{% endblock %}

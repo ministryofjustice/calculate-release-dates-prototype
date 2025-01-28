@@ -1,0 +1,36 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/{{data.prototypeVersion}}/warrant-type-select?route=appearance" method="post">
+            <div class="govuk-form-group"> 
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add an appearance</span>
+                            Select the type of warrant
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="warrant-type" name="appearance[warrant-type]" type="radio" value="Remand">
+                            <label class="govuk-label govuk-radios__label" for="warrant-type">
+                                Remand
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="warrant-type-2" name="appearance[warrant-type]" type="radio" value="Sentencing">
+                            <label class="govuk-label govuk-radios__label" for="warrant-type-2">
+                                Sentencing
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
