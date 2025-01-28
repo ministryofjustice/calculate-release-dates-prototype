@@ -6,6 +6,8 @@
 // Add extra styles here
 
 
+// New DPS styles
+@import "components/dps";
 
 // DPS header
 @import "components/dps-header";
@@ -40,6 +42,7 @@
 // BaSM styles
 @import "components/basm";
 
+
 // DPS profile styles
 @import "components/prisonerProfile/prisoner-alerts";
 @import "components/prisonerProfile/prisoner-full-image";
@@ -50,7 +53,8 @@
 @import "components/prisonerProfile/prisoner-schedule";
 @import "components/prisonerProfile/prisoner-visits";
 @import 'components/prisonerSearch/prisoner-search';
-@import 'components/prisonerSearch/prisoner-panel';
+@import 'components/prisonerSearch/prisoner-panel'; 
+@import 'components/dps-home';
 
 @import "components/modal";
 @import "components/govuk-cards";
