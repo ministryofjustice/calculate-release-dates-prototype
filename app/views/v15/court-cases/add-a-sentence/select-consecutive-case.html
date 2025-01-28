@@ -1,0 +1,82 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="/{{data.prototypeVersion}}/persist-sentence?edit=true" method="post">
+            {% else %}
+            <form class="form" action="/{{data.prototypeVersion}}/select-consecutive-case-select" method="post">
+                {% endif %}
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            {% if data.postSaveEdit == 'true' %}
+                            <h1 class="govuk-fieldset__heading">
+                                <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{
+                                    data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{
+                                    data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year']
+                                    }}</span>
+                                Select the case count {{ data.sentence["count-number"] }} is consecutive to an offence
+                                on
+                            </h1>
+                            {% else %}
+                            <h1 class="govuk-fieldset__heading">
+                                <span class="govuk-caption-l">Add offences</span>
+                                Select the case
+                            </h1>
+                            {% endif %}
+                        </legend>
+                        <details class="govuk-details govuk-!-margin-top-2">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    What to do if the case isn't listed
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                Lorum ipsum
+                            </div>
+                        </details>
+                        <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+                            {% for courtCase in data.courtCases %}
+                            {% if loop.index < data.courtCases.length %} {% set lastAppearance=courtCase.appearances |
+                                last %} <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="consecutive-to-case-ref"
+                                    name="sentence[consecutive-to-case-ref]" type="radio"
+                                    value="{{ loop.index0 }},{{ lastAppearance[" court-case-ref"] }}">
+                                <label class="govuk-label govuk-radios__label" for="consecutive-concurrent">
+                                    Case {{ lastAppearance["court-case-ref"] }} at {{ lastAppearance["court-name"] }} on
+                                    {{ lastAppearance["warrant-date-day"] }}/{{ lastAppearance["warrant-date-month"]
+                                    }}/{{ lastAppearance["warrant-date-year"] }}
+                                </label>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="consecutive-to-case-ref"
+                                name="sentence[consecutive-to-case-ref]" type="radio"
+                                value="{{ loop.index0 }},{{ lastAppearance[" court-case-ref"] }}">
+                            <label class="govuk-label govuk-radios__label" for="consecutive-concurrent">
+                                Case 6838756939 at Manchester Crown Court (Crown Square) on 25/01/2024
+                            </label>
+                        </div>
+                </div>
+                </fieldset>
+    </div>
+    <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+            formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+            Save as a draft
+        </button>
+    </div>
+    </form>
+</div>
+<div class="govuk-grid-column-one-third">
+    {% set showOffences = true %}
+    {% include "includes/templates/appearance-info.njk" %}
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/{{data.prototypeVersion}}/offence-name-same" method="post">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add sentences to a court case</span>
+                            Is the offence name the same?
+                        </h1>
+                    </legend>
+                    <p class="govuk-body-l">
+                        {{ data.sentence['offence-name'] }}
+                    </p>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="offence-name-same" name="sentence[offence-name-same]"
+                                type="radio" value="Yes">
+                            <label class="govuk-label govuk-radios__label" for="offence-name-same">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="offence-name-same-2"
+                                name="sentence[offence-name-same]" type="radio" value="No">
+                            <label class="govuk-label govuk-radios__label" for="offence-name-same-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>ß
+            </div>
+            <div class="govuk-button-group">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+                    formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+                    Save as a draft
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+{% endblock %}

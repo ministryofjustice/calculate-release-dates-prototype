@@ -1,0 +1,74 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %} 
+<!-- Back link -->
+<!-- <div class="moj-width-container">
+    <a href="../release-dates" class="govuk-back-link">Back</a>
+</div> -->
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row"> 
+        <div class="govuk-grid-column-two-thirds">
+            <form method="post" action="check-sentence-and-offence-information">
+
+                <div class="govuk-form-group">
+
+                    <fieldset class="govuk-fieldset" aria-describedby="calculationReasonId-hint">
+                    
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <span class="govuk-caption-xl">Sepcialist support team override tool</span>
+                            <h1 class="govuk-fieldset__heading">
+                            Confirm this is the correct person
+                            </h1>
+                        </legend>  
+
+                        <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-0">
+                            <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Calculation reference
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                abc-123-def-456-ghi-789 
+                            </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Prisoner name
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                               Joe Bloggs
+                            </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Prisoner number 
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                A8207AA
+                            </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Establishment
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                HMP Kirkham
+                            </dd>
+                            </div>
+                        </dl>
+                    </fieldset> 
+ 
+                </div> 
+
+            
+                <div class="govuk-button-group"> 
+                        <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                            Yes, continue
+                        </button> 
+                        <a class="govuk-link" href="look-up-calculation">No, look up a different calculation</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

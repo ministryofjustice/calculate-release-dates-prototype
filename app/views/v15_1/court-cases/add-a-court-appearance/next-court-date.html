@@ -1,0 +1,74 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="check-answers-next-appearance" method="post">
+            {% elif data.postSaveEdit == 'true' %}
+            <form class="form" action="/{{data.prototypeVersion}}/persist-appearance" method="post">
+            {% else %}
+            <form class="form" action="next-court-select">
+                {% endif %}
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        {% if data.postSaveEdit == 'true' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{ data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{ data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }}</span>
+                            Edit the date of the next court appearance
+                        </h1>
+                        {% else %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add an appearance to a court case</span>
+                            Enter the date of the next court appearance
+                        </h1>
+                        {% endif %}
+                    </legend>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="next-court-date">
+                            Next court date
+                        </label>
+                        <div class="govuk-date-input" id="next-court-date">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="next-court-date-day">
+                                        Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="next-court-date-day" name="appearance[next-court-date-day]" type="text" inputmode="numeric" value="{{ data.appearance['next-court-date-day'] }}">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="next-court-date-month">
+                                        Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="next-court-date-month" name="appearance[next-court-date-month]" type="text" inputmode="numeric" value="{{ data.appearance['next-court-date-month'] }}">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="next-court-date-year">
+                                        Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="next-court-date-year" name="appearance[next-court-date-year]" type="text" inputmode="numeric" value="{{ data.appearance['next-court-date-year'] }}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="next-court-time">
+                            Time of next court appearance (optional)
+                        </label>
+                        <div id="next-court-time-hint" class="govuk-hint">
+                            For example, 1:00 or 13:00
+                        </div>
+                        <input class="govuk-input govuk-input--width-4" id="next-court-time" name="appearance[next-court-time]" type="text" value="{{ data.appearance['next-court-time'] }}">
+                    </div>
+                </fieldset>
+                <button class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+            </form>
+    </div>
+</div>
+{% endblock %}
