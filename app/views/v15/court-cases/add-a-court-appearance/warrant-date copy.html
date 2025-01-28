@@ -1,0 +1,27 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="check-answers" method="post">
+         {% elif data.postSaveEdit == 'true' %}
+        <form class="form" action="/{{data.prototypeVersion}}/persist-appearance" method="post">
+            {% else %}
+        <form class="form" action="court-name-select">
+            {% endif %}
+            <div class="govuk-form-group">
+                <h1 class="govuk-heading-l">
+                            <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{ data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{ data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }}</span>
+                            Sentence length mismatch
+                        </h1>
+                        <p class="govuk-body">The total sentence length of the offences added for this appearace do not match the overall sentence length entered from the warrant.</p>
+                        <ul class="govuk-list govuk-list--no-bullet">
+                            <li><a href="">Go back and review offences</a></li>
+                            <li><a href="">Continue with mismatching sentence lengths</a></li>
+                        </ul>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

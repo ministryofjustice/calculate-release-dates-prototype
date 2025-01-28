@@ -1,0 +1,28 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="terror-related" method="post">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                        <span class="govuk-caption-l">Add sentence information for offence {{ data['sentence']['count-number'] }}</span>
+                        Offence code {{ data.sentence['offence-code'] }} cannot be added
+                    </h1>
+                </legend>
+                <p class="govuk-body">Based on the offence details entered, this offence code is incorrect.</p>
+                <h2 class="govuk-heading-m">What you need to do</h2>
+                <p class="gocuk-body">Check that:</p>
+                <ul class="govuk-list govuk-list--no-bullet">
+                    <li><a href="offence-code">you have entered the offence code correctly</a></li>
+                    <li><a href="offence-date">the sentence start and end date have been entered correctly</a></li>
+
+
+            <!-- <li><p class="govuk-body"><a href="offence-code">Enter a different offence code</a></p></li>
+            <li><p class="govuk-body"><a href="offence-name">Look up an offence by name</a></p></li>-->
+        </ul>
+        <p>If all the details have been entered correctly, contact {{ data.appearance['court-name'] }}.</p>
+            </div>
+    </div>
+</div>
+{% endblock %}

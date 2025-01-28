@@ -1,0 +1,54 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="check-answers?edit=false" method="post">
+            {% else %}
+            <form class="form" action="/{{data.prototypeVersion}}/merged-cases-select" method="post">
+                {% endif %}
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                <span class="govuk-caption-l">Add offences</span>
+                                Does this warrant include offences from other court cases?
+                            </h1>
+                        </legend>
+                        <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="merged-cases" name="appearance[merged-cases]"
+                                    value="Yes" type="radio" {% if data.appearance['merged-cases'] %}{% if
+                                    data.appearance['merged-cases'].includes('Yes') %}checked{% endif %}{% endif %}>
+                                <label class="govuk-label govuk-radios__label" for="merged-cases">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="merged-cases-2" name="appearance[merged-cases]"
+                                    type="radio" value="None" {% if data.appearance['merged-cases'] %}{% if
+                                    data.appearance['merged-cases'].includes('None') %}checked{% endif %}{% endif %}>
+                                <label class="govuk-label govuk-radios__label" for="merged-cases-2">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="govuk-button-group">
+                    <button class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+                    <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+                        formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+                        Save as a draft
+                    </button>
+                </div>
+            </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = false %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+{% endblock %}

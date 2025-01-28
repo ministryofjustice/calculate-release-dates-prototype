@@ -1,0 +1,61 @@
+{% extends "../../../../includes/layouts/template-linear.html" %} {% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+  <a href="select-which-approved-dates" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds"> 
+
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="SED-hint">
+
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+
+              <span class="govuk-caption-xl">Sepcialist support team override tool</span>
+              <h1 class="govuk-fieldset__heading">
+                Check the dates you have entered
+              </h1>
+
+            </legend> 
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  SED (Sentence expiry date)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  11 November 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span><br>  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a>
+                </dd>
+              </div> 
+              </div>
+            </dl>
+
+          </fieldset> 
+
+<div class="moj-width-container govuk-!-margin-top-6">
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+          <h3 class="govuk-heading-m">Confirm and save to NOMIS</h3>
+          <p class="govuk-body">By saving this calculation you are confirming that, to the best of your knowledge, it is correct. These dates will be saved in NOMIS as a manual calculation.</p>
+          
+              <div class="govuk-button-group">
+                  <form method="post" action="calculation-complete">
+                      <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                          Confirm and save to NOMIS
+                      </button>
+                  </form> 
+              </div>
+          <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
+      </div>
+  </div>
+</div>
+ 
+    </div>
+  </div>
+</div>
+{% endblock %}

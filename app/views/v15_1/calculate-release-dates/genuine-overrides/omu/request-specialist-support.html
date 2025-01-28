@@ -1,0 +1,43 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %} 
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="../../calculation-summary" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row"> 
+        <div class="govuk-grid-column-two-thirds"> 
+
+                <div class="govuk-form-group">
+
+                    <fieldset class="govuk-fieldset" aria-describedby="calculationReasonId-hint">
+                    
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+                            Report a problem with the calculation
+                            </h1>
+                        </legend>  
+
+                       
+                        <p>You can report a problem with the Calculate release dates service (CRDS) calculation if:</p>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>sentence and offence information from the warrants and CRDS does not match</li>
+                            <li>you think the dates calculated by the service are incorrect</li>
+                            <li>the calculation includes terrorism or terrorism-related offences </li>  
+                        </ul>
+
+                    </fieldset> 
+
+
+                <a href="reason-for-override" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+                    Start now
+                    <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                      <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg>
+                  </a>
+                </div>  
+        </div>
+    </div>
+</div>
+{% endblock %}

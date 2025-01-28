@@ -1,0 +1,75 @@
+{% extends "../../template.html" %}
+{% set nav = true %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="">
+    <div class="">
+        <a href="index-1" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper offence-outcome " id="main-content" role="main">
+            <h1 class="govuk-heading-l"><span class="govuk-caption-xl">Adjustments</span>
+                LAL overview
+            </h1>
+
+            <table class="govuk-table">
+                
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">First Day</th>
+                    <th scope="col" class="govuk-table__header">Last Day</th>
+                    <th scope="col" class="govuk-table__header">Entered by</th>
+                    <th scope="col" class="govuk-table__header">Type</th>
+                    <th scope="col" class="govuk-table__header">Number of days</th>
+                    <th scope="col" class="govuk-table__header">Actions</th>
+                </tr>
+                </thead>
+                <tbody  class="govuk-table__body">
+
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">20 May 2024</td>
+                    <td class="govuk-table__cell">25 May 2024</td>
+                    <td class="govuk-table__cell">Kirkham (HMP)</td>
+                    <td class="govuk-table__cell">Unknown</td>
+                    <td class="govuk-table__cell">6</td>
+                    <td class="govuk-table__cell">
+                        <a href="../tagged-bail/edit-case.html" class="edit-link" data-caseno="4">Edit</a>
+                        <a href="../tagged-bail/edit-days.html" class="delete-link govuk-!-margin-left-4" data-caseno="4">Delete</a>
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">20 May 2024</td>
+                    <td class="govuk-table__cell">25 May 2024</td>
+                    <td class="govuk-table__cell">Kirkham (HMP)</td>
+                    <td class="govuk-table__cell">Recall from licence </td>
+                    <td class="govuk-table__cell">6</td>
+                    <td class="govuk-table__cell">
+                        <a href="../tagged-bail/edit-case.html" class="edit-link" data-caseno="8">Edit</a>
+                        <a href="../tagged-bail/edit-days.html" class="delete-link govuk-!-margin-left-4" data-caseno="8">Delete</a>
+                    </td>
+                </tr>
+
+            
+               
+
+
+                </tbody>
+                <tfoot>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" colspan="2">Total days</th>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
+                    <td id="totalTB" class="govuk-table__header" colspan="2">12</td>
+                </tr>
+                </tfoot>
+            </table>
+
+            <a href="lal" class="govuk-button" data-name="RADA" data-desc="RADA (Restore additional days awarded) ">
+                Add new
+            </a>
+        </main>
+    </div>
+</div>
+
+{% endblock %}
