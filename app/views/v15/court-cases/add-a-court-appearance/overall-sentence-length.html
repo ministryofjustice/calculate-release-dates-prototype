@@ -1,0 +1,92 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="overall-conviction-date-apply-all" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="overall-sentence-length-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        <span class="govuk-caption-l">Update offence outcomes</span>
+                        Is there an overall sentence length on the warrant?
+                      </h1>
+                    </legend>
+                    <div id="overall-sentence-length-hint" class="govuk-hint">
+                      Select one option.
+                    </div>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="overall-sentence-length" name="appearance[overall-sentence-length]" type="radio" value="yes" data-aria-controls="conditional-overall-sentence-length">
+                        <label class="govuk-label govuk-radios__label" for="overall-sentence-length">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-overall-sentence-length">
+                        <div class="govuk-form-group">
+                            <h1 class="govuk-heading-s">
+                        Enter the overall sentence length
+                      </h1>
+                          <div class="govuk-date-input" id="overall-sentence-length-years">
+                                                <div class="govuk-date-input__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-date-input__label" for="overall-sentence-length-years">
+                                                            Years
+                                                        </label>
+                                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="overall-sentence-length-years" name="appearance[overall-sentence-length-years]" type="text" inputmode="numeric" value="{{data.appearance['overall-sentence-length-years']}}">
+                                                    </div>
+                                                </div>
+                                                <div class="govuk-date-input__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-date-input__label" for="overall-sentence-length-months">
+                                                            Months
+                                                        </label>
+                                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="overall-sentence-length-months" name="appearance[overall-sentence-length-months]" type="text" inputmode="numeric" value="{{data.appearance['overall-sentence-length-months']}}">
+                                                    </div>
+                                                </div>
+                                                <div class="govuk-date-input__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-date-input__label" for="overall-sentence-length-weeks">
+                                                            Weeks
+                                                        </label>
+                                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="overall-sentence-length-weeks" name="appearance[overall-sentence-length-weeks]" type="text" inputmode="numeric" value="{{data.appearance['overall-sentence-length-weeks']}}">
+                                                    </div>
+                                                </div>
+                                                <div class="govuk-date-input__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-date-input__label" for="overall-sentence-length-days">
+                                                            Days
+                                                        </label>
+                                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="overall-sentence-length-days" name="appearance[overall-sentence-length-days]" type="text" inputmode="numeric" value="{{data.appearance['overall-sentence-length-days']}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="govuk-!-margin-top-4">
+                                                <p class="govuk-body"><a href="alternative-sentence-length">The sentence length is formatted differently</a></p>
+                                            </div>
+                        </div>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="overall-sentence-length-2" name="appearance[overall-sentence-length]" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="overall-sentence-length-2">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+            </div>
+            <div class="govuk-button-group">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/{{data.prototypeVersion}}/save-court-case">
+                    Save as draft
+                </a>
+            </div>
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = false %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+{% endblock %}

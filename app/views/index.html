@@ -22,7 +22,56 @@
         <div class="govuk-grid-column-two-thirds">
 
 
-            <!-- Version 14 -->
+            <!-- Version 15.1 -->
+            <h2 class="govuk-heading-l">Prototype for UR</h2>  
+
+
+            <h2 class="govuk-heading-m">Scenario 1 - HDC hint text</h2>   
+            
+            <p class="govuk-body">Scenario 1 will focus on the use of hint text to explain the new HDC rules coming into place in June 2025. </p>     
+            <ul class="govuk-list">
+                <li><a class="govuk-link" target="external" href="v15_1/release-dates-2">Release dates and calculations landing page</a></li>      
+            </ul> 
+
+
+            <h2 class="govuk-heading-m">Scenario 2 - conssecutive sentences</h2>        
+            
+            <p class="govuk-body">Scenario 2 will focus on testing the new interruption page designs in scenarios where conssecutive sentences have been aggregated incorrectly. </p>    
+
+            <form action="post">  
+            {{govukButton({
+                text: "Launch from DPS home",
+                attributes: {
+                "formaction": "/v15_1/DPS-home",
+                "formmethod": "post"
+                },
+                classes: "govuk-button--secondary"
+                })}} 
+            </form>   
+
+            <form action="post">  
+            {{govukButton({
+                text: "Launch from overview",
+                attributes: {
+                "formaction": "/v15_1/overview",
+                "formmethod": "post"
+                },
+                classes: "govuk-button--secondary"
+                })}} 
+            </form>  
+
+
+            <h2 class="govuk-heading-m">Scenario 3 - Genuine overrides</h2>      
+            <p class="govuk-body">Provided we have enough time, we will aim to test entry points to genuine overrides and potentially the new journey for reporters. </p>    
+            <ul class="govuk-list">
+                <li><a class="govuk-link" target="external" href="v15_1/calculate-release-dates/calculation-summary">Calculation summary page</a></li>      
+                <li><a class="govuk-link" target="external" href="v15_1/calculate-release-dates/genuine-overrides/omu/request-specialist-support">Genuine overrides start page</a></li>      
+            </ul> 
+
+            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+
+
+            <!-- Version 15 -->
             <h2 class="govuk-heading-l">Version 15</h2>
             <h4 class="govuk-heading-m">In this version</h4> 
             <p class="govuk-body">This version will focus on redeisgns of the genuine overrides journeys in preparation for research and iteration.</p>

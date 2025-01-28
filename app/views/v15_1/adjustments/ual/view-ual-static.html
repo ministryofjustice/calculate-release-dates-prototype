@@ -1,0 +1,113 @@
+{% extends "../../template.html" %}
+{% set nav = true %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="">
+    <div class="">
+        <a href="index-1" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper offence-outcome " id="main-content" role="main">
+            <h1 class="govuk-heading-l"><span class="govuk-caption-xl">Adjustments</span>
+                UAL overview
+            </h1>
+
+            <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-table__caption--m">Tagged Bail details</caption>
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Court name</th>
+                    <th scope="col" class="govuk-table__header">Case reference</th>
+                    <th scope="col" class="govuk-table__header">Days</th>
+                    <th scope="col" class="govuk-table__header">Actions</th>
+                </tr>
+                </thead>
+                <tbody  class="govuk-table__body">
+
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Bristol Magistrates Court</td>
+                    <td class="govuk-table__cell">T20223256</td>
+                    <td class="govuk-table__cell">4</td>
+                    <td class="govuk-table__cell">
+                        <a href="../tagged-bail/edit-case.html" class="edit-link" data-caseno="4">Edit</a>
+                        <a href="../tagged-bail/edit-days.html" class="delete-link govuk-!-margin-left-4" data-caseno="4">Delete</a>
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Bristol Magistrates Court</td>
+                    <td class="govuk-table__cell">T20223256</td>
+                    <td class="govuk-table__cell">6</td>
+                    <td class="govuk-table__cell">
+                        <a href="../tagged-bail/edit-case.html" class="edit-link" data-caseno="8">Edit</a>
+                        <a href="../tagged-bail/edit-days.html" class="delete-link govuk-!-margin-left-4" data-caseno="8">Delete</a>
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Bristol Magistrates Court</td>
+                    <td class="govuk-table__cell">T20230101</td>
+                    <td class="govuk-table__cell">6</td>
+                    <td class="govuk-table__cell">
+                        <a href="../tagged-bail/edit-case.html" class="edit-link" data-caseno="10">Edit</a>
+                        <a href="../tagged-bail/edit-days.html" class="delete-link govuk-!-margin-left-4" data-caseno="10">Delete</a>
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Bristol Magistrates Court</td>
+                    <td class="govuk-table__cell">T20223256</td>
+                    <td class="govuk-table__cell">2</td>
+                    <td class="govuk-table__cell">
+                        <a href="../tagged-bail/edit-case.html" class="edit-link" data-caseno="13">Edit</a>
+                        <a href="../tagged-bail/edit-days.html" class="delete-link govuk-!-margin-left-4" data-caseno="13">Delete</a>
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Bristol Magistrates Court</td>
+                    <td class="govuk-table__cell">T20223256</td>
+                    <td class="govuk-table__cell">5</td>
+                    <td class="govuk-table__cell">
+                        <a href="../tagged-bail/edit-case.html" class="edit-link" data-caseno="14">Edit</a>
+                        <a href="../tagged-bail/edit-days.html" class="delete-link govuk-!-margin-left-4" data-caseno="14">Delete</a>
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Bristol Magistrates Court</td>
+                    <td class="govuk-table__cell">T20223256</td>
+                    <td class="govuk-table__cell">5</td>
+                    <td class="govuk-table__cell">
+                        <a href="../tagged-bail/edit-case.html" class="edit-link" data-caseno="15">Edit</a>
+                        <a href="../tagged-bail/edit-days.html" class="delete-link govuk-!-margin-left-4" data-caseno="15">Delete</a>
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Bristol Magistrates Court</td>
+                    <td class="govuk-table__cell">T20223256</td>
+                    <td class="govuk-table__cell">4</td>
+                    <td class="govuk-table__cell">
+                        <a href="../tagged-bail/edit-case.html" class="edit-link" data-caseno="16">Edit</a>
+                        <a href="../tagged-bail/edit-days.html" class="delete-link govuk-!-margin-left-4" data-caseno="16">Delete</a>
+                    </td>
+                </tr>
+
+                </tbody>
+                <tfoot>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" colspan="2">Total days</th>
+                    <td id="totalTB" class="govuk-table__cell" colspan="2">32</td>
+                </tr>
+                </tfoot>
+            </table>
+
+            <a href="ual.html" class="govuk-button" data-name="RADA" data-desc="RADA (Restore additional days awarded) ">
+                Add new
+            </a>
+        </main>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="/{{data.prototypeVersion}}/add-count-numbers-other-offence" method="post">
+                    <div class="moj-interruption-card">
+  <div class="moj-interruption-card__content">
+    <h1 class="govuk-heading-l moj-interruption-card__heading">There are missing count numbers</h1>
+    <div class="govuk-body-l moj-interruption-card__body">
+      <p>You will need to enter the count numbers for the appearance {{ data.sentence["consecutive-to-case-ref"] }} at Manchester Crown Court (Crown Square) on 05/10/2024.</p>
+      <h2 class="govuk-heading-m moj-interruption-card__heading">How to add count numbers</h2>
+      <p>On the next page, for each offence:</p>
+      <ol class="govuk-list govuk-list--number govuk-!-margin-left-1">
+        <li>Select edit</li>
+        <li>Enter the count number</li>
+        <li>Select 'Confirm and continue'</li>
+    </ol>
+    <p>By continuing, you will be taken to appearance {{ data.sentence["consecutive-to-case-ref"] }} at Manchester Crown Court (Crown Square) on 05/10/2024. Once you have added the count numbers, you will be brought back to this court appearance.</p>
+    </div>
+    <div class="govuk-button-group moj-interruption-card__actions">
+        <button type="submit" class="govuk-button govuk-button--inverse" data-module="govuk-button">
+            Review offences
+        </button>
+
+      <a class="govuk-link govuk-link--inverse" href="#">Go back to offences</a>
+
+    </div>
+  </div>
+</div>
+
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/{{data.prototypeVersion}}/persist-sentence" method="post">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                        <span class="govuk-caption-l">Add offences</span>
+                        Enter the sentence length
+                    </h1>
+                </legend>
+                <div class="govuk-!-margin-top-2">
+                    <div class="govuk-form-group">
+                        <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-2" id="sentence-length-1"
+                            name="sentence-length-{{ data.sentence[sentence-length-period-1] }}" type="text"
+                            inputmode="numeric">
+                        <select class="govuk-select alternative-sentence-length-select" id="sentence-length-period-1"
+                            name="sentence[sentence-length-period-1]">
+                            <option value="years" selected>years</option>
+                            <option value="months">months</option>
+                            <option value="weeks">weeks</option>
+                            <option value="days">days</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group">
+                        <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-2" id="sentence-length-2"
+                            name="sentence[sentence-length-{{ data.sentence[sentence-length-period-2] }}]" type="text"
+                            inputmode="numeric">
+                        <select class="govuk-select alternative-sentence-length-select" id="sentence-length-period-2"
+                            name="sentence[sentence-length-period-2]">
+                            <option value="years">years</option>
+                            <option value="months" selected>months</option>
+                            <option value="weeks">weeks</option>
+                            <option value="days">days</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group">
+                        <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-2" id="sentence-length-3"
+                            name="sentence[sentence-length-{{ data.sentence[sentence-length-period-3] }}]" type="text"
+                            inputmode="numeric">
+                        <select class="govuk-select alternative-sentence-length-select" id="sentence-length-period-3"
+                            name="sentence[sentence-length-period-3]">
+                            <option value="years">years</option>
+                            <option value="months">months</option>
+                            <option value="weeks" selected>weeks</option>
+                            <option value="days">days</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group">
+                        <input class="govuk-input govuk-input--width-2 govuk-!-margin-right-2" id="sentence-length-4"
+                            name="sentence[sentence-length-{{ data.sentence[sentence-length-period-4] }}]" type="text"
+                            inputmode="numeric">
+                        <select class="govuk-select alternative-sentence-length-select" id="sentence-length-period-4"
+                            name="sentence[sentence-length-period-4]">
+                            <option value="years">years</option>
+                            <option value="months">months</option>
+                            <option value="weeks">weeks</option>
+                            <option value="days" selected>days</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="govuk-button-group">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+                    formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+                    Save as a draft
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+</div>
+{% endblock %}
