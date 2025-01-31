@@ -55,7 +55,7 @@ module.exports = {
               },
               {
                   "court-case-ref": "34F2356911",
-                  "court-case-number": "1",
+                  "court-case-number": "2",
                   "overall-case-outcome": "Imprisonment",
                   "overall-conviction-date-day": "04",
                   "overall-conviction-date-month": "05",
