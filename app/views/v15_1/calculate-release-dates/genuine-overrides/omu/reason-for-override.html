@@ -20,21 +20,28 @@
                 <input class="govuk-radios__input" id="overrideReason" name="overrideReason" type="radio" value="missmatch"
                   data-aria-controls="conditional-overrideReason">
                 <label class="govuk-label govuk-radios__label" for="overrideReason">
-                  Dates are incorrect
+                  One or more release dates are incorrect
                 </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="overrideReason-2" name="overrideReason" type="radio" value="torrorism"
                   data-aria-controls="conditional-overrideReason-2">
                 <label class="govuk-label govuk-radios__label" for="overrideReason-2">
-                  Dates are missing
+                  One or more release dates are missing
                 </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="overrideReason-3" name="overrideReason" type="radio" value="other"
                   data-aria-controls="conditional-overrideReason-3">
                 <label class="govuk-label govuk-radios__label" for="overrideReason-3">
-                  All of the above
+                  Sentence information cannot be entered corretly in NOMIS
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="overrideReason-4" name="overrideReason" type="radio" value="other"
+                  data-aria-controls="conditional-overrideReason-3">
+                <label class="govuk-label govuk-radios__label" for="overrideReason-3">
+                  Other
                 </label>
               </div>
  
@@ -48,7 +55,7 @@
         <div class="govuk-grid-column-two-thirds"> 
             
                 <div class="govuk-button-group">
-                    <form method="post" action="additional-details">
+                    <form method="post" action="upload-warrants">
                         <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                             Continue
                         </button>
