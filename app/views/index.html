@@ -22,6 +22,87 @@
         <div class="govuk-grid-column-two-thirds">
 
 
+            <!-- Version recalls prototype v15.1 -->
+            <h2 class="govuk-heading-l">Recalls prototype - version 15.1</h2>
+          
+                <div class="govuk-grid-row">  
+                    
+                    
+
+            
+                        <div class="govuk-grid-column-full govuk-!-margin-top-4"> 
+                            <h4 class="govuk-heading-m">What we are testing</h4> 
+                            <p class="govuk-body">This remote round of UR is due to take place in wc 17th February 2025.</p> 
+                            <p class="govuk-body">In this round, we aim to:</p> 
+                            <ul class="govuk-list govuk-list--bullet"> 
+                                <li>Testing an improved version of the unsupported sentences journey and an iteration of the select recall types journey. </li>  
+                            </ul>   
+                            <h4 class="govuk-heading-m">Supporting documents</h4>
+                            <ul class="govuk-list">  
+                                <li><a class="govuk-link" target="external" href="https://docs.google.com/document/d/1lX9F7pCxkuTpkGmnZkk_ciWKs_GHlQHiLRnknXg-8iU/edit?tab=t.0#heading=h.nclgwjwl6spb">R8 dummy data</a></li>    
+                         
+                            </ul> 
+
+                            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+                            <form action="post">
+                            <h4 class="govuk-heading-m">Scenario 1A</h4>
+                            <p class="govuk-hint">Recording a recall - happy path</p>
+
+                            {{govukButton({
+                                text: "Launch scenario 1A",
+                                attributes: {
+                                "formaction": "v16_1/DPS-prisoner-profile",
+                                "formmethod": "post"
+                                },
+                                classes: "govuk-button--secondary"
+                                })}}
+                            <p class="govuk-body">This scenario explores the previously tested journey where the user records a recall (core journey).</p> 
+                            
+                            </form>  
+
+
+                            <form action="post">
+                            <h4 class="govuk-heading-m">Scenario 1B</h4>
+                            <p class="govuk-hint">Recording a recall - recall type intercept</p>
+
+                            {{govukButton({
+                                text: "Launch scenario 1B",
+                                attributes: {
+                                "formaction": "v16_1/DPS-prisoner-profile?recallTypeIntercept=true",
+                                "formmethod": "post"
+                                },
+                                classes: "govuk-button--secondary"
+                                })}}
+                            <p class="govuk-body">This scenario explores the previously tested journey where the user records a recall (core journey).</p> 
+                            
+                            </form>  
+
+
+
+                            <form action="post">
+                                <h4 class="govuk-heading-m">Scenario 2</h4>
+                                <p class="govuk-hint">Recording a recall - unsupported sentences unhappy path</p>
+
+                                {{govukButton({
+                                    text: "Launch scenario 2",
+                                    attributes: {
+                                    "formaction": "v16_2/DPS-prisoner-profile?unsupportedSentences=true",
+                                    "formmethod": "post"
+                                    },
+                                    classes: "govuk-button--secondary"
+                                    })}}
+                                <p class="govuk-body">This scenario explores a new manual journey which is part of recording a recall, the user must select sentences from a list as our service had identified sentences it cannot support in CRDS. </p> 
+                                
+                                </form>  
+
+
+                        </div>
+                          
+            </div>
+
+            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
             <!-- Version 15.1 -->
             <h2 class="govuk-heading-l">Version 15.1</h2>  
             <strong class="govuk-tag govuk-tag--pink govuk-!-margin-left-1">
