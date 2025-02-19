@@ -1,0 +1,52 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="reason-for-override" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro --> 
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6"> 
+        
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="more-detail">
+
+            <span class="govuk-caption-l">Report a problem with the calculation</span>
+            Upload warrants related to the problem
+          </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+          Add any warrants that are relevant to this calculation.
+        </div>
+        
+        {{ govukFileUpload({
+          id: "file-upload-1",
+          name: "file-upload-1"
+      }) }}
+      </div>
+    </div>
+</div> 
+
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds"> 
+            
+                <div class="govuk-button-group">
+                    <form method="post" action="edit-release-dates">
+                        <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                            Continue
+                        </button>
+                    </form>
+
+                    <form method="post" action="cancel">
+                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+            <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
+        </div>
+    </div>
+</div>
+{% endblock %}

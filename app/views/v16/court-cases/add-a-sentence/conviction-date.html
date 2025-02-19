@@ -1,0 +1,79 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.postSaveEdit == 'true' %}
+        <form class="form" action="/{{data.prototypeVersion}}/persist-sentence?edit=true" method="post">
+            {% elif data.edit == 'true' %}
+            <form class="form" action="/{{data.prototypeVersion}}/persist-sentence?edit=true" method="post">
+                {% else %}
+                <form class="form" action="offence-date" method="post">
+                    {% endif %}
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                <h1 class="govuk-fieldset__heading">
+                                    <span class="govuk-caption-l">Add sentence information for offence {{
+                                        data['sentence']['count-number'] }}</span>
+                                    Enter the conviction date
+                                </h1>
+                            </legend>
+                            <div class="govuk-form-group">
+                                <div class="govuk-date-input" id="conviction-date-day">
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label"
+                                                for="conviction-date-day">
+                                                Day
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                id="conviction-date-day" name="sentence[conviction-date-day]"
+                                                type="text" inputmode="numeric"
+                                                value="{{data.sentence['conviction-date-day']}}">
+                                        </div>
+                                    </div>
+                                    <div class="govuk-date-input__item" id="conviction-date-month">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label"
+                                                for="conviction-date-month">
+                                                Month
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                                id="conviction-date-month" name="sentence[conviction-date-month]"
+                                                type="text" inputmode="numeric"
+                                                value="{{data.sentence['conviction-date-month']}}">
+                                        </div>
+                                    </div>
+                                    <div class="govuk-date-input__item" id="conviction-date-year">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label"
+                                                for="conviction-date-year">
+                                                Year
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                                                id="conviction-date-year" name="sentence[conviction-date-year]"
+                                                type="text" inputmode="numeric"
+                                                value="{{data.sentence['conviction-date-year']}}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="govuk-button-group">
+                        <button type="submit" class="govuk-button" data-module="govuk-button">
+                            Continue
+                        </button>
+                        <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+                            formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+                            Save as a draft
+                        </button>
+                    </div>
+                </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+{% endblock %}
