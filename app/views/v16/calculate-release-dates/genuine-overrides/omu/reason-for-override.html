@@ -1,0 +1,93 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="request-specialist-support" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro --> 
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6"> 
+
+        <fieldset class="govuk-fieldset" aria-describedby="calculationReasonId-hint">
+                    
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-l">Report a problem with the calculation</span>
+              Select the reason for reporting
+            </h1>
+          </legend>
+
+          <div id="calculationReasonId-hint" class="govuk-hint">
+            Select the reason for reporting
+          </div>
+
+
+          <div class="govuk-radios" data-module="govuk-radios">
+              
+              <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="calculationReasonId" name="calculationReasonId" type="radio" value="1" data-qa="reasonRadio-1">
+                  <label class="govuk-label govuk-radios__label" for="calculationReasonId">
+                    One or more release dates are incorrect
+                  </label> 
+              </div>
+                  
+              <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="calculationReasonId-2" name="calculationReasonId" type="radio" value="2" data-qa="reasonRadio-2">
+                  <label class="govuk-label govuk-radios__label" for="calculationReasonId-2">
+                    One or more release dates are missing
+                  </label> 
+              </div>
+                  
+              <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="calculationReasonId-3" name="calculationReasonId" type="radio" value="3" data-qa="reasonRadio-3">
+                  <label class="govuk-label govuk-radios__label" for="calculationReasonId-3">
+                    Sentence information cannot be entered corretly in NOMIS
+                  </label> 
+              </div>
+              
+              
+              <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="calculationReasonId-11" name="calculationReasonId" type="radio" value="11" data-qa="reasonRadio-11" aria-controls="conditional-calculationReasonId-11" aria-expanded="false">
+                  <label class="govuk-label govuk-radios__label" for="calculationReasonId-11">
+                  Other
+                  </label> 
+              </div>
+              
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-calculationReasonId-11">       
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="other-reason-description">
+                          Please enter the reason for reporting
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="other-reason-description" name="otherReasonDescription" type="string" autocomplete="string"> 
+                  </div>  
+              </div> 
+              
+          </div> 
+
+      </fieldset> 
+
+      </div>
+</div> 
+
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds"> 
+            
+                <div class="govuk-button-group">
+                    <form method="post" action="upload-warrants">
+                        <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                            Continue
+                        </button>
+                    </form>
+
+                    <form method="post" action="cancel">
+                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+            <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
+        </div>
+    </div>
+</div>
+{% endblock %}
