@@ -7,11 +7,85 @@
 <!-- Page intro -->
 <div class="govuk-width-container govuk-!-margin-top-6">
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-full">
             <h1 class="govuk-heading-xl">
                 Calculations dashboard
             </h1>
+            <table class="govuk-table" data-module="moj-sortable-table">
 
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+              
+                    <th scope="col" class="govuk-table__header" aria-sort="ascending" style="width:22%">Release date</th>
+
+                    <th scope="col" class="govuk-table__header" aria-sort="none" style="width:13%">Reported on</th>
+
+                    <th scope="col" class="govuk-table__header" aria-sort="none">Prisoner</th>
+              
+                    <th scope="col" class="govuk-table__header" aria-sort="none">Reported by</th>
+              
+                    <th scope="col" class="govuk-table__header" aria-sort="none">Actioned by</th>
+              
+                    <th scope="col" class="govuk-table__header" aria-sort="none">Status</th>
+
+                    <th scope="col" class="govuk-table__header">Actions</th>
+              
+                  </tr>
+                </thead>
+              
+                <tbody class="govuk-table__body">
+              
+                  <tr class="govuk-table__row">
+              
+                    <td class="govuk-table__cell" data-sort-value="">
+                        <span class="moj-badge moj-badge--red">Potential immediate release</span>
+                        <br>
+                        <div class="govuk-!-margin-bottom-2 govuk-!-margin-top-1"><span class="govuk-!-font-weight-bold">CRD</span><br>19 February 2024</div>
+                        <div>
+                        <span class="govuk-!-font-weight-bold">SLED</span><br>19 February 2025</div>
+                    </td>
+
+                    <td class="govuk-table__cell" data-sort-value="">11 February 2024 at 11:00</td>
+              
+                    <td class="govuk-table__cell" data-sort-value=""><a href="#" class="govuk-link">Matthew Doyle</a><br>E4911C<br>1-2-22</td>
+              
+                    <td class="govuk-table__cell"data-sort-value=""><a href="">Annie Apple</a><br>HMP Kirkham</td>
+              
+                    <td class="govuk-table__cell"data-sort-value=""><a href="">
+                        <!-- Oscar Orange</a><br>HMP Low Newton -->
+                    </td>
+              
+                    <td class="govuk-table__cell" data-sort-value=""> <strong class="govuk-tag govuk-tag--grey">To action</strong></td>
+
+                    <td class="govuk-table__cell" data-sort-value=""><a href="view-case">View</a></td>
+              
+                  </tr>
+              
+              
+                  <tr class="govuk-table__row">
+              
+                    <td class="govuk-table__cell" data-sort-value=""> 
+                        <div class="govuk-!-margin-bottom-2"><span class="govuk-!-font-weight-bold">CRD</span><br>1 March 2024</div>
+                        <div>
+                        <span class="govuk-!-font-weight-bold">SLED</span><br>3 March 2024</div>
+                    </td> 
+                    <td class="govuk-table__cell" data-sort-value="">11 February 2024 at 11:00</td>
+              
+                    <td class="govuk-table__cell" data-sort-value=""><a href="#" class="govuk-link">Joe Bloggs</a><br>E4911C<br>1-2-22</td>
+              
+                    <td class="govuk-table__cell"data-sort-value=""><a href="">Eddie Elephant</a><br>HMP Risley</td>
+              
+                    <td class="govuk-table__cell"data-sort-value=""><a href="">Oscar Orange</a><br>HMP Low Newton</td>
+              
+                    <td class="govuk-table__cell" data-sort-value=""> <strong class="govuk-tag govuk-tag--green">In progress</strong></td>
+
+                    <td class="govuk-table__cell" data-sort-value=""><a href="view-case">View</a></td>
+              
+                  </tr>
+                
+                </tbody>
+              </table>
+              
         </div>
     </div>
 </div>

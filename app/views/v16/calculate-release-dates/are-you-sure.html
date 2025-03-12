@@ -1,18 +1,21 @@
 {% extends "../../includes/layouts/template-linear.html" %}
 {% block content %} 
-
+<!-- Back link -->
+<div class="moj-width-container">
+  <a href="check-sentence-and-offence-information" class="govuk-back-link">Back</a>
+</div>
 <form method="post" action="calculation-summary">
 <div class="moj-interruption-card">
     <div class="moj-interruption-card__content">
       <h1 class="govuk-heading-l moj-interruption-card__heading" style="color: #ffff;">Multiple sentences have been made consecutive to one sentence</h1>
       <div class="govuk-body-l moj-interruption-card__body">
         <p>This means these sentences are now concurrent to others in the aggregate.</p> 
-        <p>The length of the aggregate is currently <b>0 years 48 months 0 weeks 0 days</b>.</p> 
+        <p>The length of the aggregate is currently <b>10 years 14 months 0 weeks 0 days</b>.</p> 
         <h2 class="govuk-heading-m moj-interruption-card__heading" style="color: #ffff;">What to do next</h2> 
-    
-        <p>If this is correct, continue to calculate release dates.</p>
-        <p>If this is wrong, go to NOMIS and make the consecutive chain sequential, then <a class="govuk-link--inverse" href="check-sentence-and-offence-information?toShow=sentencesUpdated">reload this page</a>.</p>
-    
+        <ol class="govuk-list govuk-list--number govuk-body-l" style="color: #ffff;">
+          <li>Check each sentence has been recorded correctly, as either consecutive or concurrent.</li>
+          <li>Once you've confirmed the information is correct, calculate release dates. </li>
+        </ol> 
       </div>
       <div class="govuk-button-group moj-interruption-card__actions">
   
@@ -21,7 +24,7 @@
           Calculate release dates
         </button>
   
-        <a class="govuk-link govuk-link--inverse" href="check-sentence-and-offence-information">Go back to sentence and offence information</a>
+        <a class="govuk-link govuk-link--inverse" href="check-sentence-and-offence-information">Cancel</a>
   
       </div>
     </div>

@@ -1,4 +1,4 @@
-{% extends "../../../../includes/layouts/template-linear.html" %}
+{% extends "../../includes/layouts/template-linear.html" %}
 {% block content %}
 <!-- Back link -->
 <div class="moj-width-container">
@@ -62,36 +62,37 @@
                         </div>
                     </dl>
                     {% else %} 
-                    <dl class="govuk-summary-list release-dates-list">
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                SLED
-                                <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                <p class="govuk-body">Tuesday, 4 March 2025</p>
-                            </dd>
-                        </div> 
-    
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                PRRD
-                                <p class="govuk-!-font-size-16 govuk-hint">Post recall release date</p>
-                            </dt>
-                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                                <p class="govuk-body">Tuesday, 4 March 2025</p>
-                            </dd>
-                        </div>
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                TUSED
-                                <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
-                            </dt>
-                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                                <p class="govuk-body">Monday, 4 August 2025</p>
-                            </dd>
-                        </div>
-                    </dl>
+                         
+              <dl class="govuk-summary-list release-dates-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                        SLED
+                        <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <p class="govuk-body">Monday, 10 March 2025</p>
+                    </dd>
+                </div>  
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                        PRRD
+                        <p class="govuk-!-font-size-16 govuk-hint">Post recall release date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                        <p class="govuk-body">Thursday, 6 February 2025</p>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                        TUSED
+                        <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                        <p class="govuk-body">Sunday, 25 November 2025</p>
+                    </dd>
+                </div>
+            </dl>
+ 
                     {% endif %}  
                 </div>
             </div>
@@ -100,7 +101,7 @@
 </div>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <details class="govuk-details govuk-!-margin-bottom-2" >
+        <details class="govuk-details govuk-!-margin-bottom-2" data-module="govuk-details">
             <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
                     Why are some details missing?
@@ -113,7 +114,7 @@
                 circumstances.
             </div>
         </details>
-        <details class="govuk-details" >
+        <details class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
                     How are final release dates calculated?
@@ -275,51 +276,33 @@
 
         </div>
 
-    </div> --> 
+    </div> -->
 
-    
-    <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              Do you agree with these release dates?
-            </h1>
-          </legend>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="doYouAgree" name="doYouAgree" type="radio" value="Yes">
-              <label class="govuk-label govuk-radios__label" for="doYouAgree">
-                Yes, I agree with these dates
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="doYouAgree-2" name="doYouAgree" type="radio" value="No">
-              <label class="govuk-label govuk-radios__label" for="doYouAgree-2">
-                No, I need to override these dates
-              </label>
-            </div> 
-            </div>
-          </div>
-        </fieldset>
-      </div>
-
+    <div class="govuk-inset-text">
+        If you think the calculation is wrong <a
+            href="request-specialist-support">contact the specialist
+            support team</a>.
+    </div>
 </div> 
 <div class="moj-width-container govuk-!-margin-top-6">
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds"> 
+        <div class="govuk-grid-column-two-thirds">
+            <h3 class="govuk-heading-m">Confirm the dates are correct</h3>
+            <p class="govuk-body">By continuing you are confirming that, to the best of your knowledge, the calculation
+                is correct.</p>
             
                 <div class="govuk-button-group">
-                    <form method="post" action="reason-for-override">
+                    <form method="post" action="enter-approved-dates-question">
                         <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
-                            Continue
+                            Confirm and continue
                         </button>
                     </form>
 
-                    <!-- <form method="post" action="cancel">
+                    <form method="post" action="cancel">
                         <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
                             Cancel
                         </button>
-                    </form> -->
+                    </form>
                 </div>
             <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
         </div>
