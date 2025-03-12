@@ -1,4 +1,4 @@
-{% extends "../../../../includes/layouts/template-linear.html" %} {% block content %}
+{% extends "../../includes/layouts/template-linear.html" %} {% block content %}
 <!-- Back link -->
 <div class="moj-width-container">
   <a href="select-which-approved-dates" class="govuk-back-link">Back</a>
@@ -10,27 +10,26 @@
 
         <div class="govuk-form-group">
 
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="SED-hint">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="ROTL-hint">
 
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
 
-              <span class="govuk-caption-xl">Sepcialist support team override tool</span>
               <h1 class="govuk-fieldset__heading">
-                Enter the SED (Sentence expiry date)
+                Enter the ROTL (Release on temporary licence)
               </h1>
 
             </legend> 
 
-            <div class="govuk-date-input" id="SED">
+            <div class="govuk-date-input" id="ROTL">
  
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="SED-day">
+                  <label class="govuk-label govuk-date-input__label" for="ROTL-day">
                     Day
                   </label>
 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="SED-day" name="day"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="ROTL-day" name="day"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -38,12 +37,12 @@
 
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="SED-month">
+                  <label class="govuk-label govuk-date-input__label" for="ROTL-month">
                     Month
                   </label>
 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="SED-month" name="month"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="ROTL-month" name="month"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -51,11 +50,11 @@
 
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="SED-year">
+                  <label class="govuk-label govuk-date-input__label" for="ROTL-year">
                     Year
                   </label> 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="SED-year" name="year"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="ROTL-year" name="year"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -69,24 +68,22 @@
         </div> 
 
         <input type="hidden" name="_csrf" value="spFxF0sq-CzqH8QHtGwIF7luXgK5KjaLm0bM">
-        <input type="hidden" name="dateType" value="SED"> 
+        <input type="hidden" name="dateType" value="ROTL"> 
 
        
-               
         <div class="govuk-button-group">
-          <form method="post" action="check-entered-dates">
+          <form method="post" action="calculation-final-summary">
               <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                   Continue
               </button>
           </form>
 
-          <!-- <form method="post" action="cancel">
+          <form method="post" action="cancel">
               <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
                   Cancel
               </button>
-          </form> -->
+          </form>
       </div>
- 
     </div>
   </div>
 </div>
