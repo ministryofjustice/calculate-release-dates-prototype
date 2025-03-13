@@ -237,9 +237,8 @@
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
  
 
-        {% elif data['toShow'] == 'ualAdded' or data['toShow'] == 'calc2Complete'%}
-
-
+        {% elif data['toShow'] == 'ualAdded' or data['toShow'] == 'calc2Complete' or data['ualEdited'] == 'true' or data['recallEdited'] == 'true'%}
+ 
         <h3 class="govuk-heading-m">Additions</h3>
         <dl class="govuk-summary-list" style="margin-bottom: 10px;"> 
             <div class="govuk-summary-list__row">
@@ -247,7 +246,7 @@
                     UAL (Unlawfully at large)
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    1 Day
+                    2 days
                 </dd>
             </div>
         </dl>
