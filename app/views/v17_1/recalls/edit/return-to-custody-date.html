@@ -36,7 +36,7 @@
             
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="arrested-2" name="arrested" type="radio" value="no"
-                  data-aria-controls="conditional-arrested">
+                  data-aria-controls="conditional-arrested" checked>
                 <label class="govuk-label govuk-radios__label" for="arrested-2">
                   No
                 </label>
@@ -60,7 +60,7 @@
                         <label class="govuk-label govuk-date-input__label" for="arrest-date-day">
                           Day
                         </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="arrest-date-day" name="arrest-date-day" type="text" inputmode="numeric" maxlength="2">
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="arrest-date-day" name="arrest-date-day" type="text" inputmode="numeric" maxlength="2" value="{{ data['arrest-date-day'] }}" >
                       </div>
                     </div>
             
@@ -69,7 +69,7 @@
                         <label class="govuk-label govuk-date-input__label" for="arrest-date-month">
                           Month
                         </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="arrest-date-month" name="arrest-date-month" type="text" inputmode="numeric" maxlength="2">
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="arrest-date-month" name="arrest-date-month" type="text" inputmode="numeric" maxlength="2" value="{{ data['arrest-date-month'] }}">
                       </div>
                     </div>
             
@@ -78,7 +78,7 @@
                         <label class="govuk-label govuk-date-input__label" for="arrest-date-year">
                           Year
                         </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="arrest-date-year" name="arrest-date-year" type="text" inputmode="numeric" maxlength="4">
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="arrest-date-year" name="arrest-date-year" type="text" inputmode="numeric" maxlength="4" value="{{ data['arrest-date-year'] }}">
                       </div>
                     </div>
                   </div>
