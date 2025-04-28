@@ -21,68 +21,71 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
 
-            <!-- Version recalls prototype v17.1 -->
-            <h2 class="govuk-heading-l">Recalls prototype (version 16.1)</h2>
-          
-                <div class="govuk-grid-row">  
-                    
-                    
 
-            
-                        <div class="govuk-grid-column-full govuk-!-margin-top-4"> 
-                            <h4 class="govuk-heading-m">What we are testing</h4> 
-                            <p class="govuk-body">This remote round of UR is due to take place in wc 16th March 2025.</p> 
-                            <p class="govuk-body">In this round, we aim to:</p> 
-                            <ul class="govuk-list govuk-list--bullet"> 
-                                <li>Testing the laest designs for view and edit a recall - part of this round we will take the user through the happy path. </li>  
-                            </ul>   
-                            <h4 class="govuk-heading-m">Supporting documents</h4>
-                            <ul class="govuk-list">  
-                                <li><a class="govuk-link" target="external" href="https://miro.com/app/board/uXjVNIny_G0=/?moveToWidget=3458764615918362981&cot=14">R8 design iterations (miro)</a></li>    
-                         
-                            </ul> 
+            <!-- Version 17 -->
+            <h2 class="govuk-heading-l">Version 17</h2>
+            <h4 class="govuk-heading-m">In this version</h4> 
+            <p class="govuk-body">This version will focus on redeisgns of the <b>genuine overrides approver</b> journeys based on <b>MVP core journeys</b></p> 
 
-                            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-
-                            <form action="post">
-                            <h4 class="govuk-heading-m">Scenario 1A</h4>
-                            <p class="govuk-hint">Recording a recall - happy path</p>
-
-                            {{govukButton({
-                                text: "Launch scenario 1A",
-                                attributes: {
-                                "formaction": "v17_1/DPS-prisoner-profile",
-                                "formmethod": "post"
-                                },
-                                classes: "govuk-button--secondary"
-                                })}}
-                            <p class="govuk-body">This scenario explores the previously tested journey where the user records a recall (core journey).</p> 
-                            
-                            </form>  
-
-
-                            <form action="post">
-                            <h4 class="govuk-heading-m">Scenario 1B</h4>
-                            <p class="govuk-hint">Viewing and editing a recall</p>
-
-                            {{govukButton({
-                                text: "Launch scenario 1B",
-                                attributes: {
-                                "formaction": "v17_1/overview?nomisRecall=true",
-                                "formmethod": "post"
-                                },
-                                classes: "govuk-button--secondary"
-                                })}}
-                            <p class="govuk-body">This scenario will test view and edit a recall.</p> 
-                            
-                            </form>  
+            <h4 class="govuk-heading-m">Supporting documents</h4>
+            <ul class="govuk-list">
+                <li><a class="govuk-link" target="external" href="https://docs.google.com/presentation/d/1EpSGPy7eYbDcOGHhjxT6nMO977YpMzWjDv_4A9QsG6Y/edit#slide=id.g3efd3f15478cc4f6_51">Genuine overrides MVP core journey (Google Sheets)</a></li>    
+                <li><a class="govuk-link" target="external" href="https://docs.google.com/presentation/d/188DVM7z8bxJVO-LMH9pAm0y7-vbM_dUU5LGdwesz5sQ/edit#slide=id.p">Genuine overrides sequencing overview (Google sheets)</a></li>      
+                <li><a class="govuk-link" target="external" href="https://miro.com/app/board/uXjVM2pEwnk=/?moveToWidget=3458764624047559297&cot=14">Genuine overrides board (Miro)</a></li>    
+            </ul> 
+      
+            <h4 class="govuk-heading-m">GO lightest option - minimal omu input, shortest flow to record overridden dates</h4> 
  
-                        </div>
-                          
-            </div>
+            <p class="govuk-body">The journey for SST to manually override dates from CRDS where dates have been submitted by OMU via email.</p> 
+            <ul class="govuk-list">    
+                <li><a class="govuk-link" target="external" href="v17/release-dates?go-1=true">Release dates landing page</a></li> 
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v1/which-prison">Which prison was requesting the override?</a></li> 
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v1/calculation-reason">Calculation reason</a></li> 
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v1/select-dates">Select dates</a></li>  
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v1/enter-SED">Add SED</a></li>   
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v1/check-entered-dates">Review release dates</a></li>  
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/calculation-complete">Release dates saved</a></li>                 
+            </ul>  
+            
+            <h4 class="govuk-heading-m">GO comprehensive option - dates provided by OMU, reviewed and approved/rejected by SST</h4> 
 
-            <!-- Version 15 -->
+            <h4 class="govuk-heading-s">OMU journey - request a GO </h4> 
+            <p class="govuk-body">The journey for OMU to request release dates to be overwritten .</p> 
+            <ul class="govuk-list">     
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/OMU/calculation-summary">Review calculation</a></li>               
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/OMU/reason-for-override">Reason for disagreeing with dates</a></li>   
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/OMU/GO-required">Genuine override required</a></li>     
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/OMU/upload-warrants">Upload documents</a></li>  
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/OMU/additional-details">Provide additional details</a></li>       
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/OMU/edit-release-dates">Update release dates</a></li>          
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/OMU/calculation-summary">Confirmation</a></li>                             
+            </ul>   
+
+            <h4 class="govuk-heading-s">SST journey - reject </h4> 
+            <p class="govuk-body">The journey for SST to manually override dates from CRDS where dates have been submitted by OMU via the service.</p> 
+            <ul class="govuk-list">    
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/start-page?goRequest=reject">Start page</a></li> 
+                <!-- <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/reason-for-override?goRequest=reject">Reason for override</a></li>          -->
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/check-sentence-and-offence-information?goRequest=reject">Check sentence and offence information</a></li>   
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/calculation-summary?goRequest=reject">Review release dates</a></li>               
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/reason-for-reject?goRequest=reject">Reason for reject</a></li>                                   
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/check-answers?goRequest=reject">Check answers</a></li>              
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/calculation-complete?goRequest=reject">Confirmation</a></li>                   
+            </ul>      
+
+
+            <h4 class="govuk-heading-s">SST journey - approve </h4> 
+            <p class="govuk-body">The journey for SST to manually override dates from CRDS where dates have been submitted by OMU via the service.</p> 
+            <ul class="govuk-list">    
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/start-page?goRequest=approve">Start page</a></li> 
+                <!-- <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/reason-for-override?goRequest=approve">Reason for override</a></li>          -->
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/check-sentence-and-offence-information?goRequest=approve">Check sentence and offence information</a></li>   
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/calculation-summary?goRequest=approve">Review release dates</a></li>                 
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/check-answers?goRequest=approve">Check answers</a></li>              
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/calculation-complete?goRequest=approve">Confirmation</a></li>     
+ 
+                <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+            <!-- Version 16 -->
             <h2 class="govuk-heading-l">Version 16</h2>
             <h4 class="govuk-heading-m">In this version</h4> 
             <p class="govuk-body">This version will focus on redeisgns of the <b>genuine overrides approver</b> journeys.</p> 
@@ -95,101 +98,12 @@
             <h4 class="govuk-heading-m">Genuine overrides - SST approver journey</h4> 
             <p class="govuk-body">The journey for SST to investigate a geninue override query and modfiy release dates if required.</p> 
             <ul class="govuk-list">    
-                <li><a class="govuk-link" target="external" href="v16/calculate-release-dates/genuine-overrides/SST/start-page">Start page</a></li>     
-                <li><a class="govuk-link" target="external" href="v16/calculate-release-dates/genuine-overrides/SST/look-up-calculation">Look up a calculation</a></li>     
-                <li><a class="govuk-link" target="external" href="v16/calculate-release-dates/genuine-overrides/SST/confirm-person">Confirm its the right person</a></li>     
-                <li><a class="govuk-link" target="external" href="v16/calculate-release-dates/genuine-overrides/SST/check-sentence-and-offence-information">Review sentence and offence information</a></li>     
-                <li><a class="govuk-link" target="external" href="v16/calculate-release-dates/genuine-overrides/SST/calculation-summary">Calculation summary</a></li> 
-                <li><a class="govuk-link" target="external" href="v16/calculate-release-dates/genuine-overrides/SST/reason-for-override">Reason for override</a></li>     
-                <li><a class="govuk-link" target="external" href="v16/calculate-release-dates/genuine-overrides/SST/select-dates"></a></li>     
-                <li><a class="govuk-link" target="external" href="v16/calculate-release-dates/genuine-overrides/SST/check-entered-dates">Check entered dates</a></li>     
-                <li><a class="govuk-link" target="external" href="v16/calculate-release-dates/genuine-overrides/SST/calculation-complete">Confirmation page</a></li>         
+                <li><a class="govuk-link" target="external" href="v16/calculate-release-dates/genuine-overrides/SST/start-page">Start page</a></li>         
+                <li><a class="govuk-link" target="external" href="v16/calculate-release-dates/genuine-overrides/SST/reported-calculations-dashboard">Reported calculations dashboard</a></li>  
+                <li><a class="govuk-link" target="external" href="v16/calculate-release-dates/genuine-overrides/SST/view-case">View case details</a></li>         
             </ul>    
  
-
-            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
-           
-           
-
-            <!-- Version recalls prototype v15.1 -->
-            <h2 class="govuk-heading-l">Recalls prototype (version 15.1)</h2>
-          
-                <div class="govuk-grid-row">  
-                    
-                    
-
-            
-                        <div class="govuk-grid-column-full govuk-!-margin-top-4"> 
-                            <h4 class="govuk-heading-m">What we are testing</h4> 
-                            <p class="govuk-body">This remote round of UR is due to take place in wc 17th February 2025.</p> 
-                            <p class="govuk-body">In this round, we aim to:</p> 
-                            <ul class="govuk-list govuk-list--bullet"> 
-                                <li>Testing an improved version of the unsupported sentences journey and an iteration of the select recall types journey. </li>  
-                            </ul>   
-                            <h4 class="govuk-heading-m">Supporting documents</h4>
-                            <ul class="govuk-list">  
-                                <li><a class="govuk-link" target="external" href="https://docs.google.com/document/d/1lX9F7pCxkuTpkGmnZkk_ciWKs_GHlQHiLRnknXg-8iU/edit?tab=t.0#heading=h.nclgwjwl6spb">R8 dummy data</a></li>    
-                         
-                            </ul> 
-
-                            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-
-                            <form action="post">
-                            <h4 class="govuk-heading-m">Scenario 1A</h4>
-                            <p class="govuk-hint">Recording a recall - happy path</p>
-
-                            {{govukButton({
-                                text: "Launch scenario 1A",
-                                attributes: {
-                                "formaction": "v16_1/DPS-prisoner-profile",
-                                "formmethod": "post"
-                                },
-                                classes: "govuk-button--secondary"
-                                })}}
-                            <p class="govuk-body">This scenario explores the previously tested journey where the user records a recall (core journey).</p> 
-                            
-                            </form>  
-
-
-                            <form action="post">
-                            <h4 class="govuk-heading-m">Scenario 1B</h4>
-                            <p class="govuk-hint">Recording a recall - recall type intercept</p>
-
-                            {{govukButton({
-                                text: "Launch scenario 1B",
-                                attributes: {
-                                "formaction": "v16_1/DPS-prisoner-profile?recallTypeIntercept=true",
-                                "formmethod": "post"
-                                },
-                                classes: "govuk-button--secondary"
-                                })}}
-                            <p class="govuk-body">This scenario explores the previously tested journey where the user records a recall (core journey).</p> 
-                            
-                            </form>  
-
-
-
-                            <form action="post">
-                                <h4 class="govuk-heading-m">Scenario 2</h4>
-                                <p class="govuk-hint">Recording a recall - unsupported sentences unhappy path</p>
-
-                                {{govukButton({
-                                    text: "Launch scenario 2",
-                                    attributes: {
-                                    "formaction": "v16_2/DPS-prisoner-profile?unsupportedSentences=true",
-                                    "formmethod": "post"
-                                    },
-                                    classes: "govuk-button--secondary"
-                                    })}}
-                                <p class="govuk-body">This scenario explores a new manual journey which is part of recording a recall, the user must select sentences from a list as our service had identified sentences it cannot support in CRDS. </p> 
-                                
-                                </form>  
-
-
-                        </div>
-                          
-            </div>
+ 
 
             <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
             <!-- Version 15.1 -->
