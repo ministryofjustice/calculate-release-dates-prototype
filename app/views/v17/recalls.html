@@ -1,0 +1,25 @@
+{% extends "./template.html" %}
+{% set nav = true %}
+{% set recallsActive = true %}
+{% block content %}
+
+<!-- Back link -->
+
+<div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl"> 
+            Recalls
+        </h1> 
+ 
+
+        <p class="govuk-body">There are no recalls recorded.</p>
+        
+        <div class="action-button-group">
+            <a href="recalls/revocation-date"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    Record a recall
+                </button></a>
+        </div> 
+ 
+
+{% endblock %}
