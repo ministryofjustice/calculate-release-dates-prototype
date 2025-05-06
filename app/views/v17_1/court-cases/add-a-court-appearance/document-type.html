@@ -1,0 +1,57 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="upload-document" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{ data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{ data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }}</span>
+                            Select the document type
+                        </h1>
+                    </legend>
+                    <div class="govuk-hint">You can repeat this step to add more types of documents.</div>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="document-type" name="appearance[document-type]" type="radio" value="Custodial warrant">
+                            <label class="govuk-label govuk-radios__label" for="document-type">
+                                Custodial warrant
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="document-type-2" name="appearance[document-type]" type="radio" value="Indictment">
+                            <label class="govuk-label govuk-radios__label" for="document-type-2">
+                                Indictment
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="document-type-3" name="appearance[document-type]" type="radio" value="Trial record sheet">
+                            <label class="govuk-label govuk-radios__label" for="document-type-3">
+                                Trial record sheet
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="document-type-4" name="appearance[document-type]" type="radio" value="Other" data-aria-controls="conditional-document-type-4">
+                            <label class="govuk-label govuk-radios__label" for="document-type-4">
+                                Other
+                            </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-document-type-4">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label" for="document-type-4">
+                                    Document name
+                                </label>
+                                <input class="govuk-input govuk-!-width-one-third" id="document-type-4" name="appearance[other-document-name]">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

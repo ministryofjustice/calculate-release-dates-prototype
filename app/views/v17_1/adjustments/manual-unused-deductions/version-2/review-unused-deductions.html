@@ -1,0 +1,172 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="">
+    <div class="">
+        <a href="index.html" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper govuk-body " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                    <h1 class="govuk-heading-l"><span class="govuk-caption-xl">Adjustments</span>Review remand and tagged bail</h1>
+                    <p>Some deductions may not have been recorded correctly.</p> 
+                    <p>Make sure all offences have been added against the remand time. You can edit any court case details that do not match the warrant.</p> 
+
+                </div>
+            </div>
+            <div class="govuk-grid-row govuk-!-margin-bottom-6">
+                <div class="govuk-grid-column-two-thirds">
+                    <h2 class="govuk-heading-m">Remand details</h2>
+                    <div class="govuk-summary-card remand">
+                        <div class="govuk-summary-card__title-wrapper ">
+                            <h2 class="govuk-summary-card__title">From 14 Aug 2023 to 12 Oct 2023</h2>
+                            <ul class="govuk-summary-card__actions">
+                                <li class="govuk-summary-card__action"> <a id="remand2" data-caseno="2" class="govuk-link edit-link" href="edit.html">
+                                    Edit<span class="govuk-visually-hidden"> of University of Gloucestershire</span>
+                                </a>
+                                </li>
+                                <li class="govuk-summary-card__action"> <a class="govuk-link delete-link" href="delete.html" data-caseno="2">
+                                    Delete<span class="govuk-visually-hidden"> from University of Gloucestershire</span>
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-summary-card__content">
+                            <dl class="govuk-summary-list">
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Offences
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                        <ul class="govuk-list">
+                                            <li class="govuk-!-margin-bottom-4">
+                                                <span class="govuk-!-font-weight-bold">Affray </span><br>
+                                                <span class="govuk-body-s">Committed on 1 Jan 2023</span><br>
+                                                <span class="govuk-body-s">Heard at Aberdare County Court</span>
+                                            </li>
+                                            <!-- <li>
+                                                <span class="govuk-!-font-weight-bold">Burglary other than dwelling - theft</span><br>
+                                                <span class="	govuk-body-s">Committed on 1 Jan 2023</span><br>
+                                                <span class="	govuk-body-s">Heard at Bristol Magistrates Court</span>
+                                            </li> -->
+                                        </ul>
+                                    </dd>
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Days
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                        60
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+<!-- 
+                    <div class="govuk-summary-card remand">
+                        <div class="govuk-summary-card__title-wrapper ">
+                            <h2 class="govuk-summary-card__title">From 1 Apr 2022 to 3 Sep 2023</h2>
+                            <ul class="govuk-summary-card__actions">
+                                <li class="govuk-summary-card__action"> <a id="remand7" data-caseno="7" class="govuk-link edit-link" href="edit.html">
+                                    Edit<span class="govuk-visually-hidden"> of University of Gloucestershire</span>
+                                </a>
+                                </li>
+                                <li class="govuk-summary-card__action"> <a class="govuk-link delete-link" href="delete.html" data-caseno="7">
+                                    Delete<span class="govuk-visually-hidden"> from University of Gloucestershire</span>
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-summary-card__content">
+                            <dl class="govuk-summary-list">
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Offences
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                        <ul class="govuk-list">
+                                            <li>
+                                                <span class="govuk-!-font-weight-bold">Burglary other than dwelling - theft</span><br>
+                                                <span class="	govuk-body-s">Committed on 1 Jan 2023</span><br>
+                                                <span class="	govuk-body-s">Heard at Bristol Magistrates Court</span>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Days
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                        521
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                    </div> -->
+                    <a class="govuk-link" href="">Add remand period</a>
+
+                    <h2 class="govuk-heading-m govuk-!-margin-top-8">Tagged bail details</h2>
+                    <div class="govuk-summary-card remand">
+                        <div class="govuk-summary-card__title-wrapper ">
+                            <h2 class="govuk-summary-card__title">Abergavenny Magistrates Court</h2>
+                            <ul class="govuk-summary-card__actions">
+                                <li class="govuk-summary-card__action"> <a id="remand7" data-caseno="7" class="govuk-link edit-link" href="edit-tagged-bail.html">
+                                    Edit<span class="govuk-visually-hidden"> of University of Gloucestershire</span>
+                                </a>
+                                </li>
+                                <li class="govuk-summary-card__action"> <a class="govuk-link delete-link" href="delete-tagged-bail.html" data-caseno="7">
+                                    Delete<span class="govuk-visually-hidden"> from University of Gloucestershire</span>
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-summary-card__content">
+                            <dl class="govuk-summary-list">
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Case reference
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                        T20223256
+                                    </dd>
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Days
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                        5
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                    <a class="govuk-link" href="">Add tagged bail</a>
+                </div>
+                <div class="govuk-grid-column-one-half">
+
+                </div>
+
+            </div>
+
+           
+            <h2 class="govuk-heading-m">Approve deductions</h2>
+            <p class="govuk-body govuk-!-width-two-thirds">
+                If all of the remand and tagged bail details match the warrant information, approve the deductions.
+            </p>
+            <div class="govuk-button-group govuk-!-margin-top-6">
+                <a href="confirm-deductions" id="saveRemandButton" class="govuk-button" data-journey="1">
+                    Continue
+                </a>
+                <a href="index" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    Cancel
+                </a>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/add-remand.js"></script>
+{% endblock %}

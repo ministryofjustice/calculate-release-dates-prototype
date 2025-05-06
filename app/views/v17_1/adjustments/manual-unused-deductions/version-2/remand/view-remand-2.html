@@ -1,0 +1,100 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+
+    <div id="ViewRemandPage">
+        <a href="../index.html" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+                    <h1 class="govuk-heading-l"><span class="govuk-caption-xl">Adjustments</span>Remand overview</h1>
+                    <p></p>
+
+                    <div class="adjustment-card-container">
+        
+              
+                        <div class="adjustment-card full clear govuk-!-margin-bottom-4">
+                            <div class="govuk-summary-card__title-wrapper adjustment-card-heading clear">
+                                <h2 class="govuk-summary-card__title">From 14 Aug 2023 to 12 Oct 2023</h2>
+                                <ul class="govuk-summary-card__actions">
+                                    <li class="govuk-summary-card__action">
+                                        <a class="govuk-link" href="/A2487EA/remand/edit/4b1adcc9-8877-487d-8d56-0a596f735537">
+                                          Edit<span class="govuk-visually-hidden"> remand from 14 Aug 2023 to 12 Oct 2023</span>
+                                        </a>
+                                    </li>
+                                    <li class="govuk-summary-card__action">
+                                        <a class="govuk-link" href="/A2487EA/remand/remove/4b1adcc9-8877-487d-8d56-0a596f735537">
+                                          Delete<span class="govuk-visually-hidden"> remand from 14 Aug 2023 to 12 Oct 2023</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="adjustment-card_content">
+                              
+                        
+                          
+                        
+                          
+                        <dl class="govuk-summary-list">
+                        
+                          
+                          <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                              Offences
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                              <div class="govuk-list">
+                                  
+                                    <div>
+                                      <strong>Affray</strong> 
+                                      <br>
+                                      <span class="govuk-body-s">
+                                        
+                                
+                                  Committed on 01 Jan 2023
+                                  
+                                
+                                  <br>Heard at Aberdare County Court
+                                
+                              
+                                      </span>
+                                    </div>
+                                  
+                                </div>
+                            </dd>
+                            
+                          </div>
+                          
+                        
+                          
+                          <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                              Days
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                              60
+                            </dd>
+                            
+                          </div>
+                          
+                        
+                        </dl>
+                        
+                            </div>
+                        </div>
+                        
+                                
+                                </div>
+                    <div id="RemandPeriodListContainer">
+
+                    </div>
+              <a href="enter-remand.html" class="govuk-button" data-module="govuk-button">
+                        Add new
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/add-remand-mvp.js"></script>
+{% endblock %}

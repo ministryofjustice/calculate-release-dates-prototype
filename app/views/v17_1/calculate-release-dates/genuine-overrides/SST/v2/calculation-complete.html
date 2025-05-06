@@ -1,0 +1,50 @@
+{% extends "../../../../../includes/layouts/template-linear.html" %}
+{% block content %}
+
+ 
+<div class="moj-width-container govuk-!-margin-top-7">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            {% if data['goRequest'] == 'approve'  %} 
+
+
+            <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                    <div class="">Release dates saved</div>
+                </h1>
+                <div class="govuk-panel__body govuk-!-font-size-24">
+                    The release dates have been saved in NOMIS.
+                    <!-- You can now <a class="govuk-link--inverse" href="">print the notification slip</a>. -->
+                    
+                </div>
+            </div> 
+            <h2 class="govuk-heading-m">What happens next</h2>
+            <p class="govuk-body">
+              A response has been sent to the requestor confirming that the dates have been approved and saved.
+            </p>
+            
+            {% elif data['goRequest'] == 'reject'  %}  
+
+            <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                    <div class="">Release dates rejected</div>
+                </h1>
+                <div class="govuk-panel__body govuk-!-font-size-24">
+                    No release dates have been saved.
+                    <!-- You can now <a class="govuk-link--inverse" href="">print the notification slip</a>. -->
+                    
+                </div>
+            </div> 
+
+            <h2 class="govuk-heading-m">What happens next</h2>
+            <p class="govuk-body">
+              A response has been sent to the requestor confirming that the dates have been rejected and no dates have been saved.
+            </p>
+  
+
+            {% endif  %} 
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="/{{data.prototypeVersion}}/persist-sentence?edit=true" method="post">
+            {% else %}
+            <form class="form" action="sentence-type" method="post">
+                {% endif %}
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                <span class="govuk-caption-l">Add offences</span>
+                                Was the offence terror related?
+                            </h1>
+                        </legend>
+                        <!--                     <p class="govuk-body-l">
+                            {{ data.sentence['offence-name'] }}
+                        </p> -->
+                        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="terror-related" name="sentence[terror-related]"
+                                    type="radio" value="Yes" {% if data.sentence['terror-related']=='Yes' %} checked {%
+                                    endif %}>
+                                <label class="govuk-label govuk-radios__label" for="terror-related">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="terror-related-2" name="sentence[terror-related]"
+                                    type="radio" value="No" {% if data.sentence['terror-related']=='No' %} checked {%
+                                    endif %}>
+                                <label class="govuk-label govuk-radios__label" for="terror-related-2">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="govuk-button-group">
+                    <button type="submit" class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+                    <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+                        formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+                        Save as a draft
+                    </button>
+                </div>
+            </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+{% endblock %}
