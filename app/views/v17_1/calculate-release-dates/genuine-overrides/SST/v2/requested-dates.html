@@ -1,0 +1,213 @@
+{% extends "../../../../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="check-sentence-and-offence-information" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+            <!-- <span class="govuk-caption-xl">Calculate release dates</span> -->
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+                Review the calculated and requested release dates
+                <br>
+                <span class="govuk-body">Review the release dates calculated by CRDS and the dates provided by requestors.</span>
+            </h1>
+        </div>
+    </div>
+</div>
+<!-- Final release dates -->
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title"><span class="govuk-!-font-size-24">Calculated release dates</span></h2>
+                    <ul class="govuk-summary-card__actions">
+                    </ul>
+                </div>
+                <div class="govuk-summary-card__content" id="release-dates">
+                 
+                    <dl class="govuk-summary-list release-dates-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                SLED
+                                <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body">Tuesday, 3 May 2028</p>
+                            </dd>
+                        </div> 
+    
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                CRD
+                                <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                                <p class="govuk-body">Tuesday, 9 December 2025</p>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                HDCED
+                                <p class="govuk-!-font-size-16 govuk-hint">Home detention curfew eligibility date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                                <p class="govuk-body">Friday, 13 June 2025</p>
+                            </dd>
+                        </div>
+                    </dl> 
+                </div>
+            </div>  
+             
+
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title"><span class="govuk-!-font-size-24">Requested dates</span></h2>
+                    <ul class="govuk-summary-card__actions">
+                    </ul>
+                </div>
+                <div class="govuk-summary-card__content" id="release-dates">
+                 
+                    <dl class="govuk-summary-list release-dates-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                SLED
+                                <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body">Tuesday, 3 May 2028</p>
+                            </dd>
+                        </div> 
+    
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                CRD
+                                <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                                <p class="govuk-body">Tuesday, 9 December 2025</p>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                
+                                HDCED
+                                <p class="govuk-!-font-size-16 govuk-hint">Home detention curfew eligibility date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                                <div>
+                                    <strong class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-2">
+                                        Date Modified
+                                    </strong></div>
+                                <p class="govuk-body">Monday, 16 June 2025</p>
+                            </dd>
+
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                
+                                TUSED
+                                <p class="govuk-!-font-size-16 govuk-hint">TUSED (Top up supervision expiry date)</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                                <div>
+                                    <strong class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-2">
+                                        Date Added
+                                    </strong></div>
+                                <p class="govuk-body">Sunday, 16 June 2026</p>
+                            </dd>
+
+                        </div>
+                    </dl> 
+                </div>
+            </div> 
+        </div>
+    </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-form-group govuk-!-margin-top-6">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                      Do you agree with the requested dates?
+                    </h1>
+                  </legend>
+                
+                  <div class="govuk-radios" data-module="govuk-radios">
+
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="requestedDatesQuestion" name="requestedDatesQuestion" type="radio" value="
+                        Yes, I agree">
+                        <label class="govuk-label govuk-radios__label" for="requestedDatesQuestion-2">
+                          Yes, the requested dates are correct
+                        </label>
+                        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                            The requested dates will be saved
+                          </div>
+                      </div> 
+                        <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="requestedDatesQuestion-2" name="requestedDatesQuestion" type="radio" value="No, I disagree with the requested dates">
+                        <label class="govuk-label govuk-radios__label" for="requestedDatesQuestion">
+                            No, the requested dates are incorrect
+                        </label>
+                        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                            No release dates will be saved
+                          </div>
+                        </div>
+
+                    <!-- <div class="govuk-radios__divider">or</div> -->
+
+                  </div>
+                </fieldset>
+              </div>
+
+   
+    
+            <div class="govuk-!-margin-top-6">  
+                <div class="govuk-button-group">
+
+            
+                    {% if data['goRequest'] == 'approve'  %} 
+
+                    <form method="post" action="check-answers">
+                        <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                            Confirm and continue
+                        </button>
+                    </form>
+
+                    {% elif data['goRequest'] == 'reject'  %} 
+                    
+                    <form method="post" action="reason-for-reject">
+                        <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                            Confirm and continue
+                        </button>
+                    </form>
+
+                    {% else  %} 
+                    
+                    <form method="post" action="reason-for-reject">
+                        <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                            Confirm and continue
+                        </button>
+                    </form>
+
+                    {% endif %} 
+                    <form method="post" action="cancel">
+                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+            <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
+                   
+            </div>
+        </div>
+ 
+    </div>
+</div>
+{% endblock %}

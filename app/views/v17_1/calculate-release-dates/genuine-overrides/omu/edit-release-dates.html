@@ -1,0 +1,101 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="check-sentence-and-offence-information" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <span class="govuk-caption-l">Calculate release dates</span>
+            <h1 class="govuk-heading-l">Update the release dates to match the paper calculation</h1>
+            
+
+<dl class="govuk-summary-list">
+
+  
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      SED (Sentence expiry date)
+    </dt>
+    <dd class="govuk-summary-list__value manual-entry-value-for-SED">
+      11 November 2024
+    </dd>
+    
+    <dd class="govuk-summary-list__actions">
+      
+      <ul class="govuk-summary-list__actions-list">
+        
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="enter-SED" data-qa="change-manual-date-SED">Edit<span class="govuk-visually-hidden"> Change SED (Sentence expiry date)</span></a>
+        </li>
+        
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="#" data-qa="remove-manual-date-SED">Remove<span class="govuk-visually-hidden"> Remove  SED (Sentence expiry date)</span></a>
+        </li>
+        
+      </ul>
+      
+    </dd>
+    
+  </div>
+  
+
+  
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      CRD (Conditional release date)
+    </dt>
+    <dd class="govuk-summary-list__value manual-entry-value-for-LED">
+      12 December 2024
+    </dd>
+    
+    <dd class="govuk-summary-list__actions">
+      
+      <ul class="govuk-summary-list__actions-list">
+        
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="../../manual-entry/enter-CRD" data-qa="change-manual-date-LED">Edit<span class="govuk-visually-hidden"> Change CRD (Conditional release date)</span></a>
+        </li>
+        
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="../../manual-entry/enter-CRD" data-qa="remove-manual-date-LED">Remove<span class="govuk-visually-hidden"> Remove CRD (Conditional release date)</span></a>
+        </li>
+        
+      </ul>
+      
+    </dd>
+    
+  </div>
+  
+
+</dl>
+
+            <p class="govuk-body govuk-!-margin-bottom-8">
+            <a href="../../manual-entry/select-dates" class="govuk-link govuk-link--no-visited-state" data-qa="add-another-release-date-link">Add another release date</a>
+            </p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m">Confirm dates and send request for review</h2>
+            <p class="govuk-body">The release dates will not be saved until they have been reviewed but the SST (Specialist support team).</p>
+            
+            <div class="govuk-button-group govuk-!-margin-top-6">
+              <form method="post" action="confirmation">
+                  <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                      Continue and send request
+                  </button>
+              </form>
+
+              <form method="post" action="cancel">
+                  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                      Cancel
+                  </button>
+              </form>
+          </div>
+        </div>
+    </div>
+</div> 
+{% endblock %}

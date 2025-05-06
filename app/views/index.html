@@ -20,6 +20,46 @@
 <div class="moj-width-container govuk-!-margin-top-8">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
+            <!-- Version 17.1 -->
+            <h2 class="govuk-heading-l">Version 17.1</h2>  
+            <strong class="govuk-tag govuk-tag--pink ">
+                For research
+                </strong>
+                <strong class="govuk-tag govuk-tag--green govuk-!-margin-left-1">
+                    In Design
+                </strong>
+<!-- 
+                <strong class="govuk-tag govuk-tag--grey govuk-!-margin-left-1">
+                    Closed
+                </strong> -->
+
+            <h2 class="govuk-heading-m govuk-!-margin-top-3">Genuine overrides - SST manually record release dates</h2>        
+            
+            <p class="govuk-body">Scenario 1 will focus on testing the new SST journey for recording release dates from a request but OMUs</p>    
+
+            <form action="post">  
+            {{govukButton({
+                text: "Launch from prisoner profile",
+                attributes: {
+                "formaction": "/v17_1/DPS-prisoner-profile?go-journey=SST",
+                "formmethod": "post"
+                },
+                classes: "govuk-button--secondary"
+                })}} 
+            </form>   
+
+            <form action="post">  
+            {{govukButton({
+                text: "Launch from overview",
+                attributes: {
+                "formaction": "/v17_1/overview?go-journey=SST",
+                "formmethod": "post"
+                },
+                classes: "govuk-button--secondary"
+                })}} 
+            </form>  
+ 
+            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
 
 
             <!-- Version 17 -->
@@ -38,13 +78,16 @@
  
             <p class="govuk-body">The journey for SST to manually override dates from CRDS where dates have been submitted by OMU via email.</p> 
             <ul class="govuk-list">    
-                <li><a class="govuk-link" target="external" href="v17/release-dates?go-1=true">Release dates landing page</a></li> 
+                <li><a class="govuk-link" target="external" href="v17/release-dates?go-journey=SST">Release dates landing page</a></li> 
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v1/reason-for-override">Reason for override</a></li> 
                 <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v1/which-prison">Which prison was requesting the override?</a></li> 
-                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v1/calculation-reason">Calculation reason</a></li> 
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v1/calculation-reason">Reason for calculation</a></li> 
                 <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v1/select-dates">Select dates</a></li>  
                 <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v1/enter-SED">Add SED</a></li>   
                 <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v1/check-entered-dates">Review release dates</a></li>  
-                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/calculation-complete">Release dates saved</a></li>                 
+                <li><a class="govuk-link" target="external" href="v17/calculate-release-dates/genuine-overrides/SST/v2/calculation-complete">Release dates saved</a></li>                
+                
+                <li><a class="govuk-link" target="external" href="v17/release-dates?toShow=datesOverridden">Release dates landing page after dates saved</a></li>            
             </ul>  
             
             <h4 class="govuk-heading-m">GO comprehensive option - dates provided by OMU, reviewed and approved/rejected by SST</h4> 
@@ -90,7 +133,7 @@
  
             <p class="govuk-body">Experimenting with embedding a chatbot within our service.</p> 
             <ul class="govuk-list">     
-                <li><a class="govuk-link" target="external" href="v17/release-dates?chatbot=true">Release dates landing page</a></li>                    
+                <li><a class="govuk-link" target="external" href="v17/release-dates?go-journey=chatbot">Release dates landing page</a></li>                    
             </ul> 
 
             <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
@@ -118,16 +161,16 @@
             <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
             <!-- Version 15.1 -->
             <h2 class="govuk-heading-l">Version 15.1</h2>  
-            <strong class="govuk-tag govuk-tag--pink govuk-!-margin-left-1">
+            <strong class="govuk-tag govuk-tag--pink ">
                 For research
                 </strong>
-                <strong class="govuk-tag govuk-tag--green govuk-!-margin-left-1">
+                <!-- <strong class="govuk-tag govuk-tag--green govuk-!-margin-left-1">
                     In Design
-                </strong>
-
-                <!-- <strong class="govuk-tag govuk-tag--grey govuk-!-margin-left-1">
-                    Closed
                 </strong> -->
+
+                <strong class="govuk-tag govuk-tag--grey govuk-!-margin-left-1">
+                    Closed
+                </strong>
 
 
             <!-- <h2 class="govuk-heading-m">Scenario 1 - HDC hint text</h2>   
@@ -138,7 +181,7 @@
             </ul>  -->
 
 
-            <h2 class="govuk-heading-m">Scenario 1 - conssecutive sentences</h2>        
+            <h2 class="govuk-heading-m govuk-!-margin-top-3">Scenario 1 - conssecutive sentences</h2>        
             
             <p class="govuk-body">Scenario 1 will focus on testing the new interruption page designs in scenarios where conssecutive sentences have been aggregated incorrectly. </p>    
 

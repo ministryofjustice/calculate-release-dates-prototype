@@ -1,0 +1,53 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="">
+
+    <div class="">
+        <a href="review-all-padas" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+                    <h1 class="govuk-heading-l"><span class="govuk-caption-xl">Adjustments</span>Confirm and save</h1>
+                    <h2 class="govuk-heading-m">ADA details</h2>
+                    <p>Check that the ADA details are correct, then submit the adjustments.</p>
+                    <table class="govuk-table govuk-!-margin-bottom-9">
+                        <tr>
+                            <th class="govuk-table__header" scope="col">Date charge proved</th>
+                            <th class="govuk-table__header" scope="col">Charge number</th>
+                            <th class="govuk-table__header govuk-!-text-align-right" scope="col">Days</th>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                12 Dec 2020
+                            </td>
+                            <td class="govuk-table__cell">
+                                3822448
+                            </td>
+                            <!-- Days -->
+                            <td class="govuk-table__cell govuk-!-text-align-right ">8</td>
+                        </tr>
+
+                        <tfoot>
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__cell govuk-!-text-align-left" scope="row" colspan="2">Approved ADAs taken into calculation </th>
+                            <td class="govuk-table__cell govuk-!-text-align-right">8</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                    <div class="govuk-button-group">
+                        <a href="index-end" id="review-remand-button" class="govuk-button" data-module="govuk-button">
+                            Confirm and save
+                        </a>
+                        <a href="index-4" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </a>
+                    </div>
+            </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/adjustments.js"></script>
+{% endblock %}
