@@ -1,7 +1,7 @@
 {% extends "../../../../../includes/layouts/template-linear.html" %} {% block content %}
 <!-- Back link -->
 <div class="moj-width-container">
-  <a href="select-dates" class="govuk-back-link">Back</a>
+  <a href="enter-SED" class="govuk-back-link">Back</a>
 </div>
 <!-- Page intro -->
 <div class="moj-width-container govuk-!-margin-top-6">
@@ -10,27 +10,27 @@
 
         <div class="govuk-form-group">
 
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="SED-hint">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="LED-hint">
 
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
 
               <span class="govuk-caption-xl">Override a calculated date</span>
               <h1 class="govuk-fieldset__heading">
-                Enter the SED (Sentence expiry date)
+                Enter the LED (Licence expiry date)
               </h1>
 
             </legend> 
 
-            <div class="govuk-date-input" id="SED">
+            <div class="govuk-date-input" id="LED">
  
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="SED-day">
+                  <label class="govuk-label govuk-date-input__label" for="LED-day">
                     Day
                   </label>
 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="SED-day" name="day"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="LED-day" name="day"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -38,12 +38,12 @@
 
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="SED-month">
+                  <label class="govuk-label govuk-date-input__label" for="LED-month">
                     Month
                   </label>
 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="SED-month" name="month"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="LED-month" name="month"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -51,11 +51,11 @@
 
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="SED-year">
+                  <label class="govuk-label govuk-date-input__label" for="LED-year">
                     Year
                   </label> 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="SED-year" name="year"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="LED-year" name="year"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -69,12 +69,11 @@
         </div> 
 
         <input type="hidden" name="_csrf" value="spFxF0sq-CzqH8QHtGwIF7luXgK5KjaLm0bM">
-        <input type="hidden" name="dateType" value="SED"> 
+        <input type="hidden" name="dateType" value="LED"> 
 
        
-               
         <div class="govuk-button-group">
-          <form method="post" action="enter-LED">
+          <form method="post" action="enter-CRD">
               <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                   Continue
               </button>
@@ -86,7 +85,6 @@
               </button>
           </form>
       </div>
- 
     </div>
   </div>
 </div>

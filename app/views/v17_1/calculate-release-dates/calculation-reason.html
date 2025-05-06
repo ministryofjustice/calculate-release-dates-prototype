@@ -9,6 +9,7 @@
     <div class="govuk-grid-row"> 
         <div class="govuk-grid-column-two-thirds">
 
+            <form method="post" action="check-sentence-and-offence-information">
                 <div class="govuk-form-group">
 
                     <fieldset class="govuk-fieldset" aria-describedby="calculationReasonId-hint">
@@ -145,13 +146,10 @@
 
                
                 <div class="govuk-button-group">
-                    <form method="post" action="check-sentence-and-offence-information">
                         <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                             Continue
                         </button>
-                    </form>
-
-                    <form method="post" action="cancel">
+                
                         <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
                             Cancel
                         </button>
