@@ -11,7 +11,7 @@
 
               <h1 class="govuk-heading-xl">
 
-              <span class="govuk-caption-xl">Add manually overridden release dates</span>
+              <span class="govuk-caption-xl">Override a calculated date</span>
                 Check the dates you have entered
               </h1> 
 
@@ -30,10 +30,10 @@
             </dl> 
 
           <h3 class="govuk-heading-m ">Confirm and save</h3>
-          <p class="govuk-body">By saving this calculation you are confirming that, to the best of your knowledge, it is correct.</p>
+          <p class="govuk-body">By saving this calculation, you are confirming that, to the best of your knowledge, this calculation is correct. This is based on the information supplied by the OMU at the time of this override. </p>
           
               <div class="govuk-button-group">
-                  <form method="post" action="calculation-complete">
+                  <form method="post" action="calculation-complete?toShow=datesOverridden">
                       <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                           Confirm and save
                       </button>
