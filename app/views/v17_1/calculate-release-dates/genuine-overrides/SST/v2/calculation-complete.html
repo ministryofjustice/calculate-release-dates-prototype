@@ -1,49 +1,57 @@
 {% extends "../../../../../includes/layouts/template-linear.html" %}
 {% block content %}
 
- 
+<!-- Breadcrumbs -->
+<div class="moj-width-container">
+    <!--     <div class="govuk-breadcrumbs govuk-!-display-none-print">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/prisoner/G9126UE">Bloggs, Joe</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="page">Calculate release dates</li>
+        </ol>
+    </div> -->
+</div>
 <div class="moj-width-container govuk-!-margin-top-7">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-
-            {% if data['goRequest'] == 'approve'  %} 
-
-
             <div class="govuk-panel govuk-panel--confirmation">
                 <h1 class="govuk-panel__title">
                     <div class="">Release dates saved</div>
                 </h1>
-                <div class="govuk-panel__body govuk-!-font-size-24">
-                    The release dates have been saved in NOMIS.
-                    <!-- You can now <a class="govuk-link--inverse" href="">print the notification slip</a>. -->
-                    
-                </div>
-            </div> 
-            <h2 class="govuk-heading-m">What happens next</h2>
-            <p class="govuk-body">
-              A response has been sent to the requestor confirming that the dates have been approved and saved.
-            </p>
+             
+            </div>
+        
+ 
+         <!-- <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
             
-            {% elif data['goRequest'] == 'reject'  %}  
-
-            <div class="govuk-panel govuk-panel--confirmation">
-                <h1 class="govuk-panel__title">
-                    <div class="">Release dates rejected</div>
-                </h1>
-                <div class="govuk-panel__body govuk-!-font-size-24">
-                    No release dates have been saved.
-                    <!-- You can now <a class="govuk-link--inverse" href="">print the notification slip</a>. -->
-                    
-                </div>
+            <div class="govuk-notification-banner__content">
+              <h3 class="govuk-notification-banner__heading">
+                Calculation complete
+              </h3>
+              <p class="govuk-body">The calculation has been saved in NOMIS. You can now <a href="">print the notification slip</a>.</p>
+            </div>
+          </div> -->
+          
+ 
+        <div class="govuk-!-margin-top-6">
+            <h2 class="govuk-heading-l">What to do next</h2>  
+            <p class="govuk-body">Contact the OMU staff member and notfiy them that the dates have been saved.</p>
+           
+            <div class="govuk-body govuk-!-margin-top-6"><span>You can also go back to Joe Bloggs':</span>
+                <ul class="govuk-list govuk-!-margin-top-2">
+                    <li><a href="../../../../overview">Court case and release dates information</a></li>
+                    <li><a href="../../../../DPS-prisoner-profile">Prisoner profile</a></li>
+                </ul>
             </div> 
-
-            <h2 class="govuk-heading-m">What happens next</h2>
-            <p class="govuk-body">
-              A response has been sent to the requestor confirming that the dates have been rejected and no dates have been saved.
-            </p>
-  
-
-            {% endif  %} 
+           
+            <div class="govuk-!-margin-top-6">
+                <p class="govuk-body">Or, go to the <a href="../DPS-home"> DPS homepage</a>.</p>
+            </div>
+        </div> 
         </div>
     </div>
 </div>
