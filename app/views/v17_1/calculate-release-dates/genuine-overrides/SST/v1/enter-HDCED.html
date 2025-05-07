@@ -1,7 +1,7 @@
 {% extends "../../../../../includes/layouts/template-linear.html" %} {% block content %}
 <!-- Back link -->
 <div class="moj-width-container">
-  <a href="enter-LED" class="govuk-back-link">Back</a>
+  <a href="enter-CRD" class="govuk-back-link">Back</a>
 </div>
 <!-- Page intro -->
 <div class="moj-width-container govuk-!-margin-top-6">
@@ -10,27 +10,27 @@
 
         <div class="govuk-form-group">
 
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="CRD-hint">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="HDCED-hint">
 
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
 
               <span class="govuk-caption-xl">Override a calculated date</span>
               <h1 class="govuk-fieldset__heading">
-                Enter the CRD (Conditional release date)
+                Enter the HDCED (Home detention curfew eligibility date)
               </h1>
 
             </legend> 
 
-            <div class="govuk-date-input" id="CRD">
+            <div class="govuk-date-input" id="HDCED">
  
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="CRD-day">
+                  <label class="govuk-label govuk-date-input__label" for="HDCED-day">
                     Day
                   </label>
 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="CRD-day" name="day"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="HDCED-day" name="day"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -38,12 +38,12 @@
 
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="CRD-month">
+                  <label class="govuk-label govuk-date-input__label" for="HDCED-month">
                     Month
                   </label>
 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="CRD-month" name="month"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="HDCED-month" name="month"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -51,11 +51,11 @@
 
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="CRD-year">
+                  <label class="govuk-label govuk-date-input__label" for="HDCED-year">
                     Year
                   </label> 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="CRD-year" name="year"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="HDCED-year" name="year"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -69,11 +69,11 @@
         </div> 
 
         <input type="hidden" name="_csrf" value="spFxF0sq-CzqH8QHtGwIF7luXgK5KjaLm0bM">
-        <input type="hidden" name="dateType" value="CRD"> 
+        <input type="hidden" name="dateType" value="HDCED"> 
 
        
         <div class="govuk-button-group">
-          <form method="post" action="enter-HDCED">
+          <form method="post" action="check-entered-dates">
               <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                   Continue
               </button>
