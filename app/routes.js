@@ -3,6 +3,8 @@
 // https://prototype-kit.service.gov.uk/docs/create-routes
 //
 
+
+
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
@@ -89,3 +91,27 @@ console.log(sp)
 })
 
 
+require('dotenv').config();
+const axios = require('axios');
+
+console.log('Loaded Direct Line Secret:', process.env.DIRECT_LINE_SECRET ? '✅ Present' : '❌ Missing');
+
+router.get('/api/token', async (req, res) => {
+  try {
+    const response = await axios.post(
+      'https://directline.botframework.com/v3/directline/tokens/generate',
+      {},
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.DIRECT_LINE_SECRET}`
+        }
+      }
+    );
+    res.json({ token: response.data.token });
+  } 
+  catch (error) {
+    console.error('Token generation failed:', error.response?.data || error.message);
+    res.status(500).send('Failed to generate token');
+  }
+  
+});

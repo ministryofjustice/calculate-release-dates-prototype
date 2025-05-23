@@ -1,0 +1,77 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="licence-period" method="post">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                        <span class="govuk-caption-l">Add offences</span>
+                        Enter the custodial term
+                    </h1>
+                </legend>
+                <div class="govuk-form-group">
+                    <div class="govuk-date-input" id="custodial-term">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="custodial-term-years">
+                                    Years
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="custodial-term-years" name="sentence[custodial-term-years]" type="text"
+                                    inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="custodial-term-months">
+                                    Months
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="custodial-term-months" name="sentence[custodial-term-months]" type="text"
+                                    inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="custodial-term-weeks">
+                                    Weeks
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="custodial-term-weeks" name="sentence[custodial-term-weeks]" type="text"
+                                    inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="custodial-term-days">
+                                    Days
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="custodial-term-days" name="sentence[custodial-term-days]" type="text"
+                                    inputmode="numeric">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <!-- <p class="govuk-body"><a href="alternative-sentence-length">The sentence length is formatted differently</a></p> -->
+            <div class="govuk-button-group">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+                    formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+                    Save as a draft
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+</div>
+{% endblock %}

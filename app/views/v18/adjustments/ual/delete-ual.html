@@ -1,0 +1,66 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+
+    <div id="RemoveUAL" class="govuk-width-container">
+        <a href="view-ual" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-l">Delete UAL</h1>
+<!--                    <p>[Explainer].</p>-->
+                    <h2 class="govuk-heading-m">UAL details</h2>
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                First day spent UAL
+                            </dt>
+                            <dd id="start"  class="govuk-summary-list__value">
+                                5 May 2023
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Last day spent UAL
+                            </dt>
+                            <dd id="end"  class="govuk-summary-list__value">
+                                15 May 2023
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Number of days
+                            </dt>
+                            <dd id="days"  class="govuk-summary-list__value">
+                                11
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Type of UAL
+                            </dt>
+                            <dd id="type" class="govuk-summary-list__value">
+                                Recall
+                            </dd>
+                        </div>
+                    </dl>
+<!--                    <div class="govuk-!-margin-bottom-6">-->
+<!--                        <h2 class="govuk-heading-m">Are you sure you want to delete this UAL?</h2>-->
+<!--                        <p>The UAL will be removed. This will change the amount of unused deductions.</p>-->
+<!--                    </div>-->
+                    <div class="govuk-button-group">
+                        <a id="removeUALButton" href="../index-1" class="govuk-button " data-module="govuk-button" data-journey="9">
+                            Delete
+                        </a>
+                        <a href="view-ual" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/adjustments-3-mvp.js"></script>
+{% endblock %}

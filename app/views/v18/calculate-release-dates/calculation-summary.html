@@ -1,0 +1,211 @@
+{% extends "../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="check-sentence-and-offence-information" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <!-- <span class="govuk-caption-xl">Calculate release dates</span> -->
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+                Review calculation
+                <br>
+                <span class="govuk-body">Check the release dates before entering the approved dates.</span>
+            </h1>
+        </div>
+    </div>
+</div>
+<!-- Final release dates -->
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title"><span class="govuk-!-font-size-24">Release dates</span></h2>
+                    <ul class="govuk-summary-card__actions">
+                    </ul>
+                </div>
+                <div class="govuk-summary-card__content" id="release-dates">
+                
+                    {% if data['scenario'] == '1'  %} 
+                    <dl class="govuk-summary-list release-dates-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                SLED
+                                <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body">Thursday, 26 June 2025</p>
+                            </dd>
+                        </div> 
+    
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                PRRD
+                                <p class="govuk-!-font-size-16 govuk-hint">Post recall release date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                                <p class="govuk-body">Saturday, 24 May 2025</p><p class="govuk-body govuk-hint govuk-!-font-size-16"><a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/government/publications/discretionary-fridaypre-bank-holiday-release-scheme-policy-framework" data-qa="CRD-release-date-hint-0">The Discretionary Friday/Pre-Bank Holiday Release Scheme Policy applies to this release date.</a></p>
+
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                TUSED
+                                <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                                <p class="govuk-body">Sunday, 24 May 2026</p>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    {% elif data['scenario'] == '2'  %} 
+
+                    <dl class="govuk-summary-list release-dates-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                SLED
+                                <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body">Tuesday, 5 March 2025</p>
+                            </dd>
+                        </div> 
+    
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                PRRD
+                                <p class="govuk-!-font-size-16 govuk-hint">Post recall release date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                                <p class="govuk-body">Tuesday, 5 March 2025</p>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                TUSED
+                                <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                                <p class="govuk-body">Monday, 5 August 2025</p>
+                            </dd>
+                        </div>
+                    </dl>
+                    {% else %} 
+                    <dl class="govuk-summary-list release-dates-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                SLED
+                                <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body">Thursday, 26 June 2025</p>
+                            </dd>
+                        </div> 
+    
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                PRRD
+                                <p class="govuk-!-font-size-16 govuk-hint">Post recall release date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                                <p class="govuk-body">Saturday, 24 May 2025</p><p class="govuk-body govuk-hint govuk-!-font-size-16"><a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/government/publications/discretionary-fridaypre-bank-holiday-release-scheme-policy-framework" data-qa="CRD-release-date-hint-0">The Discretionary Friday/Pre-Bank Holiday Release Scheme Policy applies to this release date.</a></p>
+
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                TUSED
+                                <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                                <p class="govuk-body">Sunday, 24 May 2026</p>
+                            </dd>
+                        </div>
+                    </dl>
+                    {% endif %}  
+                </div>
+            </div> 
+
+
+            <details class="govuk-details govuk-!-margin-bottom-2" >
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Why are some details missing?
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    Some dates and details are not included as according to <a
+                        href="http://www.justice.gov.uk/downloads/offenders/psipso/psi-2015/psi-03-2015-sentence-calculation-determiante-sentenced-prisoners.pdf"
+                        target="_blank">PSI 03/2015 (opens in new tab)</a> they are not relevant to this person's
+                    circumstances.
+                </div>
+            </details>
+            <details class="govuk-details" >
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        How are final release dates calculated?
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    Some calculations are made up of different sentences and terms, such as overlapping or concurrent
+                    sentences. The final release date comes from the sentence or term with the latest release date.
+                </div>
+            </details> 
+
+            <div class="govuk-form-group govuk-!-margin-top-6">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h1 class="govuk-fieldset__heading">
+                      Do you agree with the release dates?
+                    </h1>
+                  </legend>
+                  <div class="govuk-radios" data-module="govuk-radios">
+
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="sentencesReplaced-2" name="sentencesReplaced" type="radio" value="
+                        Yes, this offence was replaced with Actual Bodily Harm (Section 47) committed on 29 October 2023">
+                        <label class="govuk-label govuk-radios__label" for="sentencesReplaced-2">
+                          Yes, save the calculation to NOMIS
+                        </label>
+                      </div> 
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="sentencesReplaced" name="sentencesReplaced" type="radio" value="No, this offence has not been replaced">
+                      <label class="govuk-label govuk-radios__label" for="sentencesReplaced">
+                        No, I do not agree with the release dates
+                      </label>
+                    </div>
+
+                    <!-- <div class="govuk-radios__divider">or</div> -->
+
+                  </div>
+                </fieldset>
+              </div>
+
+
+     
+              <div class="govuk-button-group"> 
+
+                <form method="post" action="request-specialist-support">
+                    <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                        Continue
+                    </button> 
+                <!-- </form> -->
+                <!-- <form method="post" action="cancel"> -->
+                    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                        Cancel
+                    </button>
+                </form>
+            </div> 
+  
+    
+        </div>
+
+       
+    </div>
+</div>
+{% endblock %}
