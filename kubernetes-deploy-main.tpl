@@ -26,6 +26,11 @@ spec:
                         secretKeyRef:
                             name: basic-auth
                             key: password
+                  - name: DIRECT_LINE_SECRET
+                    valueFrom:
+                        secretKeyRef:
+                            name: crds-chatbot-api-key-secret
+                            key: DIRECT_LINE_SECRET
                 ports:
                   - containerPort: 3000
 
