@@ -1,0 +1,48 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="check-answers" method="post">
+            {% else %}
+            <form class="form" action="check-answers" method="post">
+                    {% endif %}
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                <h1 class="govuk-fieldset__heading">
+                                    <span class="govuk-caption-l">Add appearance information</span>
+                                    Is there tagged bail on the warrant?
+                                </h1>
+                            </legend>
+                            <div class="govuk-radios" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="tagged-bail" name="appearance[tagged-bail]" value="Yes" type="radio" data-aria-controls="conditional-tagged-bail" {% if data.appearance['tagged-bail'] %}{% if data.appearance['tagged-bail'].includes('Yes') %}checked{% endif %}{% endif %}>
+                                    <label class="govuk-label govuk-radios__label" for="tagged-bail">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-tagged-bail">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label" for="appearance[tagged-bail]">
+                                            Number of days
+                                        </label>
+                                        <input class="govuk-input govuk-input--width-3" id="tagged-bail-days" name="appearance[tagged-bail]" type="number" {% if data.appearance['tagged-bail'] %}{% if data.appearance['tagged-bail'].includes('Yes') %}value="{{ data.appearance['tagged-bail'] | last }}" {% endif %}{% endif %}>
+                                    </div>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="tagged-bail-2" name="appearance[tagged-bail]" type="radio" value="None" {% if data.appearance['tagged-bail'] %}{% if data.appearance['tagged-bail'].includes('None') %}checked{% endif %}{% endif %}>
+                                    <label class="govuk-label govuk-radios__label" for="tagged-bail-2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <button class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+                </form>
+    </div>
+</div>
+{% endblock %}

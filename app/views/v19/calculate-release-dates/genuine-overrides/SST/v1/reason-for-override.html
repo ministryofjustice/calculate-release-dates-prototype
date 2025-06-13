@@ -1,0 +1,122 @@
+{% extends "../../../../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="../../../../release-dates" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro --> 
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds"> 
+   
+      <div class="govuk-form-group">
+
+        <fieldset class="govuk-fieldset" aria-describedby="calculationReasonId-hint">
+        
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+
+                  <span class="govuk-caption-xl">Override a calculated date</span>
+                  Select the reason for the override
+                </h1>
+            </legend>
+ 
+           
+            <div class="govuk-radios" data-module="govuk-radios">
+                  
+                  
+                  
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="calculationReasonId-3" name="calculationReasonId" type="radio" value="3" data-qa="reasonRadio-3">
+                <label class="govuk-label govuk-radios__label" for="calculationReasonId-3">
+                  To record cross-border section release dates
+                </label> 
+            </div>
+
+              <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="calculationReasonId-3" name="calculationReasonId" type="radio" value="3" data-qa="reasonRadio-3">
+                  <label class="govuk-label govuk-radios__label" for="calculationReasonId-3">
+                    To record 'Power to detain'
+                  </label> 
+              </div>
+
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="calculationReasonId-3" name="calculationReasonId" type="radio" value="3" data-qa="reasonRadio-3">
+                <label class="govuk-label govuk-radios__label" for="calculationReasonId-3">
+                  To record an ERS (Early release scheme) breach
+                </label> 
+              </div> 
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="calculationReasonId-3" name="calculationReasonId" type="radio" value="3" data-qa="reasonRadio-3">
+                <label class="govuk-label govuk-radios__label" for="calculationReasonId-3">
+                  To add release dates from a previous booking
+                <!-- <div id="signIn-hint" class="govuk-hint govuk-!-margin-bottom-0">
+                  For example, a SLED, LED or TUSED
+                </div> -->
+                </label> 
+                
+            </div> 
+                      
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="calculationReasonId" name="calculationReasonId" type="radio" value="1" data-qa="reasonRadio-1">
+              <label class="govuk-label govuk-radios__label" for="calculationReasonId">
+                There are misaligned court documents
+                <!-- <div id="signIn-hint" class="govuk-hint govuk-!-margin-bottom-0">
+                  For example, order of imprisonment or warrant doesn't match trial record sheet
+                </div> -->
+              </label> 
+          </div>
+              
+          <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="calculationReasonId-2" name="calculationReasonId" type="radio" value="2" data-qa="reasonRadio-2">
+              <label class="govuk-label govuk-radios__label" for="calculationReasonId-2">
+                The calculation includes unsupported sentences
+                <!-- <div id="signIn-hint" class="govuk-hint govuk-!-margin-bottom-0">
+                  Such as EDS 100 and SDS Torera part 2 & 3
+                </div> -->
+              </label> 
+          </div>
+
+              <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="calculationReasonId-11" name="calculationReasonId" type="radio" value="11" data-qa="reasonRadio-11" aria-controls="conditional-calculationReasonId-11" aria-expanded="false">
+                  <label class="govuk-label govuk-radios__label" for="calculationReasonId-11">
+                  Other
+                  <!-- <div id="signIn-hint" class="govuk-hint govuk-!-margin-bottom-0">
+                    This includes development bugs or issues in the service
+                  </div> -->
+                  </label> 
+              </div>
+              
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-calculationReasonId-11">       
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="other-reason-description">
+                          Please enter the reason for this override
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="other-reason-description" name="otherReasonDescription" type="string" autocomplete="string"> 
+                  </div>  
+              </div> 
+              
+          </div> 
+        </fieldset> 
+
+    <input type="hidden" name="_csrf" value="ijUvXjJJ-cnFaw1jmM3mPKVq1y8JyrPCB4DQ"> 
+ 
+    <div class="govuk-button-group govuk-!-margin-top-4">
+      <form method="post" action="which-prison">
+          <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+              Continue
+          </button>
+      </form>
+
+      <form method="post" action="cancel">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Cancel
+          </button>
+      </form>
+
+    </div>
+  </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+
+    <div id="ViewRemandPage">
+        <a href="../index.html" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+                    <h1 class="govuk-heading-l"><span class="govuk-caption-xl">Adjustments</span>Remand overview</h1> 
+
+                    <!-- <div id="viewRemandSummary" class="">
+ 
+                        <table class="govuk-table">
+                            <caption class="govuk-table__caption govuk-table__caption--m">Remand summary</caption>
+                            <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Periods of remand</th>
+                                <th scope="col" class="govuk-table__header">Days</th>
+                            </tr>
+                            </thead>
+                            <tbody id="R-summary" class="govuk-table__body">
+
+                            </tbody>
+                            <tfoot>
+                            <tr class="govuk-table__row">
+                                <th id="" scope="row" class="govuk-table__header">Total days on remand</th>
+                                <td id="TotalRemandDays" class="govuk-table__cell"></td>
+                            </tr>
+                            </tfoot>
+                        </table> 
+                    </div>
+                    <div id="RemandPeriodListContainer">
+
+                    </div>  -->
+                    <div class="govuk-inset-text">
+                        Unused deductions have not been calculated - <a class="govuk-link" href="#">review remand and tagged bail to calculated</a>.
+                      </div>
+
+                    <div class="govuk-summary-card remand">
+                        <div class="govuk-summary-card__title-wrapper ">
+                            <h2 class="govuk-summary-card__title">From 11 January 2023 to 13 January 2023</h2>
+                            <ul class="govuk-summary-card__actions">
+                                <li class="govuk-summary-card__action"> <a id="remand${record.caseNo}" data-caseNo="${record.caseNo}" class="govuk-link edit-link" href="edit-tagged-bail.html">
+                                    Edit<span class="govuk-visually-hidden"> remand</span>
+                                </a>
+                                </li>
+                                <li class="govuk-summary-card__action"> <a class="govuk-link delete-link" href="delete-tagged-bail.html" data-caseNo="${record.caseNo}">
+                                    Delete<span class="govuk-visually-hidden"> remand</span>
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-summary-card__content">
+                            <dl class="govuk-summary-list">
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Offences
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+
+                                        {% for courtCase in data.courtCases | reverse %}
+                                        {% set lastAppearance = courtCase.appearances | last %}
+                                        {% set courtCaseIndex = loop.revindex0 %}  
+                                        {% for sentence in lastAppearance.sentences %}
+                                        {% if sentence['remanded'] == 'true' %}
+                                        <div class="govuk-!-margin-bottom-3">
+                                           <b>{{ sentence['offence-name'] }} </b>
+                                            <br><span>Committed on {{ sentence['offence-start-date-day'] }}/{{ sentence['offence-start-date-month'] }}/{{ sentence['offence-start-date-year'] }}</span>
+                                            <br><span>Heard at {{ lastAppearance['court-name'] }}</span>
+                                        </div>
+                                        {% else %}
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endfor %}
+                                    </dd>
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Days
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                       3
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                    <a href="enter-remand.html" class="govuk-button" data-module="govuk-button">
+                        Add new
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/add-remand-mvp.js"></script>
+{% endblock %}

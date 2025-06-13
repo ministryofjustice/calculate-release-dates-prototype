@@ -1,0 +1,137 @@
+{% extends "../../includes/layouts/template-no-identity-bar.html" %}
+{% block content %}
+<script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+
+<style>
+  #webchat .webchat__bubble--from-user p {
+    color: white !important;
+  }
+
+  .chat-container {
+    border: 1px solid #b1b4b6;
+    background-color: #ffffff;
+    padding: 15px;
+  }
+
+  .webchat__send-box {
+    height: auto;
+    padding: 10px 0;
+    background-color: #ffffff;
+    border: none;
+  }
+
+  .webchat__send-box input {
+    font-size: 1.25rem;
+    font-family: "GDS Transport", Arial, sans-serif;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b1b4b6;
+    border-radius: 0;
+  }
+
+  .webchat__send-button svg,
+  .webchat__attachment-icon__icon {
+    width: 28px;
+    height: 28px;
+  }
+</style>
+
+<div class="moj-width-container govuk-!-margin-top-6">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="moj-width-container">
+        <a href="calculation-reason" class="govuk-back-link">Back</a>
+      </div>
+
+      <h1 class="govuk-heading-l govuk-!-margin-top-6">
+        <span class="govuk-caption-l">Calculate release dates virtual assistant</span>
+        Ask for help 
+      </h1>
+
+      <div class="chat-container">
+        <div id="webchat" role="main" style="height: 500px;"></div>
+      </div>
+
+      <script>
+        const styleSet = window.WebChat.createStyleSet({
+          bubbleFromUserBackground: '#1d70b8',
+          bubbleFromUserBorderColor: '#1d70b8',
+          bubbleFromUserTextColor: '#ffffff',
+          bubbleBorderRadius: 4,
+          bubbleBackground: '#ffffff',
+          bubbleTextColor: '#0b0c0c',
+          backgroundColor: '#f3f2f1',
+          primaryFont: "'GDS Transport', Arial, sans-serif",
+          suggestedActionBackgroundColor: '#ffffff',
+          suggestedActionTextColor: '#1d70b8',
+          suggestedActionBorderColor: '#1d70b8',
+          paddingRegular: 10,
+          hideUploadButton: false
+        });
+
+        async function fetchToken() {
+          const response = await fetch('/api/token');
+          const data = await response.json();
+          return data.token;
+        }
+
+        async function renderChat() {
+          const token = await fetchToken();
+          const userId = 'user-' + Date.now();
+
+          const directLine = window.WebChat.createDirectLine({ token });
+
+          window.WebChat.renderWebChat({
+            directLine,
+            styleSet,
+            userID: userId,
+            sendTypingIndicator: true
+          }, document.getElementById('webchat'));
+
+          // Trigger welcome message
+          directLine.postActivity({
+            type: 'event',
+            name: 'startConversation',
+            from: { id: userId }
+          }).subscribe(
+            id => console.log('Trigger sent with ID:', id),
+            error => console.error('Error sending trigger:', error)
+          );
+        }
+
+        function resetChat() {
+          const container = document.querySelector('.chat-container');
+          while (container.firstChild) {
+            container.removeChild(container.firstChild);
+          }
+
+          const newWebchat = document.createElement('div');
+          newWebchat.id = 'webchat';
+          newWebchat.setAttribute('role', 'main');
+          newWebchat.style.height = '500px';
+          container.appendChild(newWebchat);
+
+          renderChat();
+        }
+
+        // Initial render
+        renderChat();
+      </script>
+
+      <div class="govuk-!-margin-top-6">
+        <h2 class="govuk-heading-m">Help improve this service</h2>
+        <div class="govuk-body">
+          <span>This is a new service. Your feedback will help make it better. To give feedback you can:</span>
+          <ul class="govuk-list govuk-!-margin-top-2">
+            <li><a href="">Complete a short survey</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <button class="govuk-button govuk-button--secondary govuk-!-margin-top-4" onclick="resetChat()">Reset Chat</button>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

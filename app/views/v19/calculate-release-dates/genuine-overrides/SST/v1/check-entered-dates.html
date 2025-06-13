@@ -1,0 +1,175 @@
+{% extends "../../../../../includes/layouts/template-linear.html" %} {% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+  <a href="check-sentence-and-offence-information" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">  
+  
+
+              <h1 class="govuk-heading-xl">
+
+              <span class="govuk-caption-xl">Override a calculated date</span>
+              Review the dates calculated by CRDS
+              </h1> 
+
+            <dl class="govuk-summary-list govuk-!-margin-top-6">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  SED (Sentence expiry date)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  21 August 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="enter-SED">Edit<span class="govuk-visually-hidden"> name</span></a>
+          </li>
+          
+        <li class="govuk-summary-list__actions-list-item">
+            <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a>
+            </li>
+                </dd>
+              </div>  
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  LED (Licence expiry date)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  21 August 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="enter-LED">Edit<span class="govuk-visually-hidden"> name</span></a>
+          </li>
+          
+        <li class="govuk-summary-list__actions-list-item">
+           <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a>
+          </li>
+                </dd>
+              </div> 
+
+              {% if data['crdEdited'] == 'true' %}
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  CRD (Conditional release date)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  25 May 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="enter-CRD">Edit<span class="govuk-visually-hidden"> name</span></a>
+          </li>
+          
+        <li class="govuk-summary-list__actions-list-item">
+           <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a>
+          </li>
+
+                </dd>
+              </div> 
+
+              {% else %}
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  CRD (Conditional release date)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  24 May 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="enter-CRD">Edit<span class="govuk-visually-hidden"> name</span></a>
+          </li>
+          
+        <li class="govuk-summary-list__actions-list-item">
+           <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a>
+          </li>
+
+                </dd>
+              </div> 
+
+              {% endif %}
+
+              {% if data['hdcedAdded'] == 'true' %}
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  HDCED (Home detention curfew eligibility date)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  24 May 2026
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+        <li class="govuk-summary-list__actions-list-item">
+                  <a class="govuk-link" href="enter-HDCED">Edit<span class="govuk-visually-hidden"> name</span> </a>
+                  </li>
+                  
+        <li class="govuk-summary-list__actions-list-item">
+           <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a>
+           </li>
+                </dd>
+              </div> 
+              {% else %}
+
+              {% endif %}
+
+              {% if data['tusedRemoved'] == 'true' %}
+
+              {% else %}
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  TUSED (Top-up supervision expiry date)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  24 May 2026
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                <li class="govuk-summary-list__actions-list-item">
+                  <a class="govuk-link" href="enter-TUSED">Edit<span class="govuk-visually-hidden"> name</span> </a>
+                  </li>
+                  
+                  <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link" href="are-you-sure-delete-TUSED">Remove<span class="govuk-visually-hidden"> </span></a>
+                    </li>
+                </dd>
+              </div> 
+              {% endif %}
+          
+
+             
+            </dl> 
+
+            <a class="govuk-link govuk-body" href="select-dates">Add another release date</a>
+
+          <h3 class="govuk-heading-m govuk-!-margin-top-3">Confirm and save to NOMIS</h3>
+          <p class="govuk-body">By saving this calculation, you are confirming that, to the best of your knowledge, this calculation is correct. This is based on the information supplied by the OMU at the time of this override. </p>
+          
+              <div class="govuk-button-group">
+                  <form method="post" action="calculation-complete?toShow=datesOverridden">
+                      <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                          Confirm and save
+                      </button>
+                  </form> 
+
+                  <form method="post" action="cancel">
+                    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                        Cancel
+                    </button>
+                </form>
+              </div>
+          <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
+          </div>
+        </div>
+      </div>
+  </div> 
+  
+{% endblock %}

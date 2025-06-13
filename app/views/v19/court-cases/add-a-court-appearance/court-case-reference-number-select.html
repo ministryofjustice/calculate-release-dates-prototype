@@ -1,0 +1,37 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+                <form class="form" action="/{{data.prototypeVersion}}/new-court-case-ref" method="post">
+            <div class="govuk-form-group"> 
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add appearance information</span>
+                            Is the case reference {{ data.courtCases[data.courtCaseIndex].appearances.at(-1)['court-case-ref'] }}?
+                        </h1>
+                    </legend>
+                    <div class="govuk-hint">This is the case reference used in the previous appearance.</div>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="case-ref-select" name="appearance[case-ref-select]" type="radio" value="Yes">
+                            <label class="govuk-label govuk-radios__label" for="case-ref-select">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="case-ref-select-2" name="appearance[case-ref-select]" type="radio" value="No">
+                            <label class="govuk-label govuk-radios__label" for="case-ref-select-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

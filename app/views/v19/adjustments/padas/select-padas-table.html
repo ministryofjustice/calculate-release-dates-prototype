@@ -1,0 +1,172 @@
+{% extends "../../template.html" %}
+{% set nav = true %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="">
+    <div class="">
+        <a href="intercept-page-changes.html" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper offence-outcome " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="option-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                <h1 class="govuk-fieldset__heading">
+                                    <span class="govuk-caption-xl">Adjustments</span>
+                                    Select PADAs
+                                </h1>
+                            </legend>
+                            <p>
+                                Select the PADAs that apply to the prisoner's sentence calculation.
+                            </p>
+                            <p class="govuk-!-margin-bottom-6">The rules for PADAs can be found in the <a href="#">policy framework</a>.</p>
+
+                            <div class="pada-container govuk-!-padding-6 govuk-!-margin-bottom-6">
+                                <table class="govuk-table">
+                                    <div class=" govuk-checkboxes__item govuk-checkboxes--medium ">
+                                        <input type="checkbox" class="govuk-checkboxes__input" id="mountain-elbrus" value="elbrus">
+                                        <label class="govuk-label govuk-checkboxes__label" for="mountain-elbrus">
+                                            <span class="govuk-visually-hidden">Select 000345678</span>
+                                            <span>Date charge proved 27 Dec 2020 at Kirkham prison (HMP)</span>
+                                        </label>
+                                    </div>
+                                    <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+                                    <thead class="govuk-table__head">
+                                     <td class="govuk-table__row">
+                                            <div class="govuk-tag govuk-tag--purple">Prospective</div>
+                                            <div class="govuk-tag govuk-tag--green">Awarded</div>
+                                         </td>
+                                         <tr>
+                                            <th class="govuk-table__header" scope="col">Charge number</th>
+                                            <th class="govuk-table__header govuk-!-width-one-third" scope="col">To be served</th>
+                                           <!--<th class="govuk-table__header" scope="col">Heard at</th>
+                                            <th class="govuk-table__header" scope="col">Status</th>-->
+                                            <th class="govuk-table__header govuk-!-text-align-right" scope="col">Days</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="govuk-table__body">
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">
+                                                3812489
+                                            </td>
+                                            <td class="govuk-table__cell">
+                                                Forthwith
+                                            </td>
+                                           <!-- <td class="govuk-table__cell  ">
+                                                Nottingham prison
+                                            </td>-->
+                                            <!--<td class="govuk-table__cell  ">
+                                                <span class="govuk-tag govuk-tag--purple">Prospective</span>
+                                            </td>-->
+                                            <!-- Days -->
+                                            <td class="govuk-table__cell govuk-!-text-align-right  ">6 </td>
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">
+                                                3812491
+                                            </td>
+                                            <td class="govuk-table__cell">
+                                                Concurrent
+                                            </td>
+                                              <!-- <td class="govuk-table__cell  ">
+                                                Nottingham prison
+                                            </td>-->
+                                           <!--<td class="govuk-table__cell  ">
+                                                <span class="govuk-tag govuk-tag--purple">Prospective</span>
+                                            </td>-->
+                                            <!-- Days -->
+                                            <td class="govuk-table__cell govuk-!-text-align-right  ">6 </td>
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">
+                                                3812577
+                                            </td>
+                                            <td class="govuk-table__cell">
+                                                Concurrent
+                                            </td>
+                                              <!-- <td class="govuk-table__cell  ">
+                                                Nottingham prison
+                                            </td>-->
+                                           <!--<td class="govuk-table__cell  ">
+                                                <span class="govuk-tag govuk-tag--purple">Prospective</span>
+                                            </td>-->
+                                            <!-- Days -->
+                                            <td class="govuk-table__cell govuk-!-text-align-right  ">6 </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                               
+                            </div>
+                            <div class="pada-container govuk-!-padding-6 govuk-!-margin-bottom-6">
+                                <table class="govuk-table">
+                                     <div class=" govuk-checkboxes__item govuk-checkboxes--medium ">
+                                        <input type="checkbox" class="govuk-checkboxes__input" id="mountain-elbrus" value="elbrus">
+                                        <label class="govuk-label govuk-checkboxes__label" for="mountain-elbrus">
+                                            <span class="govuk-visually-hidden">Select 000345678</span>
+                                            <span>Date charge proved 27 Dec 2020 at Kirkham prison (HMP)</span>
+                                        </label>
+                                    </div>
+                                    <thead class="govuk-table__head">
+                                        <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+                                        <td class="govuk-table__row">
+                                            <span class="govuk-tag govuk-tag--purple">Prospective</span>
+                                         </td>
+                                         
+                                    <tr>
+                                        <th class="govuk-table__header" scope="col">Charge number</th>
+                                        <th class="govuk-table__header govuk-!-width-one-third" scope="col">To be served</th>
+                                       <!-- <th class="govuk-table__header" scope="col">Heard at</th>
+                                        <th class="govuk-table__header" scope="col">Status</th>-->
+                                        <th class="govuk-table__header govuk-!-text-align-right" scope="col">Days</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="govuk-table__body">
+                                    <tr class="govuk-table__row">
+                                        <td class="govuk-table__cell">
+                                            3812489
+                                        </td>
+                                        <td class="govuk-table__cell">
+                                            Forthwith
+                                        </td>
+                                      <!--  <td class="govuk-table__cell  ">
+                                            Nottingham prison
+                                        </td>
+                                        <td class="govuk-table__cell  ">
+                                            <span class="govuk-tag govuk-tag--purple">Prospective</span>
+                                        </td>-->
+                                        <!-- Days -->
+                                        <td class="govuk-table__cell govuk-!-text-align-right  ">6 </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                               
+                            </div>
+
+
+                            <div class=" govuk-!-margin-left-6 govuk-checkboxes__item govuk-checkboxes--small  ">
+                                <input type="checkbox" class=" govuk-checkboxes__input" id="mountain-elbrus" value="elbrus">
+                                <label class="govuk-label govuk-checkboxes__label" for="mountain-elbrus">
+                                    <span class="govuk-visually-hidden">Select 000345678</span>
+                                    <span>None of these apply</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="govuk-button-group ">
+                        <a href="check-your-answers-6" id="review-remand-button" class="govuk-button" data-module="govuk-button">
+                            Continue
+                        </a>
+                        <a href="index-1.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </a>
+                    </div>
+
+            </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/adjustments.js"></script>
+{% endblock %}
