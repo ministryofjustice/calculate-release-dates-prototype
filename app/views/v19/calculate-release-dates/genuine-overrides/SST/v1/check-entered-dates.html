@@ -14,6 +14,9 @@
               <span class="govuk-caption-xl">Override a calculated date</span>
               Review the dates calculated by CRDS
               </h1> 
+
+              <dl class="govuk-summary-list govuk-!-margin-top-6">
+
               {% if data['sedEdited'] == 'true' %}
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -37,7 +40,6 @@
               </div> 
 
               {% else %}
-            <dl class="govuk-summary-list govuk-!-margin-top-6">
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                   SED (Sentence expiry date)
@@ -57,7 +59,6 @@
             </li>
                 </dd>
               </div>  
-
 
               {% endif %}
 
