@@ -30,41 +30,7 @@
                 </div>
                 <div class="govuk-summary-card__content" id="release-dates">
                 
-                    {% if data['scenario'] == '1'  %} 
-                    <dl class="govuk-summary-list release-dates-list">
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                SLED
-                                <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                <p class="govuk-body">Thursday, 26 June 2025</p>
-                            </dd>
-                        </div> 
-    
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                CRD
-                                <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
-                            </dt>
-                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                                <p class="govuk-body">Saturday, 24 May 2025</p><p class="govuk-body govuk-hint govuk-!-font-size-16"><a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/government/publications/discretionary-fridaypre-bank-holiday-release-scheme-policy-framework" data-qa="CRD-release-date-hint-0">The Discretionary Friday/Pre-Bank Holiday Release Scheme Policy applies to this release date.</a></p>
-
-                            </dd>
-                        </div>
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                TUSED
-                                <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
-                            </dt>
-                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                                <p class="govuk-body">Sunday, 24 May 2026</p>
-                            </dd>
-                        </div>
-                    </dl>
-
-                    {% elif data['scenario'] == '2'  %} 
-
+                    {% if data['toShow'] == 'ualAdded' or data['toShow'] == 'calc2Complete'  %} 
                     <dl class="govuk-summary-list release-dates-list">
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
@@ -78,8 +44,8 @@
     
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                CRD
-                                <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
+                                PRRD
+                                <p class="govuk-!-font-size-16 govuk-hint">Post recall release date</p>
                             </dt>
                             <dd class="govuk-summary-list__value govuk-!-padding-top-4">
                                 <p class="govuk-body">Tuesday, 5 March 2025</p>
@@ -103,18 +69,17 @@
                                 <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
                             </dt>
                             <dd class="govuk-summary-list__value">
-                                <p class="govuk-body">Thursday, 26 June 2025</p>
+                                <p class="govuk-body">Tuesday, 4 March 2025</p>
                             </dd>
                         </div> 
     
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                CRD
-                                <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
+                                PRRD
+                                <p class="govuk-!-font-size-16 govuk-hint">Post recall release date</p>
                             </dt>
                             <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                                <p class="govuk-body">Saturday, 24 May 2025</p><p class="govuk-body govuk-hint govuk-!-font-size-16"><a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/government/publications/discretionary-fridaypre-bank-holiday-release-scheme-policy-framework" data-qa="CRD-release-date-hint-0">The Discretionary Friday/Pre-Bank Holiday Release Scheme Policy applies to this release date.</a></p>
-
+                                <p class="govuk-body">Tuesday, 4 March 2025</p>
                             </dd>
                         </div>
                         <div class="govuk-summary-list__row">
@@ -123,15 +88,14 @@
                                 <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
                             </dt>
                             <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                                <p class="govuk-body">Sunday, 24 May 2026</p>
+                                <p class="govuk-body">Monday, 4 August 2025</p>
                             </dd>
                         </div>
                     </dl>
                     {% endif %}  
                 </div>
             </div> 
-
-
+  
             <details class="govuk-details govuk-!-margin-bottom-2" >
                 <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text">
@@ -156,56 +120,39 @@
                     sentences. The final release date comes from the sentence or term with the latest release date.
                 </div>
             </details> 
-
-            <div class="govuk-form-group govuk-!-margin-top-6">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                    <h1 class="govuk-fieldset__heading">
-                      Do you agree with the release dates?
-                    </h1>
-                  </legend>
-                  <div class="govuk-radios" data-module="govuk-radios">
-
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="sentencesReplaced-2" name="sentencesReplaced" type="radio" value="
-                        Yes, this offence was replaced with Actual Bodily Harm (Section 47) committed on 29 October 2023">
-                        <label class="govuk-label govuk-radios__label" for="sentencesReplaced-2">
-                          Yes, save the calculation to NOMIS
-                        </label>
-                      </div> 
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="sentencesReplaced" name="sentencesReplaced" type="radio" value="No, this offence has not been replaced">
-                      <label class="govuk-label govuk-radios__label" for="sentencesReplaced">
-                        No, I do not agree with the release dates
-                      </label>
-                    </div>
-
-                    <!-- <div class="govuk-radios__divider">or</div> -->
-
-                  </div>
-                </fieldset>
-              </div>
-
-
-     
-              <div class="govuk-button-group"> 
-
-                <form method="post" action="request-specialist-support">
-                    <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
-                        Continue
-                    </button> 
-                <!-- </form> -->
-                <!-- <form method="post" action="cancel"> -->
-                    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                        Cancel
-                    </button>
-                </form>
-            </div> 
-  
     
+            <div class="govuk-!-margin-top-6">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <h3 class="govuk-heading-m">Confirm the dates are correct</h3>
+                        <p class="govuk-body">By continuing you are confirming that, to the best of your knowledge, the calculation
+                            is correct.</p>
+                        
+                            <div class="govuk-button-group">
+                                <form method="post" action="enter-approved-dates-question">
+                                    <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                                        Confirm and continue
+                                    </button>
+                                </form>
+
+                                <form method="post" action="cancel">
+                                    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                                        Cancel
+                                    </button>
+                                </form>
+                            </div>
+                        <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
+                    </div>
+                </div>
+            </div>
         </div>
 
-       
+        <div class="govuk-grid-column-one-third"> 
+            <aside class="app-related" role="complementary" style="border-top: 4px solid #1d70b8; padding-top:15px">
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-2" id="-title">Need help with a calculation?</h2>
+                    <p class="govuk-body-m">If you think the calculation is wrong <a href="genuine-overrides/omu/request-specialist-support">contact the specialist support team</a>.</p>
+            </aside>
+        </div>
     </div>
 </div>
 {% endblock %}
