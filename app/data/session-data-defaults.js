@@ -224,9 +224,9 @@ module.exports = {
                             "sentence-type": "SDS (Standard Determinate Sentence)",
                             "sentence-length-years": "0",
                             "sentence-length-months": "0",
-                            "sentence-length-weeks": "18",
+                            "sentence-length-weeks": "6",
                             "sentence-length-days": "0",
-                            "consecutive-concurrent": "Forthwith",
+                            "consecutive-concurrent": "Concurrent",
                             "status": "active"
                         },
                         {
@@ -253,7 +253,7 @@ module.exports = {
                             "sentence-length-months": "0",
                             "sentence-length-weeks": "6",
                             "sentence-length-days": "0",
-                            "consecutive-concurrent": "Concurrent to count 1",
+                            "consecutive-concurrent": "Concurrent",
                             "status": "inactive"
                         }
                     ]
@@ -391,10 +391,10 @@ module.exports = {
                             "outcome": "Imprisonment",
                             "sentence-type": "SDS (Standard Determinate Sentence)",
                             "sentence-length-years": "0",
-                            "sentence-length-months": "6",
+                            "sentence-length-months": "18",
                             "sentence-length-weeks": "0",
                             "sentence-length-days": "0",
-                            "consecutive-concurrent": "Concurrent to count 1",
+                            "consecutive-concurrent": "Consecutive to count 1",
                             "status": "active"
                         },
                         {
@@ -421,7 +421,7 @@ module.exports = {
                             "sentence-length-months": "6",
                             "sentence-length-weeks": "0",
                             "sentence-length-days": "0",
-                            "consecutive-concurrent": "Concurrent to count 1",
+                            "consecutive-concurrent": "Consecutive to count 1",
                             "status": "active"
                         },
                         {
