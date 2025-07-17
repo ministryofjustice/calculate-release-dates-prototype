@@ -1,4 +1,4 @@
-{% extends "../../includes/layouts/template-linear.html" %} {% block content %}
+{% extends "../../../includes/layouts/template-linear.html" %} {% block content %}
 <!-- Back link -->
 <div class="moj-width-container">
   <a href="select-which-approved-dates" class="govuk-back-link">Back</a>
@@ -10,26 +10,26 @@
 
         <div class="govuk-form-group">
 
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="APD-hint">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="HDCAD-hint">
 
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
 
               <h1 class="govuk-fieldset__heading">
-                Enter the APD (Approved parole date)
+                Enter the HDCAD (Home detention curfew approved date)
               </h1>
 
             </legend> 
 
-            <div class="govuk-date-input" id="APD">
+            <div class="govuk-date-input" id="HDCAD">
  
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="APD-day">
+                  <label class="govuk-label govuk-date-input__label" for="HDCAD-day">
                     Day
                   </label>
 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="APD-day" name="day"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="HDCAD-day" name="day"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -37,12 +37,12 @@
 
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="APD-month">
+                  <label class="govuk-label govuk-date-input__label" for="HDCAD-month">
                     Month
                   </label>
 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="APD-month" name="month"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="HDCAD-month" name="month"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -50,11 +50,11 @@
 
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="APD-year">
+                  <label class="govuk-label govuk-date-input__label" for="HDCAD-year">
                     Year
                   </label> 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="APD-year" name="year"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="HDCAD-year" name="year"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -68,12 +68,11 @@
         </div> 
 
         <input type="hidden" name="_csrf" value="spFxF0sq-CzqH8QHtGwIF7luXgK5KjaLm0bM">
-        <input type="hidden" name="dateType" value="APD"> 
+        <input type="hidden" name="dateType" value="HDCAD"> 
 
        
-               
         <div class="govuk-button-group">
-          <form method="post" action="enter-HDCAD">
+          <form method="post" action="enter-ROTL">
               <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                   Continue
               </button>

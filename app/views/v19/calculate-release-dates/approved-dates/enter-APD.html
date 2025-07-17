@@ -1,4 +1,4 @@
-{% extends "../../includes/layouts/template-linear.html" %} {% block content %}
+{% extends "../../../includes/layouts/template-linear.html" %} {% block content %}
 <!-- Back link -->
 <div class="moj-width-container">
   <a href="select-which-approved-dates" class="govuk-back-link">Back</a>
@@ -10,26 +10,26 @@
 
         <div class="govuk-form-group">
 
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="ROTL-hint">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="APD-hint">
 
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
 
               <h1 class="govuk-fieldset__heading">
-                Enter the ROTL (Release on temporary licence)
+                Enter the APD (Approved parole date)
               </h1>
 
             </legend> 
 
-            <div class="govuk-date-input" id="ROTL">
+            <div class="govuk-date-input" id="APD">
  
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="ROTL-day">
+                  <label class="govuk-label govuk-date-input__label" for="APD-day">
                     Day
                   </label>
 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="ROTL-day" name="day"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="APD-day" name="day"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -37,12 +37,12 @@
 
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="ROTL-month">
+                  <label class="govuk-label govuk-date-input__label" for="APD-month">
                     Month
                   </label>
 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="ROTL-month" name="month"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="APD-month" name="month"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -50,11 +50,11 @@
 
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="ROTL-year">
+                  <label class="govuk-label govuk-date-input__label" for="APD-year">
                     Year
                   </label> 
 
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="ROTL-year" name="year"
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="APD-year" name="year"
                     type="number" inputmode="numeric">
 
                 </div>
@@ -68,11 +68,12 @@
         </div> 
 
         <input type="hidden" name="_csrf" value="spFxF0sq-CzqH8QHtGwIF7luXgK5KjaLm0bM">
-        <input type="hidden" name="dateType" value="ROTL"> 
+        <input type="hidden" name="dateType" value="APD"> 
 
        
+               
         <div class="govuk-button-group">
-          <form method="post" action="calculation-final-summary">
+          <form method="post" action="enter-HDCAD">
               <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                   Continue
               </button>
@@ -84,6 +85,7 @@
               </button>
           </form>
       </div>
+ 
     </div>
   </div>
 </div>

@@ -18,20 +18,54 @@
           <li>The release dates from your paper calculation</li>
         </ol> 
       </div> 
+
          
     <div class="govuk-button-group govuk-!-margin-top-4">
-      <form method="post" action="upload-warrants">
-          <button type="submit" data-prevent-double-click="true" class="govuk-button govuk-button--inverse" data-module="govuk-button" data-qa="submitReason">
-              Continue to upload documents
-          </button>
-      </form>
+      <button onclick="sendEmail()" class='govuk-button govuk-button--inverse'>
+        Submit a calculation override request
+      </button>
+      
+      <script>
+      function sendEmail() {
+        const subject = "CRDS Override Request";
+        const body = `
+      
+      Reason for override:
+      To record cross-border section release dates
+      
+      Reason for calculation:
+      Initial calculation
+      
+      Prisoner ID:
+      A11345
+      
+      Prison requesting the override: 
+      HMP Kirkham
 
-      <form method="post" action="cancel">
+      Requested release dates:
+      CRD 11/1/2024
+      SLED 11/7/2024
+      HDCED 11/7/2025
+
+      Additional information to support the request: 
+      I need help with this now. 
+
+      Please complete the following information to support your calculation override request:  
+      
+      1. Upload document to support the request (attach to this email)
+      
+      2. Confirm by entering 'I confirm' that you have included all of the necessary supporting information for the request:`;
+      
+        window.location.href = `mailto:crds-support@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      }
+      </script>
+      
+      
+      
+ 
           <button type="submit" class="govuk-button govuk-button--inverse" data-module="govuk-button">
               Cancel
-          </button>
-      </form> 
-   
+          </button> 
     </div>
   </div>
 

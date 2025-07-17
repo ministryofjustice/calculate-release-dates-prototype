@@ -115,3 +115,22 @@ router.get('/api/token', async (req, res) => {
   }
   
 });
+
+
+// Route for reconfirming manual release dates
+// routes.js
+
+module.exports = function (router) {
+  router.post('/v19/calculate-release-dates/manual-entry/check-previous-dates', function (req, res) {
+    const answer = req.body.reconfirmDatesQuestion;
+
+    if (answer === 'yes') {
+      res.redirect('/v19/calculate-release-dates/calculation-complete');
+    } else if (answer === 'no') {
+      res.redirect('/v19/calculate-release-dates/manual-entry/modify-previous-dates');
+    } else {
+      // fallback (e.g. if no option was selected)
+      res.redirect('/v19/calculate-release-dates/manual-entry/check-previous-dates');
+    }
+  });
+};
