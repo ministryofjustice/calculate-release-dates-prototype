@@ -502,6 +502,14 @@
 
                             </button>
                         </form>
+
+                        {% elif data['unsupported-journey'] == 'true' %}
+                        <form method="post" action="manual-entry/manual-reconfirm-intercept">
+                            <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                                Calculate release dates
+
+                            </button>
+                        </form>
  
                         {% else %}
                         <form method="post" action="calculation-summary">

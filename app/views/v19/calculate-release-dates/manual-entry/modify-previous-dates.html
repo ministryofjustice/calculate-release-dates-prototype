@@ -14,7 +14,7 @@
               <h1 class="govuk-heading-xl">
 
               <!-- <span class="govuk-caption-xl">Override a calculated date</span> -->
-              Confirm the dates are correct
+              Enter the dates from your paper calculation
               </h1> 
 
             <dl class="govuk-summary-list govuk-!-margin-top-6">
@@ -26,7 +26,12 @@
                   21 August 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span><br>  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a> -->
+                    <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> contact details</span></a>
+        </li>
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+        </li>
                 </dd>
               </div>  
               <div class="govuk-summary-list__row">
@@ -37,7 +42,12 @@
                   21 August 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span><br>  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a> -->
+                    <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> contact details</span></a>
+        </li>
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+        </li>
                 </dd>
               </div> 
               <div class="govuk-summary-list__row">
@@ -48,7 +58,12 @@
                   24 May 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span><br>  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a> -->
+                    <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="enter-CRD">Edit<span class="govuk-visually-hidden"> contact details</span></a>
+        </li>
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+        </li>
                 </dd>
               </div> 
               <div class="govuk-summary-list__row">
@@ -59,42 +74,22 @@
                   24 May 2026
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span><br>  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a> -->
+                    <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> contact details</span></a>
+        </li>
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="are-you-sure-delete-TUSED">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+        </li>
                 </dd>
               </div> 
             </dl> 
-            <div class="govuk-!-margin-top-6">  
-              <form action="/v19/calculate-release-dates/manual-entry/check-previous-dates" method="post">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                    <h1 class="govuk-fieldset__heading">
-                      Confirm if these dates are still correct
-                    </h1>
-                  </legend>
-                  <p class="govuk-body">If the dates are correct, they will be saved to NOMIS.</p>
-              
-                  <div class="govuk-radios" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="reconfirmDatesQuestion" name="reconfirmDatesQuestion" type="radio" value="yes"/>
-                      <label class="govuk-label govuk-radios__label" for="reconfirmDatesQuestion">
-                        Yes, all release dates are still correct
-                      </label>
-                      <!-- <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-                        If you agree with the dates that have been manually calculated, they will be saved in NOMIS.
-                      </div> -->
-                    </div>
-              
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="reconfirmDatesQuestion-2" name="reconfirmDatesQuestion" type="radio" value="no"/>
-                      <label class="govuk-label govuk-radios__label" for="reconfirmDatesQuestion-2">
-                        No, release dates are either missing or incorrect
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
+            <a class="govuk-link govuk-body" href="select-dates">Add another release date</a>
+            <h3 class="govuk-heading-m govuk-!-margin-top-4">Confirm and save to NOMIS</h3>
+            <p class="govuk-body">By saving this calculation you are confirming that, to the best of your knowledge, it is correct. These dates will be saved in NOMIS as a manual calculation.</p>
               
                
-        <div class="govuk-button-group govuk-!-margin-top-6"> 
+              <form action="../calculation-complete" method="post">
+        <div class="govuk-button-group govuk-!-margin-top-4"> 
               <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                   Continue
               </button> 
