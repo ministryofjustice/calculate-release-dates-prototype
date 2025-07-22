@@ -133,3 +133,20 @@ router.post('/v19/calculate-release-dates/manual-entry/check-previous-dates', fu
   }
 });
 
+
+// Route for reconfirming manual release dates
+// routes.js
+router.post('/v19/calculate-release-dates/genuine-overrides/omu/check-previous-dates', function (req, res) {
+  console.log('Form submitted:', req.body); // 🔍 Debug log
+
+  const answer = req.body.reconfirmOverrideDatesQuestion;
+
+  if (answer === 'yes') {
+    return res.redirect('/v19/calculate-release-dates/calculation-complete');
+  } else if (answer === 'no') {
+    return res.redirect('#');
+  } else {
+    return res.redirect('#');
+  }
+});
+
