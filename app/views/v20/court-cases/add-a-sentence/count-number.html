@@ -1,0 +1,102 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+  <div class="govuk-grid-column-two-thirds">
+    {% if (data.edit == 'true') or (data.postSaveEdit == 'true') %}
+    <form class="form" action="/{{data.prototypeVersion}}/persist-sentence?edit=true" method="post">
+      {% else %}
+      <form class="form" action="/{{data.prototypeVersion}}/count-number" method="post">
+        {% endif %}
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              {% if data['no-count'] == "true" %}
+              <h1 class="govuk-fieldset__heading">
+                <span class="govuk-caption-l">Add offences</span>
+                Enter the count number for {% if data.appearance.sentences == 0 %}the first offence{% else %} this offence{% endif %}
+              </h1>
+              <p class="govuk-body-l govuk-!-margin-top-2">{{ data.sentence['offence-name'] }} committed on {{
+                data.sentence['offence-start-date-day'] }}/{{ data.sentence['offence-start-date-month'] }}/{{
+                data.sentence['offence-start-date-month'] }}</p>
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                Count
+              </label>
+              <input class="govuk-input govuk-input--width-5" id="count-number" name="sentence[count-number]"
+                type="text" value="{{ data.sentence['count-number'] }}">
+              {% else %}
+              {% if data.postSaveEdit == 'true' %}
+              <h1 class="govuk-fieldset__heading">
+                <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{
+                  data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{
+                  data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }}</span>
+                Edit count number
+              </h1>
+              {% else %}
+              <h1 class="govuk-fieldset__heading">
+                <span class="govuk-caption-l">Add offences</span>
+                Is there a count number for {% if data.appearance.sentences == 0 %}the first offence{% else %}this offence{% endif %}?
+              </h1>
+              {% endif %}
+            </legend>
+            {% if (data.route == 'remand-to-sentence') and (data.path != "rts-new-offence") %}
+            <p class="govuk-body-l">{{ data.sentence['offence-name'] }} committed on {{
+              data.sentence['offence-start-date-day'] }}/{{ data.sentence['offence-start-date-month'] }}/{{
+              data.sentence['offence-start-date-year'] }}</p>
+            {% endif %}
+            <details class="govuk-details govuk-!-margin-top-2">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Why is this number important?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                Sometimes the offences are given a number on the warrant, which needs to be reflected in this service.
+                These are called count or offence numbers. Identifying the sentences can impact the accuracy of the
+                release dates.
+              </div>
+            </details>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="has-count-number" name="sentence[has-count-number]" type="radio"
+                  value="yes" data-aria-controls="conditional-count-number">
+                <label class="govuk-label govuk-radios__label" for="contact">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-count-number">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="count-number">
+                    Count number
+                  </label>
+                  <input class="govuk-input govuk-input--width-2" id="count-number" name="sentence[count-number]"
+                    type="number" spellcheck="false" autocomplete="off">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="has-count-number-2" name="sentence[has-count-number]"
+                  type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="has-count-number-2">
+                  No
+                </label>
+              </div>
+            </div>
+            {% endif %}
+          </fieldset>
+        </div>
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+            formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+            Save as a draft
+          </button>
+        </div>
+      </form>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% set showOffences = true %}
+    {% include "includes/templates/appearance-info.njk" %}
+  </div>
+</div>
+{% endblock %}

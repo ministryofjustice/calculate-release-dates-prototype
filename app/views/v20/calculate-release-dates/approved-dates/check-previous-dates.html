@@ -1,0 +1,84 @@
+{% extends "../../../includes/layouts/template-linear.html" %} {% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+  <a href="../../release-dates" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" action="modify-approved-dates">
+
+
+        <h1 class="govuk-heading-xl">
+
+          <span class="govuk-caption-xl">Add ADP, HDCAD and ROTL dates</span>
+          Confirm the calculated dates are correct
+        </h1>
+
+        <dl class="govuk-summary-list govuk-!-margin-top-6">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              SLED (Sentence and licence expiry date)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              21 August 2025
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span><br>  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a> -->
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              CRD (Conditional release date)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              24 May 2025
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span><br>  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a> -->
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              TUSED (Top-up supervision expiry date)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              24 May 2026
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span><br>  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a> -->
+            </dd>
+          </div>
+        </dl>
+
+
+        <h2 class="govuk-heading-m">
+          Confirm the calculated dates are correct
+        </h2>
+        <p>If the calculated dates are incorrect, cancel adding approved dates and review court case information. Once
+          fixed, calculate release dates and add approved dates.</p>
+
+
+        <div class="govuk-button-group govuk-!-margin-top-6">
+          <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button"
+            data-qa="submitReason">
+            Confirm and continue
+          </button>
+
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Cancel
+          </button>
+        </div>
+
+      </form>
+      <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+{% endblock %}

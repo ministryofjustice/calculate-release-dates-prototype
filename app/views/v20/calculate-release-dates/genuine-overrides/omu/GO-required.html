@@ -1,0 +1,73 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %} 
+<!-- Back link -->
+<div class="moj-width-container">
+  <a href="check-sentence-and-offence-information" class="govuk-back-link">Back</a>
+</div> 
+<div class="moj-interruption-card">
+    <div class="moj-interruption-card__content">
+      <h1 class="govuk-heading-l moj-interruption-card__heading" style="color: #ffff;">The release dates might need to be overridden </h1>
+      <div class="govuk-body-l moj-interruption-card__body">
+        <p>The reason you provided suggests that the dates might need to be overridden. </p> 
+        <p>To request this, you need to provide some additional information to help with the request.</p> 
+        <p>Release dates will not be saved until the request is processed.</p> 
+        <h2 class="govuk-heading-m moj-interruption-card__heading" style="color: #ffff;">You will need to provide</h2> 
+        <ol class="govuk-list govuk-list--number govuk-body-l" style="color: #ffff;">
+          <li>Warrants and other documents supporting the calculation</li>
+          <li>Additional information to support the SST (Specialist support team) with the request</li>
+          <li>The release dates from your paper calculation</li>
+        </ol> 
+      </div> 
+
+         
+    <div class="govuk-button-group govuk-!-margin-top-4">
+      <button onclick="sendEmail()" class='govuk-button govuk-button--inverse'>
+        Submit a calculation override request
+      </button>
+      
+      <script>
+      function sendEmail() {
+        const subject = "CRDS Override Request";
+        const body = `
+      
+      Reason for override:
+      To record cross-border section release dates
+      
+      Reason for calculation:
+      Initial calculation
+      
+      Prisoner ID:
+      A11345
+      
+      Prison requesting the override: 
+      HMP Kirkham
+
+      Requested release dates:
+      CRD 11/1/2024
+      SLED 11/7/2024
+      HDCED 11/7/2025
+
+      Additional information to support the request: 
+      I need help with this now. 
+
+      Please complete the following information to support your calculation override request:  
+      
+      1. Upload document to support the request (attach to this email)
+      
+      2. Confirm by entering 'I confirm' that you have included all of the necessary supporting information for the request:`;
+      
+        window.location.href = `mailto:crds-support@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      }
+      </script>
+      
+      
+      
+ 
+          <button type="submit" class="govuk-button govuk-button--inverse" data-module="govuk-button">
+              Cancel
+          </button> 
+    </div>
+  </div>
+
+  
+{% endblock %}

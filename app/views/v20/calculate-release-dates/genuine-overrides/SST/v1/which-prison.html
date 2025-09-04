@@ -1,0 +1,197 @@
+{% extends "../../../../../includes/layouts/template-linear.html" %}
+{% block content %} 
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="reason-for-override" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row"> 
+        <div class="govuk-grid-column-two-thirds">
+
+                <div class="govuk-form-group">
+
+                    <fieldset class="govuk-fieldset" aria-describedby="calculationReasonId-hint">
+                    
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-fieldset__heading">
+
+              <span class="govuk-caption-xl">Override a calculated date</span>
+                            Which prison is requesting the override?
+                            </h1>
+                        </legend>
+
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--s" for="sort">
+                              <span id="event-name-hint" class="govuk-hint">
+                                Start typing a prison and select from the list.
+                              </span>
+                            </label>
+                            <select class="govuk-select" id="prison-name" name="prison-name">
+                                <option value="" selected> </option>
+                                <option value="Altcourse (HMP & YOI)">Altcourse (HMP & YOI)</option>
+                                <option value="Ashfield (HMP)">Ashfield (HMP)</option>
+                                <option value="Askham Grange (HMP & YOI)">Askham Grange (HMP & YOI)</option>
+                                <option value="Aylesbury (HMP)">Aylesbury (HMP)</option>
+                                <option value="Bedford (HMP & YOI)">Bedford (HMP & YOI)</option>
+                                <option value="Belmarsh (HMP & YOI)">Belmarsh (HMP & YOI)</option>
+                                <option value="Berwyn (HMP & YOI)">Berwyn (HMP & YOI)</option>
+                                <option value="Birmingham (HMP)">Birmingham (HMP)</option>
+                                <option value="Brinsford (HMP & YOI)">Brinsford (HMP & YOI)</option>
+                                <option value="Bristol (HMP & YOI)">Bristol (HMP & YOI)</option>
+                                <option value="Brixton (HMP)">Brixton (HMP)</option>
+                                <option value="Bronzefield (HMP & YOI)">Bronzefield (HMP & YOI)</option>
+                                <option value="Buckley Hall (HMP)">Buckley Hall (HMP)</option>
+                                <option value="Bullingdon (HMP & YOI)">Bullingdon (HMP & YOI)</option>
+                                <option value="Bure (HMP)">Bure (HMP)</option>
+                                <option value="Cardiff (HMP & YOI)">Cardiff (HMP & YOI)</option>
+                                <option value="Channings Wood (HMP)">Channings Wood (HMP)</option>
+                                <option value="Chelmsford (HMP & YOI)">Chelmsford (HMP & YOI)</option>
+                                <option value="Coldingley (HMP)">Coldingley (HMP)</option>
+                                <option value="Cookham Wood (HMP)">Cookham Wood (HMP)</option>
+                                <option value="Dartmoor (HMP)">Dartmoor (HMP)</option>
+                                <option value="Deerbolt (HMPYOI)">Deerbolt (HMPYOI)</option>
+                                <option value="Doncaster (HMP & YOI)">Doncaster (HMP & YOI)</option>
+                                <option value="Dovegate (HMP)">Dovegate (HMP)</option>
+                                <option value="Downview (HMP & YOI)">Downview (HMP & YOI)</option>
+                                <option value="Drake Hall (HMP & YOI)">Drake Hall (HMP & YOI)</option>
+                                <option value="Durham (HMP & YOI)">Durham (HMP & YOI)</option>
+                                <option value="East Sutton Park (HMP & YOI)">East Sutton Park (HMP & YOI)</option>
+                                <option value="Eastwood Park (HMP & YOI)">Eastwood Park (HMP & YOI)</option>
+                                <option value="Elmley (HMP & YOI)">Elmley (HMP & YOI)</option>
+                                <option value="Erlestoke (HMP & YOI)">Erlestoke (HMP & YOI)</option>
+                                <option value="Exeter (HMP & YOI)">Exeter (HMP & YOI)</option>
+                                <option value="Featherstone (HMP)">Featherstone (HMP)</option>
+                                <option value="Feltham B (HMP & YOI)">Feltham B (HMP & YOI)</option>
+                                <option value="Feltham A (YOI)">Feltham A (YOI)</option>
+                                <option value="Five Wells (HMP)">Five Wells (HMP)</option>
+                                <option value="Ford (HMP)">Ford (HMP)</option>
+                                <option value="Forest Bank (HMP & YOI)">Forest Bank (HMP & YOI)</option>
+                                <option value="Fosse Way (HMP & YOI)">Fosse Way (HMP & YOI)</option>
+                                <option value="Foston Hall (HMP & YOI)">Foston Hall (HMP & YOI)</option>
+                                <option value="Frankland (HMP)">Frankland (HMP)</option>
+                                <option value="Full Sutton (HMP)">Full Sutton (HMP)</option>
+                                <option value="Garth (HMP)">Garth (HMP)</option>
+                                <option value="Gartree (HMP)">Gartree (HMP)</option>
+                                <option value="Grendon (HMP)">Grendon (HMP)</option>
+                                <option value="Guys Marsh (HMP)">Guys Marsh (HMP)</option>
+                                <option value="Hatfield (HMP & YOI)">Hatfield (HMP & YOI)</option>
+                                <option value="Haverigg (HMP)">Haverigg (HMP)</option>
+                                <option value="Hewell (HMP)">Hewell (HMP)</option>
+                                <option value="High Down (HMP & YOI)">High Down (HMP & YOI)</option>
+                                <option value="Highpoint (HMP)">Highpoint (HMP)</option>
+                                <option value="Hindley (HMP & YOI)">Hindley (HMP & YOI)</option>
+                                <option value="Hollesley Bay (HMP & YOI)">Hollesley Bay (HMP & YOI)</option>
+                                <option value="Holme House (HMP & YOI)">Holme House (HMP & YOI)</option>
+                                <option value="Hull (HMP & YOI)">Hull (HMP & YOI)</option>
+                                <option value="Humber (HMP)">Humber (HMP)</option>
+                                <option value="Huntercombe (HMP)">Huntercombe (HMP)</option>
+                                <option value="Isis Hmp/Yoi">Isis Hmp/Yoi</option>
+                                <option value="Isle Of Wight (HMP & YOI)">Isle Of Wight (HMP & YOI)</option>
+                                <option value="Kirkham (HMP)">Kirkham (HMP)</option>
+                                <option value="Kirklevington Grange (HMP & YOI)">Kirklevington Grange (HMP & YOI)</option>
+                                <option value="Lancaster Farms (HMP)">Lancaster Farms (HMP)</option>
+                                <option value="Leeds (HMP)">Leeds (HMP)</option>
+                                <option value="Leicester (HMP)">Leicester (HMP)</option>
+                                <option value="Lewes (HMP & YOI)">Lewes (HMP & YOI)</option>
+                                <option value="Leyhill (HMP)">Leyhill (HMP)</option>
+                                <option value="Lincoln (HMP & YOI)">Lincoln (HMP & YOI)</option>
+                                <option value="Lindholme (HMP)">Lindholme (HMP)</option>
+                                <option value="Littlehey (HMP)">Littlehey (HMP)</option>
+                                <option value="Liverpool (HMP)">Liverpool (HMP)</option>
+                                <option value="Long Lartin (HMP)">Long Lartin (HMP)</option>
+                                <option value="Low Newton (HMP & YOI)">Low Newton (HMP & YOI)</option>
+                                <option value="Lowdham Grange (HMP)">Lowdham Grange (HMP)</option>
+                                <option value="Maidstone (HMP)">Maidstone (HMP)</option>
+                                <option value="Manchester (HMP & YOI)">Manchester (HMP & YOI)</option>
+                                <option value="Millsike (HMP)">Millsike (HMP)</option>
+                                <option value="Moorland (HMP & YOI)">Moorland (HMP & YOI)</option>
+                                <option value="Morton Hall (IRC)">Morton Hall (IRC)</option>
+                                <option value="New Hall (HMP & YOI)">New Hall (HMP & YOI)</option>
+                                <option value="North Sea Camp (HMP)">North Sea Camp (HMP)</option>
+                                <option value="Northumberland (HMP)">Northumberland (HMP)</option>
+                                <option value="Norwich (HMP & YOI)">Norwich (HMP & YOI)</option>
+                                <option value="Nottingham (HMP & YOI)">Nottingham (HMP & YOI)</option>
+                                <option value="Oakwood (HMP)">Oakwood (HMP)</option>
+                                <option value="Onley (HMP)">Onley (HMP)</option>
+                                <option value="Parc (HMP & YOI)">Parc (HMP & YOI)</option>
+                                <option value="Parc A (HMP & YOI)">Parc A (HMP & YOI)</option>
+                                <option value="Pentonville (HMP & YOI)">Pentonville (HMP & YOI)</option>
+                                <option value="Peterborough (HMP & YOI)">Peterborough (HMP & YOI)</option>
+                                <option value="Peterborough Female (HMP & YOI)">Peterborough Female (HMP & YOI)</option>
+                                <option value="Portland (HMPYOI)">Portland (HMPYOI)</option>
+                                <option value="Prescoed (HMP & YOI)">Prescoed (HMP & YOI)</option>
+                                <option value="Preston (HMP & YOI)">Preston (HMP & YOI)</option>
+                                <option value="Ranby (HMP)">Ranby (HMP)</option>
+                                <option value="Risley (HMP)">Risley (HMP)</option>
+                                <option value="Rochester (HMP & YOI)">Rochester (HMP & YOI)</option>
+                                <option value="Rye Hill (HMP)">Rye Hill (HMP)</option>
+                                <option value="Send (HMP)">Send (HMP)</option>
+                                <option value="Spring Hill (HMP)">Spring Hill (HMP)</option>
+                                <option value="Stafford (HMP)">Stafford (HMP)</option>
+                                <option value="Standford Hill (HMP & YOI)">Standford Hill (HMP & YOI)</option>
+                                <option value="Stocken (HMP)">Stocken (HMP)</option>
+                                <option value="Stoke Heath (HMPYOI)">Stoke Heath (HMPYOI)</option>
+                                <option value="Styal (HMP & YOI)">Styal (HMP & YOI)</option>
+                                <option value="Sudbury (HMP & YOI)">Sudbury (HMP & YOI)</option>
+                                <option value="Swaleside (HMP)">Swaleside (HMP)</option>
+                                <option value="Swansea (HMP & YOI)">Swansea (HMP & YOI)</option>
+                                <option value="Swinfen Hall (HMP & YOI)">Swinfen Hall (HMP & YOI)</option>
+                                <option value="Thameside (HMP & YOI)">Thameside (HMP & YOI)</option>
+                                <option value="The Mount (HMP)">The Mount (HMP)</option>
+                                <option value="The Verne (HMP)">The Verne (HMP)</option>
+                                <option value="Thorn Cross (HMP & YOI)">Thorn Cross (HMP & YOI)</option>
+                                <option value="Usk (HMP)">Usk (HMP)</option>
+                                <option value="Wakefield (HMP)">Wakefield (HMP)</option>
+                                <option value="Wandsworth (HMP & YOI)">Wandsworth (HMP & YOI)</option>
+                                <option value="Warren Hill (HMP & YOI)">Warren Hill (HMP & YOI)</option>
+                                <option value="Wayland (HMP)">Wayland (HMP)</option>
+                                <option value="Wealstun (HMP)">Wealstun (HMP)</option>
+                                <option value="Werrington (HMPYOI)">Werrington (HMPYOI)</option>
+                                <option value="Wetherby (HMPYOI)">Wetherby (HMPYOI)</option>
+                                <option value="Whatton (HMP)">Whatton (HMP)</option>
+                                <option value="Whitemoor (HMP)">Whitemoor (HMP)</option>
+                                <option value="Winchester (HMP & YOI)">Winchester (HMP & YOI)</option>
+                                <option value="Woodhill (HMP)">Woodhill (HMP)</option>
+                                <option value="Wormwood Scrubs (HMP & YOI)">Wormwood Scrubs (HMP & YOI)</option>
+                                <option value="Wymott (HMP & YOI)">Wymott (HMP & YOI)</option>
+                            </select>
+                          </div> 
+
+                    </fieldset> 
+                </div>
+
+                <input type="hidden" name="_csrf" value="ijUvXjJJ-cnFaw1jmM3mPKVq1y8JyrPCB4DQ"> 
+
+               
+                <div class="govuk-button-group">
+                    <form method="post" action="calculation-reason">
+                        <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                            Continue
+                        </button>
+                    </form>
+
+                    <form method="post" action="cancel">
+                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+<script>
+    accessibleAutocomplete.enhanceSelectElement({
+        selectElement: document.querySelector('#prison-name'),
+        showAllValues: true,
+        defaultValue: '',
+        autoselect: true,
+        confirmOnBlur: false,
+    })
+</script>
+{% endblock %}

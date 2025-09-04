@@ -1,0 +1,64 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="">
+    <div class="">
+        <a href="review-unused-deductions" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper govuk-body " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+                    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                        <div class="govuk-notification-banner__header">
+                          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                            Important
+                          </h2>
+                        </div>
+                        <div class="govuk-notification-banner__content">
+                          <p class="govuk-notification-banner__heading">
+                            No unused deductions have been identified for these periods of remand.
+                          </p>
+                        </div>
+                      </div>
+
+                    <h1 class="govuk-heading-l"><span class="govuk-caption-xl">Adjustments</span>Confirm and save</h1>
+                    <table class="govuk-table govuk-!-margin-bottom-8">
+                        <caption class="govuk-table__caption govuk-table__caption--m">Deduction summary</caption>
+                        <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Deductions</th>
+                            <th scope="col" class="govuk-table__header govuk-!-text-align-right">Days</th>
+                        </tr>
+                        </thead>
+                        <tbody id="R-summary" class="govuk-table__body">
+
+                        <tr class="govuk-table__row">
+                            <td scope="row" class="govuk-table__cell">Remand</td>
+                            <td id="" class="govuk-table__cell govuk-!-text-align-right">40 <span class="govuk-hint"></span> </td>
+                        </tr> <tr class="govuk-table__row">
+                            <td scope="row" class="govuk-table__cell">Tagged bail</td>
+                            <td id="" class="govuk-table__cell govuk-!-text-align-right">0</td>
+                        </tr></tbody>
+                        <tfoot>
+                        <tr class="govuk-table__row">
+                            <th id="" scope="row" class="govuk-table__header">Total</th>
+                            <td id="TotalRemandDays" class="govuk-table__cell govuk-!-text-align-right">40</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="govuk-button-group govuk-!-margin-top-6">
+                <a href="index-end" id="saveRemandButton" class="govuk-button" data-journey="1">
+                    Confirm and save
+                </a>
+                <a href="../../index-1.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    Cancel
+                </a>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/add-remand.js"></script>
+{% endblock %}
