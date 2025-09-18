@@ -1,4 +1,4 @@
-{% extends "../../../../includes/layouts/template-linear.html" %}
+{% extends "../../../includes/layouts/template-linear.html" %}
 {% block content %}
 
 <!-- Breadcrumbs -->
@@ -20,10 +20,10 @@
         <div class="govuk-grid-column-two-thirds">
             <div class="govuk-panel govuk-panel--confirmation">
                 <h1 class="govuk-panel__title">
-                    <div class="">Release dates sent for review</div>
+                    <div class="">Check recorded</div>
                 </h1>
                 <div class="govuk-panel__body govuk-!-font-size-24">
-                    No release dates have been saved yet.
+                    <!-- The calculation has been saved in NOMIS.  -->
                     <!-- You can now <a class="govuk-link--inverse" href="">print the notification slip</a>. -->
                     
                 </div>
@@ -40,40 +40,35 @@
             </div>
           </div> -->
           
-        <div class="govuk-!-margin-top-6">
-            <h2 class="govuk-heading-l">What happens next</h2> 
-  
-                <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-2">
-                    <li>Your request will be sent to the SST (Specialist support team) for review</li> 
-                    <li>If your request is approved, your proposed release dates will be saved</li> 
-                    <li>If your request is not approved, the SST will provide guidance on what to do next</li> 
-                </ul>
-            </div>   
-
-          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-  
-            <h2 class="govuk-heading-m">What you can do next</h2> 
  
+        <div class="govuk-!-margin-top-6">
+            <h2 class="govuk-heading-l">What you can do next</h2> 
 
-            <div class="govuk-body govuk-!-margin-top-6"><span>You can go back to Joe Bloggs':</span>
+    
+            <p class="govuk-body"><a href="notification-slip-mvp">Print the release dates notification slip</a></p>
+
+            <div class="govuk-body govuk-!-margin-top-6"><span>You can also go back to Joe Bloggs':</span>
                 <ul class="govuk-list govuk-!-margin-top-2">
-                    <li><a href="../overview">Court case and release dates information</a></li>
+                    <li><a href="overview?checkComplete=1">Court case and release dates information</a></li>
                     <li><a href="../DPS-prisoner-profile">Prisoner profile</a></li>
                 </ul>
             </div>  
-     
+        
             <div class="govuk-!-margin-top-6">
                 <p class="govuk-body">Or, go to the <a href="../DPS-home"> DPS homepage</a>.</p>
-            </div> 
-            <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+            </div>
+        </div>
+
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
             <div class="">
                 <h2 class="govuk-heading-m">Help improve this service</h2>
                 <div class="govuk-body"><span>This is a new service. Your feedback will help make it better. To give feedback you can:</span>
                 <ul class="govuk-list govuk-!-margin-top-2">
                     <li><a href="">Complete a short survey</a></li>
+                    <li><a href="">Report a specific problem by email</a></li>
                 </ul>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 </div>

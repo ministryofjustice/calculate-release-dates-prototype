@@ -1,8 +1,8 @@
-{% extends "../../../../../includes/layouts/template-linear.html" %}
+{% extends "../../../../includes/layouts/template-linear.html" %}
 {% block content %}
 <!-- Back link -->
 <div class="moj-width-container">
-    <a href="select-dates" class="govuk-back-link">Back</a>
+    <a href="../release-dates" class="govuk-back-link">Back</a>
 </div>
 <!-- Page intro -->
 <div class="moj-width-container govuk-!-margin-top-6">
@@ -19,13 +19,20 @@
 
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
 
-                            <span class="govuk-caption-xl">Override a calculated date</span>
                             <h1 class="govuk-fieldset__heading">
-                                Select all the dates included in this calculation
+
+            <span class="govuk-caption-xl">Calculate release dates</span>
+                                Select the dates you need to enter
                             </h1>
 
                         </legend>
- 
+
+
+                        <div id="dateSelect-hint" class="govuk-hint">
+                            Select all that apply to the manual calculation.
+                        </div>
+
+
                         <div class="govuk-checkboxes" data-module="govuk-checkboxes" data-govuk-checkboxes-init="">
 
 
@@ -39,8 +46,8 @@
 
                             <div class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" id="dateSelect" name="dateSelect" type="checkbox"
-                                    value="SED" checked disabled>
-                                <label class="govuk-label govuk-checkboxes__label" for="dateSelect">
+                                    value="SED" checked disabled >
+                                <label class="govuk-label govuk-checkboxes__label" for="dateSelect" >
                                     SED (Sentence expiry date)
                                 </label>
 
@@ -346,7 +353,15 @@
 
                             </div>
 
- 
+
+
+
+
+
+
+
+
+
 
 
                             <div class="govuk-checkboxes__item">

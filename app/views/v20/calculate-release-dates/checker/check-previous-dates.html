@@ -1,23 +1,22 @@
 {% extends "../../../includes/layouts/template-linear.html" %} {% block content %}
 <!-- Back link -->
 <div class="moj-width-container">
-  <a href="../../release-dates" class="govuk-back-link">Back</a>
+  <a href="check-sentence-and-offence-information" class="govuk-back-link">Back</a>
 </div>
 <!-- Page intro -->
 <div class="moj-width-container govuk-!-margin-top-6">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form method="post" action="modify-approved-dates">
+      <form method="post" action="calculation-complete">
 
 
         <h1 class="govuk-heading-xl">
 
-          <span class="govuk-caption-xl">Add APD, HDCAD and ROTL dates</span>
+          <span class="govuk-caption-xl">Record a blind check</span>
           Confirm the calculated dates are correct
         </h1>
-
-        <dl class="govuk-summary-list release-dates-list">
+               <dl class="govuk-summary-list release-dates-list">
                     
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
@@ -40,7 +39,6 @@
                 </div> 
                 </dl>
 
-
         <h2 class="govuk-heading-m">
           What to do if the dates are wrong
         </h2>
@@ -50,7 +48,7 @@
         <div class="govuk-button-group govuk-!-margin-top-6">
           <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button"
             data-qa="submitReason">
-            Confirm and continue
+            Confirm check
           </button>
 
           <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">

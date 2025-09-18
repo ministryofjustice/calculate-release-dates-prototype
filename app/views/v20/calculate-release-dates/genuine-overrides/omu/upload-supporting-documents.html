@@ -13,42 +13,42 @@
           <label class="govuk-label govuk-label--l" for="more-detail">
 
             <span class="govuk-caption-l">Calculate release dates</span>
-            Upload warrants to support the override (optional)
+            Upload any other supporting documents
           </label>
         </h1>  
 
- 
+        <dl class="govuk-summary-list govuk-summary-list--long-key govuk-!-margin-bottom-3">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">file-name.pdf</a>
+          <div class="govuk-body govuk-!-margin-0">Remand warrant</div>
+        </dt>
+        <dd class="govuk-summary-list__value govuk-!-text-align-right">
+          <strong class="govuk-tag govuk-tag--green">
+            Uploaded
+        </strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> file-name.pdf</span></a>
+        </dd>
+      </div>
+      
+    </dl>
 
-          <dl class="govuk-summary-list govuk-summary-list--long-key govuk-!-margin-bottom-6">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key" style="width: 60%">
-              <a class="govuk-link" href="#">file-name.pdf</a>
-              <div class="govuk-body govuk-!-margin-0">TS1233535 at Aberdare Court on 17/10/2024</div>
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-text-align-right">
-              <strong class="govuk-tag govuk-tag--green">
-                Uploaded
-            </strong>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> file-name.pdf</span></a>
-            </dd>
-          </div>
-          
-        </dl>
- 
-        <a class="govuk-list" href="select-a-case">Upload another warrant</a>
-
+        {{ govukFileUpload({
+          id: "file-upload-1",
+          name: "file-upload-1"
+      }) }}
       </div>
     </div>
 </div> 
 
-<div class="moj-width-container  govuk-!-margin-top-4">
+<div class="moj-width-container govuk-!-margin-top-6">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds"> 
             
                 <div class="govuk-button-group">
-                    <form method="post" action="upload-supporting-documents">
+                    <form method="post" action="additional-details">
                         <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                             Continue
                         </button>

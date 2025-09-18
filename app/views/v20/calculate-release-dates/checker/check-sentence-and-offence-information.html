@@ -1,23 +1,24 @@
-{% extends "../../../../../includes/layouts/template-linear.html" %}
+{% extends "../../../includes/layouts/template-linear.html" %}
 {% block content %}
 <!-- Back link -->
 <div class="moj-width-container">
-    <a href="calculation-reason" class="govuk-back-link">Back</a>
+    <a href="release-dates" class="govuk-back-link">Back</a>
 </div>
+ 
+
 <!-- Page intro -->
 <div class="moj-width-container govuk-!-margin-top-6">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-xl">
 
-                <span class="govuk-caption-xl">Override a calculated date</span>
+          <span class="govuk-caption-xl">Record a blind check</span>
                 Check sentence and offence information
             </h1>
 
         </div>
     </div>
-</div>
- 
+</div> 
 <!-- NOMIS sentences -->
 <div class="moj-width-container">
     <div class="govuk-grid-row">
@@ -79,15 +80,6 @@
                 ORA Sentencing Code Standard Determinate Sentence
             </dd>
             </div>
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Sentence date
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    02 May 2025
-                </dd>
-                </div>
             
             
             <div class="govuk-summary-list__row">
@@ -239,58 +231,24 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
  
-    <!-- If some infomation is wrong -->
-    <!-- <div class="moj-width-container">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-                <div class="govuk-inset-text">
-                    If you think some information is wrong, you can edit it in NOMIS and <a
-                        href="check-sentence-and-offence-information?toShow=sentencesUpdated">reload this page</a>.
-                </div>
-            </div>
-        </div>
-    </div> -->
- 
-    <h2 class="govuk-heading-m govuk-!-margin-top-2">Now calculate release dates</h2>
-
-<!-- ERSED checkbox -->
-<div class="moj-width-container govuk-!-margin-top-2">
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-
-            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox"
-                        value="hmrc">
-                    <label class="govuk-label govuk-checkboxes__label">
-                        Include an Early release scheme eligibility date (ERSED) in this calculation
-                    </label>
-                    <div class="govuk-hint govuk-checkboxes__hint">
-                        Not applicable for terror or terror-related offences
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
     <!-- Call to action -->
     <div class="moj-width-container govuk-!-margin-top-4">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <!-- <p class="govuk-body">The release dates will not be saved in NOMIS until you have reviewed the
-                    calculation.</p> -->
+            
                
                     <div class="govuk-button-group">
                         
-                    
-                        <form method="post" action="check-entered-dates">
+                   
+                        <form method="post" action="check-previous-dates">
                             <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                                 Calculate release dates
                             </button>
                         </form>
  
+    
                         <form method="post" action="cancel">
                             <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
                                 Cancel

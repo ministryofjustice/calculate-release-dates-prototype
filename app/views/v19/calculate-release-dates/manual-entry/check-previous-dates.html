@@ -13,56 +13,53 @@
 
               <h1 class="govuk-heading-xl">
 
-              <!-- <span class="govuk-caption-xl">Override a calculated date</span> -->
+            <span class="govuk-caption-xl">Calculate release dates</span>
               Confirm the dates are correct
               </h1> 
 
-            <dl class="govuk-summary-list govuk-!-margin-top-6">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  SED (Sentence expiry date)
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  21 August 2025
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span><br>  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a> -->
-                </dd>
-              </div>  
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  LED (Licence expiry date)
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  21 August 2025
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span><br>  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a> -->
-                </dd>
-              </div> 
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  CRD (Conditional release date)
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  24 May 2025
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span><br>  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a> -->
-                </dd>
-              </div> 
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  TUSED (Top-up supervision expiry date)
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  24 May 2026
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span><br>  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> </span></a> -->
-                </dd>
-              </div> 
-            </dl> 
+                 <dl class="govuk-summary-list release-dates-list">
+                    
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                        SED
+                        <p class="govuk-!-font-size-16 govuk-hint">Sentence expiry date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <p class="govuk-body">Thursday, 21 August 2025</p></p>
+                    </dd>
+                </div> 
+
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                        LED
+                        <p class="govuk-!-font-size-16 govuk-hint">Licence expiry date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <p class="govuk-body">Thursday, 21 August 2025</p></p>
+                    </dd>
+                </div> 
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                        CRD
+                        <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                        <p class="govuk-body">Saturday, 24 May 2025</p>
+
+                    </dd>
+                </div>
+                   <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                        TUSED
+                        <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                        <p class="govuk-body">Saturday,  24 May 2026</p>
+
+                    </dd>
+                </div>
+                </dl>
+ 
             <div class="govuk-!-margin-top-6">  
               <form action="/v19/calculate-release-dates/manual-entry/check-previous-dates" method="post">
                 <fieldset class="govuk-fieldset">

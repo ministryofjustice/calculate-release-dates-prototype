@@ -1,0 +1,45 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %} 
+<!-- Back link -->
+<div class="moj-width-container">
+  <a href="reason-for-override" class="govuk-back-link">Back</a>
+</div>  
+
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-l">Calculate release dates</span>
+        The release dates need to be overridden 
+      </h1> 
+      
+        <p>The reason you provided suggests that the dates might need to be overridden. </p> 
+        <p>To record this, you need to provide some additional information to support the override.</p>  
+        <h2 class="govuk-heading-m">You will need to provide</h2> 
+        <ol class="govuk-list govuk-list--number">
+          <li>Information about who has supported this override</li>
+          <li>Warrants and other documents supporting the calculation</li>
+          <li>The release dates from your paper calculation</li>
+        </ol>  
+         
+    <div class="govuk-button-group govuk-!-margin-top-4">
+      <form method="post" action="who-supported">
+          <button type="submit" data-prevent-double-click="true" class="govuk-button " data-module="govuk-button" data-qa="submitReason">
+              Continue 
+          </button>
+      </form>
+
+      <form method="post" action="cancel">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Cancel
+          </button>
+      </form> 
+   
+    </div> 
+    </div>
+    </div>
+
+
+  
+{% endblock %}

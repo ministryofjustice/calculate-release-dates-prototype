@@ -39,8 +39,8 @@
           <ul class="govuk-list govuk-list--number">    
                 <li>retriving SLEDs and TUSEDs from previous bookings</li> 
                 <li>checker journey</li> 
-                <li>express adding approved dates</li> 
-                <li>express manual calculation approved dates</li>       
+                <li>express adding approved dates</li>  
+                <li>Genuine overrides OMU journey</li>          
             </ul>  
 
             <h4 class="govuk-heading-m">Supporting documents</h4>
@@ -61,7 +61,7 @@
                 <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/retrieve-SLED-TUSED/calculation-summary?toShow=retrive-SLED-TUSED">Calculation summary</a></li> 
                 <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/retrieve-SLED-TUSED/review-previous-SLED?toShow=retrive-SLED-TUSED">Review dates from previous period of custody</a></li> 
                 <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/retrieve-SLED-TUSED/calculation-summary?calcUpdated?true">Calculation summary (updated)</a></li>  
-                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/enter-approved-dates-question">Do you want to add ADP, HDCAD or ROTL?</a></li> 
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/enter-approved-dates-question">Do you want to add APD, HDCAD or ROTL?</a></li> 
                 <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/calculation-complete">Calculation complete</a></li> 
                        
             </ul>  
@@ -73,6 +73,23 @@
  
             <p class="govuk-body">Designs for a checker journey, allowing OMUs to register when a calculation has been blind checked by another case admin, reducing existing erroneous overrides in NOMIS.</p> 
             <!-- <h4 class="govuk-heading-s">SST override</h4>  -->
+              <ul class="govuk-list">    
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/checker/release-dates">Release dates landing page</a></li> 
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/checker/check-sentence-and-offence-information">Check sentence and offence information</a></li> 
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/checker/check-previous-dates">Confirm previous calculated dates</a></li> 
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/checker/calculation-complete">Check confirmed</a></li> 
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/checker/release-dates?checkComplete=1">Release dates landing page (check complete - option 1)</a></li>
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/checker/release-dates?checkComplete=2">Release dates landing page (check complete - option 2)</a></li> 
+                   
+            </ul>  
+
+            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--l">
+             
+      
+            <h4 class="govuk-heading-m">3. Express approved dates journey</h4> 
+ 
+            <p class="govuk-body">Designs for allowing a user to save approved dates (APD, ROTL, HDCAD) without having to go through the entire calculation journey.</p> 
+            <!-- <h4 class="govuk-heading-s">SST override</h4>  -->
             <ul class="govuk-list">    
                 <li><a class="govuk-link" target="external" href="v20/release-dates">Release dates landing page</a></li> 
                 <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/approved-dates/check-previous-dates">Confirm previous calculated dates</a></li> 
@@ -81,21 +98,48 @@
                 <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/approved-dates/enter-HDCAD">Enter HDCAD</a></li> 
                 <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/approved-dates/modify-approved-dates?HDCADupdated=true">Add and review approved dates (updated)</a></li> 
                 <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/calculation-complete">Calculation complete</a></li> 
-                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/approved-dates/cancel">Cancel</a></li> 
-                       
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/approved-dates/cancel">Cancel</a></li>  
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/approved-dates/you-need-to-calculate-release-dates">Error: you need to calculate release dates</a></li>  
+                   
             </ul>  
 
             <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--l">
              
       
-            <h4 class="govuk-heading-m">3. Express approved dates journey</h4> 
+            <h4 class="govuk-heading-m">4. Genuine overrides</h4> 
  
-            <p class="govuk-body">Designs for allowing a user to save approved dates (ADP, ROTL, HDCAD) without having to go through the entire calculation journey.</p> 
-            <!-- <h4 class="govuk-heading-s">SST override</h4>  -->
+            <p class="govuk-body">Decision made to allow for prisons to do their own overrides instead of the SST as an MVP. This journey modifies the genuine override journeys to enable OMUs so do their own overrides. </p> 
+            <h4 class="govuk-heading-s">Full journey</h4> 
             <ul class="govuk-list">    
-                <li><a class="govuk-link" target="external" href="v20/release-dates?toShow=override">Release dates landing page</a></li> 
+             <!-- <li><a class="govuk-link" target="external" href="v20/release-dates?toShow=override">Release dates landing page</a></li> 
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/calculation-reason?toShow=override">Calculation reason</a></li>  
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/check-sentence-and-offence-information?toShow=override">Check sentence and offence information</a></li>   -->
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/omu/calculation-summary?toShow=override">Calculation summary</a></li>  
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/omu/reason-for-override">Reason for disagreeing with calculation</a></li>  
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/omu/go-intercept">Intercept</a></li>  
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/omu/who-supported">Who has supported this override?</a></li>  
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/omu/upload-warrants">Upload supporting warrants</a></li>  
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/omu/select-case">Select a case for the warrant</a></li>  
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/omu/upload-supporting-documents">Upload any other supporting documents</a></li>  
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/omu/edit-release-dates">Reivew and edit release dates</a></li>  
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/calculation-complete">Reivew and edit release dates</a></li>  
+                   
                        
-            </ul>  
+            </ul> 
+              <h4 class="govuk-heading-s" id="v20-go-core">Core journey</h4> 
+            <ul class="govuk-list">    
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/core/calculation-summary?toShow=override">Calculation summary</a></li>  
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/core/reason-for-override">Reason for disagreeing with calculation</a></li>    
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/core/edit-release-dates">Review and edit release dates</a></li>   
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/core/enter-CRD">Edit CRD</a></li>   
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/core/select-dates">Select which dates</a></li>  
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/core/enter-HDCED">Add HDCED</a></li>    
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/core/are-you-sure-delete-TUSED">Remove TUSED</a></li>   
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/genuine-overrides/core/edit-release-dates">Reivew and edit release dates</a></li>  
+                <li><a class="govuk-link" target="external" href="v20/calculate-release-dates/calculation-complete">Calc complete</a></li>  
+                   
+                       
+            </ul> 
  
             <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
          
@@ -542,7 +586,7 @@
 
             <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
             <h4 class="govuk-heading-m">1. Calculate release dates - supported sentences journey</h4> 
-            <p class="govuk-body">This is the standard calculation journey which allows user to calculate release dates of supported sentences. This includes the option to add approved dates (ADP, ROTL and HDCAD)</p> 
+            <p class="govuk-body">This is the standard calculation journey which allows user to calculate release dates of supported sentences. This includes the option to add approved dates (APD, ROTL and HDCAD)</p> 
             <ul class="govuk-list"> 
                 <li><a class="govuk-link" target="external" href="v14/release-dates">Release dates and calculations landing page</a></li>  
                 <li><a class="govuk-link" target="external" href="v14/calculate-release-dates/calculation-reason">Calculation reason</a></li>     

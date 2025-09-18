@@ -1,33 +1,102 @@
-{% extends "../../../../../includes/layouts/template-linear.html" %}
-{% block content %}
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %} 
 <!-- Back link -->
 <div class="moj-width-container">
-    <a href="start-page" class="govuk-back-link">Back</a>
+    <a href="../../release-dates" class="govuk-back-link">Back</a>
 </div>
 <!-- Page intro -->
 <div class="moj-width-container govuk-!-margin-top-6">
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-two-thirds"> 
             <h1 class="govuk-heading-xl">
-
-                <span class="govuk-caption-xl"> Record outcomes for a release dates override request</span>
-                Review sentence and offence information
-            </h1>
-
+            <!-- <span class="govuk-caption-xl">11 March 2023 at HMP Kirkham</span> -->
+                Sentence and offence information
+            </h1> 
         </div>
     </div>
 </div>
-
-<!-- NOMIS sentences -->
-<div class="moj-width-container">
  
+
+<div class="moj-width-container"> 
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-            <p class="govuk-body">This calculation includes 4 sentences.</p>
+        <div class="govuk-grid-column-two-thirds">
+
+            <h2 class="govuk-heading-m">
+                    Calculation details
+            </h2> 
+      
+          <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-2">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Calculation date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ "today" | govukDate }}
+
+              {% if data['checkComplete'] == '3' %}
+              <p class="govuk-hint">Blind checked on   {{ "today" | govukDate }}</p>
+
+              {% else %} 
+             
+              {% endif %}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Calculation reason
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 Initial calculaion
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Establishment
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  HMP Kirkham
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Source
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Calculate release dates service
+              </div>
+              {% if data['checkComplete'] == '1' or data['checkComplete'] == '2' %}
+                  <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Blind checked on
+                </dt>
+                <dd class="govuk-summary-list__value">
+                     {{ "today" | govukDate }}
+              </div>
+              {% else %} 
+             
+              {% endif %}
+           
+
+            </dl>
         </div>
     </div>
-
 </div>
+
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+    <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link" aria-current="page" href="check-sentence-and-offence-information">Sentence and offence information</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link"  href="calculation-summary">Calculation summary</a>
+        </li>
+    </ul>
+    
+</nav>
+
+
+ 
 <!-- Court cases -->
 <div class="moj-width-container govuk-!-margin-top-4"> 
     <!-- Count 1 -->
@@ -223,6 +292,7 @@
 
 
 </div> 
+
     <!-- Adjustments -->
     <div class="moj-width-container">
         <div class="govuk-grid-row">
@@ -310,14 +380,24 @@
                                     <!-- Days -->
                                     <td class="govuk-table__cell">0</td>
                                 </tr>
- 
+
+                                {% if data['toShow'] == 'ualAdded' %}
                                 <tr class="govuk-table__row">
                                     <!-- Adjustment -->
                                     <td class="govuk-table__cell">Unlawfully at large (UAL)</td>
                                     <!-- Days -->
                                     <td class="govuk-table__cell">3
                                     </td>
-                                </tr> 
+                                </tr>
+                                {% else %}
+                                <tr class="govuk-table__row">
+                                    <!-- Adjustment -->
+                                    <td class="govuk-table__cell">Unlawfully at large (UAL)</td>
+                                    <!-- Days -->
+                                    <td class="govuk-table__cell">2
+                                    </td>
+                                </tr>
+                                {% endif %} 
                             </tbody>
                         </table>
                     </div>
@@ -326,7 +406,7 @@
                        
                         <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Additions</h3>
                         <h4 class="govuk-heading-s govuk-!-margin-bottom-2">UAL (Unlawfully at large)</h4>
-                        <table class="govuk-table ">
+                        <table class="govuk-table govuk-!-margin-bottom-8">
                             <thead class="govuk-table__head">
                                 <tr class="govuk-table__row">
                                     <th class="govuk-table__header" scope="col">Dates</th>
@@ -334,7 +414,22 @@
                                 </tr>
                             </thead>
                             <tbody class="govuk-table__body">
- 
+
+                                {% if data['toShow'] == 'ualAdded' %}
+                                <tr class="govuk-table__row">
+                            
+                                    <td class="govuk-table__cell">From {{data['revocation-date-day']}}/{{data['revocation-date-month']}} {{data['revocation-date-year']}}  to {{data['arrest-date-day']}}/{{data['arrest-date-month']}}/{{data['arrest-date-year']}}</td>
+                                   
+                                    <td class="govuk-table__cell">3</td>
+                                </tr> 
+                                <tr class="govuk-table__row"> 
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-text-align-right">
+                                        Total days</td> 
+                                    <td class="govuk-table__cell">3
+                                    </td>
+                                </tr>
+
+                                {% else %}
 
                                 <tr class="govuk-table__row">
                             
@@ -347,38 +442,16 @@
                                         Total days</td> 
                                     <td class="govuk-table__cell">2
                                     </td>
-                                </tr> 
+                                </tr>
+
+                                {% endif %}
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-    </div> 
-
-    <h2 class="govuk-heading-l govuk-!-margin-top-4">Review release dates</h2>
- 
-    <div class="moj-width-container">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-                <p class="govuk-body">The release dates will not be saved in NOMIS until you have reviewed the
-                    calculation.</p>
-               
-                    <div class="govuk-button-group"> 
-                        <form method="post" action="requested-dates">
-                            <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
-                                Review release dates
-                            </button>
-                        </form> 
-    
-                        <!-- <form method="post" action="cancel">
-                            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                                Cancel
-                            </button>
-                        </form> -->
-                    </div>
-            </div>
-        </div>
     </div>
-</div>
+
+
 {% endblock %}

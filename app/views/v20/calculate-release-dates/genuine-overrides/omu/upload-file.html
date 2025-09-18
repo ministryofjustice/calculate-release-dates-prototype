@@ -2,31 +2,42 @@
 {% block content %}
 <!-- Back link -->
 <div class="moj-width-container">
-    <a href="reason-for-override" class="govuk-back-link">Back</a>
+    <a href="calculation-summary" class="govuk-back-link">Back</a>
 </div>
 <!-- Page intro --> 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6"> 
-        
-      <div class="govuk-form-group">
-        <h1 class="govuk-heading-l">
-          <span class="govuk-caption-l">Calculate release dates</span>
-          Provide additional information to support the SST with the request
-        </h1>
-        <!-- <div id="more-detail-hint" class="govuk-hint">
-          This information will help the SST . 
-        </div> -->
-        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+        <fieldset class="govuk-fieldset" aria-describedby="calculationReasonId-hint">
+                    
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-l">Calculate release dates</span>
+              Upload file
+            </h1>
+          </legend>
+
+
+            {{ govukFileUpload({
+              id: "file-upload-1",
+              name: "file-upload-1"
+          }) }}
+          
+            
+        </div> 
+      </fieldset> 
+
       </div>
-    </div>
 </div> 
+
+
 
 <div class="moj-width-container govuk-!-margin-top-6">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds"> 
             
                 <div class="govuk-button-group">
-                    <form method="post" action="edit-release-dates">
+                    <form method="post" action="upload-warrants">
                         <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                             Continue
                         </button>
