@@ -1,0 +1,876 @@
+{% extends "./template.html" %}
+{% set courtCasesActive = true %}
+{% block content %}
+<!-- Court cases -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Court cases</h1>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds"> 
+        <div class="govuk-grid-row govuk-!-margin-bottom-4">
+            <div class="govuk-grid-column-full">
+                <div class="moj-search search">
+                    <form action="#" method="post">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+                                Search Joe Bloggs' court cases
+                            </label>
+                            <div id="search-hint" class="govuk-hint moj-search__hint ">
+                                You can search by court case number, court name or date
+                            </div>
+                            <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+                        </div>
+                        <button class="govuk-button moj-search__button " data-module="govuk-button">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div> 
+
+
+        {% if data['scenario'] == '1' %}
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">Active court cases (1)</h2>
+         
+                <div class="govuk-summary-card" data-qa="courtCaseCard-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">
+                    <div class="govuk-summary-card__title-wrapper">
+                    
+                      <h2 class="govuk-summary-card__title">
+                        Weston-super-mare County Court
+                      </h2>
+                    
+                    
+                      
+                      <div class="govuk-summary-card__actions">
+                        <a class="govuk-link" href="#">Add appearance<span class="govuk-visually-hidden"> Add appearance (Weston-super-mare County Court)</span></a>
+                      </div>
+                      
+                    
+                    </div>
+                  
+                    <div class="govuk-summary-card__content">
+                      <dl class="govuk-summary-list">
+                      
+                        
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key govuk-!-display-none">
+                            
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            <dl class="govuk-summary-list" data-qa="courtCaseSummary-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Case references
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  Not entered
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  First day in custody
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  02/05/2025 (Sentencing)
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Overall case outcome
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  Imprisonment
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Overall sentence length
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  Not entered
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Conviction date
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  Not entered
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Next hearing
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  <ul class="govuk-list">
+                                                                  
+                                                                      <li>
+                                                                          No future appearance scheduled
+                                                                      </li>
+                                                                  
+                                                              </ul>
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                            </dl>
+                            
+                            
+                                                        <hr class="govuk-section-break govuk-section-break--visible">
+                                                        
+                                                        <div class="govuk-grid-row">
+                                                                <div class="govuk-grid-column-one-half">
+                                                                    <h2 class="govuk-heading-m govuk-!-margin-top-6 govuk-!-margin-bottom-2">Latest appearance</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="govuk-grid-row govuk-!-padding-bottom-2 govuk-!-margin-top-2">
+                                                                
+                            
+                                                                    
+                                                                        <div class="govuk-grid-column-one-third">
+                                                                            <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Case reference</h3>
+                                                                            <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceCourtCaseReference-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">Not entered</p>
+                                                                            <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Warrant date</h3>
+                                                                            <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceWarrantDate-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">02/05/2025</p>
+                                                                            <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Outcome</h3>
+                                                                            <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceOutcome-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e"> Imprisonment</p>
+                                                                            
+                                                                        </div>
+                                                                        <div class="govuk-grid-column-two-thirds">
+                                                                            <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Location</h3>
+                                                                            <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceLocation-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">Weston-super-mare County Court</p>
+                                                                            <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Warrant type</h3>
+                                                                            <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceWarrantType-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">Sentencing</p>
+                                                                            
+                                                                                <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Conviction date</h3>
+                                                                                <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceConvictionDate-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">Not entered</p>
+                                                                            
+                                                                            
+                                                                        </div>
+                                                                        <div class="govuk-grid-column-full govuk-!-margin-top-2">
+                                                                            
+                            
+                                                                            <details class="govuk-details" data-qa="courtCaseDetailsComponent-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e" open="">
+                              <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                  Show offences (1)
+                                </span>
+                              </summary>
+                              <div class="govuk-details__text">
+                                
+                                                                                
+                                                                                    
+                            
+                            
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+                            
+                                
+                            
+                            
+                            
+                                
+                                
+                                
+                            
+                            
+                            
+                            
+                            <div class="offence-card sentence-card ">
+                                <div class="offence-card-offence-details govuk-!-padding-4 ">
+                                    
+                                        <span class="govuk-body">Count 1</span>
+                                    
+                                    <h4 class="govuk-heading-s">
+                                        TH68006 Theft of pedal cycle
+                                        
+                                    </h4>
+                            
+                                    
+                            
+                              
+                            
+                              
+                            
+                              
+                            
+                              
+                            <dl class="govuk-summary-list govuk-summary-list--no-border" data-qa="offenceSummaryList">
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Committed on
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  30/04/2025
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Outcome
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  Imprisonment
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Sentence type
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  ORA SDS (Offender rehabilitation act standard determinate sentence)
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Consecutive or concurrent
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  Unknown
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                            </dl>
+                            
+                                    
+                                </div>
+                                
+                            </div>
+                                                                                
+                                                                            
+                              </div>
+                            </details>
+                            
+                                                                        </div>
+                                                                    
+                                                                
+                                                        </div>
+                                                        <hr class="govuk-section-break govuk-!-margin-top-4 govuk-section-break--visible">
+                                                        <p class="govuk-body govuk-!-margin-top-6">
+                                                            <a class="govuk-link--no-visited-state govuk-!-font-weight-bold" href="#">View and edit all appearances for this court case (1)</a>
+                                                        </p>
+                          </dd>
+                          
+                        </div>
+                        
+                      
+                      </dl>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        
+        {% elif data['scenario'] == '2' %}
+        <div class="govuk-summary-card" data-qa="courtCaseCard-f12562d9-d22c-47d7-a838-5d2f71e6a5b6">
+          <div class="govuk-summary-card__title-wrapper">
+          
+            <h2 class="govuk-summary-card__title">
+              Repatriated To This Country
+            </h2>
+          
+          
+            
+            <div class="govuk-summary-card__actions">
+              <a class="govuk-link" href="#">Add appearance<span class="govuk-visually-hidden"> Add appearance (Repatriated To This Country)</span></a>
+            </div>
+            
+          
+          </div>
+        
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+            
+              
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-display-none">
+                  
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <dl class="govuk-summary-list" data-qa="courtCaseSummary-f12562d9-d22c-47d7-a838-5d2f71e6a5b6">
+                  
+                    
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Case references
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Not entered
+                      </dd>
+                      
+                    </div>
+                    
+                  
+                    
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        First day in custody
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        03/05/2025 (Sentencing)
+                      </dd>
+                      
+                    </div>
+                    
+                  
+                    
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Overall case outcome
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Imprisonment
+                      </dd>
+                      
+                    </div>
+                    
+                  
+                    
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Overall sentence length
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Not entered
+                      </dd>
+                      
+                    </div>
+                    
+                  
+                    
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Conviction date
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Not entered
+                      </dd>
+                      
+                    </div>
+                    
+                  
+                    
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Next hearing
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        <ul class="govuk-list">
+                                                        
+                                                            <li>
+                                                                No future appearance scheduled
+                                                            </li>
+                                                        
+                                                    </ul>
+                      </dd>
+                      
+                    </div>
+                    
+                  
+                  </dl>
+                  
+                  
+                                              <hr class="govuk-section-break govuk-section-break--visible">
+                                              
+                                              <div class="govuk-grid-row">
+                                                      <div class="govuk-grid-column-one-half">
+                                                          <h2 class="govuk-heading-m govuk-!-margin-top-6 govuk-!-margin-bottom-2">Latest appearance</h2>
+                                                      </div>
+                                                  </div>
+                                                  <div class="govuk-grid-row govuk-!-padding-bottom-2 govuk-!-margin-top-2">
+                                                      
+                  
+                                                          
+                                                              <div class="govuk-grid-column-one-third">
+                                                                  <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Case reference</h3>
+                                                                  <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceCourtCaseReference-f12562d9-d22c-47d7-a838-5d2f71e6a5b6">Not entered</p>
+                                                                  <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Warrant date</h3>
+                                                                  <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceWarrantDate-f12562d9-d22c-47d7-a838-5d2f71e6a5b6">03/05/2025</p>
+                                                                  <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Outcome</h3>
+                                                                  <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceOutcome-f12562d9-d22c-47d7-a838-5d2f71e6a5b6"> Imprisonment</p>
+                                                                  
+                                                              </div>
+                                                              <div class="govuk-grid-column-two-thirds">
+                                                                  <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Location</h3>
+                                                                  <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceLocation-f12562d9-d22c-47d7-a838-5d2f71e6a5b6">Repatriated To This Country</p>
+                                                                  <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Warrant type</h3>
+                                                                  <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceWarrantType-f12562d9-d22c-47d7-a838-5d2f71e6a5b6">Sentencing</p>
+                                                                  
+                                                                      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Conviction date</h3>
+                                                                      <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceConvictionDate-f12562d9-d22c-47d7-a838-5d2f71e6a5b6">Not entered</p>
+                                                                  
+                                                                  
+                                                              </div>
+                                                              <div class="govuk-grid-column-full govuk-!-margin-top-2">
+                                                                  
+                  
+                                                                  <details class="govuk-details" data-qa="courtCaseDetailsComponent-f12562d9-d22c-47d7-a838-5d2f71e6a5b6">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        Show offences (1)
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      
+                                                                      
+                                                                          
+                  
+                  
+                  
+                  
+                      
+                  
+                  
+                  
+                  
+                  
+                      
+                  
+                  
+                  
+                      
+                      
+                      
+                  
+                  
+                  
+                  
+                  <div class="offence-card sentence-card ">
+                      <div class="offence-card-offence-details govuk-!-padding-4 ">
+                          
+                              <span class="govuk-body">Count 1</span>
+                          
+                          <h4 class="govuk-heading-s">
+                              MD71517 Possess with intent to supply a controlled drug of Class B - Cannabis Resin
+                              
+                          </h4>
+                  
+                          
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  <dl class="govuk-summary-list govuk-summary-list--no-border" data-qa="offenceSummaryList">
+                  
+                    
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Committed on
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        02/04/2024
+                      </dd>
+                      
+                    </div>
+                    
+                  
+                    
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Outcome
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Imprisonment
+                      </dd>
+                      
+                    </div>
+                    
+                  
+                    
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Sentence type
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        SDS (Standard determinate sentence)
+                      </dd>
+                      
+                    </div>
+                    
+                  
+                    
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Consecutive or concurrent
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Unknown
+                      </dd>
+                      
+                    </div>
+                    
+                  
+                  </dl>
+                  
+                          
+                      </div>
+                      
+                  </div>
+                                                                      
+                                                                  
+                    </div>
+                  </details>
+                  
+                                                              </div>
+                                                          
+                                                      
+                                              </div>
+                                              <hr class="govuk-section-break govuk-!-margin-top-4 govuk-section-break--visible">
+                                              <p class="govuk-body govuk-!-margin-top-6">
+                                                  <a class="govuk-link--no-visited-state govuk-!-font-weight-bold" href="#">View and edit all appearances for this court case (1)</a>
+                                              </p>
+                </dd>
+                
+              </div>
+              
+            
+            </dl>
+          </div>
+        </div>
+
+        {% else %} 
+
+       
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">Active court cases (1)</h2>
+         
+                <div class="govuk-summary-card" data-qa="courtCaseCard-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">
+                    <div class="govuk-summary-card__title-wrapper">
+                    
+                      <h2 class="govuk-summary-card__title">
+                        Weston-super-mare County Court
+                      </h2>
+                    
+                    
+                      
+                      <div class="govuk-summary-card__actions">
+                        <a class="govuk-link" href="#">Add appearance<span class="govuk-visually-hidden"> Add appearance (Weston-super-mare County Court)</span></a>
+                      </div>
+                      
+                    
+                    </div>
+                  
+                    <div class="govuk-summary-card__content">
+                      <dl class="govuk-summary-list">
+                      
+                        
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key govuk-!-display-none">
+                            
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            <dl class="govuk-summary-list" data-qa="courtCaseSummary-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Case references
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  Not entered
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  First day in custody
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  02/05/2025 (Sentencing)
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Overall case outcome
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  Imprisonment
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Overall sentence length
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  Not entered
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Conviction date
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  Not entered
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Next hearing
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  <ul class="govuk-list">
+                                                                  
+                                                                      <li>
+                                                                          No future appearance scheduled
+                                                                      </li>
+                                                                  
+                                                              </ul>
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                            </dl>
+                            
+                            
+                                                        <hr class="govuk-section-break govuk-section-break--visible">
+                                                        
+                                                        <div class="govuk-grid-row">
+                                                                <div class="govuk-grid-column-one-half">
+                                                                    <h2 class="govuk-heading-m govuk-!-margin-top-6 govuk-!-margin-bottom-2">Latest appearance</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="govuk-grid-row govuk-!-padding-bottom-2 govuk-!-margin-top-2">
+                                                                
+                            
+                                                                    
+                                                                        <div class="govuk-grid-column-one-third">
+                                                                            <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Case reference</h3>
+                                                                            <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceCourtCaseReference-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">Not entered</p>
+                                                                            <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Warrant date</h3>
+                                                                            <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceWarrantDate-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">02/05/2025</p>
+                                                                            <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Outcome</h3>
+                                                                            <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceOutcome-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e"> Imprisonment</p>
+                                                                            
+                                                                        </div>
+                                                                        <div class="govuk-grid-column-two-thirds">
+                                                                            <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Location</h3>
+                                                                            <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceLocation-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">Weston-super-mare County Court</p>
+                                                                            <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Warrant type</h3>
+                                                                            <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceWarrantType-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">Sentencing</p>
+                                                                            
+                                                                                <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Conviction date</h3>
+                                                                                <p class="govuk-body govuk-!-margin-bottom-2" data-qa="latestAppearanceConvictionDate-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e">Not entered</p>
+                                                                            
+                                                                            
+                                                                        </div>
+                                                                        <div class="govuk-grid-column-full govuk-!-margin-top-2">
+                                                                            
+                            
+                                                                            <details class="govuk-details" data-qa="courtCaseDetailsComponent-4b8c5837-aaa9-4ec3-bfc8-f3a28967832e" open="">
+                              <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                  Show offences (1)
+                                </span>
+                              </summary>
+                              <div class="govuk-details__text">
+                                
+                                                                                
+                                                                                    
+                            
+                            
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+                            
+                                
+                            
+                            
+                            
+                                
+                                
+                                
+                            
+                            
+                            
+                            
+                            <div class="offence-card sentence-card ">
+                                <div class="offence-card-offence-details govuk-!-padding-4 ">
+                                    
+                                        <span class="govuk-body">Count 1</span>
+                                    
+                                    <h4 class="govuk-heading-s">
+                                        TH68006 Theft of pedal cycle
+                                        
+                                    </h4>
+                            
+                                    
+                            
+                              
+                            
+                              
+                            
+                              
+                            
+                              
+                            <dl class="govuk-summary-list govuk-summary-list--no-border" data-qa="offenceSummaryList">
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Committed on
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  30/04/2025
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Outcome
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  Imprisonment
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Sentence type
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  ORA SDS (Offender rehabilitation act standard determinate sentence)
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                              
+                              <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                  Consecutive or concurrent
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                  Unknown
+                                </dd>
+                                
+                              </div>
+                              
+                            
+                            </dl>
+                            
+                                    
+                                </div>
+                                
+                            </div>
+                                                                                
+                                                                            
+                              </div>
+                            </details>
+                            
+                                                                        </div>
+                                                                    
+                                                                
+                                                        </div>
+                                                        <hr class="govuk-section-break govuk-!-margin-top-4 govuk-section-break--visible">
+                                                        <p class="govuk-body govuk-!-margin-top-6">
+                                                            <a class="govuk-link--no-visited-state govuk-!-font-weight-bold" href="#">View and edit all appearances for this court case (1)</a>
+                                                        </p>
+                          </dd>
+                          
+                        </div>
+                        
+                      
+                      </dl>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        
+
+        {% endif %}
+ 
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="actions-list">
+            <ul class="govuk-list actions-list-list">
+                <span class="govuk-heading-m actions-list-header">Actions</span>
+                <li><a href="#">Add a new court case</a></li>
+                <!-- <li><a href="">Record an appeal</a></li> -->
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

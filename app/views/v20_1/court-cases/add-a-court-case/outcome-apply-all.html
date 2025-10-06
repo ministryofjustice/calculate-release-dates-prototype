@@ -1,0 +1,41 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="check-answers" method="post">
+            {% else %}
+        <form class="form" action="check-answers" method="post">
+            {% endif %}
+            <div class="govuk-form-group"> 
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add appearance information</span>
+                            Does this outcome apply to all offences on the warrant?
+                        </h1>
+                    </legend>
+                    <p class="govuk-body-l">{{ data['appearance']['overall-case-outcome'] }}</p>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="overall-case-outcome-apply-all" name="appearance[overall-case-outcome-apply-all]" type="radio" value="Yes" {% if data.appearance['overall-case-outcome-apply-all'] == 'Yes' %}checked{% endif %}>
+                            <label class="govuk-label govuk-radios__label" for="overall-case-outcome">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="overall-case-outcome-apply-all-2" name="appearance[overall-case-outcome-apply-all]" type="radio" value="No" {% if data.appearance['overall-case-outcome-apply-all'] == 'No' %}checked{% endif %}>
+                            <label class="govuk-label govuk-radios__label" for="overall-case-outcome-apply-all-2">
+                                No
+                            </label>
+                        </div>  
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

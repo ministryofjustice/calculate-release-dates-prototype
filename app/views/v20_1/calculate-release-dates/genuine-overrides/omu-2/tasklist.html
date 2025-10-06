@@ -1,0 +1,165 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %} 
+<!-- Back link -->
+<div class="moj-width-container">
+  <a href="reason-for-override" class="govuk-back-link">Back</a>
+</div>  
+
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-l">Calculate release dates</span>
+        Provide additional information to record release dates 
+      </h1> 
+        
+        <p>In order to override release dates calculated by the Calculate release dates service, you should provide some additional information before saving the new dates..</p>  
+  
+  
+                <ul class="govuk-task-list govuk-!-margin-top-7">
+                    
+                    {% if data['warrantsAdded'] == 'true'  %} 
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            
+                            <a class="govuk-link govuk-task-list__link govuk-link--no-visited-state" href="review-warrants" aria-describedby="offences-and-sentences-status">
+                                Upload court documents
+                            </a>
+                            
+                        </div>
+                        <div class="govuk-task-list__status" id="offences-and-sentences-status">
+                            
+                          Completed
+                            
+                            
+                        </div>
+                    </li>
+
+                    {% else  %} 
+                              <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            
+                            <a class="govuk-link govuk-task-list__link govuk-link--no-visited-state" href="select-a-case" aria-describedby="offences-and-sentences-status">
+                                Upload court documents
+                            </a>
+                            
+                        </div>
+                        <div class="govuk-task-list__status" id="offences-and-sentences-status">
+                            
+                              
+                            <strong class="govuk-tag govuk-tag--grey">
+                                Optional
+                            </strong>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    {% endif %} 
+                    
+                    
+                    {% if data['supportingDocumentAdded'] == 'true'  %} 
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            
+                            
+                            <a class="govuk-link govuk-task-list__link govuk-link--no-visited-state" href="upload-supporting-document" aria-describedby="court-documents-status">
+                                Upload additional supporting documents
+                            </a>
+                            
+                            
+                        </div>
+                        <div class="govuk-task-list__status" id="court-documents-status">
+                            
+                           Completed
+                            
+                        </div>
+                    </li>
+
+
+                    {% else  %} 
+
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            
+                            
+                            <a class="govuk-link govuk-task-list__link govuk-link--no-visited-state" href="upload-supporting-document" aria-describedby="court-documents-status">
+                                Upload additional supporting documents
+                            </a>
+                            
+                            
+                        </div>
+                        <div class="govuk-task-list__status" id="court-documents-status">
+                            
+                            
+                            <strong class="govuk-tag govuk-tag--grey">
+                                Optional
+                            </strong>
+                            
+                            
+                        </div>
+                    </li>
+
+
+                    {% endif  %} 
+
+                    {% if data['releaseDatesUpdated'] == 'true'  %} 
+
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link govuk-link--no-visited-state" href="edit-release-dates" aria-describedby="appearance-infromation-status">
+                                Reivew and change release dates
+                            </a>
+                        </div>
+                        <div class="govuk-task-list__status" id="appearance-infromation-status">
+                            Completed
+                        </div>
+                    </li>
+
+                    {% else  %} 
+
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link govuk-link--no-visited-state" href="edit-release-dates" aria-describedby="appearance-infromation-status">
+                                Reivew and change release dates
+                            </a>
+                        </div>
+                        <div class="govuk-task-list__status" id="appearance-infromation-status">
+                            
+                            <strong class="govuk-tag govuk-tag--blue">
+                                Incomplete
+                            </strong>
+                        </div>
+                    </li>
+
+                    {% endif  %} 
+                    
+                </ul> 
+
+        <h2 class="govuk-heading-m">
+        Finish modifying release dates
+    </h2>
+
+        <p>Once every task has been completed, you must save the information. You will not be able to return to this page, but can calculate release dates again.</p>  
+         
+    <div class="govuk-button-group govuk-!-margin-top-4">
+      <form method="post" action="../../calculation-complete">
+          <button type="submit" data-prevent-double-click="true" class="govuk-button " data-module="govuk-button" data-qa="submitReason">
+              Confirm and save
+          </button>
+      </form>
+
+      <form method="post" action="../../cancel">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Cancel
+          </button>
+      </form> 
+   
+    </div> 
+    </div>
+    </div>
+
+
+  
+{% endblock %}

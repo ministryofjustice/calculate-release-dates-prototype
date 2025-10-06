@@ -1,0 +1,77 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <!--         <div class="moj-banner moj-banner--success" role="region" aria-label="Success">
+            <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" />
+            </svg>
+            <div class="moj-banner__message">Offence successfully added </div>
+        </div> -->
+        <h1 class="govuk-heading-l">
+            <span class="govuk-caption-l">Add an appearance to court case {{ data.courtCaseIndex | int + 1 }}</span>
+            Review the offence details for this appearance</h1>
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-6">Offences</h2>
+        {% for offence in data.appearance.offences %}
+        <div class="offence-card">
+            <div class="offence-card-offence-details">
+                <h4 class="govuk-heading-s">{{ offence['offence-name'] }}</h4>
+                <dl class="govuk-summary-list govuk-summary-list--no-border">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Commited on
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            {{ offence['offence-start-date-day'] }}/{{ offence['offence-start-date-month'] }}/{{ offence['offence-start-date-year'] }}
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Outcome
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            {{ offence['outcome'] }}
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+            <!--                 <div class="offence-card-actions">
+                    <ul class="offence-card-actions-list">
+                        <li class="offence-card-action-link"><a href="/v8/update-offence?index={{loop.index0}}">Edit</a></li>
+                        <li class="offence-card-action-link"><a href="/v8/delete-offence">Delete</a></li>
+                    </ul>
+                </div> -->
+        </div>
+        {% endfor %}
+        <form class="form govuk-!-margin-top-7" action="/{{data.prototypeVersion}}/change-offences-select" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+                        Do you need to make any changes to the offences?
+                    </legend>
+                    <div id="add-another-hint" class="govuk-hint">
+                        This includes adding or deleting offences.
+                    </div>
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="change-offences" name="appearance[change-offences]" type="radio" value="Yes">
+                            <label class="govuk-label govuk-radios__label" for="change-offences">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="change-offences-2" name="appearance[change-offences]" type="radio" value="No">
+                            <label class="govuk-label govuk-radios__label" for="change-offences-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
