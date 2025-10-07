@@ -23,7 +23,7 @@ module.exports = {
                             "offence-code": [
                                 "TH68010"
                             ],
-                            "offence-name": "TH68010 - Theft from a shop",
+                            "offence-name": "TH68006 - Theft of pedal cycle",
                         },
                         {
                             "offence-start-date-day": "08",
@@ -35,7 +35,7 @@ module.exports = {
                             "offence-code": [
                                 "TH68010"
                             ],
-                            "offence-name": "TH68010 - Theft from a shop",
+                            "offence-name": "TH68006 - Theft of pedal cycle",
                             "outcome": "Remand in custody",
                         }
                     ]
@@ -59,7 +59,7 @@ module.exports = {
                             "offence-code": [
                                 "TH68010"
                             ],
-                            "offence-name": "TH68010 - Theft from a shop",
+                            "offence-name": "TH68006 - Theft of pedal cycle",
                         },
                         {
                             "offence-start-date-day": "08",
@@ -71,7 +71,7 @@ module.exports = {
                             "offence-code": [
                                 "TH68010"
                             ],
-                            "offence-name": "TH68010 - Theft from a shop",
+                            "offence-name": "TH68006 - Theft of pedal cycle",
                             "outcome": "Remand in custody",
                         }
                     ]
@@ -95,7 +95,7 @@ module.exports = {
                             "offence-code": [
                                 "TH68010"
                             ],
-                            "offence-name": "TH68010 - Theft from a shop",
+                            "offence-name": "TH68006 - Theft of pedal cycle",
                         },
                         {
                             "offence-start-date-day": "08",
@@ -107,7 +107,7 @@ module.exports = {
                             "offence-code": [
                                 "TH68010"
                             ],
-                            "offence-name": "TH68010 - Theft from a shop",
+                            "offence-name": "TH68006 - Theft of pedal cycle",
                             "outcome": "Remand in custody",
                         }
                     ]
@@ -131,7 +131,7 @@ module.exports = {
                             "offence-code": [
                                 "TH68010"
                             ],
-                            "offence-name": "TH68010 - Theft from a shop",
+                            "offence-name": "TH68006 - Theft of pedal cycle",
                         },
                         {
                             "offence-start-date-day": "08",
@@ -143,7 +143,7 @@ module.exports = {
                             "offence-code": [
                                 "TH68010"
                             ],
-                            "offence-name": "TH68010 - Theft from a shop",
+                            "offence-name": "TH68006 - Theft of pedal cycle",
                             "outcome": "Remand in custody",
                         }
                     ]
@@ -167,7 +167,7 @@ module.exports = {
                             "offence-code": [
                                 "TH68010"
                             ],
-                            "offence-name": "TH68010 - Theft from a shop",
+                            "offence-name": "TH68006 - Theft of pedal cycle",
                             "outcome": "Remand in custody",
                         },
                         {
@@ -180,7 +180,7 @@ module.exports = {
                             "offence-code": [
                                 "TH68010"
                             ],
-                            "offence-name": "TH68010 - Theft from a shop",
+                            "offence-name": "TH68006 - Theft of pedal cycle",
                             "outcome": "Remand in custody",
                         }
                     ]
@@ -219,7 +219,7 @@ module.exports = {
                             "offence-code": [
                                 "TH68010"
                             ],
-                            "offence-name": "TH68010 - Theft from a shop",
+                            "offence-name": "TH68006 - Theft of pedal cycle",
                             "outcome": "Imprisonment",
                             "sentence-type": "SDS (Standard Determinate Sentence)",
                             "sentence-length-years": "0",
@@ -246,7 +246,7 @@ module.exports = {
                             "offence-code": [
                                 "TH68010"
                             ],
-                            "offence-name": "TH68010 - Theft from a shop",
+                            "offence-name": "TH68006 - Theft of pedal cycle",
                             "outcome": "Imprisonment",
                             "sentence-type": "SDS (Standard Determinate Sentence)",
                             "sentence-length-years": "0",
