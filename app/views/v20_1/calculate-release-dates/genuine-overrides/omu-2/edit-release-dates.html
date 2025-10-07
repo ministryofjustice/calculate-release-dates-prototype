@@ -14,37 +14,7 @@
 
 
       <dl class="govuk-summary-list">
-
-
-        <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                          SLED
-                          <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
-                      </dt>
-          <dd class="govuk-summary-list__value manual-entry-value-for-SED">
-            Tuesday, 3 May 2029
-          </dd>
-
-          <dd class="govuk-summary-list__actions">
-
-            <ul class="govuk-summary-list__actions-list">
-
-              <li class="govuk-summary-list__actions-list-item">
-                <a class="govuk-link" href="enter-SED" data-qa="change-manual-date-SED">Edit<span
-                    class="govuk-visually-hidden"> Change SED (Sentence expiry date)</span></a>
-              </li>
-
-              <li class="govuk-summary-list__actions-list-item">
-                <a class="govuk-link" href="#" data-qa="remove-manual-date-SED">Delete<span
-                    class="govuk-visually-hidden"> Delete SED (Sentence expiry date)</span></a>
-              </li>
-
-            </ul>
-
-          </dd>
-
-        </div>
-
+ 
 
 
         <div class="govuk-summary-list__row">
@@ -53,7 +23,7 @@
                                 <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
                             </dt>
           <dd class="govuk-summary-list__value manual-entry-value-for-LED">
-            Monday, 4 May 2026
+            Tuesday, 24 September 2025
           </dd>
 
           <dd class="govuk-summary-list__actions">
@@ -78,12 +48,46 @@
 
 
         <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                          SLED
+                          <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
+                      </dt>
+          <dd class="govuk-summary-list__value manual-entry-value-for-SLED">
+
+            {% if data['SLEDupdated'] == 'true' %}
+            Monday, 21 November 2025
+            {% else %}
+            Tuesday, 27 October 2025
+            {% endif %}
+          </dd>
+
+          <dd class="govuk-summary-list__actions">
+
+            <ul class="govuk-summary-list__actions-list">
+
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="enter-SLED" data-qa="change-manual-date-SLED">Edit<span
+                    class="govuk-visually-hidden"> Change SED (Sentence expiry date)</span></a>
+              </li>
+
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="#" data-qa="remove-manual-date-SLED">Delete<span
+                    class="govuk-visually-hidden"> Delete SED (Sentence expiry date)</span></a>
+              </li>
+
+            </ul>
+
+          </dd>
+
+        </div>
+
+        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
                                 TUSED
                                 <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
                             </dt>
           <dd class="govuk-summary-list__value manual-entry-value-for-TUSED">
-            Thursday, 6 November 2025
+            Wednesday, 24 September 2026
           </dd>
 
           <dd class="govuk-summary-list__actions">
@@ -106,38 +110,7 @@
 
         </div>
 
-
-
-
-        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                HDCED
-                                <p class="govuk-!-font-size-16 govuk-hint">Home detention curfew eligibility date</p>
-                            </dt>
-          <dd class="govuk-summary-list__value manual-entry-value-for-HDCED">
-            Thursday, 6 July 2025
-          </dd>
-
-          <dd class="govuk-summary-list__actions">
-
-            <ul class="govuk-summary-list__actions-list">
-
-              <li class="govuk-summary-list__actions-list-item">
-                <a class="govuk-link" href="enter-HDCED" data-qa="change-manual-date-HDCED">Edit<span
-                    class="govuk-visually-hidden"> HDCED (Home detention curfew eligibility date)</span></a>
-              </li>
-
-              <li class="govuk-summary-list__actions-list-item">
-                <a class="govuk-link" href="are-you-sure-delete-HDCED" data-qa="remove-manual-date-HDCED">Delete<span
-                    class="govuk-visually-hidden"> HDCED (Home detention curfew eligibility date)</span></a>
-              </li>
-
-            </ul>
-
-          </dd>
-
-        </div>
-
+ 
 
       </dl>
 

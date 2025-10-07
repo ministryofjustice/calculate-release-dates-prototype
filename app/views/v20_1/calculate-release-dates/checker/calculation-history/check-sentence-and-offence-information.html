@@ -46,20 +46,21 @@
                         HMP Kirkham
                     </dd>
                 </div>
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Source
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        Calculate release dates service
-                </div>
+                   <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Source
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 User override<br>
+                  <span class="govuk-!-font-size-16 govuk-hint">Adding a previous SLED</span></dd>
+              </div>
 
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
                         Checked on
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        {{ "today" | govukDate }}
+                         Not checked
                 </div>
 
 
@@ -389,7 +390,7 @@
                                 <!-- Adjustment -->
                                 <td class="govuk-table__cell">Unlawfully at large (UAL)</td>
                                 <!-- Days -->
-                                <td class="govuk-table__cell">3
+                                <td class="govuk-table__cell">0
                                 </td>
                             </tr>
                             {% else %}
@@ -397,7 +398,7 @@
                                 <!-- Adjustment -->
                                 <td class="govuk-table__cell">Unlawfully at large (UAL)</td>
                                 <!-- Days -->
-                                <td class="govuk-table__cell">2
+                                <td class="govuk-table__cell">0
                                 </td>
                             </tr>
                             {% endif %}
@@ -432,7 +433,7 @@
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-text-align-right">
                                     Total days</td>
-                                <td class="govuk-table__cell">3
+                                <td class="govuk-table__cell">0
                                 </td>
                             </tr>
 
@@ -446,12 +447,12 @@
                                     {{data['arrest-date-day']}}/{{data['arrest-date-month']}}/{{data['arrest-date-year']}}
                                 </td>
 
-                                <td class="govuk-table__cell">2</td>
+                                <td class="govuk-table__cell">0</td>
                             </tr>
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-text-align-right">
                                     Total days</td>
-                                <td class="govuk-table__cell">2
+                                <td class="govuk-table__cell">0
                                 </td>
                             </tr>
 

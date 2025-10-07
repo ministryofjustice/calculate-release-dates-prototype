@@ -29,49 +29,8 @@
                     </ul>
                 </div>
                 <div class="govuk-summary-card__content" id="release-dates">
-                
-                    {% if data['toShow'] == 'ualAdded' or data['toShow'] == 'calc2Complete'  %} 
-                    <dl class="govuk-summary-list release-dates-list">
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                SLED
-                                <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                <p class="govuk-body">Tuesday, 3 May 2029</p>
-                            </dd>
-                        </div> 
 
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                CRD
-                                <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
-                            </dt>
-                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                                <p class="govuk-body">Monday, 4 May 2026</p>
-                            </dd>
-                        </div>
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                HDCED
-                                <p class="govuk-!-font-size-16 govuk-hint">Home detention curfew eligibility date</p>
-                            </dt>
-                            <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                                <p class="govuk-body">Thursday, 6 November 2025</p>
-                            </dd>
-                        </div>
-                    </dl>
-                    {% else %} 
                     <dl class="govuk-summary-list release-dates-list">
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                SLED
-                                <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                                <p class="govuk-body">Tuesday, 3 May 2028</p>
-                            </dd>
-                        </div> 
     
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
@@ -79,20 +38,29 @@
                                 <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
                             </dt>
                             <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                                <p class="govuk-body">Tuesday, 9 December 2025</p>
+                                <p class="govuk-body">Tuesday, 24 September 2025</p>
                             </dd>
                         </div>
+                
                         <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
-                                HDCED
-                                <p class="govuk-!-font-size-16 govuk-hint">Home detention curfew eligibility date</p>
+                                SLED
+                                <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body">Tuesday, 27 October 2025</p>
+                            </dd>
+                        </div> 
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                TUSED
+                                <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
                             </dt>
                             <dd class="govuk-summary-list__value govuk-!-padding-top-4">
-                                <p class="govuk-body">Friday, 13 June 2025</p>
+                                <p class="govuk-body">Wednesday, 24 September 2026</p>
                             </dd>
                         </div>
-                    </dl>
-                    {% endif %}  
+                    </dl> 
                 </div>
             </div> 
   
@@ -121,9 +89,7 @@
                 </div>
             </details> 
     
-            <div class="govuk-!-margin-top-6">
-                <div class="govuk-grid-row">
-                    <div class="">
+            <div class="govuk-!-margin-top-6">  
                         <fieldset class="govuk-fieldset">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                               <h1 class="govuk-fieldset__heading">
@@ -164,8 +130,7 @@
                                 </form>
                             </div>
                         <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
-                    </div>
-                </div>
+                 
             </div>
         </div>
 

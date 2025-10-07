@@ -495,39 +495,13 @@
                     calculation.</p>
                
                     <div class="govuk-button-group">
-                        
-                        {% if data['toShow'] == 'sentencesUpdated' %}
-                        <form method="post" action="calculation-summary?toShow=calc2Complete">
+                         
+                        <form method="post" action="genuine-overrides/omu-2/calculation-summary">
                             <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
                                 Calculate release dates
 
                             </button>
-                        </form>
-
-                        {% elif data['unsupported-journey'] == 'true' %}
-                        <form method="post" action="manual-entry/manual-reconfirm-intercept">
-                            <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
-                                Calculate release dates
-
-                            </button>
-                        </form>
-
-                        {% elif data['toShow'] == 'datesOverridden' %}
-                        <form method="post" action="genuine-overrides/omu/override-reconfirm-intercept">
-                            <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
-                                Calculate release dates
-
-                            </button>
-                        </form>
- 
-                        {% else %}
-                        <form method="post" action="calculation-summary">
-                            <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
-                                Calculate release dates
-                            </button>
-                        </form>
-
-                        {% endif %}
+                        </form> 
     
                         <form method="post" action="cancel">
                             <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
