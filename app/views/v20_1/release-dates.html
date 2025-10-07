@@ -68,7 +68,12 @@
                         Checked on
                     </dt>
                     <dd class="govuk-summary-list__value">
+
+                        {% if data['checkComplete'] == 'true' %}
+                        {{ "today" | govukDate }}
+                        {% else %}
                         Not checked
+                        {% endif %}
                 </div>
  
             </dl>
@@ -143,17 +148,26 @@
                         <th scope="col" class="govuk-table__header">Calculation reason</th>
                         <th scope="col" class="govuk-table__header">Establishment</th>
                         <th scope="col" class="govuk-table__header">Source</th>
+                        <th scope="col" class="govuk-table__header">Checked on</th>
                     </tr>
                 </thead>
                 <tbody class="govuk-table__body"> 
  
                     <tr class="govuk-table__row">
-                        <td class="govuk-table__cell"><a href="calculation-history/check-sentence-and-offence-information">{{ "today" | govukDate }}</a></td>
+                        <td class="govuk-table__cell"><a href="calculate-release-dates/checker/calculation-history/check-sentence-and-offence-information">{{ "today" | govukDate }}</a></td>
                         <td class="govuk-table__cell" data-sort-value="8850">Initial calculation</td>
                         <td class="govuk-table__cell">HMP Kirkham</td>
                         <td class="govuk-table__cell">
                           User override<br>
                            <span class="govuk-!-font-size-16 govuk-hint">Adding a previous SLED</span></td> 
+
+
+                        {% if data['checkComplete'] == 'true' %}
+                        <td class="govuk-table__cell">{{ "today" | govukDate }}</td>
+                        {% else %}
+                        <td class="govuk-table__cell">Not checked</td>
+                        {% endif %}
+
                     </tr>  
  
                 
