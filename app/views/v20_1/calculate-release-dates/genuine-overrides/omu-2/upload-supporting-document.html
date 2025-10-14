@@ -42,10 +42,16 @@
       
     </dl> -->
 
-            {{ govukFileUpload({
-              id: "file-upload-1",
-              name: "file-upload-1"
-          }) }}
+         
+            <input class="govuk-file-upload" id="file-upload-register" name="file-upload-register" type="file">
+
+          <script>
+            document.querySelectorAll('input[type="file"]').forEach(input => {
+              input.addEventListener('click', function (event) {
+                event.preventDefault();
+              });
+            });
+          </script>
            <!-- <details class="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
