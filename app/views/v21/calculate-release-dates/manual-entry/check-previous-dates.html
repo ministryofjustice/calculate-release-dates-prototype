@@ -1,0 +1,113 @@
+{% extends "../../../includes/layouts/template-linear.html" %} {% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+  <a href="enter-TUSED" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">  
+
+     
+  
+
+              <h1 class="govuk-heading-xl">
+
+            <span class="govuk-caption-xl">Calculate release dates</span>
+              Confirm the dates are correct
+              </h1> 
+
+                 <dl class="govuk-summary-list release-dates-list">
+                    
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                        SED
+                        <p class="govuk-!-font-size-16 govuk-hint">Sentence expiry date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <p class="govuk-body">Thursday, 21 August 2025</p></p>
+                    </dd>
+                </div> 
+
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                        LED
+                        <p class="govuk-!-font-size-16 govuk-hint">Licence expiry date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <p class="govuk-body">Thursday, 21 August 2025</p></p>
+                    </dd>
+                </div> 
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                        CRD
+                        <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                        <p class="govuk-body">Saturday, 24 May 2025</p>
+
+                    </dd>
+                </div>
+                   <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                        TUSED
+                        <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
+                    </dt>
+                    <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                        <p class="govuk-body">Saturday,  24 May 2026</p>
+
+                    </dd>
+                </div>
+                </dl>
+ 
+            <div class="govuk-!-margin-top-6">  
+              <form action="/v19/calculate-release-dates/manual-entry/check-previous-dates" method="post">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h1 class="govuk-fieldset__heading">
+                      Confirm if these dates are still correct
+                    </h1>
+                  </legend>
+                  <p class="govuk-body">If the dates are correct, they will be saved to NOMIS.</p>
+              
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="reconfirmDatesQuestion" name="reconfirmDatesQuestion" type="radio" value="yes"/>
+                      <label class="govuk-label govuk-radios__label" for="reconfirmDatesQuestion">
+                        Yes, all release dates are still correct
+                      </label>
+                      <!-- <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                        If you agree with the dates that have been manually calculated, they will be saved in NOMIS.
+                      </div> -->
+                    </div>
+              
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="reconfirmDatesQuestion-2" name="reconfirmDatesQuestion" type="radio" value="no"/>
+                      <label class="govuk-label govuk-radios__label" for="reconfirmDatesQuestion-2">
+                        No, release dates are either missing or incorrect
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              
+               
+        <div class="govuk-button-group govuk-!-margin-top-6"> 
+              <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                  Continue
+              </button> 
+ 
+              <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  Cancel
+              </button>
+      </div>
+
+    </form>
+                  <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
+                  </div> 
+          </div>
+
+        </div>
+      </div>
+  </div> 
+  
+{% endblock %}

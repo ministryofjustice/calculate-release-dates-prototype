@@ -1,0 +1,68 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/{{data.prototypeVersion}}/outcome-select-3" method="post">
+            <div class="govuk-form-group"> 
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add a court case</span>
+                            Select the overall case outcome
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="overall-case-outcome" name="appearance[overall-case-outcome]" type="radio" value="Sentencing outcome 1">
+                            <label class="govuk-label govuk-radios__label" for="overall-case-outcome">
+                                Sentencing outcome 1
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="overall-case-outcome-2" name="appearance[overall-case-outcome]" type="radio" value="Sentencing outcome 2">
+                            <label class="govuk-label govuk-radios__label" for="overall-case-outcome-2">
+                                Sentencing outcome 2
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="overall-case-outcome-3" name="appearance[overall-case-outcome]" type="radio" value="Sentencing outcome 3">
+                            <label class="govuk-label govuk-radios__label" for="overall-case-outcome-3">
+                                Sentencing outcome 3
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="overall-case-outcome-4" name="appearance[overall-case-outcome]" type="radio" value="Sentencing outcome 4">
+                            <label class="govuk-label govuk-radios__label" for="overall-case-outcome-4">
+                                Sentencing outcome 4
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="overall-case-outcome-3
+                        5" name="appearance[overall-case-outcome]" type="radio" value="Sentencing outcome 5">
+                            <label class="govuk-label govuk-radios__label" for="overall-case-outcome-5">
+                                Sentencing outcome 5
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="overall-case-outcome-6" name="appearance[overall-case-outcome]" type="radio" value="Sentencing outcome 6">
+                            <label class="govuk-label govuk-radios__label" for="overall-case-outcome-6">
+                                Sentencing outcome 6
+                            </label>
+                        </div>
+                        <div class="govuk-radios__divider">or</div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="overall-case-outcome-6" name="appearance[overall-case-outcome]" type="radio" value="lookup-another-outcome">
+                            <label class="govuk-label govuk-radios__label" for="overall-case-outcome-6">
+                                Look up a different outcome
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

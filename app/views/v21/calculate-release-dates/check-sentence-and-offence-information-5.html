@@ -1,0 +1,187 @@
+{% extends "../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="calculation-reason" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">
+                <span class="govuk-caption-xl">Calculate release dates</span>
+                Check sentence and offence information
+            </h1>
+
+        </div>
+    </div>
+</div>
+
+
+ 
+<!-- NOMIS sentences -->
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+           <p class="govuk-body">This calculation will include 1 sentence from NOMIS.</p>
+        </div>
+    </div>
+</div>
+<!-- Court cases -->
+<div class="moj-width-container govuk-!-margin-top-4"> 
+    <!-- Count 1 -->
+    <h2 class="govuk-heading-l govuk-!-margin-bottom-2">Court case 1</h2>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <dl class="govuk-summary-list govuk-summary-list--no-border">
+                
+                
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Court name</dt>
+                        <dd class="govuk-summary-list__value">Weston-super-Mare County Court</dd>
+                    </div>
+                
+            </dl>
+
+    <div class="offence-card sentence-card">
+        <div class="offence-card-offence-details">
+            <span class="govuk-body">Count 1</span>
+            <h4 class="govuk-heading-s">TH68006 - Theft of pedal cycle
+                </h4>
+                <dl class="govuk-summary-list govuk-summary-list--no-border">
+                
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Commited on
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        10 August 2025
+                        
+                    </dd>
+                </div>
+                
+                
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        CJA Code
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2020
+            </dd>
+            </div>
+            
+            
+            <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Sentence type
+            </dt>
+            <dd class="govuk-summary-list__value">
+                ORA Sentencing Code Standard Determinate Sentence
+            </dd>
+            </div>
+            
+            
+            <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Sentence length
+            </dt>
+            <dd class="govuk-summary-list__value">
+                
+                0 years 0 months 8 weeks 0 days
+                    </dd>
+                </div>
+                
+                 
+                
+            </dl>
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+</div> 
+
+
+    <!-- Adjustments -->
+<div class="moj-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h2 class="govuk-heading-l govuk-!-margin-top-6">Adjustments</h2>
+      <p class="govuk-body">There are no active adjustments.</p>
+
+    </div>
+  </div>
+</div>
+
+  
+    <!-- If some infomation is wrong -->
+    <div class="moj-width-container ">
+        <div class="govuk-grid-row"> 
+            <div class="govuk-grid-column-two-thirds">
+
+            <p class="govuk-body govuk-!-margin-top-4">
+                You can edit or add more adjustments in the <a href="../adjustments">adjustments service</a>.
+            </p>  
+
+            <div class="govuk-inset-text govuk-!-margin-top-6">
+                If you think some information is wrong, you can edit it in NOMIS and <a
+                    href="check-sentence-and-offence-information?toShow=sentencesUpdated">reload this page</a>.
+            </div>  
+
+            <h2 class="govuk-heading-l govuk-!-margin-top-6">Now calculate release dates</h2>
+    </div>
+    </div>
+    </div>
+  
+<!-- ERSED checkbox -->
+<div class="moj-width-container govuk-!-margin-top-2">
+    <div class="govuk-grid-row"> 
+        
+            <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-checkboxes govuk-checkboxes " data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox"
+                        value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" style="padding-top: 0px;">
+                        Include an Early release scheme eligibility date (ERSED) in this calculation
+                    </label>
+                    <div class="govuk-hint govuk-checkboxes__hint">
+                        Not applicable for terror or terror-related offences
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Call to action -->
+    <div class="moj-width-container govuk-!-margin-top-4">
+        <div class="govuk-grid-row"> 
+
+        
+            <div class="govuk-grid-column-two-thirds">
+                <p class="govuk-body">The release dates will not be saved in NOMIS until you have reviewed the
+                    calculation.</p>
+               
+                    <div class="govuk-button-group">
+                         
+                        <form method="post" action="genuine-overrides/omu-2/calculation-summary">
+                            <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                                Calculate release dates
+
+                            </button>
+                        </form> 
+    
+                        <form method="post" action="cancel">
+                            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                                Cancel
+                            </button>
+                        </form>
+                    </div> 
+        </div>
+    </div>
+</div>
+
+{% endblock %}
