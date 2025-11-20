@@ -1,0 +1,160 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="../../../release-dates" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">
+                <!-- <span class="govuk-caption-xl">11 March 2023 at HMP Kirkham</span> -->
+                Calculation details
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-2">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Calculation date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ "today" | govukDate }}
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Calculation reason
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Initial calculation
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Establishment
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        HMP Kirkham
+                    </dd>
+                </div>
+                     <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Source
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 User override<br>
+                  <span class="govuk-!-font-size-16 govuk-hint">Adding a previous SLED</span></dd>
+              </div>
+
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Checked on
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                         Not checked
+                </div>
+
+
+            </dl>
+        </div>
+
+    <div class="govuk-grid-column-one-third"> 
+      <div class="actions-list ">
+        <ul class="govuk-list actions-list-list">
+            <span class="govuk-heading-m actions-list-header" style="margin-bottom: 0px;">Actions</span>
+
+            <li><a href="#">Print notification slip</a></li>
+          
+            <!-- <li><a href="../are-you-sure-check">Record a calculation check</a></li>  -->
+          
+            <!-- <li><a href="check-sentence-and-offence-information">Record a blind check</a></li>  -->
+        </ul>
+      </div> 
+    </div>
+    </div>
+</div>
+
+<div class="moj-width-container govuk-!-margin-top-4">
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+                <ul class="moj-sub-navigation__list">
+                    <li class="moj-sub-navigation__item">
+                        <a class="moj-sub-navigation__link" 
+                            href="check-sentence-and-offence-information">Sentence and offence information</a>
+                    </li>
+                    <li class="moj-sub-navigation__item">
+                        <a class="moj-sub-navigation__link" aria-current="page" href="calculation-summary">Release dates</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Court cases -->
+<div class="moj-width-container">
+
+    <h2 class="govuk-heading-l"> 
+        Release dates
+    </h2>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <!-- Final release dates --> 
+                        <dl class="govuk-summary-list release-dates-list">
+
+                  <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                          CRD
+                          <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
+                      </dt>
+                      <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                          <p class="govuk-body">Tuesday, 24 September 2025</p>
+
+                      </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                          SLED
+                          <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                          <p class="govuk-body">Monday, 21 November 2025</p></p>
+                      </dd>
+                  </div> 
+                  <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                          TUSED
+                          <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
+                      </dt>
+                      <dd class="govuk-summary-list__value govuk-!-padding-top-4">
+                          <p class="govuk-body">Wednesday, 24 September 2026</p>
+                      </dd>
+                  </div>
+                        </dl>
+  
+ 
+
+        </div>
+    </div>
+
+
+</div>
+
+
+{% endblock %}

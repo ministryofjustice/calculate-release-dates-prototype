@@ -1,0 +1,83 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+
+    <div class="">
+        <a href="lal" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+                    <h1 class="govuk-heading-l"><span class="govuk-caption-xl">Adjustments</span>Confirm and save</h1>
+
+                    <h2 class="govuk-heading-m">LAL details</h2>
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                               First day spent LAL
+                            </dt>
+                            <dd class="govuk-summary-list__value" style="">
+                               15 September 2023
+                            </dd>
+                            <dd class="govuk-summary-list__value" ></dd>
+                            <dd class="govuk-summary-list__value">
+                                <a href="lal">Edit</a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Last day spent LAL
+                            </dt>
+                            <dd id="end" class="govuk-summary-list__value">
+                                19 September 2023
+                            </dd>
+                            <dd id="start" class="govuk-summary-list__value"></dd>
+                            <dd class="govuk-summary-list__value">
+                                <a href="lal">Edit</a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Number of days
+                            </dt>
+                            <dd  id="days" class="govuk-summary-list__value">
+                                4
+                            </dd>
+                            <dd id="start" class="govuk-summary-list__value"></dd>
+                            <dd class="govuk-summary-list__value">
+                                <a href="lal">Edit</a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Defer release dates
+                            </dt>
+                            
+                            <dd class="govuk-summary-list__value">
+                               
+                                {%if (data.laltype) %} 
+                                {{data.laltype}}
+
+                              {% endif %}
+                              
+                            </dd>
+                            <dd id="start" class="govuk-summary-list__value"></dd>
+                            <dd class="govuk-summary-list__value">
+                                <a href="lal">Edit</a>
+                            </dd>
+                        </div>
+                    </dl>
+                    <div class="govuk-button-group">
+                        <a href="../lal/index1"  id="saveLALButton" class="govuk-button" data-module="govuk-button"  data-journey="7">
+                            Confirm and save
+                        </a>
+                        <a href="../index-1" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+<script src="/public/javascripts/add-remand-mvp.js"></script>
+
+{% endblock %}

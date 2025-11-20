@@ -1,0 +1,145 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+  <a href="upload-supporting-document" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Calculate release dates</span>
+      <h1 class="govuk-heading-xl">Update the release dates to match the paper calculation</h1>
+
+
+      <dl class="govuk-summary-list">
+ 
+
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                CRD
+                                <p class="govuk-!-font-size-16 govuk-hint">Conditional release date</p>
+                            </dt>
+          <dd class="govuk-summary-list__value manual-entry-value-for-LED">
+            Tuesday, 24 September 2025
+          </dd>
+
+          <dd class="govuk-summary-list__actions">
+
+            <ul class="govuk-summary-list__actions-list">
+
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="enter-CRD" data-qa="change-manual-date-LED">Edit<span
+                    class="govuk-visually-hidden"> CRD (Conditional release date)</span></a>
+              </li>
+
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="enter-CRD" data-qa="remove-manual-date-LED">Delete<span
+                    class="govuk-visually-hidden"> CRD (Conditional release date)</span></a>
+              </li>
+
+            </ul>
+
+          </dd>
+
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                          SLED
+                          <p class="govuk-!-font-size-16 govuk-hint">Sentence and licence expiry date</p>
+                      </dt>
+          <dd class="govuk-summary-list__value manual-entry-value-for-SLED">
+
+            {% if data['SLEDupdated'] == 'true' %}
+            Monday, 21 November 2025
+            {% else %}
+            Tuesday, 27 October 2025
+            {% endif %}
+          </dd>
+
+          <dd class="govuk-summary-list__actions">
+
+            <ul class="govuk-summary-list__actions-list">
+
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="enter-SLED" data-qa="change-manual-date-SLED">Edit<span
+                    class="govuk-visually-hidden"> Change SED (Sentence expiry date)</span></a>
+              </li>
+
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="#" data-qa="remove-manual-date-SLED">Delete<span
+                    class="govuk-visually-hidden"> Delete SED (Sentence expiry date)</span></a>
+              </li>
+
+            </ul>
+
+          </dd>
+
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key release-dates-key govuk-!-font-size-24">
+                                TUSED
+                                <p class="govuk-!-font-size-16 govuk-hint">Top-up supervision expiry date</p>
+                            </dt>
+          <dd class="govuk-summary-list__value manual-entry-value-for-TUSED">
+            Wednesday, 24 September 2026
+          </dd>
+
+          <dd class="govuk-summary-list__actions">
+
+            <ul class="govuk-summary-list__actions-list">
+
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="enter-TUSED" data-qa="change-manual-date-LED">Edit<span
+                    class="govuk-visually-hidden"> TUSED (Top-up supervision eligibility date)</span></a>
+              </li>
+
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="are-you-sure-delete-TUSED" data-qa="remove-manual-date-LED">Delete<span
+                    class="govuk-visually-hidden"> TUSED (Top-up supervision eligibility date)</span></a>
+              </li>
+
+            </ul>
+
+          </dd>
+
+        </div>
+
+ 
+
+      </dl>
+
+      <p class="govuk-body govuk-!-margin-bottom-8">
+        <a href="select-dates" class="govuk-link govuk-link--no-visited-state"
+          data-qa="add-another-release-date-link">Add another release date</a>
+      </p>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <!-- <h2 class="govuk-heading-m">Confirm and save to NOMIS</h2>
+      <p class="govuk-body">By saving this calculation you are confirming that, to the best of your knowledge, it is
+        correct. These dates will be saved in NOMIS as a manual calculation.</p> -->
+
+      <div class="govuk-button-group ">
+        <form method="post" action="tasklist?releaseDatesUpdated=true">
+          <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button"
+            data-qa="submitReason">
+            Continue
+          </button>
+        </form>
+
+        <form method="post" action="cancel">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Cancel
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

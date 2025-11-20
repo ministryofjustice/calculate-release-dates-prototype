@@ -1,0 +1,63 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="check-answers" method="post">
+         {% elif data.postSaveEdit == 'true' %}
+        <form class="form" action="/{{data.prototypeVersion}}/persist-appearance" method="post">
+            {% else %}
+        <form class="form" action="court-name-select">
+            {% endif %}
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        {% if data.postSaveEdit == 'true' %}
+
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{ data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{ data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }}</span>
+                            Edit the warrant date
+                        </h1>
+                        {% else %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add appearance information</span>
+                            Enter the warrant date
+                        </h1>
+                        {% endif %}
+                    </legend>
+                    <div class="govuk-date-input" id="warrant-date">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="warrant-date-day">
+                                    Day
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="warrant-date-day" name="appearance[warrant-date-day]" type="text" inputmode="numeric" {% if data.edit == 'true' %}value="{{ data.appearance['warrant-date-day'] }}"{% endif %}{% if data.postSaveEdit == 'true' %}value="{{ data.appearance['warrant-date-day'] }}"{% endif %}>
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="warrant-date-month">
+                                    Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="warrant-date-month" name="appearance[warrant-date-month]" type="text" inputmode="numeric" {% if data.edit == 'true' %}value="{{ data.appearance['warrant-date-month'] }}"{% endif %}{% if data.postSaveEdit == 'true' %}value="{{ data.appearance['warrant-date-month'] }}"{% endif %}>
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="warrant-date-year">
+                                    Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="warrant-date-year" name="appearance[warrant-date-year]" type="text" inputmode="numeric" {% if data.edit == 'true' %}value="{{ data.appearance['warrant-date-year'] }}"{% endif %}{% if data.postSaveEdit == 'true' %}value="{{ data.appearance['warrant-date-year'] }}"{% endif %}>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

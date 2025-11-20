@@ -1,0 +1,135 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="select-an-appearance" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro --> 
+<div class="govuk-grid-row govuk-!-margin-top-4">
+  <div class="govuk-grid-column-two-thirds govuk-!-padding-right-8">
+    <form class="form" action="/23/court-documents-complete" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Upload court documents
+            </h1>
+          </legend>
+
+            <div id="file-upload-1-hint" class="govuk-hint">
+            Uploading documents is optional. The selected file type should be .PDF under 500MB.
+            </div>
+
+    <p class="govuk-body" aria-live="polite">1 file uploaded</p>
+
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
+
+    <dl class="govuk-summary-list govuk-summary-list--long-key govuk-!-margin-0">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">file-name.pdf</a>
+          <div class="govuk-body govuk-!-margin-0">Sentencing warrant</div>
+        </dt>
+        <dd class="govuk-summary-list__value govuk-!-text-align-right">
+          <strong class="govuk-tag govuk-tag--green">
+            Uploaded
+        </strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> file-name.pdf</span></a>
+        </dd>
+      </div> 
+      
+    </dl>
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible govuk-!-margin-bottom-4">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-2">
+        Trial record sheet
+      </label>
+      <input class="govuk-file-upload" id="file-upload-2" name="file-upload-2" type="file">
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-2">
+        Indictment
+      </label>
+      <input class="govuk-file-upload" id="file-upload-2" name="file-upload-2" type="file">
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-2">
+        Prison court register
+      </label>
+      <input class="govuk-file-upload" id="file-upload-2" name="file-upload-2" type="file">
+    </div>
+ 
+    
+  </fieldset></div></form>
+</div>
+<div class="govuk-grid-column-one-third">
+  
+  <div class="offence-summary">
+            <h2 class="govuk-heading-m govuk-!-margin-top-4">Appearance details</h2>
+            <dl class="govuk-summary-list govuk-summary-list--no-border offences-summary-card-content">
+                <div class="govuk-summary-list__row offences-summary-card-court-details-row">
+                    <dt class="govuk-summary-list__key">
+                        Case reference
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                         TS1233535 
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row offences-summary-card-court-details-row">
+                    <dt class="govuk-summary-list__key">
+                        Court name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Aberdare Court
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row offences-summary-card-court-details-row">
+                    <dt class="govuk-summary-list__key">
+                        Warrant date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        27/10/2024
+                    </dd>
+                </div> 
+            </dl>
+            
+            
+            
+            
+        </div>
+        
+</div>
+
+    </div>
+</div> 
+
+
+
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds"> 
+            
+                <div class="govuk-button-group">
+                    <form method="post" action="review-warrants">
+                        <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                            Continue
+                        </button>
+                    </form>
+
+                    <form method="post" action="cancel">
+                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+            <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
+        </div>
+    </div>
+</div>
+{% endblock %}
