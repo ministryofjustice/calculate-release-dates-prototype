@@ -17,6 +17,11 @@
         Add and review dates
       </h1>
 
+        {% if data['all-deleted'] == 'true' %} 
+        <div class="govuk-inset-text">
+        No APD, HDCAD or ROTL dates have been added.
+      </div>
+        {% else %}
       <dl class="govuk-summary-list govuk-!-margin-top-6">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -51,9 +56,12 @@
               <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> contact details</span></a>
             </li>
           </dd>
-        </div>  
+        </div> 
+        
 
         {% else %}
+
+        {% endif %} 
         {% endif %}
         <!-- <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
