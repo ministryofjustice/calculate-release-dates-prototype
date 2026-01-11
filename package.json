@@ -11,7 +11,7 @@
     "@x-govuk/govuk-prototype-filters": "^2.0.0",
     "axios": "^1.9.0",
     "dotenv": "^16.5.0",
-    "express": "^5.1.0",
+    "express": "^5.2.1",
     "govuk-frontend": "5.10.1",
     "govuk-prototype-kit": "13.16.2",
     "hmpps-court-cases-release-dates-design": "^4.4.0"
