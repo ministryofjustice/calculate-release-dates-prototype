@@ -1,0 +1,103 @@
+{% extends "../template.html" %}
+{% set edit = "false" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+            <span class="govuk-caption-l">Add appearance information</span>
+            Check your answers
+        </h1>
+        <form class="form" action="/{{data.prototypeVersion}}/persist-court-case" method="post">
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Court case reference
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['court-case-ref'] | last }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="court-case-reference-number?edit=true">
+                            Edit<span class="govuk-visually-hidden"> case reference</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Warrant date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['warrant-date-day'] }}/{{ data['appearance']['warrant-date-month'] }}/{{ data['appearance']['warrant-date-year'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="warrant-date?edit=true">
+                            Edit<span class="govuk-visually-hidden"> warrant date</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Court name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['court-name'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="court-name?edit=true">
+                            Edit<span class="govuk-visually-hidden"> court name</span>
+                        </a>
+                    </dd>
+                </div>
+                {% if data.appearance['warrant-type'] == "Remand" %}
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Overall case outcome
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['overall-case-outcome'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="overall-case-outcome.html">
+                            Edit<span class="govuk-visually-hidden"> court name</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Overall case outcome applies to all offences?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['overall-case-outcome-apply-all'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="outcome-apply-all.html">
+                            Edit<span class="govuk-visually-hidden"> court name</span>
+                        </a>
+                    </dd>
+                </div>
+                {% endif %}
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Tagged bail
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {% if data['appearance']['tagged-bail'] | first == "Yes" %}
+                        {{ data['appearance']['tagged-bail'] | last }} days
+                        {% else %}
+                        None
+                        {% endif %}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="tagged-bail?edit=true">
+                            Edit<span class="govuk-visually-hidden"> court name</span>
+                        </a>
+                    </dd>
+                </div>
+            </dl>
+            <button class="govuk-button" data-module="govuk-button">
+                Confirm and continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

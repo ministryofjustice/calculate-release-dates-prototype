@@ -1,0 +1,139 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            {% if data['appearance'].offences.length == 0 %}
+            <h1 class="govuk-fieldset__heading">
+                <span class="govuk-caption-l">Add offences</span>
+                Add offences to case {{ data['appearance']['court-case-ref'] }}
+            </h1>
+            {% else %}
+            <h1 class="govuk-fieldset__heading">
+                <span class="govuk-caption-l">Add offences</span>
+               You have added {{ data.appearance.offences.length }} offences added to court case {{ data['appearance']['court-case-ref'] }}
+            </h1>
+            {% endif %}
+        </legend>
+        <form class="form" action="../add-a-court-case/task-list" method="post">
+            <!-- <dl class="govuk-summary-list govuk-summary-list--no-border">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Case reference
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['court-case-ref'] | last }}
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Court name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['court-name'] }}
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Warrant date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['warrant-date-day'] }}/{{ data['appearance']['warrant-date-month'] }}/{{ data['appearance']['warrant-date-year'] }}
+                    </dd>
+                </div>
+            </dl> -->
+            {% if data['appearance'].offences.length == 0 %}
+            <div class="govuk-inset-text">
+                No offences have been added to this appearance. You must add an offence to continue.
+            </div>
+            {% endif %}
+            <a href="/{{data.prototypeVersion}}/create-offence?path=cta" role="button" draggable="false" class="govuk-button govuk-button--link govuk-!-margin-bottom-6 govuk-!-margin-top-2" data-module="govuk-button">
+                Add an offence
+            </a>
+            {% if data['appearance'].offences.length > 0 %}
+            {% for offence in data['appearance'].offences %}
+            <div class="offence-card">
+                <div class="offence-card-offence-details">
+                    <h4 class="govuk-heading-s">{{ offence['offence-name'] }}</h4>
+                    {% if offence['terror-related'] == 'Yes' %}
+                            <strong class="govuk-tag govuk-!-margin-bottom-4">
+                                Terror-related
+                            </strong>
+                            {% endif %}</h4>
+                    <dl class="govuk-summary-list govuk-summary-list--no-border">
+                        {% if offence['offence-start-date-day'] %}
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Commited on
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ offence['offence-start-date-day'] }}/{{ offence['offence-start-date-month'] }}/{{ offence['offence-start-date-year'] }}
+                                {% if offence['offence-end-date-day'] %}
+                                to
+                                {{ offence['offence-end-date-day'] }}/{{ offence['offence-end-date-month'] }}/{{ offence['offence-end-date-year'] }}
+                                {% endif %}
+                            </dd>
+                        </div>
+                        {% endif %}
+                        {% if offence['outcome'] %}
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Outcome
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ offence['outcome'] }}
+                            </dd>
+                        </div>
+                        {% endif %}
+                    </dl>
+                    {% if offence['status'] == 'draft' %}
+                        <p class="govuk-!-body govuk-!-margin-top-3 govuk-!-margin-bottom-1"><a href="{{ data.offence['saved-from'] }}?index={{ loop.index }}">Continue adding offence details</a></p>
+                        {% endif %}
+                </div>
+                <div class="offence-card-actions">
+                    <ul class="offence-card-actions-list">
+                        {% if offence['status'] == 'draft' %}
+                        <li class="offence-card-action-link"></li><strong class="govuk-tag govuk-tag--blue  govuk-!-margin-bottom-2">
+                            Draft
+                        </strong></li>
+                        {% else %}
+                        <li class="offence-card-action-link"><a href="/{{data.prototypeVersion}}/update-offence?index={{loop.index0}}">Edit</a></li>
+                        <li class="offence-card-action-link"><a href="/{{data.prototypeVersion}}/confirm-delete?index={{loop.index0}}&route=add-a-court-case">Delete</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+            <div class="govuk-form-group govuk-!-margin-top-8">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        Have you finished adding offences?
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="finished-adding-offences" name="appearance[finished-adding-offences]" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="finished-adding-offences">
+                                Yes, I’ve finished adding offences
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="finished-adding-offences-2" name="appearance[finished-adding-offences]" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="finished-adding-offences-2">
+                                No, I’ll come back to it later
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = false %}
+        {% include "includes/templates/appearance-info.njk" %}
+      </div>
+</div>
+{% endblock %}

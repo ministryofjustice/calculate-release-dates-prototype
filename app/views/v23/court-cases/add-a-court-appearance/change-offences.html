@@ -1,0 +1,78 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.changeMade == 1 %}
+        <div class="moj-banner moj-banner--success" role="region" aria-label="Success">
+            <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" />
+            </svg>
+            <div class="moj-banner__message">Changes successfully made</div>
+        </div>
+        {% endif %}
+        {% if data.offenceDeleted == 1 %}
+        <div class="moj-banner moj-banner--success" role="region" aria-label="Success">
+            <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" />
+            </svg>
+            <div class="moj-banner__message">Offence deleted</div>
+        </div>
+        {% endif %}
+        {% if data.offenceAdded == 1 %}
+        <div class="moj-banner moj-banner--success" role="region" aria-label="Success">
+            <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" />
+            </svg>
+            <div class="moj-banner__message">New offence added</div>
+        </div>
+        {% endif %}
+        <h1 class="govuk-heading-l">
+            <span class="govuk-caption-l">Add an appearance to court case {{ data.courtCaseIndex | int + 1 }}</span>
+            Edit the offence details for this appearance</h1>
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-6">Offences ({{ data.appearance.offences | length }})</h2>
+        {% for offence in data.appearance.offences %}
+        <div class="offence-card">
+            <div class="offence-card-offence-details">
+                <h4 class="govuk-heading-s">{{ offence['offence-name'] }}</h4>
+                <dl class="govuk-summary-list govuk-summary-list--no-border">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Commited on
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            {{ offence['offence-start-date-day'] }}/{{ offence['offence-start-date-month'] }}/{{ offence['offence-start-date-year'] }}
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Outcome
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            {{ offence['outcome'] }}
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+           <div class="offence-card-actions">
+                    <ul class="offence-card-actions-list">
+                        <li class="offence-card-action-link"><a href="/v8/update-offence?index={{loop.index0}}&route=repeat-remand">Edit</a></li>
+                        <li class="offence-card-action-link">
+                            <a href="/v8/confirm-delete?index={{loop.index0}}&route=repeat-remand">Delete</a></li>
+                    </ul>
+                </div>
+        </div>
+        {% endfor %}
+        <form class="form govuk-!-margin-top-7" action="next-court-date-select">
+            <p><a class="govuk-link--no-visited-state" href="/{{data.prototypeVersion}}/add-an-offence-to-appearance?route=repeat-remand">Add another offence</a></p>
+            <div class="govuk-button-group">
+            <!-- <button class="govuk-button govuk-button--secondary" data-module="govuk-button" formaction="" formmethod="post">
+                Add another
+            </button> -->
+            <button class="govuk-button" data-module="govuk-button">
+                Finish and continue
+            </button>
+        </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

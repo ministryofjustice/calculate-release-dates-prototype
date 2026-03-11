@@ -1,0 +1,81 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="check-answers" method="post">
+            <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                <span class="govuk-caption-l">Add appearance information</span>
+                                Enter the case reference
+                            </h1>
+                        </legend>
+                        <input class="govuk-input govuk-input--width-10" id="court-case-ref" name="appearance[court-case-ref]" type="text" {% if data.appearance['court-case-ref'] | last !="None" %} value="{{ data.appearance['court-case-ref'] }}" {% endif %}>
+                    </fieldset>
+                    <fieldset class="govuk-fieldset">
+                        <div class="govuk-checkboxes govuk-!-margin-top-6" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="no-offence-code" name="appearance[court-case-ref]" type="checkbox" value="None" {% if data.appearance['court-case-ref'] | last=="None" %}checked{% endif %}>
+                                <label class="govuk-label govuk-checkboxes__label" for="no-offence-code">
+                                    There is no case reference
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            {% elif data.postSaveEdit == 'true' %}
+        <form class="form" action="/{{data.prototypeVersion}}/persist-appearance" method="post">
+            <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{ data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{ data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }}</span>
+                                Edit case reference
+                            </h1>
+                        </legend>
+                        <input class="govuk-input govuk-input--width-10" id="court-case-ref" name="appearance[court-case-ref]" type="text" {% if data.appearance['court-case-ref'] | last !="None" %} value="{{ data.appearance['court-case-ref'] }}" {% endif %}>
+                    </fieldset>
+                    <fieldset class="govuk-fieldset">
+                        <div class="govuk-checkboxes govuk-!-margin-top-6" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="no-offence-code" name="appearance[court-case-ref]" type="checkbox" value="None" {% if data.appearance['court-case-ref'] | last=="None" %}checked{% endif %}>
+                                <label class="govuk-label govuk-checkboxes__label" for="no-offence-code">
+                                    There is no case reference
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            {% else %}
+            <form class="form" action="warrant-date">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                <span class="govuk-caption-l">Add appearance information</span>
+                                Enter the case reference
+                            </h1>
+                        </legend>
+                        <input class="govuk-input govuk-input--width-10" id="court-case-ref" name="appearance[court-case-ref]" type="text">
+                    </fieldset>
+                    <fieldset class="govuk-fieldset">
+                        <div class="govuk-checkboxes govuk-!-margin-top-6" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="no-offence-code" name="appearance[court-case-ref]" type="checkbox" value="None">
+                                <label class="govuk-label govuk-checkboxes__label" for="no-offence-code">
+                                    There is no case reference
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                {% endif %}
+                <button class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+            </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="/{{data.prototypeVersion}}/persist-offence?edit=true" method="post">
+            {% else %}
+            <form class="form" action="/{{data.prototypeVersion}}/case-outcome-apply" method="post">
+                {% endif %}
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            {% if data.route == 'repeat-remand' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add offences</span>
+                            Was the offence terror related?
+                        </h1>
+                        {% elif data.route == 'remand-to-sentence' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add offences</span>
+                            Was the offence terror related?
+                        </h1>
+                        {% elif data.postSaveEdit == 'true' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{ data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{ data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }}</span>
+                            Was the offence terror related?
+                        </h1>
+                        {% else %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add offences</span>
+                            Was the offence terror related?
+                        </h1>
+                        {% endif %}
+                        </legend>
+                        <!-- <p class="govuk-body-l">
+                            {{ data.sentence['offence-name'] }}
+                        </p> -->
+                        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="terror-related" name="offence[terror-related]" type="radio" value="Yes" {% if data.offence['terror-related'] == 'Yes'%} checked {% endif %}>
+                                <label class="govuk-label govuk-radios__label" for="terror-related">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="terror-related-2" name="offence[terror-related]" type="radio" value="No" {% if data.offence['terror-related'] == 'No'%} checked {% endif %}>
+                                <label class="govuk-label govuk-radios__label" for="terror-related-2">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="govuk-button-group">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/{{data.prototypeVersion}}/save-court-case">
+                    Save as draft
+                </a>
+            </div>
+            </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+      </div>
+</div>
+{% endblock %}

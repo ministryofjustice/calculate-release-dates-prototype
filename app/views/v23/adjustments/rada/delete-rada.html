@@ -1,0 +1,50 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+
+    <div id="DeleteRADAPage" class="govuk-width-container">
+        <a href="view-rada" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-l">Delete RADA</h1>
+<!--                    <p>[Explainer].</p>-->
+                    <h2 class="govuk-heading-m">RADA details</h2>
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                               Date the days were restored
+                            </dt>
+                            <dd id="PeriodDate" class="govuk-summary-list__value">
+                               12 Mar 2023
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Number of days restored
+                            </dt>
+                            <dd id="PeriodDays" class="govuk-summary-list__value">
+                                2
+                            </dd>
+                        </div>
+                    </dl>
+<!--                    <div class="govuk-!-margin-bottom-6">-->
+<!--                        <h2 class="govuk-heading-m">Are you sure you want to delete this RADA details?</h2>-->
+<!--                        <p>The RADA details will be removed. This will change the amount of unused deductions.</p>-->
+<!--                    </div>-->
+                    <div class="govuk-button-group">
+                        <a id="DeleteRADA" href="../index-1" class="govuk-button " data-module="govuk-button" data-journey="8">
+                            Delete
+                        </a>
+                        <a href="view-rada" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/adjustments-3-mvp.js"></script>
+{% endblock %}

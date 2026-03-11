@@ -1,0 +1,99 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        {% if data.sentence['consecutive-concurrent'] == "Consecutive" %}
+        <form class="form" action="/{{data.prototypeVersion}}/consecutive-concurrent-select" method="post">
+            {% else %}
+            <form class="form" action="/{{data.prototypeVersion}}/persist-sentence?edit=true" method="post">
+                {% endif %}
+                {% else %}
+                <form class="form" action="/{{data.prototypeVersion}}/consecutive-concurrent-select" method="post">
+                    {% endif %}
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                {% if data.postSaveEdit == 'true' %}
+                                <h1 class="govuk-fieldset__heading">
+                                    <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at
+                                        {{ data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day']
+                                        }}/{{ data.appearance['warrant-date-month'] }}/{{
+                                        data.appearance['warrant-date-year'] }}</span>
+                                    Is the sentence consecutive or concurrent?
+                                </h1>
+                                {% else %}
+                                <h1 class="govuk-fieldset__heading">
+                                    <span class="govuk-caption-l">Add offences</span>
+                                    Is the sentence consecutive or concurrent?
+                                </h1>
+                                {% endif %}
+                            </legend>
+                            <!--                     <p class="govuk-body-l">
+                            {{ data.sentence['offence-name'] }}
+                        </p> -->
+                            <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="consecutive-concurrent"
+                                        name="sentence[consecutive-concurrent]" type="radio" value="Consecutive" {% if
+                                        data.sentence['consecutive-concurrent']=='Consecutive' %} checked {% endif %}>
+                                    <label class="govuk-label govuk-radios__label" for="consecutive-concurrent">
+                                        Consecutive
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="consecutive-concurrent-2"
+                                        name="sentence[consecutive-concurrent]" type="radio" value="Concurrent" {% if
+                                        data.sentence['consecutive-concurrent']=='Concurrent' %} checked {% endif %}>
+                                    <label class="govuk-label govuk-radios__label" for="consecutive-concurrent-2">
+                                        Concurrent
+                                    </label>
+                                </div>
+                                {% if data.sentence['consecutive-concurrent'] != "Forthwith" %}
+                                {% if data.forthwithSelected != "Yes" %}
+                                <div class="govuk-radios__divider">or</div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="consecutive-concurrent-3"
+                                        name="sentence[consecutive-concurrent]" type="radio" value="Forthwith" {% if
+                                        data.sentence['consecutive-concurrent']=='Forthwith' %} checked {% endif %}>
+                                    <label class="govuk-label govuk-radios__label" for="consecutive-concurrent-3">
+                                        Forthwith
+                                        <div class="govuk-hint">There can only be one forthwith sentence in a case</div>
+                                    </label>
+                                </div>
+                                {% endif %}
+                                {% endif %}
+                                {% if data.sentence['consecutive-concurrent'] == "Forthwith" %}
+                                <div class="govuk-radios__divider">or</div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="consecutive-concurrent-3"
+                                        name="sentence[consecutive-concurrent]" type="radio" value="Forthwith" {% if
+                                        data.sentence['consecutive-concurrent']=='Forthwith' %} checked {% endif %}>
+                                    <label class="govuk-label govuk-radios__label" for="consecutive-concurrent-3">
+                                        Forthwith
+                                        <div class="govuk-hint">There can only be one forthwith sentence in an
+                                            appearance.</div>
+                                    </label>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="govuk-button-group">
+                        <button type="submit" class="govuk-button" data-module="govuk-button">
+                            Continue
+                        </button>
+                        <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+                            formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+                            Save as a draft
+                        </button>
+                    </div>
+                </form>
+    </div>å
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+{% endblock %}

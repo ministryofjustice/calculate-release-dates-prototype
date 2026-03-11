@@ -1,0 +1,53 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="/{{data.prototypeVersion}}/persist-sentence" method="post">
+
+            
+                    <h1 class="govuk-heading-l">
+                        <span class="govuk-caption-l">Add offences</span>
+                        Enter count numbers for multiple consecutive sentences
+                    </h1>
+                    <p>You must enter count numbers for offences when there is more than one consecutive sentence listed on the same warrant.</p>
+                    <details class="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            Why count numbers are important
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                            Count numbers are given to each offence on a court case. Sometimes these are also called Offence numbers. <br><br>Some warrants don't show count numbers, but they are needed to show the correct order of consecutive sentences. Entering count numbers incorrectly could lead to inaccurate sentence calculations.
+                        </div>
+                      </details>
+                    <h2 class="govuk-heading-m">What you need to do</h2>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Review offences added for this appearance</li>
+                        <li>Edit each sentence to add the count number</li>
+                    </ul>
+                    <h2 class="govuk-heading-m">If there are no count numbers on the warrant</h2>
+                    <p>If the warrant doesn't have count numbers, you can either:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Check other documents such as the indictment or prison court register relevent count number for each offence</li>
+                        <li>If you have access, check Common Platform</li>
+                        <li>Contact {{ data.appearance['court-name'] }}</li>
+                    </ul>
+            <div class="govuk-button-group govuk-!-margin-top-6">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Review offences
+                </button>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button"
+                    href="/{{data.prototypeVersion}}/save-court-case">
+                    Save as draft
+                </a>
+            </div>
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+</div>
+{% endblock %}

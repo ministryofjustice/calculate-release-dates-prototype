@@ -1,0 +1,102 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/{{data.prototypeVersion}}/delete-sentence" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        {% if data.route == 'repeat-remand' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Review offences</span>
+                            Are you sure you want to delete this offence?
+                        </h1>
+                        {% else %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add offences</span>
+                            Are you sure you want to delete this offence?
+                        </h1>
+                        {% endif %}
+                    </legend>
+                    <div class="offence-card sentence-card">
+                        <div class="offence-card-offence-details">
+                            <span class="govuk-body-s">Count {{ data.appearance.sentences[data.index]['count-number'] }}</span>
+                            <h4 class="govuk-heading-s">{{ data.appearance.sentences[data.index]['offence-name'] }}
+                                {% if data.appearance.sentences[data.index]['terror-related'] == 'Yes' %}
+                                <br><strong class="govuk-tag govuk-!-margin-top-2">
+                                    Terror-related
+                                </strong>
+                                {% endif %}</h4>
+                            <dl class="govuk-summary-list govuk-summary-list--no-border">
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Commited on
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                        {{ data.appearance.sentences[data.index]['offence-start-date-day'] }}/{{ data.appearance.sentences[data.index]['offence-start-date-month'] }}/{{ data.appearance.sentences[data.index]['offence-start-date-year'] }}
+                                        {% if data.appearance.sentences[data.index]['offence-end-date-day'] > 0 %}
+                                        to
+                                        {{ data.appearance.sentences[data.index]['offence-end-date-day'] }}/{{ data.appearance.sentences[data.index]['offence-end-date-month'] }}/{{ data.appearance.sentences[data.index]['offence-end-date-year'] }}
+                                        {% endif %}
+                                    </dd>
+                                </div>
+                                <!--                         <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Outcome
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ sentence['outcome'] }}
+                            </dd>
+                        </div> -->
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Sentence type
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                        {{ data.appearance.sentences[data.index]['sentence-type'] }}
+                                    </dd>
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Sentence length
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                        {{ data.appearance.sentences[data.index]['sentence-length-years'] }} years {{ data.appearance.sentences[data.index]['sentence-length-months'] }} months {{ data.appearance.sentences[data.index]['sentence-length-weeks'] }} weeks {{ data.appearance.sentences[data.index]['sentence-length-days'] }} days
+                                    </dd>
+                                </div>
+                                {% if data.appearance.sentences[data.index]['licence-period-years'] %}
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Licence period
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                        {{ data.appearance.sentences[data.index]['licence-period-years'] }} years {{ data.appearance.sentences[data.index]['licence-period-months'] }} months {{ data.appearance.sentences[data.index]['licence-period-weeks'] }} weeks {{ data.appearance.sentences[data.index]['licence-period-days'] }} days
+                                    </dd>
+                                </div>
+                                {% endif %}
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="govuk-radios govuk-!-margin-top-6" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="confirm-delete-sentence" name="confirmDeleteSentence" type="radio" value="Yes">
+                            <label class="govuk-label govuk-radios__label" for="confirm-delete-sentence">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="confirm-delete-sentence-2" name="confirmDeleteSentence" type="radio" value="No">
+                            <label class="govuk-label govuk-radios__label" for="confirm-delete-sentence-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="check-answers?edit=false" method="post">
+            {% else %}
+            <form class="form" action="/{{data.prototypeVersion}}/select-merged-cases" method="post">
+                {% endif %}
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                <span class="govuk-caption-l">Add offences</span>
+                                Select the cases to merge offences from
+                            </h1>
+                        </legend>
+                        <div class="govuk-hint">Select all that apply</div>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            {% for courtCase in data.courtCases %}
+                            {% if loop.index < data.courtCases.length %} {% set lastAppearance=courtCase.appearances |
+                                last %} <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="merged-from" name="appearance[merged-from]"
+                                    type="checkbox" value="{{ loop.index0 }}">
+                                <label class="govuk-label govuk-checkboxes__label" for="merged-from">
+                                    Case {{ lastAppearance["court-case-ref"] }} at {{ lastAppearance["court-name"] }} on
+                                    {{ lastAppearance["warrant-date-day"] }}/{{ lastAppearance["warrant-date-month"]
+                                    }}/{{ lastAppearance["warrant-date-year"] }}
+                                </label>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                </div>
+                </fieldset>
+    </div>
+    <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+            Continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+            formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+            Save as a draft
+        </button>
+    </div>
+    </form>
+</div>
+<div class="govuk-grid-column-one-third">
+    {% set showOffences = false %}
+    {% include "includes/templates/appearance-info.njk" %}
+</div>
+</div>
+{% endblock %}

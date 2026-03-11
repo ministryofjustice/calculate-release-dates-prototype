@@ -1,0 +1,64 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="upload-warrant" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro --> 
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6"> 
+        
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="more-detail">
+
+            <span class="govuk-caption-l">Calculate release dates</span>
+            Review uploaded court documents
+          </label>
+        </h1>  
+
+        <p>You can upload other types of documents later. </p>
+
+ 
+
+          <dl class="govuk-summary-list govuk-summary-list--long-key govuk-!-margin-bottom-6">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style="width: 60%">
+              <span class="govuk-!-font-weight-bold">3 documents uploaded</span>
+              <div class="govuk-body govuk-!-margin-0">TS1233535 at Aberdare Court on 17/10/2024</div>
+            </dt> 
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> file-name.pdf</span></a>
+            </dd>
+          </div>
+          
+        </dl>
+ 
+        <a class="govuk-list" href="select-a-case">Upload other court documents</a>
+
+      </div>
+    </div>
+</div> 
+
+<div class="moj-width-container  govuk-!-margin-top-4">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds"> 
+            
+                <div class="govuk-button-group">
+                    <form method="post" action="upload-a-supporting-document-question">
+                        <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                            Continue
+                        </button>
+                    </form>
+
+                    <form method="post" action="cancel">
+                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+            <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
+        </div>
+    </div>
+</div>
+{% endblock %}

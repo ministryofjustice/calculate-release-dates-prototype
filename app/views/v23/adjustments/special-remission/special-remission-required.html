@@ -1,0 +1,38 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="govuk-body">
+    <div class="">
+        <a href="../index-1" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper offence-outcome " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <form action="index.html" method="post">
+                       <h1 class="govuk-heading-l">
+                                <span class="govuk-caption-xl">Adjustments</span>
+                                <legend class="govuk-fieldset__legend--l">
+                                  You cannot continue
+                              </legend>
+                            </h1>
+                           
+                            
+                       <div class="govuk-body">You need to check the sentence calculation team has agreed the number of special remission days. </div>
+
+
+                        <div class="govuk-button-group">
+                            <button class="govuk-button" data-module="govuk-button">
+                                Return to adjustments
+                            </button>
+                           <!-- <a href="../index-1.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                                Cancel
+                            </a>-->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/add-remand-mvp.js"></script>
+{% endblock %}

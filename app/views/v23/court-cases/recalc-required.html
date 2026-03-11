@@ -1,0 +1,25 @@
+{% extends "../template.html" %}
+<!-- {% set backLinkTarget = 'court-case-detail' %} -->
+{% set backLinkTarget = '/' + data.prototypeVersion + '/court-cases/appearance-detail' %}
+{% set noBackLink = false %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="court-case-detail" method="post">
+            <h1 class="govuk-heading-l govuk-!-margin-top-4">Recalculation required</h1>
+           <p>Because the follwoing changes have been made to this court appearance, release dates must be recalculated.</p> 
+           <ul class="govuk-list govuk-list--bullet">
+               <li>One or more offence dates have changed</li>
+               <li>One or more sentence types have changed</li>
+           </ul>
+           
+            <div class="govuk-button-group">
+                <button class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+                    Recalculate release dates
+                </button>
+                <a href="court-case-detail" class="govuk-link">Cancel changes</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

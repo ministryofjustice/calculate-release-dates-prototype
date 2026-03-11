@@ -117,6 +117,19 @@ router.get('/api/token', async (req, res) => {
 });
 
 
+// Route for v23 calculation reason branching
+router.post('/v23/calculate-release-dates/calculation-reason-answer', function (req, res) {
+  const calculationReasonId = req.body.calculationReasonId;
+  
+  if (calculationReasonId === '12') {
+    // Branch to checker path for "record a calculation check"
+    return res.redirect('/v23/calculate-release-dates/checker/check-sentence-and-offence-information');
+  } else {
+    // Default path for all other options
+    return res.redirect('/v23/calculate-release-dates/check-sentence-and-offence-information');
+  }
+});
+
 // Route for reconfirming manual release dates
 // routes.js
 router.post('/v19/calculate-release-dates/manual-entry/check-previous-dates', function (req, res) {

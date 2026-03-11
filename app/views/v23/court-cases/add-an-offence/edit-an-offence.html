@@ -1,0 +1,89 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.postSaveEdit == 'true' %}
+        <form class="form" action="/{{data.prototypeVersion}}/persist-appearance" method="post">
+        {% else %}
+        <form class="form" action="/{{data.prototypeVersion}}/court-cases/add-a-court-appearance/add-sentence-information?edit=false" method="post">
+            {% endif %}
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        {% if data.route == 'repeat-remand' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Review offences</span>
+                            Edit offence details
+                        </h1>
+                        {% elif data.route == 'remand-to-sentence' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Update offence outcomes</span>
+                            Edit offence details
+                        </h1>
+                        {% elif data.postSaveEdit == 'true' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{ data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{ data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }}</span>
+                            Edit offence details
+                        </h1>
+                        {% else %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add offences</span>
+                            Edit offence details
+                        </h1>
+                        {% endif %}
+                    </legend>
+                    <dl class="govuk-summary-list govuk-!-margin-top-4 govuk-!-margin-bottom-2">
+                        <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key offence-card-edit-offence-details-key">
+                                        Offence
+                                    </dt>
+                                    <dd class="govuk-summary-list__value offence-card-edit-offence-details-value">
+                                        {{ data.appearance.offences[data.index]['offence-name'] }}
+                                    </dd>
+                                    <dd class="govuk-summary-list__actions">
+                                        <a class="govuk-link" href="offence-code?postSaveEdit=true">Edit<span class="govuk-visually-hidden"> name</span></a>
+                                    </dd>
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key offence-card-edit-offence-details-key">
+                                        Commited on
+                                    </dt>
+                                    <dd class="govuk-summary-list__value offence-card-edit-offence-details-value">
+                                        {{ data.appearance.offences[data.index]['offence-start-date-day'] }}/{{ data.appearance.offences[data.index]['offence-start-date-month'] }}/{{ data.appearance.offences[data.index]['offence-start-date-year'] }}
+                                    </dd>
+                                    <dd class="govuk-summary-list__actions">
+                                        <a class="govuk-link" href="offence-date?postSaveEdit=true">Edit<span class="govuk-visually-hidden"> date offence committed on</span></a>
+                                    </dd>
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key offence-card-edit-offence-details-key">
+                                        Terror related
+                                    </dt>
+                                    <dd class="govuk-summary-list__value offence-card-edit-offence-details-value">
+                                        {% if data.appearance.offences[data.index]['terror-related'] == undefined %}No{% endif %}{{ data.appearance.offences[data.index]['terror-related'] }}
+                                    </dd>
+                                    <dd class="govuk-summary-list__actions">
+                                        <a class="govuk-link" href="terror-related?postSaveEdit=true">Edit<span class="govuk-visually-hidden"> offence outcome</span></a>
+                                    </dd>
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key offence-card-edit-offence-details-key">
+                                        Outcome
+                                    </dt>
+                                    <dd class="govuk-summary-list__value offence-card-edit-offence-details-value">
+                                        {{ data.appearance.offences[data.index]['outcome'] }}
+                                    </dd>
+                                    <dd class="govuk-summary-list__actions">
+                                        <a class="govuk-link" href="outcome?postSaveEdit=true">Edit<span class="govuk-visually-hidden"> offence outcome</span></a>
+                                    </dd>
+                                </div>
+                            </dl>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Accept changes
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

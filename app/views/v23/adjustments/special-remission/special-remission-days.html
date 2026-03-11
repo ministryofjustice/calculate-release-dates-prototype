@@ -1,0 +1,50 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="govuk-body">
+    <div class="">
+        <a href="../index-1" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper offence-outcome " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <form action="confirm-special-remission" method="post">
+
+                        <div id="" class="">
+
+
+                            <h1 class="govuk-heading-l">
+                                <span class="govuk-caption-xl">Adjustments</span>
+                                Enter the number of special remission days
+                            </h1>
+                           
+
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="weight">
+                             Number of days
+                            </label>
+                            <div class="govuk-input__wrapper">
+                              <input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                              <div class="govuk-input__suffix" aria-hidden="true">days</div>
+                            </div>
+                          </div>
+                       
+
+
+                        <div class="govuk-button-group">
+                            <button id="addUALButton" class="govuk-button" data-module="govuk-button">
+                                Continue
+                            </button>
+                            <a href="/index.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                                Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/add-remand-mvp.js"></script>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/{{data.prototypeVersion}}/additional-documents" method="post">
+            <div class="govuk-form-group"> 
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Upload court documents</span>
+                            Do you need to upload additional documents?
+
+                        </h1>
+                    </legend>
+                    <div class="govuk-hint">Such as an indictment, trial record sheet or court register</div>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="additional-documents" name="appearance[additional-documents]" type="radio" value="yes" data-aria-controls="conditional-additional-documents">
+                          <label class="govuk-label govuk-radios__label" for="additional-documents">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-additional-documents">
+                          <div class="govuk-form-group">
+                            <div id="document-hint" class="govuk-hint">
+                                Select all that apply
+                              </div>
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="documents" name="appearance[additional-documents-list]" type="checkbox" value="Indictment">
+                                  <label class="govuk-label govuk-checkboxes__label" for="documents">
+                                    Indictment
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="documents-2" name="appearance[additional-documents-list]" type="checkbox" value="Trial record sheet">
+                                  <label class="govuk-label govuk-checkboxes__label" for="documents-2">
+                                    Trial record sheet
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="documents-3" name="appearance[additional-documents-list]" type="checkbox" value="Court register">
+                                  <label class="govuk-label govuk-checkboxes__label" for="documents-3">
+                                    Court register
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="documents-4" name="appearance[additional-documents-list]" type="checkbox" value="other">
+                                    <label class="govuk-label govuk-checkboxes__label" for="documents-3">
+                                      Other
+                                    </label>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="additional-documents-2" name="appearance[additional-documents]" type="radio" value="no">
+                          <label class="govuk-label govuk-radios__label" for="additional-documents-2">
+                            No
+                          </label>
+                        </div>
+                </fieldset>
+            </div>
+            <div class="govuk-button-group">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Save and continue
+                </button>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/{{data.prototypeVersion}}/save-court-case">
+                    Save as draft
+                </a>
+            </div>
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+{% endblock %}

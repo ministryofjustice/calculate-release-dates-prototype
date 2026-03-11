@@ -1,0 +1,146 @@
+
+{% if data['viewOption'] == 'adjustmentsReleasedFalse' %}
+{% extends "../includes/layouts/template-linear.html" %}
+{% else %}
+{% extends "./template.html" %}
+{% set nav = true %}
+{% endif %}
+
+{% set releaseDatesActive = true %}
+{% block content %}
+
+
+<!-- Release dates -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Release dates and calculations
+        </h1>
+    </div>
+</div>
+ 
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+      
+      <h3 class="govuk-heading-l">Release dates</h3> 
+
+ 
+      {% if data['toShow'] == 'startDate' %}
+      <p  class="govuk-body">The release dates cannot be displayed when the offence start date is missing.</p>
+
+      {% elif data['toShow'] == 'endDate' %}
+      <p  class="govuk-body">The release dates cannot be displayed when the offence end date is missing.</p>
+      {% elif data['toShow'] == 'bothDate' %}
+      <p  class="govuk-body">The release dates cannot be displayed when the offence start and end dates are missing.</p>
+      
+      {% endif %} 
+      <p  class="govuk-body">Go to NOMIS and enter the missing details, then <a class="govuk-link" href="#">try again</a>.</p>
+        
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+  
+ 
+    
+        <h3 class="govuk-heading-l">Calculation history</h3> 
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Calculation date</th>
+                        <th scope="col" class="govuk-table__header">Calculation reason</th>
+                        <th scope="col" class="govuk-table__header">Establishment</th>
+                        <th scope="col" class="govuk-table__header">Source</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body"> 
+
+  
+
+ 
+                    {% if data['toShow'] == 'datesOverridden' %}
+
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell"><a href="calculation-history/10-12-2024/check-sentence-and-offence-information">{{ "today" | govukDate }}</a></td>
+                        <td class="govuk-table__cell" data-sort-value="8850">Initial calculation</td>
+                        <td class="govuk-table__cell">HMP Kirkham</td>
+                        <td class="govuk-table__cell">
+                          Request for dates to be manually recorded<br>
+                           <span class="govuk-!-font-size-16 govuk-hint">Recorded by the SST</span></td> 
+                    </tr> 
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell"><a href="calculation-history/10-12-2024/check-sentence-and-offence-information">5 May 2024</a></td>
+                        <td class="govuk-table__cell" data-sort-value="8850">New sentence</td>
+                        <td class="govuk-table__cell">HMP Kirkham</td>
+                        <td class="govuk-table__cell"></td> 
+                    </tr> 
+  
+                    {% elif data['unsupported-journey'] == 'true' %}
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell"><a href="calculation-history/10-12-2024/check-sentence-and-offence-information">{{ "today" | govukDate }}</a></td>
+                      <td class="govuk-table__cell" data-sort-value="8850">Initial calculation</td>
+                      <td class="govuk-table__cell">HMP Kirkham</td>
+                      <td class="govuk-table__cell">
+                        Paper calculation<br>
+                         <span class="govuk-!-font-size-16 govuk-hint">Entered in the Calculate release dates service</span>
+                        </td> 
+                  </tr> 
+                  <tr class="govuk-table__row">
+                      <td class="govuk-table__cell"><a href="calculation-history/10-12-2024/check-sentence-and-offence-information">5 May 2024</a></td>
+                      <td class="govuk-table__cell" data-sort-value="8850">New sentence</td>
+                      <td class="govuk-table__cell">HMP Kirkham</td>
+                      <td class="govuk-table__cell"></td> 
+                  </tr> 
+ 
+                    {% elif data['toShow'] == 'datesOverridden2' %}
+
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell"><a href="calculation-history/10-12-2024/check-sentence-and-offence-information">{{ "today" | govukDate }}</a></td>
+                        <td class="govuk-table__cell" data-sort-value="8850">Initial calculation</td>
+                        <td class="govuk-table__cell">HMP Kirkham</td>
+                        <td class="govuk-table__cell">
+                          Request for dates to be manually recorded<br>
+                           <span class="govuk-!-font-size-16 govuk-hint">Recorded by the SST</span></td> 
+                    </tr> 
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell"><a href="calculation-history/10-12-2024/check-sentence-and-offence-information">5 May 2024</a></td>
+                        <td class="govuk-table__cell" data-sort-value="8850">New sentence</td>
+                        <td class="govuk-table__cell">HMP Kirkham</td>
+                        <td class="govuk-table__cell"></td> 
+                    </tr> 
+ 
+                    {% else %}
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell"><a href="calculation-history/10-12-2024/check-sentence-and-offence-information">5 May 2024</a></td>
+                        <td class="govuk-table__cell" data-sort-value="8850">New sentence</td>
+                        <td class="govuk-table__cell">HMP Kirkham</td>
+                        <td class="govuk-table__cell">NOMIS</td> 
+                    </tr> 
+ 
+                    {% endif %} 
+                </tbody>
+            </table> 
+    </div>
+    <div class="govuk-grid-column-one-third"> 
+      <div class="actions-list ">
+        <ul class="govuk-list actions-list-list">
+            <span class="govuk-heading-m actions-list-header" style="margin-bottom: 0px;">Actions</span>
+            <li><a href="error-missing-dates">Calculate release dates</a></li>
+
+            {% if data['unsupported-journey'] == 'true' %}
+
+            {% else %}
+            <li><a href="calculate-release-dates/genuine-overrides/SST/v1/reason-for-override">Override a calculated date</a></li>
+            {% endif %}  
+            <li><a href="calculate-release-dates/calculation-reason">Add APD, HDCAD or ROTL dates</a></li> 
+          
+        </ul>
+      </div> 
+    </div>
+
+</div>
+
+
+ 
+    {% endblock %}

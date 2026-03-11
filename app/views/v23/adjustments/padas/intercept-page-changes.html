@@ -1,0 +1,40 @@
+{% extends "version-1/dps/includes/template.html" %}
+{% block content %}
+<div class="moj-width-container">
+    <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container govuk-!-margin-left-0">
+            <div class="moj-identity-bar__details">
+                <span class="moj-identity-bar__title"><span class="govuk-!-margin-right-5"><strong>Prisoner name: </strong>Joe Bloggs</span><strong> Date of birth: </strong><span class="govuk-!-margin-right-5">21 March 1986</span><strong>Prison number: </strong>A8207AA</span>
+            </div>
+        </div>
+    </div>
+    <div id="hubPage">
+        <a href="#" class="govuk-back-link">Back</a>
+
+        <main class=" offence-outcome " id="main-content" role="main">
+            <div class="moj-page-header-actions">
+                <div class="moj-page-header-actions__title">
+                    <h1 class="govuk-heading-xl">
+                        <span class="govuk-caption-xl">Adjust release dates</span>
+                        There is information to be reviewed
+                    </h1>
+                </div>
+            </div>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full govuk-!-padding-6">
+                    <article class="moj-ticket-panel govuk-!-margin-bottom-6" aria-label="Sub navigation 1">
+                        <section class="moj-ticket-panel__content moj-ticket-panel__content--blue" aria-label="Section 1">
+                            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Existing PADAs to review</h2>
+                            <p>Joe Bloggs has PADAs logged, they need to be reviewed</p>
+                            <p><a href="select-padas-table.html" class="govuk-link">Review</a></p>
+                        </section>
+                    </article>
+
+<!--                    <p><a href="" class="govuk-link">Continue to Adjustments service</a></p>-->
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/adjustments-3.js"></script>
+{% endblock %}

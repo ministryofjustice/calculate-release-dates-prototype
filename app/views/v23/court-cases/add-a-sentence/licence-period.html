@@ -1,0 +1,81 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="consecutive-concurrent" method="post">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                        {% if data.route == 'remand-to-sentence' %}
+                        <span class="govuk-caption-l">Review offences and sentences</span>
+                        {% else %}
+                        <span class="govuk-caption-l">Add offences</span>
+                        {% endif %}
+                        Enter the licence period
+                    </h1>
+                </legend>
+                <div class="govuk-form-group">
+                    <div class="govuk-date-input" id="licence-period">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="licence-period-years">
+                                    Years
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="licence-period-years" name="sentence[licence-period-years]" type="text"
+                                    inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="licence-period-months">
+                                    Months
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="licence-period-months" name="sentence[licence-period-months]" type="text"
+                                    inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="licence-period-weeks">
+                                    Weeks
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="licence-period-weeks" name="sentence[licence-period-weeks]" type="text"
+                                    inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="licence-period-days">
+                                    Days
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                                    id="licence-period-days" name="sentence[licence-period-days]" type="text"
+                                    inputmode="numeric">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <!-- <p class="govuk-body"><a href="alternative-sentence-length">The sentence length is formatted differently</a></p> -->
+            <div class="govuk-button-group">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+                    formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+                    Save as a draft
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+</div>
+{% endblock %}

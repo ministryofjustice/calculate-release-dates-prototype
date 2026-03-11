@@ -1,0 +1,41 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/{{data.prototypeVersion}}/add-court-document" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Upload court documents</span>
+                            Upload the {{ data.appearance['document-type'] }}
+                        </h1>
+                    </legend>
+                    <div id="file-upload-1-hint" class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-5">
+                        You can upload .pdf, .jpg, .doc or .docx files.
+                    </div>
+
+
+                    <div class="govuk-form-group">
+                        <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+                    </div>
+
+                    <div class="govuk-button-group">
+                        <button type="submit" class="govuk-button" data-module="govuk-button">
+                            Continue
+                        </button>
+                        <a class="govuk-button govuk-button--secondary" data-module="govuk-button"
+                            href="/{{data.prototypeVersion}}/save-court-case">
+                            Save as draft
+                        </a>
+                    </div>
+                    </fieldset>
+                    </div>
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+{% endblock %}

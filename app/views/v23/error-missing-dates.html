@@ -1,0 +1,26 @@
+{% extends "../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- <div class="moj-width-container">
+    <a href="javascript:history.back();" class="govuk-back-link">Back</a>
+</div> -->
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-6 govuk-!-margin-top-6">
+                Some of the offence dates are missing
+            </h1>
+           
+            {% if data['toShow'] == 'startDate' %}
+            <p  class="govuk-body">This service cannot calculate release dates because the offence start date is missing.</p>
+
+            {% elif data['toShow'] == 'endDate' %}
+            <p  class="govuk-body">This service cannot calculate release dates because the offence end date is missing.</p>
+            {% elif data['toShow'] == 'bothDate' %}
+            <p  class="govuk-body">This service cannot calculate release dates because the offence start and end dates are missing.</p>
+            
+            {% endif %} 
+            <p  class="govuk-body govuk-!-margin-bottom-9">Go to NOMIS and enter the missing details, then <a class="govuk-link" href="#">try again</a>.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

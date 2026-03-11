@@ -1,0 +1,92 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="go-intercept" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro --> 
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6"> 
+
+        <fieldset class="govuk-fieldset" aria-describedby="calculationReasonId-hint">
+                    
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-l">Calculate release dates</span>
+              Who have you contacted to support this override?
+            </h1>
+          </legend>
+
+           
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="calculationReasonId" name="calculationReasonId" type="checkbox" value="1" data-qa="reasoncheckbox-1">
+                <label class="govuk-label govuk-checkboxes__label" for="calculationReasonId">
+                  OMU Hub Manager
+                </label> 
+            </div>
+                
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="calculationReasonId-2" name="calculationReasonId" type="checkbox" value="2" data-qa="reasoncheckbox-2">
+                <label class="govuk-label govuk-checkboxes__label" for="calculationReasonId-2">
+                  Specialist support team (SST)
+                </label> 
+            </div>
+                
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="calculationReasonId-3" name="calculationReasonId" type="checkbox" value="3" data-qa="reasoncheckbox-3">
+                <label class="govuk-label govuk-checkboxes__label" for="calculationReasonId-3">
+                  Another team or authoriser <br>
+                  <span class="govuk-hint">For example the Cross border team</span>
+                </label> 
+            </div>  
+
+          <div class="govuk-checkboxes__divider">or</div>
+ 
+         
+          <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="calculationReasonId-11" name="calculationReasonId" type="checkbox" value="11" data-qa="reasoncheckbox-11" aria-controls="conditional-calculationReasonId-11" aria-expanded="false">
+              <label class="govuk-label govuk-checkboxes__label" for="calculationReasonId-11">
+              Someone else
+              </label> 
+          </div>
+          
+          <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-calculationReasonId-11">       
+              <div class="govuk-form-group">
+                  <label class="govuk-label" for="other-reason-description">
+                      Enter who has supported this calculation
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="other-reason-description" name="otherReasonDescription" type="string" autocomplete="string"> 
+              </div>  
+          </div> 
+                            
+            
+        </div> 
+      </fieldset> 
+
+      </div>
+</div> 
+
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds"> 
+            
+                <div class="govuk-button-group">
+                    <form method="post" action="upload-a-warrant-question">
+                        <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                            Continue
+                        </button>
+                    </form>
+
+                    <form method="post" action="cancel">
+                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+            <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
+        </div>
+    </div>
+</div>
+{% endblock %}

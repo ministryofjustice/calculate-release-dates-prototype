@@ -1,0 +1,158 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="govuk-body">
+    <div class="">
+        <a href="../index-1" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper offence-outcome " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <form action="confirm-lal" method="post">
+
+                        <div id="" class="">
+
+
+                            <h1 class="govuk-heading-l">
+                                <span class="govuk-caption-xl">Adjustments</span>
+                               Enter LAL details
+                            </h1>
+                           <!-- <p class="govuk-body">
+                                The rules for LAL (Lawfully at large) can be found in
+                                <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1083190/sc-annex-a-operational-guidance.pdf#page=87">the policy framework</a>.
+                            </p>-->
+                         <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                                    <legend class="govuk-fieldset__legend--s">
+                                        First day spent LAL
+                                    </legend>
+                                    <div id="passport-issued-hint" class="govuk-hint">
+                                        For example, 27 3 2022
+                                    </div>
+                                    <div class="govuk-date-input" id="passport-issued">
+                                        <div class="govuk-date-input__item">
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label" for="from-day">
+                                                    Day
+                                                </label>
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                            </div>
+                                        </div>
+                                        <div class="govuk-date-input__item">
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label" for="from-month">
+                                                    Month
+                                                </label>
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                            </div>
+                                        </div>
+                                        <div class="govuk-date-input__item">
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label" for="from-year">
+                                                    Year
+                                                </label>
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="from-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                                    <legend class="govuk-fieldset__legend--s">
+                                        Last day spent LAL
+                                    </legend>
+                                    <div id="passport-issued-hint" class="govuk-hint">
+                                        For example, 27 3 2022
+                                    </div>
+                                    <div class="govuk-date-input" id="passport-issued">
+                                        <div class="govuk-date-input__item">
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label" for="to-day">
+                                                    Day
+                                                </label>
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                            </div>
+                                        </div>
+                                        <div class="govuk-date-input__item">
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label" for="to-month">
+                                                    Month
+                                                </label>
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                            </div>
+                                        </div>
+                                        <div class="govuk-date-input__item">
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label" for="to-year">
+                                                    Year
+                                                </label>
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="to-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                            </div>
+                                        </div>
+                                    </div>
+                                  <br>
+                                    <div class="govuk-form-group">
+                                        <fieldset class="govuk-fieldset">
+                                            <legend class="govuk-fieldset__legend--s">
+                                                Will the LAL days defer this person’s release dates?
+                                            </legend>
+                                            <div class="govuk-radios" data-module="govuk-radios">
+                                                <div class="govuk-radios__item govuk-!-margin-top-4">
+                                                    <input class="govuk-radios__input" id="laltype-1" name="laltype" type="radio" value="Yes">
+                                                    <label class="govuk-label govuk-radios__label" for="laltype-1">
+                                                        Yes
+                                                        <div id="signIn-hint" class="govuk-hint">
+                                                            For example, a non-custodial sentence is upgraded at the Court of Appeal to a custodial sentence on appeal. The time lawfully at large between the original sentence and when the sentence is upgraded or amended would defer the release dates.
+                                                          </div>
+                                                    </label>
+                                                    
+                                                </div>
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" id="laltype-2" name="laltype" type="radio" value="No">
+                                                    <label class="govuk-label govuk-radios__label" for="laltype-2">
+                                                        No 
+                                                        <div id="signIn-hint" class="govuk-hint">
+                                                            For example, a prisoner is lawfully released on licence. The sentence is increased on appeal. The time spent on licence will count as time served towards the sentence.
+                                                          </div>
+                                                          
+                                                    </label>
+                                                    <p class="govuk-body">Email <a href="mailto:omu.specialistsupportteam@justice.gov.uk">omu.specialistsupportteam@justice.gov.uk </a> if you're unsure whether the LAL days will defer this person’s release dates.  </p>
+                                                </div>
+                                              
+                                               
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </fieldset>
+                            </div>
+                           
+                            
+<!--                            <div class="govuk-form-group">-->
+<!--                                <label class="govuk-label" for="document-ID">-->
+<!--                                    Adjudication ID-->
+<!--                                </label>-->
+<!--                                <input class="govuk-input govuk-input&#45;&#45;width-20" id="document-ID" name="width-20" type="text">-->
+<!--                            </div>-->
+
+                        </div>
+
+                       
+
+
+                        <div class="govuk-button-group">
+                            <button id="addUALButton" class="govuk-button" data-module="govuk-button">
+                                Continue
+                            </button>
+                            <a href="../index-1.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                                Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/add-remand-mvp.js"></script>
+{% endblock %}

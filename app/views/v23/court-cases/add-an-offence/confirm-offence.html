@@ -1,0 +1,67 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.postSaveEdit == 'true' %}
+            <form class="form" action="/{{data.prototypeVersion}}/persist-offence?edit=true?changeMade=1&variableName=Offence&value=offence-code" method="post">
+                {% else %}
+        <form class="form" action="offence-date" method="post">
+            {% endif %}
+            <div class="govuk-form-group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        {% if data.route == 'repeat-remand' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add offences</span>
+                            Confirm the offence
+                        </h1>
+                        {% elif data.postSaveEdit == 'true' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{ data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{ data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }}</span>
+                            Confirm the offence
+                        </h1>
+                        {% else %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add offences</span>
+                            Confirm the offence
+                        </h1>
+                        {% endif %}
+                    </legend>
+                <dl class="govuk-summary-list govuk-summary-list--no-border">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key dwf-confirm-offence-key">
+                            Offence code
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            {{ data['offence']['offence-code'] }}
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key dwf-confirm-offence-key">
+                            Offence
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Kidnap
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+            <input type="hidden" name="offence[offence-name]" value="Kidnap" />
+            <div class="govuk-button-group">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/{{data.prototypeVersion}}/save-court-case">
+                    Save as draft
+                </a>
+            </div>
+            <p class="govuk-body"><a href="offence-code">Enter a different offence code</a></p>
+            <p class="govuk-body"><a href="offence-code">Look up an offence by name</a></p>
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+      </div>
+</div>
+{% endblock %}

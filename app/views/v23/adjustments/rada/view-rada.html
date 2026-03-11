@@ -1,0 +1,47 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="">
+    <div id="viewRADAPage" class="" data-type="RADA">
+        <a href="../index-1" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper offence-outcome " id="main-content" role="main">
+            <h1 class="govuk-heading-l"><span class="govuk-caption-xl">Adjustments</span>
+                RADA overview
+            </h1>
+
+
+            <table id="" class="govuk-table govuk-!-margin-bottom-8 govuk-!-width-two-thirds">
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Date of days restored</th>
+                    <th class="govuk-table__header " scope="col">Entered by</th>
+                    <th class="govuk-table__header govuk-!-text-align-centre" scope="col">Days</th>
+                    <th class="govuk-table__header " scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody id="viewRADAS">
+<!--                <tr class="govuk-table__row">-->
+<!--                    <td class="govuk-table__cell">3 Apr 2022</td>-->
+<!--                    <td class="govuk-table__cell">HMP Kirkham</td>-->
+<!--                    <td class="govuk-table__cell govuk-!-text-align-centre">6</td>-->
+<!--                    <td class="govuk-table__cell ">-->
+<!--                        <a id="ItemEdit" href="edit-rada" class="govuk-link" data-liveid="null">Edit</a>-->
+<!--                        <a id="ItemRemove" data-liveid="null" href="delete-rada" class="govuk-link removelink govuk-!-margin-left-4">Delete</a>-->
+<!--                    </td>-->
+<!--                </tr>-->
+            </tbody>
+                <tfoot id = "viewRADASFooter">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-table__header " colspan="2">Total days</td>
+                    <td colspan="1" id="TotalDays" class="govuk-table__cell govuk-table__header govuk-!-text-align-centre">12</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+                </tfoot>
+            </table>
+            <a href="rada" class="govuk-button">Add new</a>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/adjustments-3-mvp.js"></script>
+{% endblock %}

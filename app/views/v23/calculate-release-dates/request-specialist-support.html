@@ -1,0 +1,41 @@
+{% extends "../../includes/layouts/template-linear.html" %}
+{% block content %}
+<div class="moj-width-container">
+    <a href="javascript:history.back();" class="govuk-back-link">Back</a>
+</div>
+<div class="moj-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-6 govuk-!-margin-top-6">
+                Get support with a calculation
+            </h1>
+            <p>Use this service if you:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>disagree with the release dates calculated by the CRDS</li>
+                <li>need to enter release dates that cannot be calculated by CRDS</li>
+                <li>want to ask the SST a question about a calculation</li>  
+            </ul>
+ 
+            <p>You will need:</p>
+            <ul class="govuk-list govuk-list--number">
+                <li>the documents to hand</li>
+                <li>the prisoner ID/number</li> 
+            </ul>
+ 
+            <div class="govuk-button-group">
+                <form method="post" action="chat-support">
+                    <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                        Continue
+                    </button>
+                </form>
+      
+                <form method="post" action="cancel">
+                    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                        Cancel
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

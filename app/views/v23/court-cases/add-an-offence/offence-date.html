@@ -1,0 +1,123 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.postSaveEdit == 'true' %}
+            <form class="form" action="/{{data.prototypeVersion}}/persist-offence" method="post">
+        {% else %}
+            {% if data.edit == 'true' %}
+                {% if data.route == 'remand-to-sentence' %}
+                    <form class="form" action="/{{data.prototypeVersion}}/persist-offence?edit=true" method="post">
+                {% elif data.route == 'remand-to-sentence' %}
+                    <form class="form" action="outcome" method="post">
+                {% endif %}
+                {% endif %}
+            <form class="form" action="terror-related" method="post">
+                {% endif %}
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        {% if data.route == 'repeat-remand' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add offences</span>
+                            Enter the offence dates
+                        </h1>
+                        {% elif data.route == 'remand-to-sentence' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add aoffences</span>
+                            Enter the offence dates
+                        </h1>
+                        {% elif data.postSaveEdit == 'true' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{ data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{ data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }}</span>
+                            Edit the offence dates
+                        </h1>
+                        {% else %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add offences</span>
+                            Enter the offence dates
+                        </h1>
+                        {% endif %}
+                    </legend>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="offence-start-date">
+                            Offence start date
+                        </label>
+                        <div class="govuk-date-input" id="offence-start-date">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="offence-start-date-day">
+                                        Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="offence-start-date-day" name="offence[offence-start-date-day]" type="text" inputmode="numeric" value="{{ data.offence[offence-start-date-day] }}{% if data.postSaveEdit == 'true' %}{{ data.appearance.offences[data.index]['offence-start-date-day'] }}{% endif %}">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="offence-start-date-month">
+                                        Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="offence-start-date-month" name="offence[offence-start-date-month]" type="text" inputmode="numeric" value="{{ data.offence[offence-start-date-month] }}{% if data.postSaveEdit == 'true' %}{{ data.appearance.offences[data.index]['offence-start-date-month'] }}{% endif %}">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="offence-start-date-year">
+                                        Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="offence-start-date-year" name="offence[offence-start-date-year]" type="text" inputmode="numeric" value="{{ data.offence[offence-start-date-year] }}{% if data.postSaveEdit == 'true' %}{{ data.appearance.offences[data.index]['offence-start-date-year'] }}{% endif %}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="offence-start-date">
+                            Offence end date (optional)
+                        </label>
+                        <div id="event-name-hint" class="govuk-hint">
+                            This only applies to offences that occur over multiple days.
+                        </div>
+                        <div class="govuk-date-input" id="offence-end-date">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="offence-end-date-day">
+                                        Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="offence-end-date-day" name="offence[offence-end-date-day]" type="text" inputmode="numeric">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="offence-end-date-month">
+                                        Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="offence-end-date-month" name="offence[offence-end-date-month]" type="text" inputmode="numeric">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="offence-end-date-year">
+                                        Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="offence-end-date-year" name="offence[offence-end-date-year]" type="text" inputmode="numeric">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="govuk-button-group">
+                    <button type="submit" class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+                    <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/{{data.prototypeVersion}}/save-court-case">
+                        Save as draft
+                    </a>
+                </div>
+            </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+      </div>
+</div>
+</div>
+{% endblock %}

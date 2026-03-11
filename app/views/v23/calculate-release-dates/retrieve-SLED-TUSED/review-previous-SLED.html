@@ -1,0 +1,63 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% block content %} 
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="calculation-summary" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro -->
+<div class="moj-width-container govuk-!-margin-top-6"> 
+    <div class="govuk-grid-row"> 
+        <div class="govuk-grid-column-two-thirds">
+            
+            <h1 class="govuk-heading-l">
+
+            <span class="govuk-caption-xl">Calculate release dates</span>
+                Review dates from other periods of custody
+            </h1>
+            <p class="govuk-body">This service has found a <b>SLED (Sentence and licence expiry date) on 13 January 2026</b> from another period of custody which can used for this calculation.</p>
+ 
+            <div class="govuk-!-margin-top-6">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading"> 
+                    Doy want to use this date instead?
+                  </h1>
+                </legend>
+    
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="approvedDatesQuestion" name="approvedDatesQuestion" type="radio"
+                      value="yes" />
+                    <label class="govuk-label govuk-radios__label" for="approvedDatesQuestion">
+                      Yes, use this date
+                    </label>
+                  </div>
+    
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="approvedDatesQuestion-2" name="approvedDatesQuestion"
+                      type="radio" value="no" />
+                    <label class="govuk-label govuk-radios__label" for="approvedDatesQuestion-2">
+                      No, do not use this date
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+
+            </div> 
+                <div class="govuk-button-group govuk-!-margin-top-6">
+                    <form method="post" action="calculation-summary?calcUpdated=true">
+                        <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                            Continue
+                        </button> 
+ 
+                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+              
+        </div>
+    </div>
+ 
+</div>
+{% endblock %}

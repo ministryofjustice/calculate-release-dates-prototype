@@ -1,0 +1,161 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="calculation-summary" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro --> 
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6"> 
+
+        <fieldset class="govuk-fieldset" aria-describedby="calculationReasonId-hint">
+                    
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-l">Calculate release dates</span>
+              Select the reason the dates are not correct
+            </h1>
+          </legend>
+            <!-- 
+                    <div id="calculationReasonId-hint" class="govuk-hint">
+                        If the reason is not provided, select 'reason not on the list'
+                    </div>
+            -->
+
+       <div class="govuk-radios" data-module="govuk-radios">
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="calculationReasonId-1" name="calculationReasonId" type="radio" value="1" data-qa="reasonRadio-1" aria-controls="conditional-calculationReasonId-1" aria-expanded="false">
+    <label class="govuk-label govuk-radios__label" for="calculationReasonId-1">
+      Order of imprisonment/warrant doesn't match trial record sheet
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-calculationReasonId-1">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="reason-1-detail">Provide more details (optional)</label>
+      <input class="govuk-input govuk-!-width-full" id="reason-1-detail" name="reason1Detail" type="text">
+    </div>
+  </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="calculationReasonId-2" name="calculationReasonId" type="radio" value="2" data-qa="reasonRadio-2" aria-controls="conditional-calculationReasonId-2" aria-expanded="false">
+    <label class="govuk-label govuk-radios__label" for="calculationReasonId-2">
+      Terrorism or terror-related offences
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-calculationReasonId-2">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="reason-2-detail">Provide more details (optional)</label>
+      <input class="govuk-input govuk-!-width-full" id="reason-2-detail" name="reason2Detail" type="text">
+    </div>
+  </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="calculationReasonId-3" name="calculationReasonId" type="radio" value="3" data-qa="reasonRadio-3" aria-controls="conditional-calculationReasonId-3" aria-expanded="false">
+    <label class="govuk-label govuk-radios__label" for="calculationReasonId-3">
+      Power to detain
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-calculationReasonId-3">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="reason-3-detail">Provide more details (optional)</label>
+      <input class="govuk-input govuk-!-width-full" id="reason-3-detail" name="reason3Detail" type="text">
+    </div>
+  </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="calculationReasonId-4" name="calculationReasonId" type="radio" value="4" data-qa="reasonRadio-4" aria-controls="conditional-calculationReasonId-4" aria-expanded="false">
+    <label class="govuk-label govuk-radios__label" for="calculationReasonId-4">
+      Cross border section release dates
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-calculationReasonId-4">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="reason-4-detail">Provide more details (optional)</label>
+      <input class="govuk-input govuk-!-width-full" id="reason-4-detail" name="reason4Detail" type="text">
+    </div>
+  </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="calculationReasonId-5" name="calculationReasonId" type="radio" value="5" data-qa="reasonRadio-5" aria-controls="conditional-calculationReasonId-5" aria-expanded="false">
+    <label class="govuk-label govuk-radios__label" for="calculationReasonId-5">
+      Adding a previous SLED
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-calculationReasonId-5">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="reason-5-detail">Provide more details (optional)</label>
+      <input class="govuk-input govuk-!-width-full" id="reason-5-detail" name="reason5Detail" type="text">
+    </div>
+  </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="calculationReasonId-6" name="calculationReasonId" type="radio" value="6" data-qa="reasonRadio-6" aria-controls="conditional-calculationReasonId-6" aria-expanded="false">
+    <label class="govuk-label govuk-radios__label" for="calculationReasonId-6">
+      ERS (Early release scheme) breach
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-calculationReasonId-6">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="reason-6-detail">Provide more details (optional)</label>
+      <input class="govuk-input govuk-!-width-full" id="reason-6-detail" name="reason6Detail" type="text">
+    </div>
+  </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="calculationReasonId-7" name="calculationReasonId" type="radio" value="7" data-qa="reasonRadio-7" aria-controls="conditional-calculationReasonId-7" aria-expanded="false">
+    <label class="govuk-label govuk-radios__label" for="calculationReasonId-7">
+      Court of appeal
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-calculationReasonId-7">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="reason-7-detail">Provide more details (optional)</label>
+      <input class="govuk-input govuk-!-width-full" id="reason-7-detail" name="reason7Detail" type="text">
+    </div>
+  </div>
+
+  <div class="govuk-radios__divider">or</div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="calculationReasonId-11" name="calculationReasonId" type="radio" value="11" data-qa="reasonRadio-11" aria-controls="conditional-calculationReasonId-11" aria-expanded="false">
+    <label class="govuk-label govuk-radios__label" for="calculationReasonId-11">
+      The reason is not on this list
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-calculationReasonId-11">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="reason-11-detail">Enter the reason this calculation is incorrect</label>
+      <input class="govuk-input govuk-!-width-full" id="reason-11-detail" name="reason11Detail" type="text">
+    </div>
+  </div>
+
+</div>
+
+      </fieldset> 
+
+      </div>
+</div> 
+
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds"> 
+            
+                <div class="govuk-button-group">
+                    <form method="post" action="go-intercept">
+                        <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                            Continue
+                        </button>
+                    </form>
+
+                    <form method="post" action="cancel">
+                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+            <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+  <div class="govuk-grid-column-two-thirds govuk-!-padding-right-8">
+    <form class="form" action="/{{data.prototypeVersion}}/court-documents-complete" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-l">Upload court documents</span>
+              {% if data.appearance['warrant-type'] == "Remand" %}
+              You have uploaded the remand warrant
+              {% else %}
+              You have uploaded {{ data.appearance.documents.length + data.appearance['additional-documents-list'].length}}  documents
+              {% endif %}
+            </h1>
+          </legend>
+          <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh
+              page to update file upload progress</a></p>
+          <dl class="govuk-summary-list govuk-!-margin-top-2">
+            {% for document in data.appearance.documents %}
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                <a class="govuk-link" href="#">{{ document | capitalize }}</a>
+              </dt>
+              <!-- <dd class="govuk-summary-list__value">
+                <strong class="govuk-tag govuk-tag--green">
+                  uploaded
+                </strong>
+              </dd> -->
+              <dd class="govuk-summary-list__actions">
+                <ul class="govuk-summary-list__actions-list">
+                  <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link" href="#">Replace<span class="govuk-visually-hidden"> {{ document }}</span></a>
+                  </li>
+                  <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> c{{ document }}</span></a>
+                  </li>
+                </ul>
+              </dd>
+            </div>
+            {% else %}
+            <p class="govuk-body">No documents have been uploaded for this appearance yet.</p>
+            {% endfor %}
+            {% for document in data.appearance['additional-documents-list'] %}
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                <a class="govuk-link" href="#">{{ document }}</a>
+              </dt>
+              <!-- <dd class="govuk-summary-list__value">
+                <strong class="govuk-tag govuk-tag--green">
+                  uploaded
+                </strong>
+
+              </dd> -->
+              <dd class="govuk-summary-list__actions">
+                <ul class="govuk-summary-list__actions-list">
+                  <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link" href="#">Replace<span class="govuk-visually-hidden"> {{ document }}</span></a>
+                  </li>
+                  <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> c{{ document }}</span></a>
+                  </li>
+                </ul>
+              </dd>
+            </div>
+            {% endfor %}
+          </dl>
+          <div class="govuk-button-group">
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+             Accept and finish
+            </button>
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button"
+              href="/{{data.prototypeVersion}}/save-court-case">
+              Save as draft
+            </a>
+          </div>
+    </form>
+  </div>
+</div>
+<div class="govuk-grid-column-one-third">
+  {% set showOffences = true %}
+  {% include "includes/templates/appearance-info.njk" %}
+</div>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+            <span class="govuk-caption-l">Add an appearance to a court case</span>
+            Select the offences that have been sentenced
+        </h1>
+        <div class="govuk-inset-text">
+            New sentences will be added on the next page.
+        </div>
+        <form class="form" action="/{{data.prototypeVersion}}/offence-to-sentence" method="post">
+            <h2 class="govuk-heading-m">Offences<span class="govuk-body"> ({{ data.appearance.offences.length }})</span></h2>
+            {% for offence in data.appearance.offences %}
+            <div class="offence-card">
+                <div class="offence-card-select">
+                    <div class="govuk-form-group">
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sentenced" name="selected-for-sentencing" type="checkbox" value="{{ loop.index0 }}">
+                                <label class="govuk-label govuk-checkboxes__label " for="sentenced">
+                                    <span class="govuk-visually-hidden">{{ offence['offence-name'] }} coimmitted on {{ offence['offence-start-date-day'] }}/{{ offence['offence-start-date-month'] }}/{{ offence['offence-start-date-year'] }}
+                                        {% if offence['offence-end-date-day'] > 0 %}
+                                        to
+                                        {{ offence['offence-end-date-day'] }}/{{ offence['offence-end-date-month'] }}/{{ offence['offence-end-date-year'] }}
+                                        {% endif %}</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offence-card-offence-details">
+                    <h4 class="govuk-heading-s">{{ offence['offence-name'] }}</h4>
+                    <dl class="govuk-summary-list govuk-summary-list--no-border">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Commited on
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ offence['offence-start-date-day'] }}/{{ offence['offence-start-date-month'] }}/{{ offence['offence-start-date-year'] }}
+                                {% if offence['offence-end-date-day'] > 0 %}
+                                to
+                                {{ offence['offence-end-date-day'] }}/{{ offence['offence-end-date-month'] }}/{{ offence['offence-end-date-year'] }}
+                                {% endif %}
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Outcome
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                {{ offence['outcome'] }}
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            {% endfor %}
+            <button class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+                Confirm and continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

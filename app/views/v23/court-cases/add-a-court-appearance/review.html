@@ -1,0 +1,23 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+            <span class="govuk-caption-l">Add an appearance to a court case</span>
+            Review information before saving
+        </h1>
+        <form class="form" action="/{{data.prototypeVersion}}/persist-appearance?route=remand-to-sentence" method="post">
+            <ul class="govuk-list govuk-list__no-bullet review-list">
+                <li><a href="check-answers-2">Review court case information</a></li>
+                <li><a href="add-sentence-information">Review sentences</a></li>
+            </ul>
+            <h2 class="govuk-heading-m">Now save this court case</h2>
+            <p class="govuk-body">By saving this court case, you are confirming that the details you are providing match the details on the warrant.</p>
+            <button class="govuk-button" data-module="govuk-button">
+                Save court case
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

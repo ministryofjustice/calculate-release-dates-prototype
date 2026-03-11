@@ -1,0 +1,49 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="check-answers-next-appearance" method="post">
+            {% else %}
+            <form class="form" action="next-court-date" method="post">
+                {% endif %}
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                <span class="govuk-caption-l">Next court case</span>
+                                How will they attend the hearing?
+                            </h1>
+                        </legend>
+                        <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="next-hearing-type" name="appearance[next-hearing-type]" type="radio" value="Court appearance" {% if data.appearance['next-hearing-type']=="Court appearance" %}checked{% endif %}>
+                                <label class="govuk-label govuk-radios__label" for="next-hearing-type-1">
+                                    Court appearance
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="next-hearing-type-2" name="appearance[next-hearing-type]" type="radio" value="Video link" {% if data.appearance['next-hearing-type']=="Video link" %}checked{% endif %}>
+                                <label class="govuk-label govuk-radios__label" for="next-hearing-type-2">
+                                    Video link
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="govuk-button-group">
+                    <button type="submit" class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+                    <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/{{data.prototypeVersion}}/save-court-case">
+                        Save as draft
+                    </a>
+                </div>
+            </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+      </div>
+</div>
+{% endblock %}

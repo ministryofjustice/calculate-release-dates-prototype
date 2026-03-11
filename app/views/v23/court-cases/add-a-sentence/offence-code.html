@@ -1,0 +1,59 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.postSaveEdit == 'true' %}
+        <form class="form" action="/{{data.prototypeVersion}}/offence-code-known?postSaveEdit=true&route=sentence"
+            method="post">
+            {% else %}
+            <form class="form" action="/{{data.prototypeVersion}}/offence-code-known" method="post">
+                {% endif %}
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            {% if data.postSaveEdit == 'true' %}
+                            <h1 class="govuk-fieldset__heading">
+                                <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{
+                                    data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{
+                                    data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year']
+                                    }}</span>
+                                Edit the offence code
+                            </h1>
+                            {% else %}
+                            <h1 class="govuk-fieldset__heading">
+                                <span class="govuk-caption-l">Add offences</span>
+                                Enter the offence code
+                            </h1>
+                            {% endif %}
+                        </legend>
+                        <input class="govuk-input govuk-input--width-10" id="offence-code" name="sentence[offence-code]"
+                            type="text" value="{{ data.sentence['offence-code'] }}">
+                        <div class="govuk-checkboxes govuk-!-margin-top-6" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="no-offence-code" name="offence-code-known"
+                                    type="checkbox" value="None">
+                                <label class="govuk-label govuk-checkboxes__label" for="no-offence-code">
+                                    I do not have the offence code
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="govuk-button-group">
+                    <button type="submit" class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+                    <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+                        formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+                        Save as a draft
+                    </button>
+                </div>
+            </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+{% endblock %}

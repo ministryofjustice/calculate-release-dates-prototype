@@ -1,0 +1,44 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/{{data.prototypeVersion}}/persist-sentence" method="post">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                        {% if data.route == 'remand-to-sentence' %}
+                        <span class="govuk-caption-l">Review offences and sentences</span>
+                        {% else %}
+                        <span class="govuk-caption-l">Add offences</span>
+                        {% endif %}
+                        What is the fine amount?
+                    </h1>
+                </legend>
+                <div class="govuk-form-group">
+                    <div class="govuk-input__wrapper">
+                        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                        <input class="govuk-input govuk-input--width-5" id="fine-amount" name="sentence[fine-amount]"
+                            type="text" spellcheck="false">
+                    </div>
+                </div>
+            </fieldset>
+            <!-- <p class="govuk-body"><a href="alternative-sentence-length">The sentence length is formatted differently</a></p> -->
+            <div class="govuk-button-group">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button"
+                    formaction="/{{data.prototypeVersion}}/save-court-case" method="post">
+                    Save as a draft
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {% set showOffences = true %}
+        {% include "includes/templates/appearance-info.njk" %}
+    </div>
+</div>
+</div>
+{% endblock %}

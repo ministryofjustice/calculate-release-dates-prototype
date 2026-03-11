@@ -1,0 +1,33 @@
+{% extends "../template.html" %}
+<!-- {% set backLinkTarget = 'court-case-detail' %} -->
+{% set backLinkTarget = '/' + data.prototypeVersion + '/court-cases/appearance-detail' %}
+{% set noBackLink = true %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/{{data.prototypeVersion}}/persist-appearance" method="post">
+            <h1 class="govuk-heading-l govuk-!-margin-top-4">Do you want to apply change the court name to {{ data.appearance['court-name'] }} for all appearances?</h1>
+            <div class="govuk-radios govuk-radios govuk-!-margin-top-6" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changes-apply-all" name="changes-apply-all" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="consecutive-concurrent">
+                        Yes, apply to all appearances
+                    </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changes-apply-all-2" name="changes-apply-all" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="consecutive-concurrent-2">
+                        No, apply to appearance {{data.appearance['court-case-ref']}} on {{ data.appearance['warrant-date-day'] }}/{{ data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }} only
+                    </label>
+                </div>
+            </div>
+            <div class="govuk-button-group">
+                <button class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+                    Continue
+                </button>
+                <a href="appearance-detail" class="govuk-link">Cancel changes</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

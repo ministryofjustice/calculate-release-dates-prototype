@@ -1,0 +1,50 @@
+{% extends "../template.html" %}
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data.edit == 'true' %}
+        <form class="form" action="check-answers-next-appearance" method="post">
+            {% elif data.postSaveEdit == 'true' %}
+            <form class="form" action="/{{data.prototypeVersion}}/persist-appearance" method="post">
+            {% else %}
+        <form class="form" action="next-court-date" method="post">
+            {% endif %}
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        {% if data.postSaveEdit == 'true' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{ data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{ data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }}</span>
+                            Edit the next hearing type
+                        </h1>
+                        {% else %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add an appearance to a court case</span>
+                            How will they attend the hearing?
+                        </h1>
+                        {% endif %}
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="next-hearing-type" name="appearance[next-hearing-type]" type="radio" value="Court appearance" {% if data.appearance['next-hearing-type'] == "Court appearance" %}checked{% endif %}>
+                            <label class="govuk-label govuk-radios__label" for="next-hearing-type-1">
+                                Court appearance
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="next-hearing-type-2" name="appearance[next-hearing-type]" type="radio" value="Video link" {% if data.appearance['next-hearing-type'] == "Video link" %}checked{% endif %}>
+                            <label class="govuk-label govuk-radios__label" for="next-hearing-type-2">
+                                Video link
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

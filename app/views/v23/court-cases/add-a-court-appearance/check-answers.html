@@ -1,0 +1,102 @@
+{% extends "../template.html" %}
+
+{% block content %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+            <span class="govuk-caption-l">Add appearance information</span>
+            Check your answers
+        </h1>
+        <form class="form" action="/{{data.prototypeVersion}}/persist-appearance?edit=false" method="post">
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Warrant type
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['warrant-type'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="warrant-type?edit=true">
+                            Edit<span class="govuk-visually-hidden"> warrant type</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Case reference
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['court-case-ref'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="court-case-reference-number?edit=true">
+                            Edit<span class="govuk-visually-hidden"> case reference number</span>
+                        </a>
+                    </dd>
+                </div>
+                                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Warrant date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['warrant-date-day'] }}/{{ data['appearance']['warrant-date-month'] }}/{{ data['appearance']['warrant-date-year'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="warrant-date?edit=true">
+                            Edit<span class="govuk-visually-hidden"> warrant date</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Court name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['court-name'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="court-name?edit=true">
+                            Edit<span class="govuk-visually-hidden"> court name</span>
+                        </a>
+                    </dd>
+                </div>
+                {% if data.appearance['warrant-type'] == "Remand" %}
+                                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Overall case outcome
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['overall-case-outcome'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="overall-case-outcome?edit=true">
+                            Edit<span class="govuk-visually-hidden"> overall case outcome</span>
+                        </a>
+                    </dd>
+                </div>
+                {% endif %}
+                <!-- {% if data.appearance['warrant-type'] == "Sentencing" %}
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Overall sentence length
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['appearance']['overall-sentence-length-years'] }} years {{ data['appearance']['overall-sentence-length-months'] }} months {{ data['appearance']['overall-sentence-length-weeks'] }} weeks {{ data['appearance']['overall-sentence-length-days'] }} days
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="overall-sentence-length?edit=true">
+                            Edit<span class="govuk-visually-hidden"> overall sentence length</span>
+                        </a>
+                    </dd>
+                </div>
+                {% endif %} -->
+            </dl>
+            <button class="govuk-button govuk-!-margin-top-2" data-module="govuk-button">
+                Confirm and continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

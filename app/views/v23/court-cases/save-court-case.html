@@ -1,0 +1,29 @@
+{% extends "../template.html" %}
+{% set backLinkTarget = "task-list.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/{{data.prototypeVersion}}/persist-appearance?saveCourtCase=true" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            {% if (data.route == 'appearance') or (data.route == 'remand-to-sentence') %} Appearance {% else %}
+                            Court case {% endif %} {{ data.appearance['court-case-ref'] }} on {{ data.appearance['warrant-date-day'] }}/{{ data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }} at {{ data.appearance['court-name'] }} has been saved
+                        </h1>
+                    </legend>
+                    <div class="govuk-inset-text">
+                        This appearance has not been saved to NOMIS
+                    </div>
+                    <p class="govuk-body">Court cases can only be saved to NOMIS when <a href="task-list">all sections on the task list</a> are complete.</p>
+                    </p>
+                    <p class="govuk-body">You can return to finish adding court case and offence information from <a href="">Joe Bloggs' Court cases page</a>.</p>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

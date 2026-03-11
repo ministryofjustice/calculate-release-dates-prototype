@@ -1,0 +1,67 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="govuk-body">
+    <div class="">
+        <a href="../index-1" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper offence-outcome " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <form action="confirm-special-remission.html" method="post">
+                        <div id="" class="">
+                             <h1 class="govuk-heading-l">
+                                <span class="govuk-caption-xl">Adjustments</span>
+                                Select the type of special remission
+                            </h1>
+                            <p class="govuk-body">You can read the rules for special remission in <a href="#">the policy framework. </a> </p>
+                        </div>
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                            <div class="govuk-radios" data-module="govuk-radios">
+                                    <div class="govuk-radios__item govuk-!-margin-top-4">
+                                        <input class="govuk-radios__input" id="specialremission-1" name="specialremission-type" type="radio" value="Meritorious (excellent) conduct">
+                                        <label class="govuk-label govuk-radios__label" for="specialremission-1">
+                                            Meritorious (excellent) conduct
+                                            <div id="signIn-hint" class="govuk-hint">
+                                                The person has been rewarded with automatic release or is being released on parole on an earlier date. If the person is on licence, their SLED is being brought forward.                                              </div>
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="specialremission-2" name="specialremission-type" type="radio" value="Release date calculated too early">
+                                        <label class="govuk-label govuk-radios__label" for="specialremission-2">
+                                            Release date calculated too early
+                                            <div id="signIn-hint" class="govuk-hint">
+                                                The remainder of the person’s sentence is being cancelled, so they will be released on an earlier date.
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="specialremission-3" name="specialremission-type" type="radio" value="Release in error">
+                                        <label class="govuk-label govuk-radios__label" for="specialremission-3">
+                                            Release in error 
+                                            <div id="signIn-hint" class="govuk-hint">
+                                                The person was released in error and they’re not being returned to custody.
+                                             </div>
+                                        </label>
+                                        <p class="govuk-body">Email <a href="mailto:omu.specialistsupportteam@justice.gov.uk">omu.specialistsupportteam@justice.gov.uk </a> if you're unsure whether the LAL days will defer this person’s release dates.  </p>
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="govuk-button-group">
+                            <button class="govuk-button" data-module="govuk-button">
+                                Continue
+                            </button>
+                            <a href="/adjustments/beta/mvp-plus/special-remission/index" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                                Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/add-remand-mvp.js"></script>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "../template.html" %}
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/{{data.prototypeVersion}}/delete-offence" method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        {% if data.route == 'repeat-remand' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add an appearance to court case</span>
+                            Are you sure you want to delete this offence?
+                        </h1>
+                        {% elif data.route == 'remand-to-sentence'%}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add an appearance to court case</span>
+                            Are you sure you want to delete this offence?
+                        </h1>
+                        {% elif data.postSaveEdit == 'true' %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Appearance {{ data.appearance['court-case-ref'] }} at {{ data.appearance['court-name'] }} on {{ data.appearance['warrant-date-day'] }}/{{ data.appearance['warrant-date-month'] }}/{{ data.appearance['warrant-date-year'] }}</span>
+                            Are you sure you want to delete this offence?
+                        </h1>
+                        {% else %}
+                        <h1 class="govuk-fieldset__heading">
+                            <span class="govuk-caption-l">Add a court case</span>
+                            Are you sure you want to delete this offence?
+                        </h1>
+                        {% endif %}
+                    </legend>
+                    <div class="offence-card">
+                        <div class="offence-card-offence-details">
+                            <h4 class="govuk-heading-s">{{ data.appearance.offences[data.index]['offence-name'] }}</h4>
+                            <dl class="govuk-summary-list govuk-summary-list--no-border">
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Commited on
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                        {{ data.appearance.offences[data.index]['offence-start-date-day'] }}/{{ data.appearance.offences[data.index]['offence-start-date-month'] }}/{{ data.appearance.offences[data.index]['offence-start-date-year'] }}
+                                    </dd>
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                        Outcome
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                        {{ data.appearance.offences[data.index]['outcome'] }}
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="govuk-radios govuk-!-margin-top-6" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="confirm-delete-offence" name="confirmDeleteOffence" type="radio" value="Yes">
+                            <label class="govuk-label govuk-radios__label" for="confirm-delete-offence">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="confirm-delete-offence-2" name="confirmDeleteOffence" type="radio" value="No">
+                            <label class="govuk-label govuk-radios__label" for="confirm-delete-offence-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

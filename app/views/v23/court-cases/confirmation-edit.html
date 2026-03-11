@@ -1,0 +1,27 @@
+{% extends "../template.html" %}
+{% block content %}
+{% set lastAppearance = data.courtCases[data.courtCaseIndex].appearances | last %}
+<!-- What is the confirmed date -->
+<div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6">
+            <h1 class="govuk-panel__title govuk-!-font-size-36">
+                Appearance successfully saved to NOMIS
+            </h1>
+        </div>
+        <div class="govuk-!-margin-top-6">
+            <h2 class="govuk-heading-l">What you can do next</h2> 
+            <p class="govuk-body"><a href="court-case-detail.html">Go back to court case {{ lastAppearance['court-case-ref'] }} at {{ lastAppearance['court-name']}}</a></p> 
+            <div class="govuk-body govuk-!-margin-top-6"><span>You can also go back to Joe Bloggs':</span>
+                <ul class="govuk-list govuk-!-margin-top-2">
+                    <li><a href="../">Court case information</a></li>
+                    <li><a href="">Prisoner profile</a></li>
+                </ul>
+            </div> 
+            <div class="govuk-!-margin-top-6">
+                <p class="govuk-body">Or, go to the <a href="../DPS-home"> DPS homepage</a>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

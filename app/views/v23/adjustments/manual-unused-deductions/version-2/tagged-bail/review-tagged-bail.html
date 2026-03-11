@@ -1,0 +1,37 @@
+{% extends "../../../includes/layouts/template-linear.html" %}
+{% set adjustmentsActive = true %}
+{% block content %}
+<div class="">
+    <div class="">
+        <a href="add-tagged-bail.html" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                    <h1 class="govuk-heading-l">
+                        <span class="govuk-caption-xl">Adjustments</span>
+                        Confirm and save
+                    </h1>
+                    <div id="dataContainer">
+
+                    </div>
+                    <h2 class="govuk-heading-m">Tagged bail details</h2>
+                    <div class="govuk-!-margin-top-6" id="ReviewTaggedBail"></div>
+
+                    <div class="govuk-button-group">
+                        <a href="../index-after-tagged-bail" id="saveTaggedBailButton" class="govuk-button" data-journey="3">
+                            Confirm and save
+                        </a>
+                        <a href="../index" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </a>
+                    </div>
+
+<!--                    <a href=".html" class="govuk-link">Return to tagged bail details</a>-->
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/add-remand.js"></script>
+{% endblock %}

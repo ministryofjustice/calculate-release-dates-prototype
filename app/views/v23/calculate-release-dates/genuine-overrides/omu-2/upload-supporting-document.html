@@ -1,0 +1,118 @@
+{% extends "../../../../includes/layouts/template-linear.html" %}
+{% block content %}
+<!-- Back link -->
+<div class="moj-width-container">
+    <a href="upload-a-supporting-document-question" class="govuk-back-link">Back</a>
+</div>
+<!-- Page intro --> 
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6"> 
+
+        <fieldset class="govuk-fieldset" aria-describedby="calculationReasonId-hint">
+                    
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-l">Calculate release dates</span>
+              Upload other supporting documents
+            </h1>
+            <!-- <p class="govuk-body-l govuk-!-margin-bottom-2">TS1233535 at Aberdare Court on 17/10/2024</p> -->
+          </legend>
+                   
+  <div id="file-upload-1-hint" class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-5">
+          You can upload most text and image-based file types e.g. .pdf, .doc, .csv, .xml, and .jpeg,
+      </div> 
+
+<!-- <p>1 file uploaded</p> -->
+
+        <!-- <dl class="govuk-summary-list govuk-summary-list--long-key govuk-!-margin-bottom-3">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">file-name.pdf</a>
+          <div class="govuk-body govuk-!-margin-0">Remand warrant</div>
+        </dt>
+        <dd class="govuk-summary-list__value govuk-!-text-align-right">
+          <strong class="govuk-tag govuk-tag--green">
+            Uploaded
+        </strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> file-name.pdf</span></a>
+        </dd>
+      </div>
+      
+    </dl> -->
+
+         
+            <input class="govuk-file-upload" id="file-upload-register" name="file-upload-register" type="file">
+
+          <script>
+            document.querySelectorAll('input[type="file"]').forEach(input => {
+              input.addEventListener('click', function (event) {
+                event.preventDefault();
+              });
+            });
+          </script>
+           <!-- <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Document types you can include
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <ul class="govuk-list govuk-list--bullet"> 
+  <li>Immigration detention order</li>   
+  <li>Court extract (magistrates’ court – where required)</li>
+  <li>Appeal order</li>
+  <li>DISTs containing details of any added days awarded (ADAs) on adjudication</li>
+  <li>Evidence of date of arrest (where applicable)</li>
+  <li>Evidence of police custody (where applicable)</li>
+  <li>E-mail evidence from courts/CPS, or other agency, containing information relevant to the calculation</li>
+  <li>Decision from the Public Protection Casework Section (PPCS) to allow time spent abroad pending extradition to count</li>
+  <li>Letter from the Cross Border Transfer Section for prisoners transferred from other jurisdictions</li>
+  <li>Advice provided by the sentence calculation helpline team in the event that they were consulted about a complex calculation</li>
+  <li>Decision from PPCS where special remission (RPM) has been granted</li>
+  <li>Decision from the Secretary of State for Justice (SSJ), or from PPCS as a delegated authority, where early release on compassionate grounds (ERCG) has been granted</li>
+  <li>Parole Board release (including re-release after recall) decision</li>
+  <li>Pay-out proforma giving effect to a release (where applicable)</li>
+  <li>Decision to authorise removal under the Early Removal Scheme (ERS)</li>
+  <li>Decision from PPCS authorising removal under the Tariff Expiry Removal Scheme (TERS)</li>
+  <li>Confirmation of imposition of a non-custodial sentence from court i.e. discharge authorisation form escort staff</li>
+  <li>Court bail decision and bail release paperwork</li>
+  <li>Home Detention Curfew approval form</li>
+  <li>Sentence calculation sheet(s)</li>
+  <li>Release licence</li>
+  <li>Final court decision and confirmation of type of recall.</li> 
+</ul>
+  </div>
+</details> -->
+            
+        </div> 
+      </fieldset> 
+
+      </div>
+</div> 
+
+
+
+<div class="moj-width-container govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds"> 
+            
+                <div class="govuk-button-group">
+                    <form method="post" action="tasklist?supportingDocumentAdded=true">
+                        <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="submitReason">
+                            Continue
+                        </button>
+                    </form>
+
+                    <form method="post" action="cancel">
+                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Cancel
+                        </button>
+                    </form>
+                </div>
+            <!-- <p class="govuk-body govuk-!-font-size-16"><a href="../release-dates" class="govuk-link">Cancel calculation</a></p> -->
+        </div>
+    </div>
+</div>
+{% endblock %}
