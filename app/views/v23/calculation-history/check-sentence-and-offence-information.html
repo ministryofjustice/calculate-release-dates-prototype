@@ -27,7 +27,7 @@
                   Calculation date
                 </dt>
                 <dd class="govuk-summary-list__value">
-                   08/01/2026
+                   10/03/2026
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -35,7 +35,7 @@
                   Calculation reason
                 </dt>
                 <dd class="govuk-summary-list__value">
-                 Recording a recall
+                 Initial calculation
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -53,6 +53,8 @@
                 <dd class="govuk-summary-list__value">
                 Calculate release dates service
               </div>
+
+             
                  <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
                         Checked on
@@ -60,14 +62,14 @@
                     <dd class="govuk-summary-list__value">
 
                         {% if data['checkComplete'] == 'true' %}
-                        {{ "today" | govukDate }}
+                        {{ "today" | govukDate }} by Brogan Tate
                         {% else %}
                         Not checked
                         {% endif %}
                 </div>
  
+ 
             </dl>
-
                 </div>
             </div>
 
