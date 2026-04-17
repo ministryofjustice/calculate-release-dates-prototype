@@ -3,25 +3,27 @@
     "dev": "govuk-prototype-kit dev",
     "serve": "govuk-prototype-kit serve",
     "start": "govuk-prototype-kit start",
-    "compile-sass": "sass --quiet-deps --no-source-map --load-path=node_modules/govuk-frontend/dist --load-path=node_modules/@ministryofjustice/frontend --load-path=. app/assets/sass/application.scss:./assets/stylesheets/application.css --style compressed"
+    "compile-sass": "sass --quiet-deps --no-source-map --load-path=node_modules/govuk-frontend/dist --load-path=node_modules/@ministryofjustice/frontend --load-path=. app/assets/sass/application.scss:./assets/stylesheets/application.css --style compressed",
+    "setup": "npm ci && hmpps-npm-script-run-allowlist"
   },
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "2.0.1",
     "@ministryofjustice/frontend": "^5.1.3",
     "@x-govuk/govuk-prototype-filters": "^2.0.0",
-    "axios": "^1.9.0",
+    "axios": "^1.15.0",
     "dotenv": "^16.5.0",
-    "express": "^5.1.0",
+    "express": "^5.2.0",
     "govuk-frontend": "5.10.1",
     "govuk-prototype-kit": "13.16.2",
     "hmpps-court-cases-release-dates-design": "^4.4.0"
   },
   "devDependencies": {
+    "@ministryofjustice/hmpps-npm-script-allowlist": "0.0.4",
     "sass": "^1.80.4"
   },
   "engines": {
-    "node": "^23",
-    "npm": "^10.9"
+    "node": "^24",
+    "npm": "^11.8"
   },
   "name": "calculate-release-dates-prototype",
   "version": "1.0.0",
