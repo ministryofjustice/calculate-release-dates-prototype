@@ -14,7 +14,7 @@
     "dotenv": "^16.5.0",
     "express": "^5.2.0",
     "govuk-frontend": "5.10.1",
-    "govuk-prototype-kit": "13.16.2",
+    "govuk-prototype-kit": "13.20.0",
     "hmpps-court-cases-release-dates-design": "^4.4.0"
   },
   "devDependencies": {
